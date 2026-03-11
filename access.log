@@ -1,2 +1,1 @@
-192.168.1.10 - - [11/Mar/2026:14:22:11] "GET /?id=1 UNION SELECT 1,2,3--" 200
-10.0.0.5 - - [11/Mar/2026:14:23:45] "GET /?id=2 UNION SELECT user,pass FROM users" 200
+192.168.1.10 - - [11/Mar/2026] "GET /?id=1 UNION SELECT 1,2,3--" 200
