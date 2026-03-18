@@ -1,10 +1,11 @@
-# The Knowledge House: Cyber Security
+# Cybersecurity Portfolio
 
 ### 🛡️ Dual-Certified: Google IT Support & CompTIA A+
 
 ---
 
-## 📂 Official Submission Manifest (T1-M1):
+## 📂 Modules & Assignments
+
 * **T1-M1-S01:** Portfolio Artifact Git Push
 * **T1-M1-S02:** Portfolio Artifact Git Push
 * **T1-M1-S03:** Portfolio Artifact Git Push
@@ -12,4 +13,4 @@
 * **T1-M1-S04:** Portfolio Artifact Git Commit
 * **T1-M1-S05:** Portfolio Artifact Git Commit (File: subnet_audit.txt)
 
-*Verified against Official Canvas Gradebook Transcript.*
+*Developed by Chad K. Bachoo*
