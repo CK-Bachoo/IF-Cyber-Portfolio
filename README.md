@@ -14,3 +14,5 @@
 * **T1-M1-S05:** Portfolio Artifact Git Commit (File: subnet_audit.txt)
 
 *Developed by Chad K. Bachoo*
+
+* T1-M1-S06: Protocol Interrogation (File: protocol_audit.txt)
