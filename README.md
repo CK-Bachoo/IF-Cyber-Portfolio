@@ -1,4 +1,16 @@
-# Cybersecurity Portfolio
+# ⚓ Operational Portfolio: New York Cybersecurity IF-CS-2026
+
+Operator: Bachoo, C. K. | Navy Veteran | Dual Google/CompTIA A+ | AI Architect | Principal Security Engineer (Purple Team & GRC)
+Primary Node: Samsung Note 20 Ultra (Mobile SOC Workbench Termux)
+
+---
+
+### ⚡ THE TECHNICAL CORE: MOBILE SOC ARCHITECTURE
+
+This academic record is powered by a custom-engineered Mobile Cybersecurity Workbench.
+Link: [https://github.com/CK-Bachoo/Android-mobile-cybersecurity-workbench](https://github.com/CK-Bachoo/Android-mobile-cybersecurity-workbench)
+
+---
 
 ### 🛡️ Dual-Certified: Google IT Support & CompTIA A+
 
