@@ -24,8 +24,9 @@ Link: [https://github.com/CK-Bachoo/Android-mobile-cybersecurity-workbench](http
 * **TLAB-01:** OPERATION CLEAN SWEEP ([network_audit.txt](./network_audit.txt))
 * **T1-M1-S04:** Portfolio Artifact Git Commit
 * **T1-M1-S05:** Portfolio Artifact Git Commit ([subnet_audit.txt](./subnet_audit.txt))
+* **T1-M1-S06: Protocol Interrogation ([protocol_audit.txt](./protocol_audit.txt))
 
-
-* T1-M1-S06: Protocol Interrogation ([protocol_audit.txt](./protocol_audit.txt))
+### IF-CS.26.T1-M2.TLAB: Operation Blackout
+[Evidence](https://github.com/ck-bachoo/IF-Cyber-Portfolio/commits/main/tlab_report.txt)
 
 Developed by Chad K. Bachoo
