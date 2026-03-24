@@ -1,0 +1,14 @@
+--- MISSION: OPERATION BLACKOUT | ANALYST: C.K. BACHOO ---
+MISSION ID: T1-M2-TLAB | STATUS: REMEDIATED
+
+[TASK 1: SUBNET REMEDIATION]
+Logical Fix: sudo ip addr add 10.88.0.3/24 dev eth0
+Status: Gateway 10.88.0.1 connectivity restored.
+
+[TASK 2: DNS DECEPTION PURGED]
+Forensic Check: Malicious entry 10.99.99.99 removed from /etc/hosts.
+
+[TASK 3: TCP 3-WAY HANDSHAKE FORENSIC PROOF]
+21:32:45.194412 eth0 Out IP 10.88.0.3.37356 > 172.217.204.102.80: Flags [S]
+21:32:45.195595 eth0 In IP 172.217.204.102.80 > 10.88.0.3.37356: Flags [S.]
+21:32:45.195649 eth0 Out IP 10.88.0.3.37356 > 172.217.204.102.80: Flags [.]
