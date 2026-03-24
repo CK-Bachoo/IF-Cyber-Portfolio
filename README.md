@@ -2,6 +2,9 @@
 ## Mobile Cybersecurity Workbench
 ### [📱 Android Mobile Cybersecurity Workbench](https://github.com/CK-Bachoo/Android-mobile-cybersecurity-workbench)
 **This entire portfolio and all associated artifacts were created strictly and exclusively using the Samsung Note 20 Ultra 5G / Termux Bunker configuration.**
+
+[🌐 Portfolio Repository Activity Log](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/activity)
+
 ---
 
 ## 🏗️ Architecture Pipeline
@@ -22,15 +25,15 @@
 > **Note:** This environment is volatile. Foundational scripts (S04) must be re-executed via `sudo bash` to restore state if the terminal session drops.
 
 ### 🛠️ T1-M1-S01: Portfolio Initialization
-* [Evidence: Exact Commit](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/PASTE_S01_HASH_HERE)
+* [Evidence: Commit History](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commits/main)
 * **Explanation:** Established secure baseline via Note 20 Ultra. Initialized Git version control and configured SSH key-based authentication for encrypted transmission to GitHub.
 
 ### 🛠️ T1-M1-S02: Command Line Operations
-* [Evidence: Exact Commit](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/PASTE_S02_HASH_HERE)
+* [Evidence: Commit History](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commits/main)
 * **Explanation:** CLI proficiency. Demonstrated mastery of directory traversal, file permission management, and core Linux I/O operations required for headless systems administration.
 
 ### 🛠️ T1-M1-S03: Network Foundations (Cisco Academy)
-* [Evidence: Exact Commit](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/PASTE_S03_HASH_HERE)
+* [Evidence: Commit History](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commits/main)
 * **Explanation:** Network layer analysis. Leveraged Cisco Networking Academy resources to map the OSI model and TCP/IP stack. Conducted packet analysis foundations in preparation for advanced Wireshark interrogation.
 
 ### 🔍 TLAB-01: OPERATION CLEAN SWEEP
@@ -38,7 +41,7 @@
 * **Explanation:** Advanced log interrogation to identify Indicators of Compromise (IoCs). Detected unauthorized access attempts and proposed technical remediation.
 
 ### ⚙️ T1-M1-S04: Portfolio Artifact Git Commit
-* [Evidence: Exact Commit](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/PASTE_S04_HASH_HERE)
+* [Evidence: Commit History](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commits/main)
 * **Explanation:** Infrastructure-as-Code deployment. Synchronized the local mobile workbench with curriculum dependencies strictly via Google Cloud Shell and Termux.
 
 ### ⚙️ T1-M1-S05: Portfolio Artifact Git Commit
