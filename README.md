@@ -29,3 +29,6 @@ Link: [https://github.com/CK-Bachoo/Android-mobile-cybersecurity-workbench](http
 * T1-M1-S06: Protocol Interrogation ([protocol_audit.txt](./protocol_audit.txt))
 
 Developed by Chad K. Bachoo
+
+### IF-CS.26.T1-M1.S07: The Automation Forge
+[Evidence](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commits/main/port_check.py)
