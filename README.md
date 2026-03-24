@@ -27,8 +27,7 @@ Link: [https://github.com/CK-Bachoo/Android-mobile-cybersecurity-workbench](http
 * **T1-M1-S06: Protocol Interrogation ([protocol_audit.txt](./protocol_audit.txt))
 ### T1-M2.TLAB: Operation Blackout
 [Evidence](https://github.com/ck-bachoo/IF-Cyber-Portfolio/commits/main/tlab_report.txt)
-
-Developed by Chad K. Bachoo
-
-### IF-CS.26.T1-M1.S07: The Automation Forge
+### T1-M1.S07: The Automation Forge
 [Evidence](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commits/main/port_check.py)
+
+Designed by: Chad K. Bachoo
