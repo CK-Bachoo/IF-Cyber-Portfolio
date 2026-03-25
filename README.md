@@ -1,6 +1,6 @@
 # 🛡️ IF-Cyber-Portfolio
-## 🏫 The Knowledge HouseInnovation Fellow: Chad K. Bachoo  IF-CS-26 New York
-### 📱 Android Mobile Cybersecurity Workbench](https://github.com/CK-Bachoo/Android-mobile-cybersecurity-workbench)
+## 🏫 The Knowledge House Innovation Fellow: Chad K. Bachoo  IF-CS-26 New York
+### [📱 Android Mobile Cybersecurity Workbench] (https://github.com/CK-Bachoo/Android-mobile-cybersecurity-workbench)
 **This entire portfolio and all associated artifacts were created strictly and exclusively using the Samsung Note 20 Ultra 5G / Termux Bunker configuration.**
 
 [🌐 Portfolio Repository Activity Log](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/activity)
