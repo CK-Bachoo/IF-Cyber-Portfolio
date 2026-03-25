@@ -56,13 +56,11 @@
 * [harden.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/harden.sh)
 * **Explanation:** Initialization of Module 2 Capstone. Leveraging GitHub Codespaces for high-compute security assessments and advanced automation workflows using the Note 20 Ultra.
 
-### 🐍 IF-CS.26.T1-M1.S07: THE AUTOMATION FORGE
+### 🐍 T1-M1.S07: THE AUTOMATION FORGE
 * [port_check.py](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/port_check.py) | [s07reflection.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/s07reflection.md)
 * **Explanation:** Python-based network reconnaissance. Developed a socket-based port scanner to automate vulnerability identification and asset discovery.
 
 ---
-"Action then Audit."
 
-**Designed by: Chad K. Bachoo | Android Cyber Security Workbench**
-### Week 03 - Session 08: Security Monitoring
+###T1-M1-S08 Paper Trail: Security Monitoring
 - [Verify Session 08 Evidence](./Week_03/Session_08/monitoring_log.txt)
