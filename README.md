@@ -63,6 +63,6 @@
 ---
 
 ###🛡️ T1-M1-S08 Paper Trail: Security Monitoring
-
+*
 - [Verify Session 08 Evidence](./Week_03/Session_08/monitoring_log.txt)
-The evidence log contains absolute timestamps and a snapshot of active system processes executed within the Termux mobile environment, verifying active system monitoring and command-line logging protocols.
+* **Explanation: The evidence log contains absolute timestamps and a snapshot of active system processes executed within the Termux mobile environment, verifying active system monitoring and command-line logging protocols.
