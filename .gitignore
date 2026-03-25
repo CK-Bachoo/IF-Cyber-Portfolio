@@ -1,0 +1,7 @@
+# Ignore sensitive or temp files
+Vault/
+*.bak
+*ed_readme*
+*.log
+__pycache__/
+.DS_Store
