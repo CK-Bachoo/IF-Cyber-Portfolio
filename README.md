@@ -64,3 +64,5 @@
 "Action then Audit."
 
 **Designed by: Chad K. Bachoo | Android Cyber Security Workbench**
+### Week 03 - Session 08: Security Monitoring
+- [Verify Session 08 Evidence](./Week_03/Session_08/monitoring_log.txt)
