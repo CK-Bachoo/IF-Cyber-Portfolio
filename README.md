@@ -62,12 +62,13 @@
 
 ---
 
+
 ## 🐍 T1-M1.S07: THE AUTOMATION FORGE (Network Reconnaissance)
 
 | Data Point | Desktop/Laptop User | Android Cyber Workbench (Note 20 Ultra) |
 | :--- | :--- | :--- |
 | **Architecture** | Standard x86/x64 Linux Desktop. | ARM64 Mobile Sandbox (Termux). |
-| **Evidence & Data** | Automated Script Execution. | 1. [Evidence 1: port_check.py](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/35248d8/port_check.py) (**Socket Logic**) <br> 2. [Evidence 2: s07reflection.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/35248d8/s07reflection.md) (**Architecture Analysis**) |
+| **Evidence & Data** | Automated Script Execution. | 1. [Evidence 1: port_check.py](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/port_check.py) (**Socket Logic**) <br> 2. [Evidence 2: s07reflection.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/s07reflection.md) (**Architecture Reflection**) |
 | **Conclusion** | Standard recon automation. | Successfully executed socket-based reconnaissance within a restricted mobile sandbox. |
 
 ---
@@ -77,7 +78,7 @@
 | Data Point | Desktop User | Android Cyber Workbench (Note 20 Ultra) |
 | :--- | :--- | :--- |
 | **Source Data** | Static `auth_audit.log` file. | Live `ps aux` Memory Snapshot. |
-| **Evidence & Data** | IPs: **10.0.0.55** / **172.16.0.5** | 1. [Evidence 1: brute_report.txt](./brute_report.txt) (**Data: 10.0.0.55 / 172.16.0.5**) <br> 2. [Evidence 2: monitoring_log.txt](./monitoring_log.txt) (**Timestamp: Tue Mar 24 23:57:04 EDT 2026**) |
+| **Evidence & Data** | IPs: **10.0.0.55** / **172.16.0.5** | 1. [Evidence 1: brute_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/brute_report.txt) (**Data: 10.0.0.55 / 172.16.0.5**) <br> 2. [Evidence 2: monitoring_log.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/monitoring_log.txt) (**Timestamp: Tue Mar 24 23:57:04 EDT 2026**) |
 | **Verification** | Automated script parsing. | Manual `grep` extraction from live system noise (PID 3845). |
 
 ---
@@ -87,7 +88,7 @@
 | Data Point | Desktop User | Android Cyber Workbench (Note 20 Ultra) |
 | :--- | :--- | :--- |
 | **Provisioning** | `sudo bash` (Success) | `No superuser binary detected` (Blocked by Android Security). |
-| **Evidence & Data** | `{"severity": "High"}` (Automatic) | 1. [Evidence 1: audit_brief.txt](./lab_prep/audit_brief.txt) (**Data: Cryptominer JSON Seed**) <br> 2. [Evidence 2: system_auditor.py](./system_auditor.py) (**Logic Verification**) |
-| **Audit Result** | Malware Detected via Root Access. | [Evidence 2: system_auditor.py](./system_auditor.py) (**Result: [-] Clean / System Secured**) |
+| **Evidence & Data** | `{"severity": "High"}` (Automatic) | 1. [Evidence 1: audit_brief.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/lab_prep/audit_brief.txt) (**Data: Cryptominer JSON Seed**) <br> 2. [Evidence 2: system_auditor.py](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/system_auditor.py) (**Logic Verification**) |
+| **Audit Result** | Malware Detected via Root Access. | [Evidence 2: system_auditor.py](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/system_auditor.py) (**Result: [-] Clean / System Secured**) |
 
 **The Forensic Truth:** Because my Note 20 Ultra's security physically blocked the malware from running, I manually seeded **[Evidence 1: audit_brief.txt]**. This allowed my **[Evidence 2: system_auditor.py]** to prove the logic catches the threat exactly like the desktop class, while accurately reporting my actual system remained **`[-] Clean`**.
