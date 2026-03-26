@@ -58,6 +58,7 @@
 
 
 
+
 ## 🐍 T1-M1.S07: THE AUTOMATION FORGE (Network Reconnaissance)
 * **Workbench:** Note 20 Ultra 5G Exynos (Termux ARM64)
 * **Evidence:** [port_check.py](./port_check.py)
@@ -70,8 +71,8 @@
 | Data Point | Desktop User (Standard Curriculum) | Android Cyber Workbench (Note 20 Ultra) |
 | :--- | :--- | :--- |
 | **Source Data** | Static `auth_audit.log` file. | Live `ps aux` Memory Snapshot. |
-| **Evidence Link** | `10.0.0.55` / `172.16.0.5` | [brute_report.txt](./brute_report.txt) (Timestamp: 23:57:04 EDT) |
-| **Verification** | Automated script parsing. | Manual `grep` extraction of required SOC IPs. |
+| **Evidence Links** | IPs: `10.0.0.55` / `172.16.0.5` | 1. [Threat Intel](./brute_report.txt)<br>2. [Timestamped Log](./monitoring_log.txt) |
+| **Verification** | Automated script parsing. | Manual `grep` extraction from live system noise (PID 3845). |
 
 ---
 
@@ -80,7 +81,7 @@
 | Data Point | Desktop User (Standard Curriculum) | Android Cyber Workbench (Note 20 Ultra) |
 | :--- | :--- | :--- |
 | **Provisioning** | `sudo bash` (Success) | `No superuser` (Blocked by Android Security). |
-| **Audit Alert** | `{"severity": "High"}` (Automatic) | [audit_brief.txt](./lab_prep/audit_brief.txt) (Manual Injection) |
+| **Evidence Links** | `{"severity": "High"}` (Automatic) | 1. [Manual Evidence](./lab_prep/audit_brief.txt)<br>2. [Auditor Script](./system_auditor.py) |
 | **Audit Result** | Malware Detected via Root Access. | [system_auditor.py](./system_auditor.py) (Verified Clean System). |
 
-* **The Same-Output Evidence:** Because my system defended against the `sudo` malware, I manually seeded the [audit_brief.txt](./lab_prep/audit_brief.txt) evidence file. This allowed my `system_auditor.py` to scan the data and prove it would have caught the threat exactly like the desktop class, while accurately reporting my system remained **`[-] Clean`**.
+* **The Same-Output Evidence:** To match class results despite my system defending against the `sudo` malware, I manually seeded the [audit_brief.txt](./lab_prep/audit_brief.txt) evidence. This allowed my [system_auditor.py](./system_auditor.py) to prove the logic catches the threat exactly like the desktop class, while accurately reporting my actual system remained **`[-] Clean`**.
