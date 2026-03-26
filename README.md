@@ -65,30 +65,32 @@
 
 ## 🐍 T1-M1.S07: THE AUTOMATION FORGE (Network Reconnaissance)
 
-| Data Point | Desktop/Laptop User | Android Cyber Workbench (Note 20 Ultra) |
+| Data Point | Desktop/Laptop User (Standard) | Android Cyber Workbench (Note 20 Ultra) |
 | :--- | :--- | :--- |
 | **Architecture** | Standard x86/x64 Linux Desktop. | ARM64 Mobile Sandbox (Termux). |
-| **Evidence & Data** | Automated Script Execution. | 1. [Evidence 1: port_check.py](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/port_check.py) (**Socket Logic**) <br> 2. [Evidence 2: s07reflection.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/s07reflection.md) (**Architecture Reflection**) |
-| **Conclusion** | Standard recon automation. | Successfully executed socket-based reconnaissance within a restricted mobile sandbox. |
+| **Evidence & Data** | Automated Script Execution. | 1. [Evidence 1: port_check.py](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/port_check.py) (**Socket Logic**) <br> 2. [Evidence 2: s07reflection.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/s07reflection.md) (**Architecture Analysis**) |
+
+**🛡️ S07 Technical Analysis:** In this session, the Python-based socket logic was executed within the ARM64 Termux environment. The system performed the scan by attempting connection handshakes across specified ports on the local network. The performance was defined by the mobile system's ability to handle low-level socket requests without native root permissions, yielding a successful asset map of the environment.
 
 ---
 
 ## 🛡️ T1-M1.S08: REFINED PAPER TRAIL (Forensic Audit Comparison)
 
-| Data Point | Desktop User | Android Cyber Workbench (Note 20 Ultra) |
+| Data Point | Desktop User (Standard) | Android Cyber Workbench (Note 20 Ultra) |
 | :--- | :--- | :--- |
 | **Source Data** | Static `auth_audit.log` file. | Live `ps aux` Memory Snapshot. |
 | **Evidence & Data** | IPs: **10.0.0.55** / **172.16.0.5** | 1. [Evidence 1: brute_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/brute_report.txt) (**Data: 10.0.0.55 / 172.16.0.5**) <br> 2. [Evidence 2: monitoring_log.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/monitoring_log.txt) (**Timestamp: Tue Mar 24 23:57:04 EDT 2026**) |
-| **Verification** | Automated script parsing. | Manual `grep` extraction from live system noise (PID 3845). |
+
+**🛡️ S08 Technical Analysis:** The forensic task was performed by capturing a live memory snapshot via `ps aux`. The data was then manually filtered using `grep` to isolate PID 3845. The system successfully extracted the target IPs (**10.0.0.55** and **172.16.0.5**) and generated a forensic report with an absolute timestamp (**23:57:04 EDT**). This process demonstrates the extraction of forensic evidence directly from active system noise in a live environment.
 
 ---
 
 ## 🚀 T1-M1.S09: THE AUTOMATION PIVOT (Engineering Audit Comparison)
 
-| Data Point | Desktop User | Android Cyber Workbench (Note 20 Ultra) |
+| Data Point | Desktop User (Standard) | Android Cyber Workbench (Note 20 Ultra) |
 | :--- | :--- | :--- |
 | **Provisioning** | `sudo bash` (Success) | `No superuser binary detected` (Blocked by Android Security). |
 | **Evidence & Data** | `{"severity": "High"}` (Automatic) | 1. [Evidence 1: audit_brief.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/lab_prep/audit_brief.txt) (**Data: Cryptominer JSON Seed**) <br> 2. [Evidence 2: system_auditor.py](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/system_auditor.py) (**Logic Verification**) |
 | **Audit Result** | Malware Detected via Root Access. | [Evidence 2: system_auditor.py](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/system_auditor.py) (**Result: [-] Clean / System Secured**) |
 
-**The Forensic Truth:** Because my Note 20 Ultra's security physically blocked the malware from running, I manually seeded **[Evidence 1: audit_brief.txt]**. This allowed my **[Evidence 2: system_auditor.py]** to prove the logic catches the threat exactly like the desktop class, while accurately reporting my actual system remained **`[-] Clean`**.
+**🛡️ S09 Technical Analysis:** During this audit, the Android security model actively blocked the `sudo` command required for the malware to provision itself. To perform the audit logic test, a JSON-based threat seed (**[Evidence 1]**) was manually introduced to the scanning directory. The system auditor then parsed this data, successfully flagging the unauthorized process signatures. The final audit resulted in a **[-] Clean** report for the actual OS, proving the detection script's accuracy against known threat signatures while the system remained uncompromised.
