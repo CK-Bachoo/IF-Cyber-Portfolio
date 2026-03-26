@@ -1,8 +1,6 @@
 # IF '26 Cyber Security Phase 1 Portfolio
 **Operator:** CK-Bachoo | **Platform:** Note 20 Ultra Bunker (Termux ARM64)
 
----
-
 ## 🐍 T1-M1.S07: THE AUTOMATION FORGE
 * [port_check.py](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/port_check.py)
 * **Explanation:** Python-based network reconnaissance. Developed a socket-based port scanner to automate vulnerability identification.
