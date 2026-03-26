@@ -57,30 +57,30 @@
 * **Explanation:** Initialization of Module 2 Capstone. Leveraging GitHub Codespaces for high-compute security assessments and advanced automation workflows using the Note 20 Ultra.
 
 
-## 🐍 T1-M1.S07: THE AUTOMATION FORGE (Network Reconnaissance)
 
-| Data Point | Desktop/Laptop User (Standard Curriculum) | Android Cyber Workbench (Note 20 Ultra 5G Exynos Termux) |
-| :--- | :--- | :--- |
-| **Environment** | Standard x86 Linux Desktop. | ARM64 Mobile Sandbox (Termux). |
-| **Execution** | Automated script execution. | Manual engineering of [port_check.py](./port_check.py) for mobile architecture. |
+## 🐍 T1-M1.S07: THE AUTOMATION FORGE (Network Reconnaissance)
+* **Workbench:** Note 20 Ultra 5G Exynos (Termux ARM64)
+* **Evidence:** [port_check.py](./port_check.py)
+* **Conclusion:** Successfully executed socket-based reconnaissance within a restricted mobile sandbox.
 
 ---
 
 ## 🛡️ T1-M1.S08: REFINED PAPER TRAIL (Forensic Audit Comparison)
 
-| Data Point | Desktop/Laptop User (Standard Curriculum) | Android Cyber Workbench (Note 20 Ultra 5G Exynos Termux) |
+| Data Point | Desktop User (Standard Curriculum) | Android Cyber Workbench (Note 20 Ultra) |
 | :--- | :--- | :--- |
-| **Source Data** | Static `auth_audit.log` file. | Live `ps aux` memory (PID 3845 / 1970 Ghost Signals). |
-| **Evidence** | `10.0.0.55` and `172.16.0.5` | `10.0.0.55` and `172.16.0.5` |
-| **Process** | Automated log parsing. | Manual `grep` extraction from live system noise into [brute_report.txt](./brute_report.txt). |
+| **Source Data** | Static `auth_audit.log` file. | Live `ps aux` Memory Snapshot. |
+| **Evidence Link** | `10.0.0.55` / `172.16.0.5` | [brute_report.txt](./brute_report.txt) (Timestamp: 23:57:04 EDT) |
+| **Verification** | Automated script parsing. | Manual `grep` extraction of required SOC IPs. |
 
 ---
 
 ## 🚀 T1-M1.S09: THE AUTOMATION PIVOT (Engineering Audit Comparison)
 
-| Data Point | Desktop/Laptop User (Standard Curriculum) | Android Cyber Workbench (Note 20 Ultra 5G Exynos Termux) |
+| Data Point | Desktop User (Standard Curriculum) | Android Cyber Workbench (Note 20 Ultra) |
 | :--- | :--- | :--- |
-| **Provisioning** | `sudo bash` (Success) | `No superuser binary detected` (Blocked by Android). |
-| **Audit Result** | `{"severity": "High"}` (Malware Ran) | `[-] Clean: No unauthorized processes` (Malware Blocked). |
-| **Conclusion** | Auditor caught the threat. | Auditor [system_auditor.py](./system_auditor.py) verified the Workbench protected itself. |
+| **Provisioning** | `sudo bash` (Success) | `No superuser` (Blocked by Android Security). |
+| **Audit Alert** | `{"severity": "High"}` (Automatic) | [audit_brief.txt](./lab_prep/audit_brief.txt) (Manual Injection) |
+| **Audit Result** | Malware Detected via Root Access. | [system_auditor.py](./system_auditor.py) (Verified Clean System). |
 
+* **The Same-Output Evidence:** Because my system defended against the `sudo` malware, I manually seeded the [audit_brief.txt](./lab_prep/audit_brief.txt) evidence file. This allowed my `system_auditor.py` to scan the data and prove it would have caught the threat exactly like the desktop class, while accurately reporting my system remained **`[-] Clean`**.
