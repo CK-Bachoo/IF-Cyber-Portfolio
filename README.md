@@ -1,14 +1,68 @@
-# IF '26 Cyber Security Phase 1 Portfolio
-**Operator:** CK-Bachoo | **Platform:** Note 20 Ultra Bunker (Termux ARM64)
+# 🛡️ IF-Cyber-Portfolio
+## 🏫 The Knowledge House Innovation Fellow: Chad K. Bachoo  IF-CS-26 New York
+### [📱 Android Mobile Cybersecurity Workbench] (https://github.com/CK-Bachoo/Android-mobile-cybersecurity-workbench)
+**This entire portfolio and all associated artifacts were created strictly and exclusively using the Samsung Note 20 Ultra 5G / Termux Bunker configuration.**
 
-## 🐍 T1-M1.S07: THE AUTOMATION FORGE
-* [port_check.py](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/port_check.py)
-* **Explanation:** Python-based network reconnaissance. Developed a socket-based port scanner to automate vulnerability identification.
+[🌐 Portfolio Repository Activity Log](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/activity)
 
-## 🛡️ T1-M1.S08: REFINED PAPER TRAIL
-* [brute_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/brute_report.txt)
-* **Explanation:** Forensic signature extraction. Isolated unauthorized login attempts from system logs to generate structured threat intelligence.
+---
 
-## 🚀 T1-M1.S09: THE AUTOMATION PIVOT
-* [system_auditor.py](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/system_auditor.py)
-* **Explanation:** Automated System Auditor. Engineered a script using Python’s `subprocess` module to interrogate live OS processes and export JSON security alerts.
+## 🏗️ Architecture Pipeline
+**Note 20 Ultra** ➔ **Termux / Google Cloud Shell** ➔ **GitHub Codespaces / Chrome Mobile** ➔ **Canvas**
+
+## ⚖️ Governance & Framework Alignment
+| Artifact | Function | NIST CSF | CIS Control | CIA Triad |
+|---|---|---|---|---|
+| **harden.sh** | OS Hardening | PR.IP | CIS 4 | Integrity |
+| **subnet_audit.txt** | Network Blueprint | PR.IP | CIS 4 | Integrity |
+| **protocol_audit.txt** | Threat Intel | DE.CM | CIS 9 | Confidentiality |
+| **port_check.py** | Asset Discovery | DE.AE | CIS 12 | Availability |
+| **network_audit.txt** | Log Analysis | PR.AT | CIS 8 | Integrity |
+
+---
+
+## 📁 Artifact Evidence & Operational History
+> **Note:** This environment is volatile. Foundational scripts (S04) must be re-executed via `sudo bash` to restore state if the terminal session drops.
+
+### 🛠️ T1-M1-S01: Portfolio Initialization
+* [Evidence: Commit History](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commits/main)
+* **Explanation:** Established secure baseline via Note 20 Ultra. Initialized Git version control and configured SSH key-based authentication for encrypted transmission to GitHub.
+
+### 🛠️ T1-M1-S02: Command Line Operations
+* [Evidence: Commit History](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commits/main)
+* **Explanation:** CLI proficiency. Demonstrated mastery of directory traversal, file permission management, and core Linux I/O operations required for headless systems administration.
+
+### 🛠️ T1-M1-S03: Network Foundations (Cisco Academy)
+* [Evidence: Commit History](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commits/main)
+* **Explanation:** Network layer analysis. Leveraged Cisco Networking Academy resources to map the OSI model and TCP/IP stack. Conducted packet analysis foundations in preparation for advanced Wireshark interrogation.
+
+### 🔍 TLAB-01: OPERATION CLEAN SWEEP
+* [network_audit.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/network_audit.txt)
+* **Explanation:** Advanced log interrogation to identify Indicators of Compromise (IoCs). Detected unauthorized access attempts and proposed technical remediation.
+
+### ⚙️ T1-M1-S04: Portfolio Artifact Git Commit
+* [Evidence: Commit History](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commits/main)
+* **Explanation:** Infrastructure-as-Code deployment. Synchronized the local mobile workbench with curriculum dependencies strictly via Google Cloud Shell and Termux.
+
+### ⚙️ T1-M1-S05: Portfolio Artifact Git Commit
+* [subnet_audit.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/subnet_audit.txt)
+* **Explanation:** Connectivity verification. Leveraged `ip addr`, `ping`, and `ipcalc` to blueprint subnetting architectures and ensure routing integrity.
+
+### 🛰️ T1-M1-S06: Protocol Interrogation (Wireshark Analysis)
+* [protocol_audit.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/protocol_audit.txt)
+* **Explanation:** Protocol parsing via `grep`, `awk`, and `sed`. Utilized Wireshark-based data captures to isolate network protocol anomalies and transform raw traffic into actionable threat intelligence.
+
+### 🛡️ T1-M2.TLAB: Operation Blackout (Linux Hardening)
+* [harden.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/harden.sh)
+* **Explanation:** Initialization of Module 2 Capstone. Leveraging GitHub Codespaces for high-compute security assessments and advanced automation workflows using the Note 20 Ultra.
+
+### 🐍 T1-M1.S07: THE AUTOMATION FORGE
+* [port_check.py](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/port_check.py) | [s07reflection.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/s07reflection.md)
+* **Explanation:** Python-based network reconnaissance. Developed a socket-based port scanner to automate vulnerability identification and asset discovery.
+
+---
+
+🛡️ T1-M1-S08 Paper Trail: Security Monitoring
+*
+- [Verify Session 08 Evidence](./Week_03/Session_08/monitoring_log.txt)
+* Explanation: The evidence log contains absolute timestamps and a snapshot of active system processes executed within the Termux mobile environment, verifying active system monitoring and command-line logging protocols.
