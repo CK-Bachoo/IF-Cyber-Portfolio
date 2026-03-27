@@ -96,12 +96,3 @@
 
 ## Directory Structure (Enterprise Taxonomy)
 This structure follows NIST Cybersecurity Framework + Purple Team best practices and keeps the repo clean for future labs.
-
-## Directory Structure (Enterprise Taxonomy) — Updated with Commit Evidence
-
-**Commit implementing the taxonomy:**  
-[Architecture: Implemented enterprise directory taxonomy for scale](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/cef833802c74fea89c5824fc3b61d0fa60f16dfe)
-
-**Commit adding this section to README:**  
-[docs: add enterprise directory taxonomy to README](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/100ad6991b132d2d47b72370ff6ac26b3cf80b57)
-This structure follows NIST Cybersecurity Framework (Blue Team focus) and prepares for Purple/Red Team expansion. All previous root links have been updated to the new locations.
