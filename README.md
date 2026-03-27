@@ -93,3 +93,6 @@
 | **Audit Result** | Malware Detected via Root Access | [Result: [-] Clean / System Secured] |
 
 **🛡️ S09 Technical Analysis:** During this audit, the Android security model (Samsung Knox) actively blocked the `sudo` command required for unauthorized malware provisioning. A custom Python auditor parsed JSON threat seeds manually to prove detection accuracy against known signatures without compromising the OS.
+
+## Directory Structure (Enterprise Taxonomy)
+This structure follows NIST Cybersecurity Framework + Purple Team best practices and keeps the repo clean for future labs.
