@@ -1,0 +1,5 @@
+QUESTION 1: Based on your ping test, what was the output and what does it prove?
+Output: ping: connect: Network is unreachable. This proves the Termux environment was successfully isolated at Layer 3, confirming the software air-gap is active and the zero-trust perimeter is secure.
+
+QUESTION 2: Explain why Bridged mode gives malware a map to your local network.
+Bridged mode assigns the sandbox a direct IP address on the host's physical subnet. This allows malware to bypass the host OS, enumerate local network devices, and execute lateral movement attacks against adjacent hardware like routers or personal computers.
