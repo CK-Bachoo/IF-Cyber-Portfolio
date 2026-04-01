@@ -1,0 +1,7 @@
+{
+    "alert_type": "Brute Force",
+    "attacker_ips": [
+        "192.168.1.50",
+        "10.0.0.25"
+    ]
+}
