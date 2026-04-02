@@ -107,7 +107,7 @@
 
 ---
 
-## 📁 S10: THE GHOST IN THE MACHINE (Layer 3 Isolation)
+## 📁 T1-M1-S10: THE GHOST IN THE MACHINE (Layer 3 Isolation)
 **Evidence:** [Commit 36193ac](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/36193ac)
 **Verified Timestamp:** 2026-04-01 16:57:16 EDT
 
