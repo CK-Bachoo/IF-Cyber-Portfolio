@@ -1,7 +1,40 @@
-# Ignore sensitive or temp files
+# ===== SENSITIVE DATA =====
 Vault/
-*.bak
-*ed_readme*
-*.log
+*.pem
+*.key
+*.ppk
+.env
+.env.local
+secrets.json
+credentials.json
+
+# ===== BUILD ARTIFACTS =====
 __pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+htmlcov/
+
+# ===== LOGS & FORENSIC DATA =====
+*.log
+access.log
+monitoring_log.txt
+audit.log
+security_alert.json
+
+# ===== OS & EDITOR =====
 .DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.sublime-project
+
+# ===== TERMUX SPECIFIC =====
+.termux/
+.local/
