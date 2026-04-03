@@ -1,3 +1,21 @@
+# IF-Cyber-Portfolio: Mobile Cybersecurity Workbench
+
+**Built 100% on Samsung Galaxy Note 20 Ultra + Termux (no laptop)**
+
+Professional mobile-first Purple Team environment demonstrating Zero Trust principles, network audits, automation scripts, forensic logging, and AI-assisted analysis engineered during The Knowledge House NY Innovation Fellowship (Cohort IF-CS-26).
+
+**Key Capabilities**
+- Real-time brute-force detection and logging
+- Network reconnaissance and protocol analysis
+- Immutable audit trails (Mapped to NIST CSF & CIS Controls)
+- Multi-AI orchestration via custom God Mode intent bridging
+- True hardware-constrained execution (ARM64)
+
+**Evidence & Operational Labs**
+- See "Artifact Evidence & Operational History" section below for cryptographic, commit-linked proofs of execution.
+
+***
+
 # 🛡️ IF-Cyber-Portfolio: Mobile Cybersecurity Workbench
 ==========================================================
 
