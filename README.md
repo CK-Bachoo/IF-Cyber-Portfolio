@@ -128,6 +128,16 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 ## 📁 T1-M1-S10: THE GHOST IN THE MACHINE (Layer 3 Isolation)
 **Evidence:** [Commit 36193ac](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/36193ac)
 **Verified Timestamp:** 2026-04-01 16:57:16 EDT
+Session 10 (Layer 3 Isolation)
+Explanation:
+1. Bypassing Heavy Desktop Software Normally, analysts use legacy GUI-based hypervisors (like VirtualBox or VMware) running on standard x86 desktops to create isolated virtual networks for testing
+. Because I am using an ARM64 mobile device, running these heavy tools would cause immense hardware strain. Instead, I rely natively on Android's User ID (UID) isolation and Linux kernel isolation to cage the environment efficiently.
+2. Severing the Connection (Layer 3 Isolation) When a computer doesn't know how to reach a specific destination on the internet, it sends the data to a "default route" (my gateway or router) to figure it out
+. To trap the malware, I manipulated the Network Layer (Layer 3) routing table. By executing the command ip route delete default, I mathematically eliminated the default gateway. Without this route, if the malware tries to call back to its creator's Command and Control (C2) server, the system simply drops the data because it has no exit path.
+3. Proving the Air-Gap is Real In cybersecurity, I must prove my isolation. By attempting to ping an external address after deleting the route, my terminal returned the error ping: connect: Network is unreachable. This is the exact forensic proof needed to verify that the software air-gap is flawless and nothing can escape.
+4. Avoiding the "Bridged Mode" Disaster I also documented why this method is safer than misconfiguring a traditional sandbox. If a virtual machine is accidentally set to "Bridged Mode," it connects directly to the host's physical network and gets its own IP address
+. If I detonate malware in this state, it can bypass my host's internal security and instantly execute lateral movement to infect other physical devices on my local network
+. My Layer 3 severance completely avoids this risk.
 
 ### 🛡️ Mobile Sandbox Forensic Report
 **Objective:** Configuration and validation of a secure forensic sandbox environment on ARM64 architecture (Samsung Note 20 Ultra) vs. Standard x86 Desktop Environments.
