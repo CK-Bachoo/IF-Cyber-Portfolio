@@ -129,6 +129,7 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 **Evidence:** [Commit 36193ac](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/36193ac)
 **Verified Timestamp:** 2026-04-01 16:57:16 EDT
 Session 10 (Layer 3 Isolation)
+
 Explanation:
 1. Bypassing Heavy Desktop Software Normally, analysts use legacy GUI-based hypervisors (like VirtualBox or VMware) running on standard x86 desktops to create isolated virtual networks for testing
 . Because I am using an ARM64 mobile device, running these heavy tools would cause immense hardware strain. Instead, I rely natively on Android's User ID (UID) isolation and Linux kernel isolation to cage the environment efficiently.
