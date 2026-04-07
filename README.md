@@ -254,3 +254,4 @@ Status: S12 Segmented Fleet Active | Air-Gap Verified | Phase 1 Portfolio Locked
 * **Strategic Explanation:** Transitioned from single-container management to full-stack orchestration using Docker Compose. Engineered a segmented network architecture to enforce a micro-segmented air-gap between the public web application and the sensitive database.
 * **Technical Mechanics:** Utilized a YAML configuration to define a dual-network topology (Frontend/Backend). Implemented the `internal: true` flag on the backend network to mathematically suppress the default gateway, preventing any outbound communication from the database container.
 * **Mechanical Proof:** Verified the air-gap via `docker-compose exec db ping google.com`. The resulting `Network is unreachable` error serves as forensic proof that the database is locked in a private, non-routable namespace with zero external exit paths.
+![S12 Orchestration 'Up' Evidence](s12%20status%20up%20screenshot2.png)
