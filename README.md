@@ -255,3 +255,35 @@ Status: S12 Segmented Fleet Active | Air-Gap Verified | Phase 1 Portfolio Locked
 * **Technical Mechanics:** Utilized a YAML configuration to define a dual-network topology (Frontend/Backend). Implemented the `internal: true` flag on the backend network to mathematically suppress the default gateway, preventing any outbound communication from the database container.
 * **Mechanical Proof:** Verified the air-gap via `docker-compose exec db ping google.com`. The resulting `Network is unreachable` error serves as forensic proof that the database is locked in a private, non-routable namespace with zero external exit paths.
 ![S12 Orchestration 'Up' Evidence](s12%20status%20up%20screenshot2.png)
+
+---
+### 🏰 P1-W4-TLAB-04: Operation Cloud Fleet (Hyper-Stack Architecture)
+
+| Data Point | Desktop User (Standard Cohort) | Android Cyber Workbench (Note 20 Ultra) |
+| :--- | :--- | :--- |
+| **Architecture** | Standard x86/x64 Desktop / Local VM | **ARM64 Mobile SOC (Exynos 990, 12GB RAM)** |
+| **Provisioning** | Local Docker Desktop GUI | **Mobile-to-Cloud Bridge (Google Cloud Shell)** |
+| **Networking** | Host-Only Adapter (VirtualBox) | **Cloud-native dual-network topology** |
+| **Isolation** | Hardware-based VM segregation | **Software Air-Gap via `internal: true` flag** |
+| **Evidence** | N/A | **[Commit 9d02e65 - TLAB 4 Complete](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/9d02e653644bb80c4fd35fd6a5c543fb2d1fef03)** |
+
+🛡️ **Operational Defense Logic (White Hat Auditor Common Questions)**
+
+**White Hat Auditor Question:** "How did you perform a multi-tier container orchestration lab designed for x86 Virtual Machines exclusively on an ARM64 mobile device?"
+
+**Response (Strategic Execution):**
+"By strictly decoupling my Command Layer from my Compute Layer. Because Samsung Knox restricts the low-level kernel namespaces required to run a native Docker Daemon on my Note 20 Ultra, I utilized Google Cloud Shell as a headless remote engine. I engineered the entire `docker-compose.yml` stack natively via the Chrome mobile browser, maintaining the core objective of a 100% mobile-first workflow without sacrificing enterprise-grade orchestration."
+
+**White Hat Auditor Question:** "How did you prove the database was isolated without using GUI-based testing tools?"
+
+**Mechanical Proof:**
+"I used declarative Infrastructure as Code (IaC) followed by a network audit. I placed the MariaDB container exclusively on a `private_net` utilizing the `internal: true` flag, mathematically suppressing the default gateway. I then audited the perimeter using `nmap localhost`. The scan forensically proved that while Port 8080 (WordPress) was open to the public, Port 3306 (MariaDB) was entirely filtered and inaccessible from the host."
+
+**🧠 TLAB-04 Mission Defense Matrix (Executive Summary)**
+* **Mission Objective:** Deploy a three-tier containerized stack in a hardened, isolated hybrid architecture. Evict squatter containers, orchestrate a WordPress + MariaDB stack with segmented networks, verify isolation, and produce a machine-readable audit report.
+* **Technical Mechanics:**
+    1. Evicted a rogue `decoy_web` container to secure Port 80.
+    2. Engineered a custom `docker-compose.yml` from scratch utilizing Docker Compose V2 syntax.
+    3. Implemented a dual-network topology (`public_net` / `private_net`), specifically applying the `internal: true` flag to the database backend to create a software air-gap.
+    4. Audited the deployment using `nmap`, verifying Port 8080 was open and 3306 was filtered.
+    5. Generated a dynamic `hyperstack_audit.json` log capturing the exact container IDs and isolated network IPs.
