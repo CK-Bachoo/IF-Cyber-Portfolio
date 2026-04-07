@@ -217,3 +217,34 @@ By engineering a **Mobile-to-Cloud Bridge**, I decoupled the Command Layer from 
 * **`docker rm -f`**: Forensically purged the entire environment post-operation to ensure zero persistence.
 
 **Status:** Strategic Defense Validated | Infrastructure Decoupled | Phase 1 Finalized.
+
+### 🎼 T1-M1-S12: THE CONDUCTOR & THE FLEET (Segmented Orchestration)
+
+| Data Point | Desktop User (Standard Cohort) | Android Cyber Workbench (Note 20 Ultra) |
+| ------ | ------ | ------ |
+| **Architecture** | Local Monolithic Stack | **Distributed Multi-Network Fleet** |
+| **Provisioning** | Manual Container Launch | **Infrastructure as Code (Docker Compose)** |
+| **Networking** | Shared Bridge Network | **Segmented FrontEnd/Internal BackEnd** |
+| **Isolation** | Standard Exposure | **Verified Layer 3 Air-Gap (Internal: True)** |
+| **Evidence** | N/A | **[docker-compose.yml](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/docker-compose.yml)** |
+
+🛡️ **Operational Defense Logic (White Hat Auditor Common Questions)**
+
+**White Hat Auditor Question:** "Why did you use Docker Compose instead of manual 'docker run' commands for this stack?"
+
+**Response:**
+"Managing a multi-tier stack (Web + DB) with manual commands is prone to human error and configuration drift. By utilizing **Docker Compose**, I moved to a declarative **Infrastructure as Code (IaC)** model. This ensures that the entire fleet—including the specific network segments and isolation rules—is version-controlled and reproducible. In a production environment, this allows for 'single-command' deployment of complex, secure architectures."
+
+**White Hat Auditor Question:** "How did you mathematically guarantee the database cannot be reached by an external attacker?"
+
+**Mechanical Proof:**
+"I engineered a dedicated `backend` network using the `internal: true` flag in the YAML configuration. This instruction prevents Docker from creating a NAT gateway to the public internet for that specific segment. I forensically verified this by executing `docker-compose exec db ping google.com`. The system returned `Network is unreachable`, confirming that the database exists in a cryptographically isolated layer with no exit path for data exfiltration."
+
+**White Hat Auditor Question:** "How does the WordPress server talk to the DB if the DB is air-gapped?"
+
+**Engineering Statement:**
+"I implemented **Micro-segmentation**. The WordPress container acts as the 'Bridge'; it is assigned to both the `frontend` (for public traffic) and the `backend` (for database queries). The DB container is assigned **only** to the `backend`. This ensures that while the web server can serve users, the database is physically unable to initiate or receive traffic from the outside world, enforcing the Principle of Least Privilege at the network layer."
+
+---
+
+Status: S12 Segmented Fleet Active | Air-Gap Verified | Phase 1 Portfolio Locked.
