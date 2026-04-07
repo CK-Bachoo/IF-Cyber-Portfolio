@@ -1,6 +1,6 @@
 # IF-Cyber-Portfolio: Mobile Cybersecurity Workbench
 
-**Built 100% on Samsung Galaxy Note 20 Ultra + Termux (no laptop)**
+**Built 100% on Samsung Galaxy Note 20 Ultra + Termux + patience **
 
 Professional mobile-first Purple Team environment demonstrating Zero Trust principles, network audits, automation scripts, forensic logging, and AI-assisted analysis engineered during The Knowledge House NY Innovation Fellowship (Cohort IF-CS-26).
 
@@ -34,13 +34,24 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 
 ## ⚖️ Governance & Framework Alignment
 
-| Artifact | Function | NIST CSF | CIS Control | CIA Triad |
-| :--- | :--- | :--- | :--- | :--- |
-| **harden.sh** | OS Hardening | PR.IP | CIS 4 | Integrity |
-| **subnet_audit.txt** | Network Blueprint | PR.IP | CIS 4 | Integrity |
-| **protocol_audit.txt** | Threat Intel | DE.CM | CIS 9 | Confidentiality |
-| **port_check.py** | Asset Discovery | DE.AE | CIS 12 | Availability |
-| **network_audit.txt** | Log Analysis | PR.AT | CIS 8 | Integrity |
+| Session   | Function              | Attack Vector / Concept                          | NIST CSF 2.0 | CIS Control | CIA Triad     | Evidence Artifact          |
+|-----------|-----------------------|--------------------------------------------------|--------------|-------------|---------------|----------------------------|
+| S01      | System Discovery     | Unmapped Asset Inventory                        | ID.AM       | CIS 1      | Integrity    | discovery.txt             |
+| S02      | Access Control       | Privilege Escalation                            | PR.AC       | CIS 3      | Confidentiality | harden.sh                |
+| S03      | Log Parsing          | SQLi / Brute Force                              | DE.AE       | CIS 8      | Integrity    | threat_ips.txt            |
+| TLAB 1   | Clean Sweep          | Active Intrusion / Persistence                  | RS.AN       | CIS 17     | Integrity    | TLAB-01_Report.md         |
+| S04      | The Wire             | Network Sabotage                                | PR.PT       | CIS 4      | Availability | network_audit.txt         |
+| S05      | Subnetting           | Network Isolation                               | PR.NW       | CIS 12     | Availability | subnet_audit.txt          |
+| S06      | Protocol Analysis    | DNS Deception / Service Discovery               | DE.CM       | CIS 9      | Confidentiality | protocol_audit.txt       |
+| TLAB 2   | Blackout             | System Sabotage / Recovery                      | RS.RP       | CIS 17     | Availability | tlab_report.txt           |
+| S07      | Python Sentry        | Reconnaissance (Vulnerability)                  | ID.RA       | CIS 12     | Availability | port_check.py             |
+| S08      | Memory Audit         | RAM-Resident Brute Force                        | DE.CM       | CIS 8      | Confidentiality | brute_report.txt         |
+| S09      | Automation Pivot     | Malware Detonation Attempt                      | PR.IP       | CIS 16     | Integrity    | system_auditor.py         |
+| TLAB 3   | Automated Hunt       | Remote Code Execution (RCE)                     | RS.MI       | CIS 17     | Integrity    | incident_response.py      |
+| S10      | Layer 3 Sandbox      | C2 Exfiltration (The Air Gap)                   | PR.PT       | CIS 12     | Confidentiality | sandbox_verify.txt       |
+| S11      | Container Rev        | Configuration Drift / Static Infra              | PR.DS       | CIS 12     | Integrity    | deploy_web.sh             |
+| S12      | Fleet Orchestr.      | Lateral Movement / Data Breach                  | PR.NW       | CIS 14     | Confidentiality | docker-compose.yml       |
+| TLAB 4   | Cloud Fleet          | Rogue Service Infrastructure                    | ID.GV       | CIS 1      | Accountability | hyperstack_audit.json    |
 
 ---
 
