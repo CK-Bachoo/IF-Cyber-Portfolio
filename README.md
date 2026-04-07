@@ -1,6 +1,6 @@
 # IF-Cyber-Portfolio: Mobile Cybersecurity Workbench
 
-**Built 100% on Samsung Galaxy Note 20 Ultra + Termux + patience **
+**Built 100% on Samsung Galaxy Note 20 Ultra + Termux **
 
 Professional mobile-first Purple Team environment demonstrating Zero Trust principles, network audits, automation scripts, forensic logging, and AI-assisted analysis engineered during The Knowledge House NY Innovation Fellowship (Cohort IF-CS-26).
 
