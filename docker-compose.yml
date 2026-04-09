@@ -1,17 +1,16 @@
-version: '3.8'
 services:
-  wordpress:
-    image: wordpress
-    networks:
-      - frontend
-      - backend
-  db:
-    image: mysql:5.7
-    environment:
-      MYSQL_ROOT_PASSWORD: somesecretpassword
-    networks:
-      - backend
+wordpress:
+image: wordpress:latest
 networks:
-  frontend:
-  backend:
-    internal: true
+- frontend
+- backend
+db:
+image: mysql:5.7
+environment:
+MYSQL_ROOT_PASSWORD: somesecretpassword
+networks:
+- backend
+networks:
+frontend:
+backend:
+internal: true
