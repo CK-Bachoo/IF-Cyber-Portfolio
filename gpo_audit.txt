@@ -1,0 +1,21 @@
+
+Group Policy Audit Report - Session 14
+
+
+
+1. What is the processing order of Group Policy?
+
+Answer: Local, Site, Domain, Organizational Unit (LSDOU).
+
+
+
+2. If a domain policy conflicts with an OU policy, which wins?
+
+Answer: The OU policy wins because it is applied last in the LSDOU sequence, overwriting previous settings.
+
+
+
+3. What does gpupdate /force do?
+
+Answer: It compels an immediate update of all Group Policy settings across the system instead of waiting for the standard background refresh cycle.
+
