@@ -301,25 +301,6 @@ S13 | Automated Onboarding | Identity Provisioning | PR.AC | CIS 5 | Integrity |
     5. Generated a dynamic `hyperstack_audit.json` log capturing the exact container IDs and isolated network IPs.
 
 
-👔 T1-M1-S13: THE CORPORATE BRAIN (Automated Onboarding)
-Data Point | Desktop User (Standard Cohort) | Android Cyber Workbench (Note 20 Ultra)
-Architecture | Heavy Windows Server VM (Local) | Ephemeral Azure Cloud Shell
-Provisioning | GUI-based Active Directory | PowerShell Automation (IaC)
-Environment | Persistent Local Hypervisor | Remote Stateless Execution
-Security Posture | Implicit Trust (Manual) | Enforced Reset (-ChangePasswordAtLogon $true)
-Evidence | N/A | Commit 7320c7a - Automated Engineer Onboarding Script (https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/7320c7a)
-🛡️ Operational Defense Logic (White Hat Auditor Common Questions)
-White Hat Auditor Question: "Why did you build a Windows Server deployment script in an ephemeral Azure Cloud Shell instead of a local VM?"
-Response (Strategic Execution): "Because my primary operational rig is an ARM64 Samsung Note 20 Ultra. Emulating an x86 Windows Server via QEMU or VirtualBox locally introduces massive thermal and compute overhead. I bypassed this hardware constraint by pivoting to an Azure Cloud Shell, allowing me to engineer and deploy the PowerShell automation script natively in a cloud environment before extracting the artifact via GitHub."
-White Hat Auditor Question: "How did you ensure the Active Directory accounts were secure upon creation?"
-Mechanical Proof: "I implemented a programmatic fail-safe using the -ChangePasswordAtLogon $true flag within the New-ADUser loop. This enforces Zero Trust by guaranteeing that the default provisioning password is automatically invalidated the moment the engineer logs in, forcing cryptographic credential rotation."
-🧠 S13 Mission Defense Matrix (Executive Summary)
-Mission Objective: Automate the mass onboarding of engineers into a Sovereign Domain using PowerShell, bypassing slow and error-prone manual GUI creation.
-Technical Mechanics: Executed a cross-cloud staging maneuver. Connected to an Azure Cloud Shell, generated a for loop integrating New-ADUser to populate the OU=Engineering,DC=titan,DC=local Organizational Unit, and secured the payload.
-Mechanical Proof: Authenticated the remote session via a GitHub Personal Access Token (PAT) and pushed the onboard_engineers.ps1 artifact directly to version control before the ephemeral cloud instance destructed.
-
-### S13 | Automated Onboarding | Identity Provisioning | PR.AC | CIS 5 | Integrity | onboard_engineers.ps1
-
 👔 **T1-M1-S13: THE CORPORATE BRAIN (Automated Onboarding)**
 
 | Data Point | Desktop User (Standard Cohort) | Android Cyber Workbench (Note 20 Ultra) |
