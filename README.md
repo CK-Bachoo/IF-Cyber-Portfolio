@@ -52,6 +52,7 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | S11      | Container Rev        | Configuration Drift / Static Infra              | PR.DS       | CIS 12     | Integrity    | deploy_web.sh             |
 | S12      | Fleet Orchestr.      | Lateral Movement / Data Breach                  | PR.NW       | CIS 14     | Confidentiality | docker-compose.yml       |
 | TLAB 4   | Cloud Fleet          | Rogue Service Infrastructure                    | ID.GV       | CIS 1      | Accountability | hyperstack_audit.json    |T1 M1 S13 | Automated Onboarding | Identity Provisioning | PR.AC | CIS 5 | Integrity | onboard_engineers.ps1
+S13 | Automated Onboarding | Identity Provisioning | PR.AC | CIS 5 | Integrity | onboard_engineers.ps1
 ---
 
 ## 📂 Artifact Evidence & Operational History
@@ -276,6 +277,7 @@ Status: S12 Segmented Fleet Active | Air-Gap Verified | Phase 1 Portfolio Locked
 | **Networking** | Host-Only Adapter (VirtualBox) | **Cloud-native dual-network topology** |
 | **Isolation** | Hardware-based VM segregation | **Software Air-Gap via `internal: true` flag** |
 | **Evidence** | N/A | **[Commit 9d02e65 - TLAB 4 Complete](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/9d02e653644bb80c4fd35fd6a5c543fb2d1fef03) (https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/e7446d2280cf0bb12dcdb1cebe231d7ec0c1410c)** |
+S13 | Automated Onboarding | Identity Provisioning | PR.AC | CIS 5 | Integrity | onboard_engineers.ps1
 
 🛡️ **Operational Defense Logic (White Hat Auditor Common Questions)**
 
@@ -315,3 +317,32 @@ Mechanical Proof: "I implemented a programmatic fail-safe using the -ChangePassw
 Mission Objective: Automate the mass onboarding of engineers into a Sovereign Domain using PowerShell, bypassing slow and error-prone manual GUI creation.
 Technical Mechanics: Executed a cross-cloud staging maneuver. Connected to an Azure Cloud Shell, generated a for loop integrating New-ADUser to populate the OU=Engineering,DC=titan,DC=local Organizational Unit, and secured the payload.
 Mechanical Proof: Authenticated the remote session via a GitHub Personal Access Token (PAT) and pushed the onboard_engineers.ps1 artifact directly to version control before the ephemeral cloud instance destructed.
+
+### S13 | Automated Onboarding | Identity Provisioning | PR.AC | CIS 5 | Integrity | onboard_engineers.ps1
+
+👔 **T1-M1-S13: THE CORPORATE BRAIN (Automated Onboarding)**
+
+| Data Point | Desktop User (Standard Cohort) | Android Cyber Workbench (Note 20 Ultra) |
+| --- | --- | --- |
+| Architecture | Heavy Windows Server VM (Local) | Ephemeral Azure Cloud Shell |
+| Provisioning | GUI-based Active Directory | PowerShell Automation (IaC) |
+| Environment | Persistent Local Hypervisor | Remote Stateless Execution |
+| Security Posture | Implicit Trust (Manual) | Enforced Reset (-ChangePasswordAtLogon $true) |
+| Evidence | N/A | [Commit 7320c7a](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/7320c7a) |
+
+🛡️ **Operational Defense Logic (White Hat Auditor Common Questions)**
+
+**White Hat Auditor Question:** "Why did you build a Windows Server deployment script in an ephemeral Azure Cloud Shell instead of a local VM?"
+
+**Response (Strategic Execution):** "Because my primary operational rig is an ARM64 Samsung Note 20 Ultra. Emulating an x86 Windows Server via QEMU or VirtualBox locally introduces massive thermal and compute overhead. I bypassed this hardware constraint by pivoting to an Azure Cloud Shell, allowing me to engineer and deploy the PowerShell automation script natively in a cloud environment before extracting the artifact via GitHub."
+
+**White Hat Auditor Question:** "How did you ensure the Active Directory accounts were secure upon creation?"
+
+**Mechanical Proof:** "I implemented a programmatic fail-safe using the `-ChangePasswordAtLogon $true` flag within the `New-ADUser` loop. This enforces Zero Trust by guaranteeing that the default provisioning password is automatically invalidated the moment the engineer logs in, forcing cryptographic credential rotation."
+
+🧠 **S13 Mission Defense Matrix (Executive Summary)**
+
+* **Mission Objective:** Automate the mass onboarding of engineers into a Sovereign Domain using PowerShell, bypassing slow and error-prone manual GUI creation.
+* **Technical Mechanics:** Executed a cross-cloud staging maneuver. Connected to an Azure Cloud Shell, generated a for loop integrating `New-ADUser` to populate the `OU=Engineering,DC=titan,DC=local` Organizational Unit, and secured the payload.
+* **Mechanical Proof:** Authenticated the remote session via a GitHub Personal Access Token (PAT) and pushed the `onboard_engineers.ps1` artifact directly to version control before the ephemeral cloud instance destructed.
+
