@@ -276,7 +276,7 @@ Status: S12 Segmented Fleet Active | Air-Gap Verified | Phase 1 Portfolio Locked
 | **Provisioning** | Local Docker Desktop GUI | **Mobile-to-Cloud Bridge (Google Cloud Shell)** |
 | **Networking** | Host-Only Adapter (VirtualBox) | **Cloud-native dual-network topology** |
 | **Isolation** | Hardware-based VM segregation | **Software Air-Gap via `internal: true` flag** |
-| **Evidence** | N/A | **[Commit 9d02e65 - TLAB 4 Complete](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/9d02e653644bb80c4fd35fd6a5c543fb2d1fef03) [ ](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/e7446d2280cf0bb12dcdb1cebe231d7ec0c1410c)** |
+| **Evidence** | N/A | **[Commit 9d02e65 - TLAB 4 Complete](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/9d02e653644bb80c4fd35fd6a5c543fb2d1fef03) (https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/e7446d2280cf0bb12dcdb1cebe231d7ec0c1410c)** |
 
 🛡️ **Operational Defense Logic (White Hat Auditor Common Questions)**
 
