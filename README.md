@@ -339,7 +339,7 @@ S13 | Automated Onboarding | Identity Provisioning | PR.AC | CIS 5 | Integrity |
 | **Provisioning** | GUI-based Group Policy Console | Headless CLI Artifact Generation |
 | **Environment** | Resource-Heavy VirtualBox | Lightweight Mobile Sandbox |
 | **Security Posture** | Manual Click-Ops Enforcement | Immutable Policy Documentation |
-| **Evidence** | N/A | ([gpo_audit.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/a617f238f802271db622ce64c8f6de04bbdbb6ad) |
+| **Evidence** | N/A | [gpo_audit.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/a617f238f802271db622ce64c8f6de04bbdbb6ad) |
 
 🛡️ Operational Defense Logic (White Hat Auditor Common Questions)
 
