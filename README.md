@@ -459,29 +459,21 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 * **Explanation:** Successfully completed a timed technical diagnostic by locating, extracting, and locking down sensitive root-owned system artifacts via suppressed error stream interrogation.
 
 ### 🛡️ T1-M1-S18: THE HARDENED OUTPOST (Enterprise Capstone)
+* [Evidence: Capstone Commit](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commits/main)
 
-| Data Point | Desktop User (Standard Cohort) | Android Cyber Workbench (Note 20 Ultra) |
+| Feature | Desktop / Laptop (x86) | Android Cyber Workbench (ARM64) |
 | :--- | :--- | :--- |
-| **Architecture** | Native x86_64 Hardware | **ARM64 Mobile Sandbox (Exynos 990)** |
-| **Provisioning** | Local VirtualBox GUI | **Headless Mobile-to-Cloud Bridge** |
+| **Orchestration** | Local VirtualBox GUI | **Headless Mobile-to-Cloud Bridge** |
 | **Network Isolation** | GUI-Based "Host-Only" Adapter | **Internal Docker Network (Zero Gateway)** |
-| **Evidence** | N/A | **[Commit b17123e](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/b17123e)** |
-| **Audit Logic** | Manual Log Review | **Automated Python Watchdog (dc_auditor.py)** |
+| **Persistence** | VM Snapshot / Save State | **Git Commit Hash / SHA-256 Ledger** |
+| **Audit Logic** | Manual Log Review | **Automated Python Watchdog [dc_auditor.py](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/dc_auditor.py)** |
 | **Hardening Method** | GUI-Based Config Edits | **Sed-Driven CLI Automation** |
 
-🛡️ **Operational Defense Logic (White Hat Auditor Common Questions)**
-
-**White Hat Auditor Question:** "Why did you implement an internal network for the Redis backend instead of just using a local firewall rule?"
-
-**Response:** "Using the `internal: true` flag in Docker Compose provides a more resilient software air-gap. It removes the default gateway from the container at the network driver level. This ensures that even if the Redis service is compromised, the container is physically unable to initiate outbound traffic or reach the public internet, neutralizing the risk of data exfiltration or lateral movement."
-
-**White Hat Auditor Question:** "What is the security justification for disabling password authentication in the SSH lockdown phase?"
-
-**Response:** "Disabling password authentication completely eliminates the risk of automated brute-force attacks and credential harvesting. By enforcing RSA key-based authentication, we ensure that only administrators possessing the physical private key artifact can establish a session, moving the system toward a Zero Trust identity model."
+🛡️ **Operational Defense Logic**
+* **White Hat Auditor Question:** "Why did you implement an internal network for the Redis backend instead of just using a local firewall rule?"
+* **Response:** "Using the `internal: true` flag in Docker Compose provides a more resilient software air-gap. It removes the default gateway from the container at the network driver level. This ensures that even if the Redis service is compromised, the container is physically unable to initiate outbound traffic, neutralizing the risk of data exfiltration."
 
 **🧠 S18 Mission Defense Matrix (Executive Summary)**
 * **Mission Objective:** Solo-deploy a hardened, fully integrated full-stack enterprise environment for Titan Small Business Services.
-
-* **Technical Mechanics:** Executed a tiered hardening protocol including SSH configuration management (PermitRootLogin no), UFW perimeter filtering (8080/tcp), and a Python-based watchdog script (dc_auditor.py) for high availability monitoring.
-
-* **Mechanical Proof:** Orchestrated a segmented container fleet via Docker Compose with a mathematical air-gap. Pushed the final Security Architecture Document (SAD) to GitHub (Commit b17123e), establishing the authoritative record of deployment.
+* **Technical Mechanics:** Executed a tiered hardening protocol including SSH configuration management (PermitRootLogin no), UFW perimeter filtering (8080/tcp), and a Python-based watchdog script (`dc_auditor.py`) for high availability monitoring.
+* **Mechanical Proof:** Orchestrated a segmented container fleet via Docker Compose with a mathematical air-gap. Pushed the final Security Architecture Document (SAD) to GitHub, establishing the authoritative record of deployment.
