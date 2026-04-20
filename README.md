@@ -475,6 +475,8 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 🛡️ **Operational Defense Logic**
 * **White Hat Auditor Question:** "Why did you implement an internal network for the Redis backend instead of just using a local firewall rule?"
 * **Response:** "Using the `internal: true` flag in Docker Compose provides a more resilient software air-gap. It removes the default gateway from the container at the network driver level. This ensures that even if the Redis service is compromised, the container is physically unable to initiate outbound traffic, neutralizing the risk of data exfiltration."
+* **Micro-Segmentation:** The database is isolated on a network with no default gateway, preventing C2 call-backs.
+* **Identity Hardening:** Enforced RSA key-only authentication to mitigate brute-force and credential harvesting risks.
 
 **🧠 S18 Mission Defense Matrix (Executive Summary)**
 * **Mission Objective:** Solo-deploy a hardened, fully integrated full-stack enterprise environment for Titan Small Business Services.
