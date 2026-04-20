@@ -379,7 +379,7 @@ Mechanical Proof: \"I documented the exact inheritance resolution logic (Local, 
 
 **Response:** \"During deployment, my Azure Free Tier hit a hard-coded vCPU quota limit. When pivoting to an AWS EC2 fallback, I encountered critical protocol friction between the Android RDP clipboard and the Windows Server buffer, halting headless script execution. I pivoted to engineer the exact deployment logic as Infrastructure as Code (IaC). This proves mastery of cross-platform AD integration without requiring localized compute resources or relying on buggy GUI fallbacks.\"
 
-🧠 **S15 Mission Defense Matrix (Executive Summary)**
+🧠 **S15 Mission Defense Matrix (Summary)**
 
 * **Mission Objective:** Join the Linux machine to the Active Directory domain and grant Domain Admins root privileges.
 * **Technical Mechanics:** Developed Infrastructure as Code (IaC) scripts for both Windows Domain Controller promotion and Ubuntu Linux domain integration via realmd/sssd.
@@ -418,7 +418,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 **Mechanical Proof:** \"I used `docker ps` to identify the rogue 'ghost_web' container squatting on port 8080. I then executed a targeted `docker rm -f` to forensically evict the process. This immediately freed the bind address for the production HTTPD server, restoring system Availability without inducing downtime.\"
 
-🧠 **S16 Mission Defense Matrix (Executive Summary)**
+🧠 **S16 Mission Defense Matrix (Summary)**
 
 * **Mission Objective:** Diagnose and repair a deliberately sabotaged infrastructure by identifying and resolving configuration failures across multiple OSI layers.
 * **Technical Mechanics:** Executed `chmod 755` to restore script execution rights (L7), evicted a conflicting Nginx container to resolve a port collision (L4), and purged a rogue UFW firewall rule blocking outbound ICMP traffic (L3).
@@ -449,7 +449,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 **Mechanical Proof:** \"I utilized standard error redirection (`2>/dev/null`). By piping the `stderr` stream to the null device, I effectively filtered out the 'Permission Denied' noise from restricted system directories. This allowed me to pinpoint the target `forge_alpha` and `forge_beta` logs instantly, demonstrating a surgical approach to filesystem interrogation.\"
 
-🧠 **S17 Mission Defense Matrix ( Summary)**
+🧠 **S17 Mission Defense Matrix (Summary)**
 * **Mission Objective:** Successfully complete a timed practical diagnostic by locating, extracting, and locking down sensitive root-owned system artifacts.
 * **Technical Mechanics:** Executed `sudo find / -type f -user root -name \"*.log\"` with error suppression to isolate targets. Performed a secure move to the submission directory and applied the `444` permission mask.
 * **Mechanical Proof:** Synchronized the `practical_exam_report.txt` to the GitHub repository (Commit 12df6fa), establishing an authoritative, timestamped record of execution.
