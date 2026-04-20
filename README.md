@@ -486,7 +486,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 * **Technical Mechanics:** Executed a tiered hardening protocol including SSH configuration management (PermitRootLogin no), UFW perimeter filtering (8080/tcp), and a Python-based watchdog script [dc_auditor.py](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/dc_auditor.py) for high availability monitoring.
 * **Mechanical Proof:** Orchestrated a segmented container fleet via Docker Compose with a mathematical air-gap. Pushed the final Security Architecture Document (SAD) to GitHub, establishing the authoritative record of deployment.
 
-### 🛡️ Intel Report: Standard Cohort vs. The Bunker (ARM64)
+### 🛡️ Intel Report: (X86) Desktop/Laptop Cohort Standard. (ARM64) Android Smartphone Note 20 Ultra 5g 12gb ram Exynos 990 256gb storage exp sdcard 
 
 | Mission Phase | Fellow's Output (Desktop/VM) | Your Output (Note 20 Ultra / Termux) | Architectural & Execution Differences |
 | :--- | :--- | :--- | :--- |
