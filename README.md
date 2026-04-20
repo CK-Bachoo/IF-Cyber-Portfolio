@@ -246,7 +246,7 @@ By engineering a **Mobile-to-Cloud Bridge**, I decoupled the Command Layer from 
 | **Isolation** | Standard Exposure | **Verified Layer 3 Air-Gap (Internal: True)** |
 | **Evidence** | N/A | **[docker-compose.yml](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/docker-compose.yml)** |
 
-* **Android cyber Workbench screenshot Status Up:**
+* **Android Cyber Workbench screenshot Status Up:**
 ![S12 Status Up](s12%20status%20up%20screenshot2.png)
 
 🛡️ **Operational Defense Logic (White Hat Auditor Common Questions)**
