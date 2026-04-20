@@ -1,0 +1,8 @@
+HUNT COMMAND:
+sudo find / -type f -name "*.log" -user root 2>/dev/null
+
+EXTRACTION COMMAND:
+sudo find / -type f \( -name "forge_alpha.log" -o -name "forge_beta.log" \) -exec mv {} ~/Exam_Submission/ \; 2>/dev/null
+
+LOCKDOWN COMMAND:
+sudo chmod 444 ~/Exam_Submission/forge_alpha.log ~/Exam_Submission/forge_beta.log
