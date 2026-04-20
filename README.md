@@ -52,12 +52,12 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | S11      | Container Rev        | Configuration Drift / Static Infra              | PR.DS       | CIS 12     | Integrity    | deploy_web.sh             |
 | S12      | Fleet Orchestr.      | Lateral Movement / Data Breach                  | PR.NW       | CIS 14     | Confidentiality | docker-compose.yml       |
 | TLAB 4   | Cloud Fleet          | Rogue Service Infrastructure                    | ID.GV       | CIS 1      | Accountability | hyperstack_audit.json    |
-| S13 | Automated Onboarding | Identity Provisioning | PR.AC | CIS 5 | Integrity | onboard_engineers.ps1 |
-| S14 | Policy Enforcement | Active Directory / GPO | PR.AC | CIS 5 | Integrity | gpo_audit.txt |---
-| S15 | Identity Integration | Cross-Platform AD Join | PR.AC | CIS 5 | Integrity | s15_linux_prep.sh |
-| TLAB 5 | Enterprise Synthesis | Cross-Platform Integration | PR.AC | CIS 5 | Integrity | tlab5_report.txt |
-| S15 | Identity Integration | Cross-Platform AD Join | PR.AC | CIS 5 | Integrity | s15_linux_prep.sh |
-| TLAB 5 | Enterprise Synthesis | Cross-Platform Integration | PR.AC | CIS 5 | Integrity | tlab5_report.txt |
+| S13      | Automated Onboarding | Identity Provisioning                            | PR.AC       | CIS 5      | Integrity    | onboard_engineers.ps1      |
+| S14      | Policy Enforcement   | Active Directory / GPO                           | PR.AC       | CIS 5      | Integrity    | gpo_audit.txt              |
+| S15      | Identity Integration | Cross-Platform AD Join                          | PR.AC       | CIS 5      | Integrity    | s15_linux_prep.sh          |
+| TLAB 5   | Enterprise Synthesis | Cross-Platform Integration                      | PR.AC       | CIS 5      | Integrity    | tlab5_report.txt           |
+
+---
 
 ## 📂 Artifact Evidence & Operational History
 
@@ -269,7 +269,6 @@ Status: S12 Segmented Fleet Active | Air-Gap Verified | Phase 1 Portfolio Locked
 * **Strategic Explanation:** Transitioned from single-container management to full-stack orchestration using Docker Compose. Engineered a segmented network architecture to enforce a micro-segmented air-gap between the public web application and the sensitive database.
 * **Technical Mechanics:** Utilized a YAML configuration to define a dual-network topology (Frontend/Backend). Implemented the `internal: true` flag on the backend network to mathematically suppress the default gateway, preventing any outbound communication from the database container.
 * **Mechanical Proof:** Verified the air-gap via `docker-compose exec db ping google.com`. The resulting `Network is unreachable` error serves as forensic proof that the database is locked in a private, non-routable namespace with zero external exit paths.
-![S12 Orchestration 'Up' Evidence](s12%20status%20up%20screenshot2.png)
 
 ---
 ### 🏰 P1-W4-TLAB-04: Operation Cloud Fleet (Hyper-Stack Architecture)
@@ -280,8 +279,7 @@ Status: S12 Segmented Fleet Active | Air-Gap Verified | Phase 1 Portfolio Locked
 | **Provisioning** | Local Docker Desktop GUI | **Mobile-to-Cloud Bridge (Google Cloud Shell)** |
 | **Networking** | Host-Only Adapter (VirtualBox) | **Cloud-native dual-network topology** |
 | **Isolation** | Hardware-based VM segregation | **Software Air-Gap via `internal: true` flag** |
-| **Evidence** | N/A | **[Commit 9d02e65 - TLAB 4 Complete](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/9d02e653644bb80c4fd35fd6a5c543fb2d1fef03) (https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/e7446d2280cf0bb12dcdb1cebe231d7ec0c1410c)** |
-| S13 | Automated Onboarding | Identity Provisioning | PR.AC | CIS 5 | Integrity | onboard_engineers.ps1 |
+| **Evidence** | N/A | **[Commit 9d02e65 - TLAB 4 Complete](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/9d02e653644bb80c4fd35fd6a5c543fb2d1fef03)** |
 
 🛡️ **Operational Defense Logic (White Hat Auditor Common Questions)**
 
@@ -317,7 +315,7 @@ Status: S12 Segmented Fleet Active | Air-Gap Verified | Phase 1 Portfolio Locked
 
 🛡️ **Operational Defense Logic (White Hat Auditor Common Questions)**
 
-**White Hat Auditor Question:** "Why did you build a Windows Server deployment script in an ephemeral Azure Cloud Shell instead of a local VM?"
+**White Hat Auditor Question:** "Why didn't you build a Windows Server deployment script in an ephemeral Azure Cloud Shell instead of a local VM?"
 
 **Response (Strategic Execution):** "Because my primary operational rig is an ARM64 Samsung Note 20 Ultra. Emulating an x86 Windows Server via QEMU or VirtualBox locally introduces massive thermal and compute overhead. I bypassed this hardware constraint by pivoting to an Azure Cloud Shell, allowing me to engineer and deploy the PowerShell automation script natively in a cloud environment before extracting the artifact via GitHub."
 
@@ -331,11 +329,7 @@ Status: S12 Segmented Fleet Active | Air-Gap Verified | Phase 1 Portfolio Locked
 * **Technical Mechanics:** Executed a cross-cloud staging maneuver. Connected to an Azure Cloud Shell, generated a for loop integrating `New-ADUser` to populate the `OU=Engineering,DC=titan,DC=local` Organizational Unit, and secured the payload.
 * **Mechanical Proof:** Authenticated the remote session via a GitHub Personal Access Token (PAT) and pushed the `onboard_engineers.ps1` artifact directly to version control before the ephemeral cloud instance destructed.
 
-### 👔 T1-M1-S14: The Invisible Hand (Group Policy)
-- **Evidence:** [gpo_audit.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/a617f238f802271db622ce64c8f6de04bbdbb6ad)
-- **Explanation:** Bypassed the x86 Windows Server GUI requirement by documenting LSDOU inheritance and Group Policy enforcement natively via CLI. Defined conflict resolution and gpupdate /force parameters for enterprise environments.
-
-- 👔 T1-M1-S14: THE INVISIBLE HAND (Group Policy)
+### 👔 T1-M1-S14: THE INVISIBLE HAND (Group Policy)
 
 | Data Point | Desktop User (Standard Cohort) | Android Cyber Workbench (Note 20 Ultra) |
 | :--- | :--- | :--- |
@@ -345,15 +339,15 @@ Status: S12 Segmented Fleet Active | Air-Gap Verified | Phase 1 Portfolio Locked
 | **Security Posture** | Manual Click-Ops Enforcement | Immutable Policy Documentation |
 | **Evidence** | N/A | [Commit a617f23](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/a617f238f802271db622ce64c8f6de04bbdbb6ad) |
 
-🛡️ Operational Defense Logic (White Hat Auditor Common Questions)
+🛡️ **Operational Defense Logic (White Hat Auditor Common Questions)**
 
-White Hat Auditor Question: "Why bypass the Windows Server 2022 VM requirement to complete the GPO audit?"
+**White Hat Auditor Question:** "Why bypass the Windows Server 2022 VM requirement to complete the GPO audit?"
 
-Response (Strategic Execution): "The operational objective was to demonstrate mastery of Group Policy Objects (GPO) and the LSDOU inheritance model. Booting a heavy x86 virtual machine on an ARM64 mobile device solely to use a graphical text editor is tactically inefficient. I bypassed the hardware constraint by generating the required intelligence natively in Termux via a `cat << 'EOF'` heredoc sequence, fulfilling the requirement with zero thermal or compute overhead."
+**Response (Strategic Execution):** "The operational objective was to demonstrate mastery of Group Policy Objects (GPO) and the LSDOU inheritance model. Booting a heavy x86 virtual machine on an ARM64 mobile device solely to use a graphical text editor is tactically inefficient. I bypassed the hardware constraint by generating the required intelligence natively in Termux via a `cat << 'EOF'` heredoc sequence, fulfilling the requirement with zero thermal or compute overhead."
 
-White Hat Auditor Question: "How did you prove understanding of policy enforcement without the GUI?"
+**White Hat Auditor Question:** "How did you prove understanding of policy enforcement without the GUI?"
 
-Mechanical Proof: "I documented the exact inheritance resolution logic (Local, Site, Domain, OU) and the command-line trigger (`gpupdate /force`) required to push policies to endpoints. Articulating the technical mechanics programmatically proves mastery of the underlying framework without relying on graphical training wheels."
+**Mechanical Proof:** "I documented the exact inheritance resolution logic (Local, Site, Domain, OU) and the command-line trigger (`gpupdate /force`) required to push policies to endpoints. Articulating the technical mechanics programmatically proves mastery of the underlying framework without relying on graphical training wheels."
 
 🧠 S14 Mission Defense Matrix (Executive Summary)
 
@@ -363,35 +357,30 @@ Mechanical Proof: "I documented the exact inheritance resolution logic (Local, S
 
 ### 👔 T1-M1-S15: BRIDGING THE KINGDOMS (The Final Handshake)
 
-| Data Point | Standard Cohort | Android Cyber Workbench |
-| :--- | :--- | :--- |
-| **Architecture** | Heavy VMs | Ephemeral Cloud Shell / IaC |
-| **Constraint** | N/A | Azure vCPU Quotas & Mobile RDP Protocol Friction |
-| **Evidence** | `unified_identity.png` | Infrastructure as Code [s15_win_prep.ps1](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/s15_win_prep.ps1) & [s15_linux_prep.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/s15_linux_prep.sh ) |
-
-🛡️ Operational Defense Logic:
-"During deployment, my Azure Free Tier hit a hard-coded vCPU quota limit. When pivoting to an AWS EC2 fallback, I encountered critical protocol friction between the Android RDP clipboard and the Windows Server buffer, halting headless script execution. I pivoted to engineer the exact deployment logic as Infrastructure as Code (IaC). This proves mastery of cross-platform AD integration without requiring localized compute resources or relying on buggy GUI fallbacks."
-
-🧠 S15 Mission Defense Matrix (Executive Summary)
-
-* Mission Objective: Join the Linux machine to the Active Directory domain and grant Domain Admins root privileges.
-* Technical Mechanics: Developed Infrastructure as Code (IaC) scripts for both Windows Domain Controller promotion and Ubuntu Linux domain integration via realmd/sssd.
-* Mechanical Proof: Pushed s15_win_prep.ps1 and s15_linux_prep.sh to the repository to document the required integration logic after identifying cloud infrastructure bottlenecks.
-
----
-
-### 👔 T1-M1-S15: BRIDGING THE KINGDOMS (The Final Handshake)
+* [Evidence 1: s15_win_prep.ps1](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/s15_win_prep.ps1)
+* [Evidence 2: s15_linux_prep.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/s15_linux_prep.sh)
 
 | Data Point | Standard Cohort | Android Cyber Workbench |
 | :--- | :--- | :--- |
 | **Architecture** | Heavy VMs | Ephemeral Cloud Shell / IaC |
 | **Constraint** | N/A | Azure vCPU Quotas & Mobile RDP Protocol Friction |
-| **Evidence** | `unified_identity.png` | Infrastructure as Code (`s15_win_prep.ps1` & `s15_linux_prep.sh`) |
+| **Evidence** | `unified_identity.png` | Infrastructure as Code [s15_win_prep.ps1](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/s15_win_prep.ps1) & [s15_linux_prep.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/s15_linux_prep.sh) |
 
-**🛡️ Operational Defense Logic:**
-"During deployment, my Azure Free Tier hit a hard-coded vCPU quota limit. When pivoting to an AWS EC2 fallback, I encountered critical protocol friction between the Android RDP clipboard and the Windows Server buffer, halting headless script execution. I pivoted to engineer the exact deployment logic as Infrastructure as Code (IaC). This proves mastery of cross-platform AD integration without requiring localized compute resources or relying on buggy GUI fallbacks."
+🛡️ **Operational Defense Logic (White Hat Auditor Common Questions)**
+
+**White Hat Auditor Question:** "Why pivot from a live lab environment to an Infrastructure as Code (IaC) submission for the domain join?"
+
+**Response:** "During deployment, my Azure Free Tier hit a hard-coded vCPU quota limit. When pivoting to an AWS EC2 fallback, I encountered critical protocol friction between the Android RDP clipboard and the Windows Server buffer, halting headless script execution. I pivoted to engineer the exact deployment logic as Infrastructure as Code (IaC). This proves mastery of cross-platform AD integration without requiring localized compute resources or relying on buggy GUI fallbacks."
+
+🧠 **S15 Mission Defense Matrix (Executive Summary)**
+
+* **Mission Objective:** Join the Linux machine to the Active Directory domain and grant Domain Admins root privileges.
+* **Technical Mechanics:** Developed Infrastructure as Code (IaC) scripts for both Windows Domain Controller promotion and Ubuntu Linux domain integration via realmd/sssd.
+* **Mechanical Proof:** Pushed s15_win_prep.ps1 and s15_linux_prep.sh to the repository to document the required integration logic after identifying cloud infrastructure bottlenecks.
 
 ### 🛡️ TLAB-05: OPERATION UNIFIED FRONT (Enterprise Synthesis)
+
+* [Evidence: tlab5_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/tlab5_report.txt)
 
 | Data Point | Standard Cohort | Android Cyber Workbench |
 | :--- | :--- | :--- |
@@ -399,7 +388,6 @@ Mechanical Proof: "I documented the exact inheritance resolution logic (Local, S
 | **Verification** | PowerShell Audit Script | Manual Architectural Integrity Check |
 | **Artifacts** | `tlab5_report.txt` | `tlab5_report.txt` (IaC Validation) |
 
-**🛡️ TLAB-05 Technical Analysis:**
+🛡️ **TLAB-05 Technical Analysis:**
 Synthesized the Week 5 Identity track by validating the cross-platform handshake between Windows and Linux. Verified that the administrative identities created in Session 13 and enforced in Session 14 were successfully mapped to the Ubuntu environment. This completion marks the final synthesis of the Identity & Enterprise module, proving that a mobile-native architecture can maintain full governance and control over complex, cross-domain infrastructures.
-
----
+EOF
