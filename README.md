@@ -459,7 +459,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 * **Explanation:** Successfully completed a timed technical diagnostic by locating, extracting, and locking down sensitive root-owned system artifacts via suppressed error stream interrogation.
 
 ### 🛡️ T1-M1-S18: THE HARDENED OUTPOST (Enterprise Capstone)
-* [Evidence: Capstone Commit](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commits/main)
+* [Evidence: Capstone Commit](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/bcd5d22faac9d35e5016e4cca17c7a7c3ea1e9f6)
 
 | Feature | Desktop / Laptop (x86) | Android Cyber Workbench (ARM64) |
 | :--- | :--- | :--- |
