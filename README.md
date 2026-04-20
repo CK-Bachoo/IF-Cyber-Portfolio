@@ -364,7 +364,7 @@ Mechanical Proof: "I documented the exact inheritance resolution logic (Local, S
 | :--- | :--- | :--- |
 | **Architecture** | Heavy VMs | Ephemeral Cloud Shell / IaC |
 | **Constraint** | N/A | Azure vCPU Quotas & Mobile RDP Protocol Friction |
-| **Evidence** | `unified_identity.png` | Infrastructure as Code ([s15_win_prep.ps1](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/s15_win_prep.ps1) & [s15_linux_prep.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/s15_linux_prep.sh ) |
+| **Evidence** | `unified_identity.png` | Infrastructure as Code [s15_win_prep.ps1](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/s15_win_prep.ps1) & [s15_linux_prep.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/s15_linux_prep.sh ) |
 
 🛡️ Operational Defense Logic:
 "During deployment, my Azure Free Tier hit a hard-coded vCPU quota limit. When pivoting to an AWS EC2 fallback, I encountered critical protocol friction between the Android RDP clipboard and the Windows Server buffer, halting headless script execution. I pivoted to engineer the exact deployment logic as Infrastructure as Code (IaC). This proves mastery of cross-platform AD integration without requiring localized compute resources or relying on buggy GUI fallbacks."
