@@ -1,11 +1,15 @@
 [ SESSION 16: TITAN INFRASTRUCTURE RESTORATION ]
-​Anomaly 1 (Layer 7): Permission Lockout.
+
+Anomaly 1 (Layer 7): Permission Lockout.
 Status: RESOLVED. Executed 'chmod 755 broken_script.sh'.
 Result: Heartbeat detected.
-​Anomaly 2 (Layer 4): Port Collision.
+
+Anomaly 2 (Layer 4): Port Collision.
 Status: RESOLVED. Evicted 'ghost_web' (Nginx) squatting on Port 8080.
 Result: Apache httpd successfully bound to production port.
-​Anomaly 3 (Layer 3): Network Isolation.
+
+Anomaly 3 (Layer 3): Network Isolation.
 Status: RESOLVED. Deleted UFW Deny rule blocking outbound ICMP.
 Result: Verified 0% packet loss to 8.8.8.8.
-​Final System Readiness: 100% OPERATIONAL.
+
+Final System Readiness: 100% OPERATIONAL.
