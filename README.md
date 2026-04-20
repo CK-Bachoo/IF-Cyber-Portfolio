@@ -56,6 +56,7 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | S14      | Policy Enforcement   | Active Directory / GPO                           | PR.AC       | CIS 5      | Integrity    | gpo_audit.txt              |
 | S15      | Identity Integration | Cross-Platform AD Join                          | PR.AC       | CIS 5      | Integrity    | s15_linux_prep.sh          |
 | TLAB 5   | Enterprise Synthesis | Cross-Platform Integration                      | PR.AC       | CIS 5      | Integrity    | tlab5_report.txt           |
+| S16      | OSI Troubleshooting  | Configuration Sabotage / Isolation               | RS.MI       | CIS 4      | Availability | readiness_check.log        |
 
 ---
 
@@ -329,7 +330,11 @@ Status: S12 Segmented Fleet Active | Air-Gap Verified | Phase 1 Portfolio Locked
 * **Technical Mechanics:** Executed a cross-cloud staging maneuver. Connected to an Azure Cloud Shell, generated a for loop integrating `New-ADUser` to populate the `OU=Engineering,DC=titan,DC=local` Organizational Unit, and secured the payload.
 * **Mechanical Proof:** Authenticated the remote session via a GitHub Personal Access Token (PAT) and pushed the `onboard_engineers.ps1` artifact directly to version control before the ephemeral cloud instance destructed.
 
-### 👔 T1-M1-S14: THE INVISIBLE HAND (Group Policy)
+### 👔 T1-M1-S14: The Invisible Hand (Group Policy)
+- **Evidence:** [gpo_audit.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/a617f238f802271db622ce64c8f6de04bbdbb6ad)
+- **Explanation:** Bypassed the x86 Windows Server GUI requirement by documenting LSDOU inheritance and Group Policy enforcement natively via CLI. Defined conflict resolution and gpupdate /force parameters for enterprise environments.
+
+- 👔 T1-M1-S14: THE INVISIBLE HAND (Group Policy)
 
 | Data Point | Desktop User (Standard Cohort) | Android Cyber Workbench (Note 20 Ultra) |
 | :--- | :--- | :--- |
@@ -339,15 +344,15 @@ Status: S12 Segmented Fleet Active | Air-Gap Verified | Phase 1 Portfolio Locked
 | **Security Posture** | Manual Click-Ops Enforcement | Immutable Policy Documentation |
 | **Evidence** | N/A | [Commit a617f23](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/a617f238f802271db622ce64c8f6de04bbdbb6ad) |
 
-🛡️ **Operational Defense Logic (White Hat Auditor Common Questions)**
+🛡️ Operational Defense Logic (White Hat Auditor Common Questions)
 
-**White Hat Auditor Question:** "Why bypass the Windows Server 2022 VM requirement to complete the GPO audit?"
+White Hat Auditor Question: "Why bypass the Windows Server 2022 VM requirement to complete the GPO audit?"
 
-**Response (Strategic Execution):** "The operational objective was to demonstrate mastery of Group Policy Objects (GPO) and the LSDOU inheritance model. Booting a heavy x86 virtual machine on an ARM64 mobile device solely to use a graphical text editor is tactically inefficient. I bypassed the hardware constraint by generating the required intelligence natively in Termux via a `cat << 'EOF'` heredoc sequence, fulfilling the requirement with zero thermal or compute overhead."
+Response (Strategic Execution): "The operational objective was to demonstrate mastery of Group Policy Objects (GPO) and the LSDOU inheritance model. Booting a heavy x86 virtual machine on an ARM64 mobile device solely to use a graphical text editor is tactically inefficient. I bypassed the hardware constraint by generating the required intelligence natively in Termux via a `cat << 'EOF'` heredoc sequence, fulfilling the requirement with zero thermal or compute overhead."
 
-**White Hat Auditor Question:** "How did you prove understanding of policy enforcement without the GUI?"
+White Hat Auditor Question: "How did you prove understanding of policy enforcement without the GUI?"
 
-**Mechanical Proof:** "I documented the exact inheritance resolution logic (Local, Site, Domain, OU) and the command-line trigger (`gpupdate /force`) required to push policies to endpoints. Articulating the technical mechanics programmatically proves mastery of the underlying framework without relying on graphical training wheels."
+Mechanical Proof: "I documented the exact inheritance resolution logic (Local, Site, Domain, OU) and the command-line trigger (`gpupdate /force`) required to push policies to endpoints. Articulating the technical mechanics programmatically proves mastery of the underlying framework without relying on graphical training wheels."
 
 🧠 S14 Mission Defense Matrix (Executive Summary)
 
@@ -386,8 +391,33 @@ Status: S12 Segmented Fleet Active | Air-Gap Verified | Phase 1 Portfolio Locked
 | :--- | :--- | :--- |
 | **Environment** | Local VirtualBox VMs | ARM64 Termux Subsystem |
 | **Verification** | PowerShell Audit Script | Manual Architectural Integrity Check |
-| **Artifacts** | `tlab5_report.txt` |  [tlab5_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/tlab5_report.txt)IaC Validation) |
+| **Artifacts** | `tlab5_report.txt` | `tlab5_report.txt` (IaC Validation) |
 
 🛡️ **TLAB-05 Technical Analysis:**
 Synthesized the Week 5 Identity track by validating the cross-platform handshake between Windows and Linux. Verified that the administrative identities created in Session 13 and enforced in Session 14 were successfully mapped to the Ubuntu environment. This completion marks the final synthesis of the Identity & Enterprise module, proving that a mobile-native architecture can maintain full governance and control over complex, cross-domain infrastructures.
-EOF
+
+### 🛡️ T1-M1-S16: THE ARCHITECT'S WAR ROOM (OSI Troubleshooting)
+
+* [Evidence: readiness_check.log](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/readiness_check.log)
+
+| Data Point | Standard Cohort | Android Cyber Workbench |
+| :--- | :--- | :--- |
+| **Environment** | Local VirtualBox VMs | Ephemeral Cloud Shell Bridge |
+| **Verification** | GUI Network Diagnostics | Headless CLI Interrogation |
+| **Artifacts** | `readiness_check.log` | `readiness_check.log` (Cloud Sync) |
+
+🛡️ **Operational Defense Logic (White Hat Auditor Common Questions)**
+
+**White Hat Auditor Question:** "Why did you approach the system failures using the 'Outside-In' methodology?"
+
+**Response:** "Operating from a mobile-native CLI removes the luxury of graphical network mapping. By systematically diagnosing Layer 7 (file permissions), Layer 4 (TCP port collisions), and Layer 3 (ICMP routing blocks), I mathematically isolated the anomalies rather than guessing. This proves an architectural understanding of the Linux networking stack."
+
+**White Hat Auditor Question:** "How did you remediate the Docker port conflict without rebooting the host?"
+
+**Mechanical Proof:** "I used `docker ps` to identify the rogue 'ghost_web' container squatting on port 8080. I then executed a targeted `docker rm -f` to forensically evict the process. This immediately freed the bind address for the production HTTPD server, restoring system Availability without inducing downtime."
+
+🧠 **S16 Mission Defense Matrix (Executive Summary)**
+
+* **Mission Objective:** Diagnose and repair a deliberately sabotaged infrastructure by identifying and resolving configuration failures across multiple OSI layers.
+* **Technical Mechanics:** Executed `chmod 755` to restore script execution rights (L7), evicted a conflicting Nginx container to resolve a port collision (L4), and purged a rogue UFW firewall rule blocking outbound ICMP traffic (L3).
+* **Mechanical Proof:** Pushed `readiness_check.log` detailing the successful restoration of the system heartbeat, confirming 100% operational status.
