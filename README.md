@@ -58,7 +58,7 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | TLAB 5   | Enterprise Synthesis | Cross-Platform Integration                      | PR.AC       | CIS 5      | Integrity    | tlab5_report.txt           |
 | S16      | OSI Troubleshooting  | Configuration Sabotage / Isolation               | RS.MI       | CIS 4      | Availability | readiness_check.log        |
 | S17      | Technical Diagnostic  | Privilege Management / Log Security              | PR.DS       | CIS 3      | Integrity    | practical_exam_report.txt |
-| S18      | Enterprise Capstone  | Lateral Movement / Infrastructure Breach        | PR.PS       | CIS 4      | All Tiers     | [HardenedOutpost_SAD.pdf] |
+| S18      | Enterprise Capstone  | Lateral Movement / Infrastructure Breach        | PR.PS       | CIS 4      | All Tiers     | [HardenedOutpost_SAD.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/HardenedOutpost_SAD.md) |
 
 ---
 
