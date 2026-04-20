@@ -386,7 +386,7 @@ Status: S12 Segmented Fleet Active | Air-Gap Verified | Phase 1 Portfolio Locked
 | :--- | :--- | :--- |
 | **Environment** | Local VirtualBox VMs | ARM64 Termux Subsystem |
 | **Verification** | PowerShell Audit Script | Manual Architectural Integrity Check |
-| **Artifacts** | `tlab5_report.txt` | `tlab5_report.txt` (IaC Validation) |
+| **Artifacts** | `tlab5_report.txt` |  [tlab5_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/tlab5_report.txt)IaC Validation) |
 
 🛡️ **TLAB-05 Technical Analysis:**
 Synthesized the Week 5 Identity track by validating the cross-platform handshake between Windows and Linux. Verified that the administrative identities created in Session 13 and enforced in Session 14 were successfully mapped to the Ubuntu environment. This completion marks the final synthesis of the Identity & Enterprise module, proving that a mobile-native architecture can maintain full governance and control over complex, cross-domain infrastructures.
