@@ -424,6 +424,10 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 * **Technical Mechanics:** Executed `chmod 755` to restore script execution rights (L7), evicted a conflicting Nginx container to resolve a port collision (L4), and purged a rogue UFW firewall rule blocking outbound ICMP traffic (L3).
 * **Mechanical Proof:** Pushed `readiness_check.log` detailing the successful restoration of the system heartbeat, confirming 100% operational status.
 
+### 🛠️ T1-M1-S16: OSI Troubleshooting
+* [Evidence: Commit ffb9eb5](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/ffb9eb5)
+* **Explanation:** Diagnosed and repaired a deliberately sabotaged infrastructure by resolving configuration failures across OSI Layers 3, 4, and 7.
+
 ### 🛡️ T1-M1-S17: THE FORGE FINAL (Technical Diagnostic)
 
 * [Evidence: practical_exam_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/practical_exam_report.txt)
@@ -451,18 +455,17 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 * **Mechanical Proof:** Synchronized the `practical_exam_report.txt` to the GitHub repository (Commit 12df6fa), establishing an authoritative, timestamped record of execution.
 
 ### 🛠️ T1-M1-S17: THE FORGE FINAL (Technical Diagnostic)
-* [Evidence: practical_exam_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/practical_exam_report.txt)
+* [Evidence: Commit 586994e](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/586994e)
 * **Explanation:** Successfully completed a timed technical diagnostic by locating, extracting, and locking down sensitive root-owned system artifacts via suppressed error stream interrogation.
 
 ### 🛡️ T1-M1-S18: THE HARDENED OUTPOST (Enterprise Capstone)
-​Evidence: Final Deployment Commit
 
 | Data Point | Desktop User (Standard Cohort) | Android Cyber Workbench (Note 20 Ultra) |
 | :--- | :--- | :--- |
 | **Architecture** | Native x86_64 Hardware | **ARM64 Mobile Sandbox (Exynos 990)** |
 | **Provisioning** | Local VirtualBox GUI | **Headless Mobile-to-Cloud Bridge** |
 | **Network Isolation** | GUI-Based "Host-Only" Adapter | **Internal Docker Network (Zero Gateway)** |
-| **Persistence** | VM Snapshot / Save State | **Git Commit Hash / SHA-256 Ledger** |
+| **Evidence** | N/A | **[Commit b17123e](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/b17123e)** |
 | **Audit Logic** | Manual Log Review | **Automated Python Watchdog (dc_auditor.py)** |
 | **Hardening Method** | GUI-Based Config Edits | **Sed-Driven CLI Automation** |
 
@@ -470,7 +473,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 **White Hat Auditor Question:** "Why did you implement an internal network for the Redis backend instead of just using a local firewall rule?"
 
-**Response:** "Using the internal: true flag in Docker Compose provides a more resilient software air-gap. It removes the default gateway from the container at the network driver level. This ensures that even if the Redis service is compromised, the container is physically unable to initiate outbound traffic or reach the public internet, neutralizing the risk of data exfiltration or lateral movement."
+**Response:** "Using the `internal: true` flag in Docker Compose provides a more resilient software air-gap. It removes the default gateway from the container at the network driver level. This ensures that even if the Redis service is compromised, the container is physically unable to initiate outbound traffic or reach the public internet, neutralizing the risk of data exfiltration or lateral movement."
 
 **White Hat Auditor Question:** "What is the security justification for disabling password authentication in the SSH lockdown phase?"
 
