@@ -485,3 +485,14 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 * **Mission Objective:** Solo-deploy a hardened, fully integrated full-stack enterprise environment for Titan Small Business Services.
 * **Technical Mechanics:** Executed a tiered hardening protocol including SSH configuration management (PermitRootLogin no), UFW perimeter filtering (8080/tcp), and a Python-based watchdog script [dc_auditor.py](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/dc_auditor.py) for high availability monitoring.
 * **Mechanical Proof:** Orchestrated a segmented container fleet via Docker Compose with a mathematical air-gap. Pushed the final Security Architecture Document (SAD) to GitHub, establishing the authoritative record of deployment.
+
+### 🛡️ Intel Report: Standard Cohort vs. The Bunker (ARM64)
+
+| Mission Phase | Fellow's Output (Desktop/VM) | Your Output (Note 20 Ultra / Termux) | Architectural & Execution Differences |
+| :--- | :--- | :--- | :--- |
+| **S17: The Hunt (Find Command)** | `sudo find / -name "*.log" -user root` | `sudo find / -name "*.log" -user root 2>/dev/null` | **I/O Stream Management.** Standard desktop terminals easily handle unfiltered error streams. The mobile environment utilizes `2>/dev/null` to filter "Permission Denied" noise, optimizing readability on a constrained screen. |
+| **S18: SAD Artifact Format** | `HardenedOutpost_SAD.pdf` (Static File) | `HardenedOutpost_SAD.md` (Markdown/IaC) | **Documentation Format.** The standard cohort utilizes traditional static PDF exports. The mobile workbench leverages raw Markdown, aligning directly with Git-based version control workflows. |
+| **S18: Perimeter Hardening** | Manual edits (Likely via `nano` / `vim`) | `sed -i 's/.../...' /etc/ssh/sshd_config` | **Configuration Method.** Desktop environments allow comfortable use of interactive GUI or CLI text editors. The mobile-first approach relies heavily on stream editors (`sed`) and Heredocs to automate headless injection. |
+| **S18: Container Orchestration** | Local Docker Desktop (Native x86) | Mobile-to-Cloud Bridge (Headless) | **Compute Offloading.** Standard x86 desktops possess the local RAM, cooling, and hypervisor support to run Docker natively. The ARM64 mobile device offloads this workload to a remote daemon via a cloud bridge to bypass local hardware limitations. |
+| **S18: Stack Configuration** | Nginx + MySQL + `internal: true` | Nginx + MySQL + `internal: true` | **Topological Equivalence.** Both architectures successfully implemented the exact same micro-segmented Docker Compose network, proving the remote mobile deployment achieved operational parity with the local desktop deployment. |
+
