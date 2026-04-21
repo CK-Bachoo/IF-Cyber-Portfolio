@@ -507,4 +507,4 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 🛡️ **Operational Defense Logic**
 * **Passive Reconnaissance:** Utilized third-party datasets (Shodan, HaveIBeenPwned, Sublist3r) to map the target's attack surface without sending direct packets, ensuring zero attribution or alarm triggers on the target's perimeter.
-* **Architectural Bypass:** When the TA's evaluation script (`session-submit`) was blocked by the Android/Termux security model (no `sudo`), an ephemeral Google Cloud Shell instance was deployed to execute the submission securely, demonstrating adaptability in constrained environments.
+* **Architectural Bypass:** When the evaluation script (`session-submit`) was blocked by the Android/Termux security model (no `sudo`), an ephemeral Google Cloud Shell instance was deployed to execute the submission securely, demonstrating adaptability in constrained environments.
