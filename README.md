@@ -27,8 +27,7 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 
 ---
 
-## 🏗️ Architecture Pipeline
-**Note 20 Ultra** → **Termux (Dual Terminal)** → **Google Cloud Shell (Chrome Mobile)** → **GitHub** → **Canvas**
+**The Mobile-to-Cloud Bridge:** `Note 20 Ultra` → `Termux (Dual Terminal / PRoot)` → `Google Cloud Shell / Azure` → `GitHub`
 
 ---
 
