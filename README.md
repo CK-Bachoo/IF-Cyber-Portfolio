@@ -59,6 +59,7 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | S16      | OSI Troubleshooting  | Configuration Sabotage / Isolation               | RS.MI       | CIS 4      | Availability | readiness_check.log        |
 | S17      | Technical Diagnostic  | Privilege Management / Log Security              | PR.DS       | CIS 3      | Integrity    | practical_exam_report.txt |
 | S18      | Enterprise Capstone  | Lateral Movement / Infrastructure Breach        | PR.PS       | CIS 4      | All Tiers     | [HardenedOutpost_SAD.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/HardenedOutpost_SAD.md) |
+| S19      | OSINT & Passive Recon | Attack Surface Mapping / Data Leakage           | ID.RA       | CIS 2      | Confidentiality | [ThreatProfile_CloudNano.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/e267d6948ef9000a5aecd23dc42e2ea815817942) |
 
 ---
 
