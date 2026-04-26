@@ -60,6 +60,7 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | S18      | Enterprise Capstone  | Lateral Movement / Infrastructure Breach        | PR.PS       | CIS 4      | All Tiers     | [HardenedOutpost_SAD.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/HardenedOutpost_SAD.md) |
 | S19      | OSINT & Passive Recon | Attack Surface Mapping / Data Leakage           | ID.RA       | CIS 2      | Confidentiality | [ThreatProfile_CloudNano.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/e267d6948ef9000a5aecd23dc42e2ea815817942) |
 | S20      | Network Enumeration  | Active Reconnaissance / Service Discovery        | ID.RA       | CIS 12     | Confidentiality | [nmap_scan_results.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/nmap_scan_results.txt) |---
+| S21      | Vulnerability Triage  | Web Application Scanning / Risk Prioritization   | ID.RA       | CIS 7      | All Tiers     | [remediation_plan.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/remediation_plan.md) |
 
 ## 📂 Artifact Evidence & Operational History
 
@@ -536,3 +537,34 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
     * **Target Beta (172.99.0.6):** Port 6379/tcp — Redis key-value store 8.6.2
     * **Target Gamma (172.99.0.7):** Port 80/tcp — Apache httpd 2.4.66 (Unix)
 * **Mechanical Proof:** Documented all findings in `nmap_scan_results.txt`, pushed to GitHub (Commit a6e1a6a), establishing a cryptographic audit trail of the enumeration operation.
+
+### 🛡️ T1-M1-S21: THE PRIORITIZATION MATRIX (Vulnerability Triage)
+* [Evidence: remediation_plan.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/remediation_plan.md)
+
+| Feature | Desktop / Laptop (x86) | Android Cyber Workbench (ARM64) |
+| :--- | :--- | :--- |
+| **Execution Environment** | Local Ubuntu VM | **Ephemeral Google Cloud Shell Bridge** |
+| **Scanner** | Nikto v2.1.5 | **Nikto v2.1.5 (Cloud-installed)** |
+| **Submission Mechanism** | Native `session-submit` | **Cloud Pivot Bypass + Git Push** |
+| **Artifact** | `remediation_plan.md` | **[remediation_plan.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/remediation_plan.md)** |
+
+🛡️ **Operational Defense Logic (White Hat Auditor Common Questions)**
+
+**White Hat Auditor Question:** "Why did you deprioritize the CVSS 10.0 finding in favor of lower-scored vulnerabilities?"
+
+**Response:** "CVSS scores measure technical severity in isolation — they do not account for business context. The CVSS 10.0 finding (default credentials on an internal router) exists on an air-gapped network with no physical access, making exploitation probability near-zero. In contrast, the unauthenticated S3 bucket containing customer PII is publicly accessible right now, creating immediate regulatory liability under GDPR and CCPA. Risk = Likelihood x Impact. A reachable vulnerability with high impact always outranks an unreachable one regardless of its score."
+
+**White Hat Auditor Question:** "How did you run Nikto on the Note 20 Ultra without a local Ubuntu VM?"
+
+**Mechanical Proof:** "Samsung Knox blocks the raw socket access and package dependencies required by Nikto natively. I provisioned the target web server and executed the Nikto scan entirely within Google Cloud Shell — an ephemeral x86_64 Ubuntu environment accessible via Chrome Mobile. The scan completed in 11 seconds, flagged 11 findings including exposed /config/ and /docs/ directories, missing security headers, and an exposed admin login page, all of which informed my triage methodology."
+
+🧠 **S21 Mission Defense Matrix (Executive Summary)**
+* **Mission Objective:** Execute an automated web audit against a vulnerable target, then apply risk-based triage to identify the 5 highest-priority vulnerabilities from 20 raw findings using Risk = Likelihood x Impact methodology.
+* **Technical Mechanics:** Provisioned the vulnerable web server via the TA script, executed `nikto -h http://127.0.0.1:8080` to generate live scan data, reviewed 20 raw Nessus/OpenVAS findings from `~/CloudNano_Audit/raw_scan_results.txt`, and applied business-context risk scoring to select the final 5.
+* **Triage Results (Priority Order):**
+    1. **Unauthenticated AWS S3 Bucket (PII)** — publicly accessible, immediate regulatory impact
+    2. **RCE in Apache Struts (Internet-Facing)** — near-certain exploitation likelihood, full server compromise
+    3. **SQL Injection in Login Page (Customer DB)** — direct path to data exfiltration
+    4. **XSS on Support Forum (Public-Facing)** — session hijacking at scale on trusted surface
+    5. **Outdated PHP 5.4 (Marketing Blog)** — end-of-life, public-facing pivot point
+* **Mechanical Proof:** Documented triage in `remediation_plan.md`, pushed to GitHub (Commit 0387cdd), establishing an immutable audit record of the prioritization decision.
