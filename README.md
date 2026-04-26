@@ -61,7 +61,7 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | S19      | OSINT & Passive Recon | Attack Surface Mapping / Data Leakage           | ID.RA       | CIS 2      | Confidentiality | [ThreatProfile_CloudNano.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/e267d6948ef9000a5aecd23dc42e2ea815817942) |
 | S20      | Network Enumeration  | Active Reconnaissance / Service Discovery        | ID.RA       | CIS 12     | Confidentiality | [nmap_scan_results.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/nmap_scan_results.txt) |---
 | S21      | Vulnerability Triage  | Web Application Scanning / Risk Prioritization   | ID.RA       | CIS 7      | All Tiers     | [remediation_plan.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/remediation_plan.md) |
-| TLAB w7  | Perimeter Assessment | Active Recon / Vulnerability Audit / Risk Triage | ID.RA       | CIS 7      | All Tiers     | [Perimeter_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Perimeter_Assessment.md) |
+| TLAB 7 w7| Perimeter Assessment | Active Recon / Vulnerability Audit / Risk Triage | ID.RA       | CIS 7      | All Tiers     | [Perimeter_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Perimeter_Assessment.md) |
 
 ## 📂 Artifact Evidence & Operational History
 
