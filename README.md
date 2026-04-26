@@ -57,11 +57,11 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | TLAB 5   | Enterprise Synthesis | Cross-Platform Integration                      | PR.AC       | CIS 5      | Integrity    | tlab5_report.txt           |
 | S16      | OSI Troubleshooting  | Configuration Sabotage / Isolation               | RS.MI       | CIS 4      | Availability | readiness_check.log        |
 | S17      | Technical Diagnostic  | Privilege Management / Log Security              | PR.DS       | CIS 3      | Integrity    | practical_exam_report.txt |
-| S18      | Enterprise Capstone  | Lateral Movement / Infrastructure Breach        | PR.PS       | CIS 4      | All Tiers     | [HardenedOutpost_SAD.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/HardenedOutpost_SAD.md) |
+| S18 Cap. | Enterprise Capstone  | Lateral Movement / Infrastructure Breach        | PR.PS       | CIS 4      | All Tiers     | [HardenedOutpost_SAD.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/HardenedOutpost_SAD.md) |
 | S19      | OSINT & Passive Recon | Attack Surface Mapping / Data Leakage           | ID.RA       | CIS 2      | Confidentiality | [ThreatProfile_CloudNano.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/e267d6948ef9000a5aecd23dc42e2ea815817942) |
 | S20      | Network Enumeration  | Active Reconnaissance / Service Discovery        | ID.RA       | CIS 12     | Confidentiality | [nmap_scan_results.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/nmap_scan_results.txt) |---
 | S21      | Vulnerability Triage  | Web Application Scanning / Risk Prioritization   | ID.RA       | CIS 7      | All Tiers     | [remediation_plan.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/remediation_plan.md) |
-| TLAB 7 w7| Perimeter Assessment | Active Recon / Vulnerability Audit / Risk Triage | ID.RA       | CIS 7      | All Tiers     | [Perimeter_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Perimeter_Assessment.md) |
+| TLAB W7  | Perimeter Assessment | Active Recon / Vulnerability Audit / Risk Triage | ID.RA       | CIS 7      | All Tiers     | [Perimeter_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Perimeter_Assessment.md) |
 
 ## 📂 Artifact Evidence & Operational History
 
@@ -591,7 +591,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 **Mechanical Proof:** "The version scan (`sudo nmap -sV 172.88.0.15`) returned all 1000 ports in closed states with no service banner — consistent with a Redis instance configured to block external access. The host responded to the ping sweep confirming it was live, but its hardened posture suppressed port exposure. Combined with the subnet context of a corporate DMZ audit, the behavioral signature matched a Redis cache operating behind a firewall rule."
 
-🧠 **TLAB-7  (W7 | TLAB6) Perimeter Assessment - Operation Shadow Map**
+🧠 **TLAB-Week7  (W7 | TLAB) Perimeter Assessment - Operation Shadow Map**
 * **Mission Objective:** Perform a full-scope reconnaissance and vulnerability assessment of TitanCorp's suspicious DMZ subnet (172.88.0.0/24) and deliver a professional Perimeter Assessment Report with risk-justified findings.
 * **Technical Mechanics:**
     * Phase 1 — Ping sweep (`nmap -sn`) identified 3 live assets plus gateway. Version scan (`sudo nmap -sV`) fingerprinted all services.
