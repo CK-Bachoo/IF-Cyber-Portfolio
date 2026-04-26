@@ -570,7 +570,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
     5. **Outdated PHP 5.4 (Marketing Blog)** — end-of-life, public-facing pivot point
 * **Mechanical Proof:** Documented triage in `remediation_plan.md`, pushed to GitHub (Commit 0387cdd), establishing an immutable audit record of the prioritization decision.
 
-### 🏴 P1-W9-TLAB-7: OPERATION SHADOW MAP (Perimeter Assessment)
+### 🏴 TLAB-7:(W7 | TLAB6) OPERATION SHADOW MAP (Perimeter Assessment)
 * [Evidence: Perimeter_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Perimeter_Assessment.md)
 
 | Feature | Desktop / Laptop (x86) | Android Cyber Workbench (ARM64) |
