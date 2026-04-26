@@ -1,0 +1,23 @@
+==================================================
+SESSION 20: NETWORK ENUMERATION MAP
+Target Subnet: 172.99.0.0/24
+==================================================
+
+HOST 1 (172.99.0.5)
+* Open Ports: [80/tcp]
+* Service/Version: [nginx 1.29.8]
+
+HOST 2 (172.99.0.6)
+* Open Ports: [6379/tcp]
+* Service/Version: [Redis key-value store 8.6.2]
+
+HOST 3 (172.99.0.7)
+* Open Ports: [80/tcp]
+* Service/Version: [Apache httpd 2.4.66 (Unix)]
+
+QUESTIONS:
+1. What Nmap flag did you use to find the specific software versions running on these ports?
+Answer: The -sV flag was used to perform version detection. This flag probes open ports and interrogates the responses to identify the exact software name and version running on each service.
+
+2. Why is it dangerous to run an intense scan (like -A) on a fragile legacy system?
+Answer: The -A flag enables aggressive scanning including OS detection, version scanning, script scanning, and traceroute. On a fragile legacy system this level of traffic can overwhelm the service, cause crashes, trigger security alerts, or corrupt unstable processes — making it a destructive tool against systems not built to handle probe volumes at that intensity.
