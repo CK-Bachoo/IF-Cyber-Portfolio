@@ -57,11 +57,11 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | TLAB 5   | Enterprise Synthesis | Cross-Platform Integration                      | PR.AC       | CIS 5      | Integrity    | tlab5_report.txt           |
 | S16      | OSI Troubleshooting  | Configuration Sabotage / Isolation               | RS.MI       | CIS 4      | Availability | readiness_check.log        |
 | S17      | Technical Diagnostic  | Privilege Management / Log Security              | PR.DS       | CIS 3      | Integrity    | practical_exam_report.txt |
-| S18      | Enterprise Capstone  | Lateral Movement / Infrastructure Breach        | PR.PS       | CIS 4      | All Tiers     | [HardenedOutpost_SAD.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/HardenedOutpost_SAD.md) |
+| S18 Tlab | Enterprise Capstone  | Lateral Movement / Infrastructure Breach        | PR.PS       | CIS 4      | All Tiers     | [HardenedOutpost_SAD.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/HardenedOutpost_SAD.md) |
 | S19      | OSINT & Passive Recon | Attack Surface Mapping / Data Leakage           | ID.RA       | CIS 2      | Confidentiality | [ThreatProfile_CloudNano.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/e267d6948ef9000a5aecd23dc42e2ea815817942) |
 | S20      | Network Enumeration  | Active Reconnaissance / Service Discovery        | ID.RA       | CIS 12     | Confidentiality | [nmap_scan_results.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/nmap_scan_results.txt) |---
 | S21      | Vulnerability Triage  | Web Application Scanning / Risk Prioritization   | ID.RA       | CIS 7      | All Tiers     | [remediation_plan.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/remediation_plan.md) |
-
+| TLAB 7   | Perimeter Assessment | Active Recon / Vulnerability Audit / Risk Triage | ID.RA       | CIS 7      | All Tiers     | [Perimeter_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Perimeter_Assessment.md) |
 ## 📂 Artifact Evidence & Operational History
 
 ### 🛠️ T1-M1-S01: Portfolio Initialization
@@ -568,3 +568,36 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
     4. **XSS on Support Forum (Public-Facing)** — session hijacking at scale on trusted surface
     5. **Outdated PHP 5.4 (Marketing Blog)** — end-of-life, public-facing pivot point
 * **Mechanical Proof:** Documented triage in `remediation_plan.md`, pushed to GitHub (Commit 0387cdd), establishing an immutable audit record of the prioritization decision.
+
+### 🏴 P1-W9-TLAB-7: OPERATION SHADOW MAP (Perimeter Assessment)
+* [Evidence: Perimeter_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Perimeter_Assessment.md)
+
+| Feature | Desktop / Laptop (x86) | Android Cyber Workbench (ARM64) |
+| :--- | :--- | :--- |
+| **Execution Environment** | Local Ubuntu VM | **Ephemeral Google Cloud Shell Bridge** |
+| **Recon Tool** | Nmap 7.94 | **Nmap 7.94 (Cloud-installed)** |
+| **Audit Tool** | Nikto v2.1.5 | **Nikto v2.1.5 (Cloud-installed)** |
+| **Submission Mechanism** | Native `session-submit` | **Cloud Pivot Bypass + Git Push** |
+| **Artifact** | `Perimeter_Assessment.md` | **[Perimeter_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Perimeter_Assessment.md)** |
+
+🛡️ **Operational Defense Logic (White Hat Auditor Common Questions)**
+
+**White Hat Auditor Question:** "Why did you identify nginx 1.14.2 as the top priority over the Apache TRACE vulnerability?"
+
+**Response:** "Both findings are real risks, but nginx 1.14.2 represents a structurally worse posture. An outdated EOL server has no patch path — the attack surface cannot be reduced without replacing the software entirely. The HTTP TRACE vulnerability on Apache, while exploitable for XST session hijacking, can be mitigated immediately with a single configuration change. When applying Risk = Likelihood x Impact, an unpatched EOL server on a DMZ-facing asset with publicly documented CVEs scores higher on both axes than a misconfiguration with an available remediation."
+
+**White Hat Auditor Question:** "How did you confirm 172.88.0.15 was a cache database without open ports?"
+
+**Mechanical Proof:** "The version scan (`sudo nmap -sV 172.88.0.15`) returned all 1000 ports in closed states with no service banner — consistent with a Redis instance configured to block external access. The host responded to the ping sweep confirming it was live, but its hardened posture suppressed port exposure. Combined with the subnet context of a corporate DMZ audit, the behavioral signature matched a Redis cache operating behind a firewall rule."
+
+🧠 **TLAB-7 Mission Defense Matrix (Executive Summary)**
+* **Mission Objective:** Perform a full-scope reconnaissance and vulnerability assessment of TitanCorp's suspicious DMZ subnet (172.88.0.0/24) and deliver a professional Perimeter Assessment Report with risk-justified findings.
+* **Technical Mechanics:**
+    * Phase 1 — Ping sweep (`nmap -sn`) identified 3 live assets plus gateway. Version scan (`sudo nmap -sV`) fingerprinted all services.
+    * Phase 2 — Nikto audited both web servers. nginx 1.14.2 flagged for EOL status and missing X-Frame-Options. Apache 2.4.66 flagged for active HTTP TRACE method (OSVDB-877) enabling XST attacks.
+    * Phase 3 — Risk triage applied Risk = Likelihood x Impact. nginx 1.14.2 selected as top priority due to EOL status with no patch path on a DMZ-facing perimeter asset.
+* **Scan Results:**
+    * **172.88.0.10:** Port 80/tcp — nginx 1.14.2 (EOL — Top Priority)
+    * **172.88.0.15:** No open ports — Redis cache database (hardened posture)
+    * **172.88.0.20:** Port 80/tcp — Apache httpd 2.4.66 — HTTP TRACE active (OSVDB-877)
+* **Mechanical Proof:** All three phases documented in `Perimeter_Assessment.md`, pushed to GitHub (Commit feat W9 TLAB7), establishing an immutable cryptographic audit trail of the full-scope assessment.
