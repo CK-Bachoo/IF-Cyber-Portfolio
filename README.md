@@ -59,8 +59,7 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | S17      | Technical Diagnostic  | Privilege Management / Log Security              | PR.DS       | CIS 3      | Integrity    | practical_exam_report.txt |
 | S18      | Enterprise Capstone  | Lateral Movement / Infrastructure Breach        | PR.PS       | CIS 4      | All Tiers     | [HardenedOutpost_SAD.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/HardenedOutpost_SAD.md) |
 | S19      | OSINT & Passive Recon | Attack Surface Mapping / Data Leakage           | ID.RA       | CIS 2      | Confidentiality | [ThreatProfile_CloudNano.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/e267d6948ef9000a5aecd23dc42e2ea815817942) |
-
----
+| S20      | Network Enumeration  | Active Reconnaissance / Service Discovery        | ID.RA       | CIS 12     | Confidentiality | [nmap_scan_results.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/nmap_scan_results.txt) |---
 
 ## 📂 Artifact Evidence & Operational History
 
@@ -508,3 +507,32 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 🛡️ **Operational Defense Logic**
 * **Passive Reconnaissance:** Utilized third-party datasets (Shodan, HaveIBeenPwned, Sublist3r) to map the target's attack surface without sending direct packets, ensuring zero attribution or alarm triggers on the target's perimeter.
 * **Architectural Bypass:** When the evaluation script (`session-submit`) was blocked by the Android/Termux security model (no `sudo`), an ephemeral Google Cloud Shell instance was deployed to execute the submission securely, demonstrating adaptability in constrained environments.
+
+### 👁️ T1-M1-S20: MAPPING THE SHADOWS (Active Network Enumeration)
+* [Evidence: nmap_scan_results.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/nmap_scan_results.txt)
+
+| Feature | Desktop / Laptop (x86) | Android Cyber Workbench (ARM64) |
+| :--- | :--- | :--- |
+| **Execution Environment** | Local Ubuntu VM | **Ephemeral Google Cloud Shell Bridge** |
+| **Submission Mechanism** | Native `session-submit` | **Cloud Pivot Bypass + Git Push** |
+| **Scan Target** | 172.99.0.0/24 Sandbox | **172.99.0.0/24 Docker Target Network** |
+| **Artifact** | `nmap_scan_results.txt` | **[nmap_scan_results.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/nmap_scan_results.txt)** |
+
+🛡️ **Operational Defense Logic (White Hat Auditor Common Questions)**
+
+**White Hat Auditor Question:** "Why did you use Google Cloud Shell instead of running Nmap locally on the Note 20 Ultra?"
+
+**Response:** "Nmap's SYN scan (`-sS`) and version detection (`-sV`) require raw socket access, which demands root privileges. Samsung Knox on the Note 20 Ultra intentionally restricts raw socket creation at the kernel level. By pivoting to Google Cloud Shell — an ephemeral x86_64 Ubuntu environment — I maintained 100% mission capability while preserving the Zero Trust integrity of the local Bunker device. The scan results were captured, documented, and synchronized to GitHub as an immutable forensic artifact."
+
+**White Hat Auditor Question:** "How did you prove all three hosts were live before running deep scans?"
+
+**Mechanical Proof:** "I executed a ping sweep (`nmap -sn 172.99.0.0/24`) first. This returned four live hosts — the gateway at `.1` and the three targets at `.5`, `.6`, and `.7`. This step eliminated 252 dead addresses from the scan queue before running intensive version detection, demonstrating disciplined reconnaissance methodology."
+
+🧠 **S20 Mission Defense Matrix (Executive Summary)**
+* **Mission Objective:** Map a newly discovered internal subnet (172.99.0.0/24), identify all live hosts, enumerate open ports, and interrogate running service versions.
+* **Technical Mechanics:** Executed a three-phase scan: ping sweep (`-sn`) for host discovery, version scan (`-sV`) on Target Alpha, all-ports version scan (`-sV -p-`) on Target Beta, and aggressive scan (`-sV -A`) on Target Gamma.
+* **Scan Results:**
+    * **Target Alpha (172.99.0.5):** Port 80/tcp — nginx 1.29.8
+    * **Target Beta (172.99.0.6):** Port 6379/tcp — Redis key-value store 8.6.2
+    * **Target Gamma (172.99.0.7):** Port 80/tcp — Apache httpd 2.4.66 (Unix)
+* **Mechanical Proof:** Documented all findings in `nmap_scan_results.txt`, pushed to GitHub (Commit a6e1a6a), establishing a cryptographic audit trail of the enumeration operation.
