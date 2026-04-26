@@ -1,6 +1,6 @@
 # Perimeter Assessment Report
 ## Operation Shadow Map — TitanCorp DMZ Audit
-**Operator:** C.K. Bachoo | TLAB-7 | W9
+**Operator:** C.K. Bachoo | TLAB-7 | W7
 **Target Subnet:** 172.88.0.0/24
 **Date:** 2026-04-26
 
