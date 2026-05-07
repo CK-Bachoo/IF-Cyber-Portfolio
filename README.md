@@ -602,3 +602,31 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
     * **172.88.0.15:** No open ports — Redis cache database (hardened posture)
     * **172.88.0.20:** Port 80/tcp — Apache httpd 2.4.66 — HTTP TRACE active (OSVDB-877)
 * **Mechanical Proof:** All three phases documented in `Perimeter_Assessment.md`, pushed to GitHub (Commit feat W7 TLABw7), establishing an immutable cryptographic audit trail of the full-scope assessment.
+
+### 👁 T1-M1-S22: THE VERIFICATION PROTOCOL (Exploitation & Shell Logic)
+* **Evidence:** [exploit_verification.png](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/a5083773d479a1f27acdc1c93ae0c2cacf00b029)
+* **Vulnerability Target:** Samba `usermap_script` (CVE-2007-2447)
+* **Framework:** Metasploit (`msfconsole`)
+
+#### 🧠 S22 Mission Defense Matrix (Executive Summary)
+* **Mission Objective:** Transition from passive vulnerability scanning to active exploitation by weaponizing the Samba `usermap_script` vulnerability to secure a verified root shell (`uid=0`) on a hardened target.
+* **Technical Mechanics:** * **Phase 1 (Multi-Terminal Architecture):** Orchestrated 3 concurrent Google Cloud Shell terminals to manage the complex attack vector: Terminal 1 operated the Metasploit (`msfconsole`) C2 framework, Terminal 2 handled Docker Daemon target resets and direct TTY fallback injection, and Terminal 3 functioned as a raw Python/Netcat socket listener for reverse connection testing.
+    * **Phase 2 (Target Acquisition & Payload Engineering):** Identified the vulnerable container's internal Docker bridge IP (`172.17.0.2`) to bypass localized host port-forwarding issues. Replaced the default Netcat payload with `cmd/unix/reverse_perl` to bypass Ubuntu's security restriction that strips the execution (`-e`) flag from native Netcat binaries.
+    * **Phase 3 (Firewall Evasion):** Configured `LPORT 8080` instead of the default `4444` to seamlessly tunnel the reverse connection through Google Cloud Shell's restrictive egress (NAT) firewall.
+    * **Phase 4 (Root Verification):** Executed the exploit and confirmed total system compromise by interrogating the resulting TTY shell with `whoami`, `id`, `uname -a`, and `hostname`.
+* **Mechanical Proof:** Documented the successful `Command shell session 1 opened` event and root-level outputs via screenshot, pushed to GitHub (Commit a508377), establishing a cryptographic audit trail of the exploit.
+
+#### ⚖️ Architectural Comparison (Governance Chart)
+| Feature | Standard Desktop (x86) | Android Cyber Workbench (ARM64) |
+| :--- | :--- | :--- |
+| **Execution Environment** | Local Kali Linux VM | 3 Concurrent Google Cloud Shell Terminals |
+| **Target Sandbox** | Local VirtualBox Network | Direct Docker Subnet (`172.17.0.x`) |
+| **Payload Delivery** | Standard `reverse_netcat` | `reverse_perl` via Port 8080 Routing / TTY Bypass |
+| **Root Verification** | Meterpreter `getsystem` | Native Linux `whoami` & `uname -a` |
+| **Artifact Sync** | Native Desktop GUI | Termux Git CLI ➔ GitHub ➔ Canvas API |
+
+#### 🛡 Operational Defense Logic (Auditor Interrogation)
+**White Hat Auditor Question:** *"Why did your exploit verification require a 3-terminal architecture, a payload swap, and a custom port configuration?"*
+
+**Engineering Statement:** *"Google Cloud Shell operates behind an aggressive internal SOCKS/NAT firewall that actively drops unauthorized background TCP traffic (such as standard Metasploit reverse/bind payloads on port 4444). Furthermore, the target Ubuntu container utilizes a restricted Netcat binary that strips the `-e` (execute) flag, causing standard `cmd/unix/reverse_netcat` payloads to fail silently. To maintain mission momentum and prove the vulnerability, I orchestrated three parallel cloud shell sessions to rapidly debug the network. I executed a tactical payload swap to `cmd/unix/reverse_perl` and routed the callback through port 8080, effectively bypassing both the OS-level binary restriction and the cloud hypervisor's egress firewall to secure root."*
+
