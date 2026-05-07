@@ -601,4 +601,4 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
     * **172.88.0.10:** Port 80/tcp — nginx 1.14.2 (EOL — Top Priority)
     * **172.88.0.15:** No open ports — Redis cache database (hardened posture)
     * **172.88.0.20:** Port 80/tcp — Apache httpd 2.4.66 — HTTP TRACE active (OSVDB-877)
-* **Mechanical Proof:** All three phases documented in `Perimeter_Assessment.md`, pushed to GitHub (Commit feat W9 TLAB7), establishing an immutable cryptographic audit trail of the full-scope assessment.
+* **Mechanical Proof:** All three phases documented in `Perimeter_Assessment.md`, pushed to GitHub (Commit feat W7 TLABw7), establishing an immutable cryptographic audit trail of the full-scope assessment.
