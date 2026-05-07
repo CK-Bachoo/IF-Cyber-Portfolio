@@ -605,7 +605,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 * **Mechanical Proof:** All three phases documented in `Perimeter_Assessment.md`, pushed to GitHub (Commit feat W7 TLABw7), establishing an immutable cryptographic audit trail of the full-scope assessment.
 
 ### 👁 T1-M1-S22: THE VERIFICATION PROTOCOL (Exploitation & Shell Logic)
-* **Evidence:** [exploit_verification.png](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/a5083773d479a1f27acdc1c93ae0c2cacf00b029)
+* **Evidence:** [[![S22 Root Shell Verification](exploit_verification.png)](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/exploit_verification.png)](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/exploit_verification.png)
 * **Vulnerability Target:** Samba `usermap_script` (CVE-2007-2447)
 * **Framework:** Metasploit (`msfconsole`)
 
@@ -617,8 +617,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
     * **Phase 4 (Root Verification):** Executed the exploit and confirmed total system compromise by interrogating the resulting TTY shell with `whoami`, `id`, `uname -a`, and `hostname`.
 * **Mechanical Proof:** Documented the successful `Command shell session 1 opened` event and root-level outputs via screenshot, pushed to GitHub (Commit a508377), establishing a cryptographic audit trail of the exploit.
 
-![S22 Root Shell Verification](exploit_verification.png) [
-](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/a5083773d479a1f27acdc1c93ae0c2cacf00b029#diff-7211a50c3b982439e379350f1e2885839fa157d804275d314ed04da87a894e10)
+* **Evidence:** [![S22 Root Shell Verification](exploit_verification.png)](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/exploit_verification.png)
 
 #### ⚖️ Architectural Comparison (Governance Chart)
 | Feature | Standard Desktop (x86) | Android Cyber Workbench (ARM64) |
