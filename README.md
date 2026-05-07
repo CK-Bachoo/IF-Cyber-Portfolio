@@ -62,7 +62,7 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | S20      | Network Enumeration  | Active Reconnaissance / Service Discovery        | ID.RA       | CIS 12     | Confidentiality | [nmap_scan_results.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/nmap_scan_results.txt) |---
 | S21      | Vulnerability Triage  | Web Application Scanning / Risk Prioritization   | ID.RA       | CIS 7      | All Tiers     | [remediation_plan.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/remediation_plan.md) |
 | TLAB W7  | Perimeter Assessment | Active Recon / Vulnerability Audit / Risk Triage | ID.RA       | CIS 7      | All Tiers     | [Perimeter_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Perimeter_Assessment.md) |
-| S22 | Exploit Verification | Shell Logic / Framework Deployment | PR.PT | CIS 4 | Confidentiality | [exploit_verification.png](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/a5083773d479a1f27acdc1c93ae0c2cacf00b029) |
+| S22 | Exploit Verification | Shell Logic / Framework Deployment | PR.PT | CIS 4 | Confidentiality | (https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/f9434851f13ba0e4d478ec348b3848c89ea13cc1)|
 
 ## 📂 Artifact Evidence & Operational History
 
@@ -605,7 +605,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 * **Mechanical Proof:** All three phases documented in `Perimeter_Assessment.md`, pushed to GitHub (Commit feat W7 TLABw7), establishing an immutable cryptographic audit trail of the full-scope assessment.
 
 ### 👁 T1-M1-S22: THE VERIFICATION PROTOCOL (Exploitation & Shell Logic)
-* **Evidence:** [exploit_verification.png](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/a5083773d479a1f27acdc1c93ae0c2cacf00b029) 
+* **Evidence:** https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/f9434851f13ba0e4d478ec348b3848c89ea13cc1
 * **Vulnerability Target:** Samba `usermap_script` (CVE-2007-2447)
 * **Framework:** Metasploit (`msfconsole`)
 
