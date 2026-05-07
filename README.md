@@ -65,6 +65,7 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | S22      | Vulnerability Verification | MSF: usermap_script / Samba Exploit | PR.IP | CIS 7 | Confidentiality | [exploit_verification.png](exploit_verification.png) |
 | S23      | Privilege Escalation  | Cron Job Wildcard / Unquoted Service Path        | PR.AC        | CIS 5       | Integrity     | [escalation_path.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/018e7631f51db14d6e5d07420be135941b7fe512) |
 | S24      | Lateral Movement | SSH Pivot / SOCKS Proxy Tunnel | PR.PT | CIS 4 | Confidentiality | [pivot_success.png](pivot_success.png) |
+| TLAB 8   | The Kill Chain | Vertical Escalation / Cross-Subnet Pivot | PR.PT | CIS 12 | Confidentiality | [Deep_Pivot_Report.md](Deep_Pivot_Report.md) |
 
 ## 📂 Artifact Evidence & Operational History
 
@@ -697,5 +698,38 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 **Question 2:** *"What does the 'denied' packet signature in your logs indicate?"
 
 ***Engineering Statement:** *"Post-Exfiltration Cleanup. Those logs represent the expected behavior of a closed circuit. Once the target Redis port (6379) was identified and visual evidence was captured, I manually severed the tunnel. The 'denied' messages prove that no unauthorized backdoors remained open."*
+
+---
+---
+
+### 💥 T1-M1-TLAB8: OPERATION DEEP PIVOT (The Kill Chain)
+* **Evidence:** [Deep_Pivot_Report.md](Deep_Pivot_Report.md)
+* **Vulnerability Target:** Air-Gapped Database (`10.0.10.50`) via Bastion (`172.60.0.10`)
+* **Framework:** Metasploit, Proxychains4, and Cron-Persistence
+
+#### ⚖️ Architectural Comparison (Governance Chart)
+
+| Feature | Standard Desktop (x86) | Android Cyber Workbench (ARM64) |
+| :--- | :--- | :--- |
+| **Execution Environment** | Heavy Local VirtualBox VMs | Ephemeral Google Cloud Shell Bridge |
+| **Escalation Path** | Standard sudo binary abuse | Native Headless Binary Exploitation (GTFOBins) |
+| **Persistence Mechanism** | Passive Background Session | Active Cron-Scheduled Reverse Shell (`* * * * *`) |
+| **Pivoting Logic** | MSF `autoroute` + `socks_proxy` | Native SSH Tunneling + Proxychains4 routing |
+| **Hardware Overhead** | High (CPU/RAM exhaustion) | Optimized (Cloud-Offloaded Compute) |
+
+#### 🧠 TLAB-08 Mission Defense Matrix (Executive Summary)
+* **Mission Objective:** Execute a full-spectrum intrusion. Secure a beachhead on a public server, escalate to root, establish persistence, and pivot through a tunnel to scan a hidden internal vault.
+* **Technical Mechanics:** * **Phase 1 (The Beachhead):** Breached the Bastion host via SSH and identified a privilege escalation vector using `sudo -l`. Leveraged GTFOBins research to weaponize a misconfigured binary for an immediate `root` shell.
+    * **Phase 2 (The Anchor):** Established permanent access by injecting a minute-by-minute `crontab` backdoor. This ensured that even if the initial exploit session was severed, the host would "call home" to my C2 listener every 60 seconds.
+    * **Phase 3 (The Ghost Pivot):** Orchestrated a multi-stage pivot. Used Metasploit’s `autoroute` to map the non-routable `10.0.10.0/24` subnet. Launched a SOCKS4a proxy on port 1080 and forced `proxychains4` to route Nmap discovery packets through the compromised bridgehead.
+* **The Win:** Successfully fingerprinted the hidden database (`10.0.10.50`), proving that no segment of the network is truly air-gapped if the perimeter is breached.
+
+#### 🛡️ OPERATIONAL DEFENSE LOGIC (White Hat Auditor Interrogation)
+
+**Question 1:** *"Why did you choose a Cron job for persistence instead of leaving the Metasploit session open?"*
+**Engineering Statement:** *"Resilience. Metasploit sessions are stateful and prone to socket timeouts, especially when operating from a mobile form factor. By using a Cron-scheduled reverse shell, I converted a fragile session into a stateless, self-healing beacon. If the cloud instance restarts or the connection drops, the system automatically restores my access within 60 seconds."*
+
+**Question 2:** *"How does Proxychains handle a scan on a network your physical device cannot see?"*
+**Engineering Statement:** *"Encapsulation. Proxychains intercepts the Nmap system calls and wraps the TCP packets inside the established SSH/SOCKS tunnel. The packets 'exit' the tunnel from the Bastion host's internal interface. To the target database, the scan appears to originate locally from the Bastion server, effectively bypassing external firewall rules."*
 
 ---
