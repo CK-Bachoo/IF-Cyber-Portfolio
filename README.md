@@ -670,8 +670,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ---
 ### 👁 T1-M1-S24: THE DEEP NETWORK (Lateral Movement & Pivoting)
-* **Evidence:** [![S24 Pivot Verification](pivot_success.png)](pivot_success.png)
-* **Evidence 2 (Visual):** [Network Pivot Topology Diagram](https://raw.githubusercontent.com/rapid7/metasploit-framework/master/docs/images/pivoting_diagram.png)
+* **Evidence:**  (https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/93c98b0eac144c8ca1eccb00718c6f85d150a58b)
 * **Vulnerability Target:** Internal Network Architecture (Lateral Movement)
 * **Framework:** Metasploit & Native SSH Tunneling (`-D 1080`)
 
@@ -683,6 +682,8 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 | **Pivoting Methodology** | MSF `autoroute` + `socks_proxy` | Native SSH SOCKS Tunnel (`ssh -D 1080`) |
 | **Command Logic** | MSF-internal routing | `proxychains4` via Native Socket |
 | **Identity Proof** | `session-submit` local binary | `git push` timestamped cryptographic hash |
+
+* **Evidence:** [![S24 Pivot Verification](pivot_success.png)](pivot_success.png)
 
 #### 🧠 S24 Mission Defense Matrix (Executive Summary)
 * **Mission Objective:** Compromise a public-facing web server (`172.50.0.10`) and weaponize it as a network bridge to discover and scan an isolated, non-routable internal database (`10.0.9.50`).
