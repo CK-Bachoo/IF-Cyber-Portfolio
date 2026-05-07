@@ -700,10 +700,10 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 ***Engineering Statement:** *"Post-Exfiltration Cleanup. Those logs represent the expected behavior of a closed circuit. Once the target Redis port (6379) was identified and visual evidence was captured, I manually severed the tunnel. The 'denied' messages prove that no unauthorized backdoors remained open."*
 
 ---
----
 
 ### 💥 T1-M1-TLAB8: OPERATION DEEP PIVOT (The Kill Chain)
 * **Evidence:** [Deep_Pivot_Report.md](Deep_Pivot_Report.md)
+* **Visual Proof:** ![Escalation Verification](escalation_verification.png)
 * **Vulnerability Target:** Air-Gapped Database (`10.0.10.50`) via Bastion (`172.60.0.10`)
 * **Framework:** Metasploit, Proxychains4, and Cron-Persistence
 
