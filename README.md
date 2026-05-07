@@ -681,7 +681,6 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 | **Identity Proof** | `session-submit` local binary | `git push` timestamped cryptographic hash |
 
 * **Evidence:** [![S24 Pivot Verification](pivot_success.png)](pivot_success.png)
-
 #### 🧠 S24 Mission Defense Matrix (Executive Summary)
 * **Mission Objective:** Compromise a public-facing web server (`172.50.0.10`) and weaponize it as a network bridge to discover and scan an isolated, non-routable internal database (`10.0.9.50`).
 * **Technical Mechanics:** * Established initial access on the target web server via SSH.
@@ -691,10 +690,12 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 #### 🛡️ OPERATIONAL DEFENSE LOGIC (White Hat Auditor Interrogation)
 
-**Question 1:** *"Why did you use a native SSH tunnel instead of the Metasploit module?"*
-**Engineering Statement:** *"Metasploit sessions in browser-based Cloud Shell environments are highly volatile. I engineered a native SSH tunnel to provide a persistent SOCKS interface for `proxychains4`, ensuring that the discovery scan of `10.0.9.50` would not fail due to session timeouts."*
+**Question 1:** *"Why did you use a native SSH tunnel instead of the Metasploit module?"
 
-**Question 2:** *"What does the 'denied' packet signature in your logs indicate?"*
-**Engineering Statement:** *"Post-Exfiltration Cleanup. Those logs represent the expected behavior of a closed circuit. Once the target Redis port (6379) was identified and visual evidence was captured, I manually severed the tunnel. The 'denied' messages prove that no unauthorized backdoors remained open."*
+***Engineering Statement:** *"Metasploit sessions in browser-based Cloud Shell environments are highly volatile. I engineered a native SSH tunnel to provide a persistent SOCKS interface for `proxychains4`, ensuring that the discovery scan of `10.0.9.50` would not fail due to session timeouts."*
+
+**Question 2:** *"What does the 'denied' packet signature in your logs indicate?"
+
+***Engineering Statement:** *"Post-Exfiltration Cleanup. Those logs represent the expected behavior of a closed circuit. Once the target Redis port (6379) was identified and visual evidence was captured, I manually severed the tunnel. The 'denied' messages prove that no unauthorized backdoors remained open."*
 
 ---
