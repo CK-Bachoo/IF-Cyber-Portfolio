@@ -607,7 +607,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 * **Mechanical Proof:** All three phases documented in `Perimeter_Assessment.md`, pushed to GitHub (Commit feat W7 TLABw7), establishing an immutable cryptographic audit trail of the full-scope assessment.
 
 ### 👁 T1-M1-S22: THE VERIFICATION PROTOCOL (Exploitation & Shell Logic)
-* **Evidence:** https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/f9434851f13ba0e4d478ec348b3848c89ea13cc1
+* **Evidence:** [exploit_verification.png](exploit_verification.png) 
 * **Vulnerability Target:** Samba `usermap_script` (CVE-2007-2447)
 * **Framework:** Metasploit (`msfconsole`)
 
