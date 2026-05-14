@@ -889,3 +889,45 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 **White Hat Auditor Question:** *"How did you execute this full-stack lab without a local Ubuntu VM?"*
 
 **Mechanical Proof:** *"I provisioned the Titan Omni-Portal Flask application inside Google Cloud Shell using the Professor-provided script. Phase 1 (SQLi) and Phase 3 (BOLA) were executed via native `curl` CLI commands. Phase 2 (Stored XSS) was executed live in the browser via Cloud Shell's Web Preview on port 8090. All three attack phases were completed with full mission capability — no local hypervisor, no GUI dependency, zero thermal overhead on the mobile device."*
+
+---
+
+### 🌐 WEEK 9: WEB APPLICATION EXPLOITATION & AGENTIC THREAT HUNTING
+
+🚀 **T1-M1-S25: SQL Injection (SQLi) Lab**
+| Data Point | Desktop User (Standard Cohort) | Android Cyber Workbench (Note 20 Ultra) |
+| :--- | :--- | :--- |
+| **Methodology** | Desktop Browser & GUI Interception | Termux `curl` & Mobile Chrome DevTools |
+| **Evidence** | N/A | Evidence: `sqli_audit.txt` |
+
+🛡️ **Technical Analysis:** Bypassed traditional desktop constraints to perform database exploitation natively from a mobile environment. Executed authentication bypasses using tautologies (`' OR 1=1 --`) and extracted backend schema data via `UNION SELECT` payloads directly against the target infrastructure.
+
+<br>
+
+🚀 **T1-M1-S26: Cross-Site Scripting (XSS) Lab**
+| Data Point | Desktop User (Standard Cohort) | Android Cyber Workbench (Note 20 Ultra) |
+| :--- | :--- | :--- |
+| **Methodology** | Standard Desktop Browser extensions | Raw payload injection via Mobile Browser |
+| **Evidence** | N/A | Evidence: `xss_payloads.txt` |
+
+🛡️ **Technical Analysis:** Demonstrated client-side manipulation by injecting malicious JavaScript (`<script>alert(document.cookie)</script>`) into vulnerable input fields. Verified reflected and stored XSS vectors to simulate session hijacking, proving that Layer 7 attacks are entirely viable from a mobile SOC.
+
+<br>
+
+🚀 **T1-M1-S27: API Reconnaissance & Exploitation**
+| Data Point | Desktop User (Standard Cohort) | Android Cyber Workbench (Note 20 Ultra) |
+| :--- | :--- | :--- |
+| **Methodology** | Postman / Insomnia GUI applications | Native Bash looping & HTTP header forging |
+| **Evidence** | N/A | Evidence: `api_brute_loop.sh` |
+
+🛡️ **Technical Analysis:** Instead of relying on heavy desktop API clients, I engineered a highly optimized Bash brute-force loop natively in Termux. Utilized `curl -X POST -H "Content-Type: application/json"` inside a `seq` loop to autonomously iterate through 10,000 PIN combinations against a protected API endpoint, extracting the access token with near-zero RAM overhead.
+
+<br>
+
+💥 **T1-M1-TLAB9: Operation Agentic Threat Hunt (Web Breach)**
+| Data Point | Desktop User (Standard Cohort) | Android Cyber Workbench (Note 20 Ultra) |
+| :--- | :--- | :--- |
+| **Methodology** | Standard VM & Splunk/SIEM GUI | Python Automation Forge & Local LLM (Gemma) |
+| **Evidence** | N/A | Evidence: `tlab9_web_breach_report.md` |
+
+🛡️ **Technical Analysis:** Synthesized Week 9 offensive tactics (SQLi, XSS, API Abuse) with defensive automation. Leveraged Python scripting to parse massive web server logs for HTTP 200 responses tied to malicious SQL payloads. Integrated an Agentic AI workflow to autonomously classify the Threat Actor's TTPs and generate incident response commands, successfully defending the perimeter from the Note 20 Ultra.
