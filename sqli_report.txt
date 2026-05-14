@@ -1,22 +1,3 @@
-
-
-
-
-
-
-
-Welcome to Cloud Shell! Type "help" to get started, or type "gemini" to try prompting with Gemini CLI.
-To set your Cloud Platform project in this session use `gcloud config set project [PROJECT_ID]`.
-You can view your projects by running `gcloud projects list`.
-ckizzzle@cloudshell:~$ curl -sL https://gist.githubusercontent.com/grobbins-cell/6ad2f5311f05560210a6e8dea9d3a6ba/raw/4be23d9aeda8a438a33f765a1a57f6f3605be15d/s25_provision.sh | sudo bash
-[*] Initializing Web App Environment for operator: ckizzzle...
-********************************************************************************
-You are running apt-get inside of Cloud Shell. Note that your Cloud Shell  
-machine is ephemeral and no system-wide change will persist beyond session end. 
-
-To suppress this warning, create an empty ~/.cloudshell/no-apt-get-warning file.
-The command will automatically proceed in 5 seconds or on any key. 
-  GNU nano 7.2                                                                                                    /home/ckizzzle/sqli_report.txt                                                                                                              
 ==================================================
 SESSION 25: SQL INJECTION EXFILTRATION REPORT
 ==================================================
