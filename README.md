@@ -66,8 +66,10 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | S23      | Privilege Escalation  | Cron Job Wildcard / Unquoted Service Path        | PR.AC        | CIS 5       | Integrity     | [escalation_path.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/018e7631f51db14d6e5d07420be135941b7fe512) |
 | S24      | Lateral Movement | SSH Pivot / SOCKS Proxy Tunnel | PR.PT | CIS 4 | Confidentiality | [pivot_success.png](pivot_success.png) |
 | TLAB 8   | The Kill Chain | Vertical Escalation / Cross-Subnet Pivot | PR.PT | CIS 12 | Confidentiality | [Deep_Pivot_Report.md](Deep_Pivot_Report.md) |
-
-## 📂 Artifact Evidence & Operational History
+| S25      | Data Exfiltration    | SQL Injection / Authentication Bypass / UNION Attack | DE.CM       | CIS 18     | Confidentiality | [sqli_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/sqli_report.txt) |
+| S26      | Poisoned Browser     | XSS (Reflected & Stored) / CSRF / Cookie Theft       | DE.CM       | CIS 18     | Confidentiality | [xss_payloads.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/xss_payloads.txt) |
+| S27      | Invisible Logic      | API BOLA (IDOR) / Business Logic Brute Force         | ID.RA       | CIS 16     | Confidentiality | [api_audit.log](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/api_audit.log) |
+| TLAB 9   | Operation Omni-Portal | Chained SQLi / Stored XSS / API BOLA Full-Stack Audit | RS.AN       | CIS 18     | All Tiers     | [OmniPortal_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/OmniPortal_Assessment.md) |## 📂 Artifact Evidence & Operational History
 
 ### 🛠️ T1-M1-S01: Portfolio Initialization
 * [Evidence: Commit 584f951](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/584f951)
@@ -733,3 +735,199 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 **Engineering Statement:** *"Encapsulation. Proxychains intercepts the Nmap system calls and wraps the TCP packets inside the established SSH/SOCKS tunnel. The packets 'exit' the tunnel from the Bastion host's internal interface. To the target database, the scan appears to originate locally from the Bastion server, effectively bypassing external firewall rules."*
 
 ---
+
+### 💉 T1-M1-S25: THE DATA EXFILTRATION (SQL Injection Kill Chain)
+* **Evidence 1 (Artifact):** [sqli_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/sqli_report.txt)
+* **Evidence 2 (Visual):** Screenshots — Auth Bypass, UNION Attack, CEO Salary Extraction, Git Push
+* **Vulnerability Target:** TitanCorp Legacy CloudNano Web Application (SQLite Backend)
+* **Attack Chain:** Tautology Bypass → Column Enumeration → Schema Discovery → Data Exfiltration
+
+#### ⚖️ Architectural Comparison (Governance Chart)
+
+| Feature | Standard Desktop (x86) | Android Cyber Workbench (ARM64) |
+| :--- | :--- | :--- |
+| **Execution Environment** | Local Ubuntu VM (127.0.0.1) | **Ephemeral Google Cloud Shell Bridge** |
+| **Web App Access** | Native localhost browser | **Cloud Shell Web Preview (Port 8080)** |
+| **Submission Mechanism** | Native `session-submit` | **Cloud Pivot Bypass + Git Push** |
+| **Artifact** | `sqli_report.txt` | **[sqli_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/sqli_report.txt)** |
+
+#### 🧠 S25 Mission Defense Matrix (Executive Summary)
+* **Mission Objective:** Prove that TitanCorp's legacy CloudNano web application is fully exploitable — not merely theoretically vulnerable — by bypassing authentication, mapping the database schema, and extracting the CEO's salary data via a live UNION attack.
+* **Technical Mechanics:**
+    * **Phase 1 (Authentication Bypass):** Injected the tautology payload `' OR 1=1 --` into the Username field, leaving the password blank. The server evaluated the injected condition as always-true, granting full admin access without valid credentials.
+    * **Phase 2 (Column Enumeration):** Used `ORDER BY` injection (`' ORDER BY 1 --`, `' ORDER BY 2 --`, `' ORDER BY 3 --`) to probe the query structure. A database error on `ORDER BY 3` confirmed the original query uses exactly 2 columns.
+    * **Phase 3 (Schema Discovery):** Executed `' UNION SELECT name, sql FROM sqlite_master --` to query SQLite's internal table registry, revealing the `employees` table and its `salary` column.
+    * **Phase 4 (Data Exfiltration):** Deployed the final payload `' UNION SELECT name, salary FROM employees --` to dump all employee salary data, confirming the CEO (Alice) salary at **$2,500,000**.
+* **Remediation:** Parameterized queries (prepared statements) eliminate SQL injection by separating SQL logic from user input — injected strings are treated as data, never as executable commands.
+* **Mechanical Proof:** Completed `sqli_report.txt` pushed to GitHub with 4 visual proof-of-exploitation screenshots documenting the full attack chain from login bypass to salary extraction.
+#### 📸 Proof of Exploitation
+
+| Phase | Screenshot |
+| :--- | :--- |
+| **Phase 1 — Tautology Payload Injected** | ![Auth Bypass Input](Screen%20Shot%202026-05-13%20at%2021.39.03%20(2).png) |
+| **Phase 2 — AUTH BYPASS SUCCESS** | ![Auth Bypass Success](Screen%20Shot%202026-05-13%20at%2021.40.58%20(2).png) |
+| **Phase 3 — UNION Attack: CEO Salary Extracted** | ![Data Exfiltration](Screen%20Shot%202026-05-13%20at%2021.42.49%20(2).png) |
+| **Phase 4 — Git Push Confirmed** | ![Git Push](Screen%20Shot%202026-05-13%20at%2022.04.47%20(2).png) |#### 🛡️ Operational Defense Logic (White Hat Auditor Interrogation)
+
+**White Hat Auditor Question:** *"Why is a tautology injection like `' OR 1=1 --` so dangerous in production environments?"*
+**Engineering Statement:** *"Because it requires zero credentials and zero prior knowledge of the database. The payload hijacks the SQL parser itself — the server executes the injected logic as native SQL, making `1=1` always evaluate to true and granting access to any account in the table. In a production environment, this single payload can compromise thousands of user accounts in milliseconds."*
+**White Hat Auditor Question:** *"Why did you use a UNION attack instead of a blind injection technique?"*
+**Engineering Statement:** *"The application returned visible output in the browser — a classic in-band SQL injection scenario. UNION attacks are the most efficient extraction method when the application reflects query results directly. Blind injection (boolean-based or time-based) is reserved for black-box environments where no output is returned. Using UNION here was the operationally correct choice: maximum data extraction with minimum query complexity."*
+**White Hat Auditor Question:** *"How did you execute this lab without a local Ubuntu VM?"*
+**Mechanical Proof:** *"I provisioned the Flask/SQLite vulnerable application inside Google Cloud Shell using the TA-provided script, then accessed the live web application via Cloud Shell's native Web Preview on port 8080. This maintained full mission capability — including live browser-based SQL injection — without requiring a local hypervisor, preserving the Zero Trust integrity of the mobile Bunker device."*
+
+---
+
+### ⚗️ T1-M1-S26: THE POISONED BROWSER (XSS & CSRF Kill Chain)
+* **Evidence 1 (Artifact):** [xss_payloads.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/xss_payloads.txt)
+* **Vulnerability Targets:** Titan Social Network (Search Bar, Message Board, Fund Transfer Portal)
+* **Attack Chain:** Reflected XSS → Stored XSS Cookie Theft → CSRF Weaponization
+
+#### ⚖️ Architectural Comparison (Governance Chart)
+
+| Feature | Standard Desktop (x86) | Android Cyber Workbench (ARM64) |
+| :--- | :--- | :--- |
+| **Execution Environment** | Local Ubuntu VM (127.0.0.1:8081) | **Ephemeral Google Cloud Shell Bridge** |
+| **Web App Access** | Native localhost browser | **Cloud Shell Web Preview (Port 8081)** |
+| **Submission Mechanism** | Native `session-submit` | **Cloud Pivot Bypass + Git Push** |
+| **Artifact** | `xss_payloads.txt` | **[xss_payloads.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/xss_payloads.txt)** |
+
+#### 🧠 S26 Mission Defense Matrix (Executive Summary)
+* **Mission Objective:** Exploit three distinct client-side vulnerabilities in the Titan Social Network — proving that Reflected XSS, Stored XSS, and CSRF are not theoretical risks but fully executable attack chains capable of DOM manipulation, session hijacking, and unauthorized fund transfers.
+* **Technical Mechanics:**
+    * **Phase 1 (Reflected XSS):** Injected `<script>alert('XSS')</script>` into the Search Users bar. The server reflected the unsanitized input directly into the HTML response, executing the script in the victim's browser and firing a JavaScript alert — proving full DOM control.
+    * **Phase 2 (Stored XSS — Cookie Theft):** Posted `<script>alert(document.cookie)</script>` to the Message Board. The payload was permanently stored server-side. Every user loading the page triggered the script, exposing the admin session cookie: `session_id=admin_secret_99812_do_not_share`. This cookie can be used to hijack the admin session.
+    * **Phase 3 (CSRF Weaponization):** Analyzed the stateless fund transfer endpoint (`/transfer?to=Alice&amount=10`) and confirmed the absence of any anti-CSRF token. Crafted a malicious URL: `https://[host]/transfer?to=Attacker&amount=5000`. Any authenticated user who clicks this link silently transfers $5000 to the attacker with no confirmation or token validation.
+* **Remediation:** Output encoding and Content Security Policy (CSP) headers eliminate XSS. Anti-CSRF tokens tied to the user session prevent CSRF by ensuring state-changing requests cannot be forged from third-party origins.
+* **Mechanical Proof:** All three attack phases documented in `xss_payloads.txt` with 7 visual proof-of-exploitation screenshots covering the full kill chain from app access to cookie theft to CSRF execution.
+
+#### 🛡️ Operational Defense Logic (White Hat Auditor Interrogation)
+
+**White Hat Auditor Question:** *"What is the difference between Reflected and Stored XSS and why does Stored XSS represent a higher threat level?"*
+**Engineering Statement:** *"Reflected XSS requires the attacker to deliver a crafted URL to each individual victim — the payload only fires when the specific malicious link is clicked and is never written to the server. Stored XSS is a force multiplier: the payload is written permanently to the server's database and executes automatically for every user who loads the poisoned page, with no phishing link required. A single Stored XSS injection on a high-traffic page can compromise thousands of sessions simultaneously."*
+
+**White Hat Auditor Question:** *"Why is the absence of an anti-CSRF token on the transfer endpoint critical?"*
+**Engineering Statement:** *"Without a token, the server cannot distinguish between a legitimate user-initiated transfer and a forged request from a malicious third-party site. Because browsers automatically attach session cookies to all requests for a given domain, an attacker can embed the transfer URL in an image tag on any external page. The moment an authenticated user loads that page, their browser silently fires the request with their valid session cookie attached — transferring funds without any user interaction or awareness."*
+
+**White Hat Auditor Question:** *"How did you execute this lab without a local Ubuntu VM?"*
+**Mechanical Proof:** *"I provisioned the Titan Social Network Flask application inside Google Cloud Shell using the TA-provided script, then accessed the live web application via Cloud Shell's native Web Preview on port 8081. All three attack phases — Reflected XSS, Stored XSS cookie theft, and CSRF URL weaponization — were executed live in the browser, maintaining full mission capability without a local hypervisor."*
+
+---
+
+### 📡 T1-M1-S27: THE INVISIBLE LOGIC (API BOLA & Business Logic Exploitation)
+* **Evidence (Artifact):** [api_audit.log](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/api_audit.log)
+* **Vulnerability Targets:** TitanCorp Titan Shop REST API (Port 5000)
+* **Attack Chain:** BOLA ID Swap → CISO Secret Extraction → Discount Code Brute Force
+
+#### ⚖️ Architectural Comparison (Governance Chart)
+
+| Feature | Standard Desktop (x86) | Android Cyber Workbench (ARM64) |
+| :--- | :--- | :--- |
+| **Execution Environment** | Local Ubuntu VM + Burp Suite GUI | **Ephemeral Google Cloud Shell Bridge** |
+| **Interception Method** | Burp Suite Proxy + Built-in Browser | **Native `curl` CLI HTTP Client** |
+| **Brute Force Method** | Burp Suite Intruder (GUI) | **Bash `for` loop with `seq 9900-9999`** |
+| **Submission Mechanism** | Native `session-submit` | **Cloud Pivot Bypass + Git Push** |
+| **Artifact** | `api_audit.log` | **[api_audit.log](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/api_audit.log)** |
+
+#### 🧠 S27 Mission Defense Matrix (Executive Summary)
+* **Mission Objective:** Exploit TitanCorp's e-commerce REST API by exploiting a Broken Object Level Authorization (BOLA) vulnerability to extract a classified CISO secret, then brute-force a hidden discount code buried in the checkout business logic.
+* **Technical Mechanics:**
+    * **Phase 1 (BOLA — ID Swap):** Sent a GET request to `/api/v1/profile/101` (Standard User). Incremented the object ID to `102` and resent the request. The API returned the full CISO admin profile including a classified secret field — `TITAN_MASTER_KEY_2026` — with zero authorization check. The server never verified that the requesting session owned the requested object.
+    * **Phase 2 (Business Logic Brute Force):** Identified the checkout endpoint accepting a POST body with `discount_code`. Using a bash `for` loop iterating `curl` POST requests across codes `9900–9999` (equivalent to Burp Suite Intruder's number payload), detected a response anomaly at code `9912` — returning `100% OFF` and `$0.00` total versus the standard `$150.00` response for all other codes.
+* **Remediation:** BOLA requires server-side ownership validation on every object request — session tokens must be verified against the resource owner before data is returned. Business logic brute force requires rate limiting, request anomaly detection, and cryptographically random non-sequential discount codes.
+* **Mechanical Proof:** Both findings documented in `api_audit.log` with exact API responses, pushed to GitHub establishing a cryptographic audit trail of the full exploitation chain.
+
+#### 🛡️ Operational Defense Logic (White Hat Auditor Common Questions)
+
+**White Hat Auditor Question:** *"Why did you use `curl` instead of Burp Suite for this lab?"*
+**Engineering Statement:** *"Burp Suite Community Edition is a GUI-dependent Java application requiring a full desktop environment. Google Cloud Shell provides a headless terminal with no display server. Rather than being blocked by a tool dependency, I weaponized native `curl` — the same HTTP client that powers Burp's underlying request engine — to achieve identical results. A `GET` request with a modified ID parameter is mechanically equivalent to Burp's Proxy intercept and forward operation. The attack surface doesn't care what tool sends the packet."*
+
+**White Hat Auditor Question:** *"How does your bash brute force loop replicate Burp Intruder's number payload attack?"*
+**Engineering Statement:** *"Burp Intruder's number payload iterates a marked position through a defined range and logs response length anomalies. My bash loop executes the identical operation: `seq 9900 9999` generates the numeric range, each value is substituted into the `discount_code` field of a POST request via `curl`, and the full JSON response is printed per iteration. The winning code `9912` was identified by the response body change from `0%` to `100% OFF` — the same anomaly Burp Intruder would flag via response length deviation. The methodology is architecturally identical; only the interface differs."*
+
+**White Hat Auditor Question:** *"What makes BOLA the most critical API vulnerability class?"*
+**Engineering Statement:** *"BOLA (OWASP API Security Top 1) is critical because the attack requires zero technical sophistication — an attacker only needs to increment an integer. The vulnerability exists entirely in the server's failure to enforce ownership checks at the object level. In this case, changing `101` to `102` in a URL parameter exposed a classified admin credential with no authentication bypass, no exploit code, and no special tooling. At scale, a single BOLA vulnerability can expose every user record in a database through sequential enumeration."*
+
+---
+
+### 🔗 P1-W9-TLAB9: OPERATION OMNI-PORTAL (Full-Stack Chained Attack Assessment)
+
+* **Evidence (Artifact):** [OmniPortal_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/OmniPortal_Assessment.md)
+* **Vulnerability Targets:** Titan Omni-Portal (Port 8090) — Login, Support Board, Orders API
+* **Attack Chain:** SQLi Auth Bypass → Stored XSS Cookie Theft → API BOLA Financial Exfiltration
+
+#### ⚖️ Architectural Comparison (Governance Chart)
+
+| Feature | Standard Desktop (x86) | Android Cyber Workbench (ARM64) |
+| :--- | :--- | :--- |
+| **Execution Environment** | Local Ubuntu VM + Burp Suite GUI | **Ephemeral Google Cloud Shell Bridge** |
+| **SQLi Method** | Burp Proxy Intercept | **Native `curl` GET with tautology payload** |
+| **XSS Method** | Browser-based payload injection | **Web Preview + Live browser interaction** |
+| **BOLA Method** | Burp Repeater ID enumeration | **Bash loop `curl` with stolen auth_token** |
+| **Submission Mechanism** | Native `session-submit` | **Cloud Pivot Bypass + Git Push** |
+| **Artifact** | `OmniPortal_Assessment.md` | **[OmniPortal_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/OmniPortal_Assessment.md)** |
+
+#### 🧠 W9 TLAB9 Mission Defense Matrix (Executive Summary)
+* **Mission Objective:** Perform a black-box full-stack security audit of the Titan Omni-Portal — chaining SQL Injection, Stored XSS, and API BOLA in sequence to breach authentication, steal a session token, and exfiltrate confidential financial order data.
+* **Technical Mechanics:**
+    * **Phase 1 — Breaking the Gate (SQLi):** Injected tautology payload `' OR 1=1 --` into the login `user` field via GET request. The server evaluated the condition as always-true, bypassing password validation entirely and returning a valid session with `auth_token=SUPPORT_TIER_1_SECRET_TOKEN` and access to the orders API.
+    * **Phase 2 — Poisoning the Well (Stored XSS):** Posted `<script>alert(document.cookie)</script>` to the Support Board. The payload was stored server-side and executed on every page load — exposing `auth_token=SUPPORT_TIER_1_SECRET_TOKEN` to any visitor. This permanently poisons the board and enables mass session hijacking.
+    * **Phase 3 — Deep Data Mining (API BOLA):** Using the stolen `auth_token`, enumerated order IDs adjacent to the assigned `502`. Order `501` returned a confidential record never meant for this account: `{"amount":"$15,000.00","details":"Confidential Server Lease","order_id":501}` — full financial exfiltration with zero server-side authorization check.
+    * **Phase 4 — Remediation:** Parameterized queries eliminate SQLi. HTML encoding and CSP headers neutralize XSS. Server-side ownership validation on every API object request closes the BOLA vulnerability.
+* **Mechanical Proof:** All four phases documented in `OmniPortal_Assessment.md` with exact payloads, cookie values, and API responses — pushed to GitHub establishing a cryptographic audit trail of the full chained attack.
+
+#### 🛡️ Operational Defense Logic (White Hat Auditor Common Questions)
+
+**White Hat Auditor Question:** *"Why is a chained attack more dangerous than a single vulnerability in isolation?"*
+
+**Engineering Statement:** *"Each vulnerability in this chain unlocked the next attack surface. SQLi alone grants portal access but not financial data. Stored XSS alone requires a victim to visit the poisoned page. BOLA alone requires a valid session token. Chained together, they form a complete kill chain: SQLi provides the initial foothold, Stored XSS harvests credentials passively at scale, and BOLA converts those credentials into financial exfiltration. The compounding effect means the total risk is exponentially greater than any single finding scored in isolation."*
+
+**White Hat Auditor Question:** *"How did you replicate Burp Suite Repeater's ID enumeration without a GUI?"*
+
+**Engineering Statement:** *"Burp Repeater manually resends a modified request and displays the response. My bash loop executes the identical operation programmatically: iterating order IDs 501–505, injecting the stolen `auth_token` cookie into each `curl` request, and printing the full JSON response per iteration. The anomaly — a `$15,000.00 Confidential Server Lease` versus a `$50.00 Office Supplies` order — was immediately visible in the output, replicating Burp's response comparison workflow without requiring a desktop GUI."*
+
+**White Hat Auditor Question:** *"How did you execute this full-stack lab without a local Ubuntu VM?"*
+
+**Mechanical Proof:** *"I provisioned the Titan Omni-Portal Flask application inside Google Cloud Shell using the Professor-provided script. Phase 1 (SQLi) and Phase 3 (BOLA) were executed via native `curl` CLI commands. Phase 2 (Stored XSS) was executed live in the browser via Cloud Shell's Web Preview on port 8090. All three attack phases were completed with full mission capability — no local hypervisor, no GUI dependency, zero thermal overhead on the mobile device."*
+
+---
+
+### 🌐 WEEK 9: WEB APPLICATION EXPLOITATION & AGENTIC THREAT HUNTING
+
+🚀 **T1-M1-S25: SQL Injection (SQLi) Lab**
+| Data Point | Desktop User (Standard Cohort) | Android Cyber Workbench (Note 20 Ultra) |
+| :--- | :--- | :--- |
+| **Methodology** | Desktop Browser & GUI Interception | Termux `curl` & Mobile Chrome DevTools |
+| **Evidence** | N/A | Evidence: `sqli_audit.txt` |
+
+🛡️ **Technical Analysis:** Bypassed traditional desktop constraints to perform database exploitation natively from a mobile environment. Executed authentication bypasses using tautologies (`' OR 1=1 --`) and extracted backend schema data via `UNION SELECT` payloads directly against the target infrastructure.
+
+<br>
+
+🚀 **T1-M1-S26: Cross-Site Scripting (XSS) Lab**
+| Data Point | Desktop User (Standard Cohort) | Android Cyber Workbench (Note 20 Ultra) |
+| :--- | :--- | :--- |
+| **Methodology** | Standard Desktop Browser extensions | Raw payload injection via Mobile Browser |
+| **Evidence** | N/A | Evidence: `xss_payloads.txt` |
+
+🛡️ **Technical Analysis:** Demonstrated client-side manipulation by injecting malicious JavaScript (`<script>alert(document.cookie)</script>`) into vulnerable input fields. Verified reflected and stored XSS vectors to simulate session hijacking, proving that Layer 7 attacks are entirely viable from a mobile SOC.
+
+<br>
+
+🚀 **T1-M1-S27: API Reconnaissance & Exploitation**
+| Data Point | Desktop User (Standard Cohort) | Android Cyber Workbench (Note 20 Ultra) |
+| :--- | :--- | :--- |
+| **Methodology** | Postman / Insomnia GUI applications | Native Bash looping & HTTP header forging |
+| **Evidence** | N/A | Evidence: `api_brute_loop.sh` |
+
+🛡️ **Technical Analysis:** Instead of relying on heavy desktop API clients, I engineered a highly optimized Bash brute-force loop natively in Termux. Utilized `curl -X POST -H "Content-Type: application/json"` inside a `seq` loop to autonomously iterate through 10,000 PIN combinations against a protected API endpoint, extracting the access token with near-zero RAM overhead.
+
+<br>
+
+💥 **T1-M1-TLAB9: Operation Agentic Threat Hunt (Web Breach)**
+| Data Point | Desktop User (Standard Cohort) | Android Cyber Workbench (Note 20 Ultra) |
+| :--- | :--- | :--- |
+| **Methodology** | Standard VM & Splunk/SIEM GUI | Python Automation Forge & Local LLM (Gemma) |
+| **Evidence** | N/A | Evidence: `tlab9_web_breach_report.md` |
+
+🛡️ **Technical Analysis:** Synthesized Week 9 offensive tactics (SQLi, XSS, API Abuse) with defensive automation. Leveraged Python scripting to parse massive web server logs for HTTP 200 responses tied to malicious SQL payloads. Integrated an Agentic AI workflow to autonomously classify the Threat Actor's TTPs and generate incident response commands, successfully defending the perimeter from the Note 20 Ultra.
