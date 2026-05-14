@@ -66,6 +66,7 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | S23      | Privilege Escalation  | Cron Job Wildcard / Unquoted Service Path        | PR.AC        | CIS 5       | Integrity     | [escalation_path.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/018e7631f51db14d6e5d07420be135941b7fe512) |
 | S24      | Lateral Movement | SSH Pivot / SOCKS Proxy Tunnel | PR.PT | CIS 4 | Confidentiality | [pivot_success.png](pivot_success.png) |
 | TLAB 8   | The Kill Chain | Vertical Escalation / Cross-Subnet Pivot | PR.PT | CIS 12 | Confidentiality | [Deep_Pivot_Report.md](Deep_Pivot_Report.md) |
+| S25      | Data Exfiltration    | SQL Injection / Authentication Bypass / UNION Attack | DE.CM       | CIS 18     | Confidentiality | [sqli_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/sqli_report.txt) |
 
 ## 📂 Artifact Evidence & Operational History
 
@@ -733,3 +734,43 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 **Engineering Statement:** *"Encapsulation. Proxychains intercepts the Nmap system calls and wraps the TCP packets inside the established SSH/SOCKS tunnel. The packets 'exit' the tunnel from the Bastion host's internal interface. To the target database, the scan appears to originate locally from the Bastion server, effectively bypassing external firewall rules."*
 
 ---
+
+### 💉 T1-M1-S25: THE DATA EXFILTRATION (SQL Injection Kill Chain)
+* **Evidence 1 (Artifact):** [sqli_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/sqli_report.txt)
+* **Evidence 2 (Visual):** Screenshots — Auth Bypass, UNION Attack, CEO Salary Extraction, Git Push
+* **Vulnerability Target:** TitanCorp Legacy CloudNano Web Application (SQLite Backend)
+* **Attack Chain:** Tautology Bypass → Column Enumeration → Schema Discovery → Data Exfiltration
+
+#### ⚖️ Architectural Comparison (Governance Chart)
+
+| Feature | Standard Desktop (x86) | Android Cyber Workbench (ARM64) |
+| :--- | :--- | :--- |
+| **Execution Environment** | Local Ubuntu VM (127.0.0.1) | **Ephemeral Google Cloud Shell Bridge** |
+| **Web App Access** | Native localhost browser | **Cloud Shell Web Preview (Port 8080)** |
+| **Submission Mechanism** | Native `session-submit` | **Cloud Pivot Bypass + Git Push** |
+| **Artifact** | `sqli_report.txt` | **[sqli_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/sqli_report.txt)** |
+
+#### 🧠 S25 Mission Defense Matrix (Executive Summary)
+* **Mission Objective:** Prove that TitanCorp's legacy CloudNano web application is fully exploitable — not merely theoretically vulnerable — by bypassing authentication, mapping the database schema, and extracting the CEO's salary data via a live UNION attack.
+* **Technical Mechanics:**
+    * **Phase 1 (Authentication Bypass):** Injected the tautology payload `' OR 1=1 --` into the Username field, leaving the password blank. The server evaluated the injected condition as always-true, granting full admin access without valid credentials.
+    * **Phase 2 (Column Enumeration):** Used `ORDER BY` injection (`' ORDER BY 1 --`, `' ORDER BY 2 --`, `' ORDER BY 3 --`) to probe the query structure. A database error on `ORDER BY 3` confirmed the original query uses exactly 2 columns.
+    * **Phase 3 (Schema Discovery):** Executed `' UNION SELECT name, sql FROM sqlite_master --` to query SQLite's internal table registry, revealing the `employees` table and its `salary` column.
+    * **Phase 4 (Data Exfiltration):** Deployed the final payload `' UNION SELECT name, salary FROM employees --` to dump all employee salary data, confirming the CEO (Alice) salary at **$2,500,000**.
+* **Remediation:** Parameterized queries (prepared statements) eliminate SQL injection by separating SQL logic from user input — injected strings are treated as data, never as executable commands.
+* **Mechanical Proof:** Completed `sqli_report.txt` pushed to GitHub with 4 visual proof-of-exploitation screenshots documenting the full attack chain from login bypass to salary extraction.
+#### 📸 Proof of Exploitation
+
+| Phase | Screenshot |
+| :--- | :--- |
+| **Phase 1 — Tautology Payload Injected** | ![Auth Bypass Input](Screen%20Shot%202026-05-13%20at%2021.39.03%20(2).png) |
+| **Phase 2 — AUTH BYPASS SUCCESS** | ![Auth Bypass Success](Screen%20Shot%202026-05-13%20at%2021.40.58%20(2).png) |
+| **Phase 3 — UNION Attack: CEO Salary Extracted** | ![Data Exfiltration](Screen%20Shot%202026-05-13%20at%2021.42.49%20(2).png) |
+| **Phase 4 — Git Push Confirmed** | ![Git Push](Screen%20Shot%202026-05-13%20at%2022.04.47%20(2).png) |#### 🛡️ Operational Defense Logic (White Hat Auditor Interrogation)
+
+**White Hat Auditor Question:** *"Why is a tautology injection like `' OR 1=1 --` so dangerous in production environments?"*
+**Engineering Statement:** *"Because it requires zero credentials and zero prior knowledge of the database. The payload hijacks the SQL parser itself — the server executes the injected logic as native SQL, making `1=1` always evaluate to true and granting access to any account in the table. In a production environment, this single payload can compromise thousands of user accounts in milliseconds."*
+**White Hat Auditor Question:** *"Why did you use a UNION attack instead of a blind injection technique?"*
+**Engineering Statement:** *"The application returned visible output in the browser — a classic in-band SQL injection scenario. UNION attacks are the most efficient extraction method when the application reflects query results directly. Blind injection (boolean-based or time-based) is reserved for black-box environments where no output is returned. Using UNION here was the operationally correct choice: maximum data extraction with minimum query complexity."*
+**White Hat Auditor Question:** *"How did you execute this lab without a local Ubuntu VM?"*
+**Mechanical Proof:** *"I provisioned the Flask/SQLite vulnerable application inside Google Cloud Shell using the TA-provided script, then accessed the live web application via Cloud Shell's native Web Preview on port 8080. This maintained full mission capability — including live browser-based SQL injection — without requiring a local hypervisor, preserving the Zero Trust integrity of the mobile Bunker device."*
