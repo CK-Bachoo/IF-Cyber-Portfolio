@@ -68,6 +68,7 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | TLAB 8   | The Kill Chain | Vertical Escalation / Cross-Subnet Pivot | PR.PT | CIS 12 | Confidentiality | [Deep_Pivot_Report.md](Deep_Pivot_Report.md) |
 | S25      | Data Exfiltration    | SQL Injection / Authentication Bypass / UNION Attack | DE.CM       | CIS 18     | Confidentiality | [sqli_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/sqli_report.txt) |
 | S26      | Poisoned Browser     | XSS (Reflected & Stored) / CSRF / Cookie Theft       | DE.CM       | CIS 18     | Confidentiality | [xss_payloads.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/xss_payloads.txt) |
+| S27      | Invisible Logic      | API BOLA (IDOR) / Business Logic Brute Force         | ID.RA       | CIS 16     | Confidentiality | [api_audit.log](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/api_audit.log) |
 
 ## 📂 Artifact Evidence & Operational History
 
@@ -804,13 +805,46 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 #### 🛡️ Operational Defense Logic (White Hat Auditor Interrogation)
 
 **White Hat Auditor Question:** *"What is the difference between Reflected and Stored XSS and why does Stored XSS represent a higher threat level?"*
-
 **Engineering Statement:** *"Reflected XSS requires the attacker to deliver a crafted URL to each individual victim — the payload only fires when the specific malicious link is clicked and is never written to the server. Stored XSS is a force multiplier: the payload is written permanently to the server's database and executes automatically for every user who loads the poisoned page, with no phishing link required. A single Stored XSS injection on a high-traffic page can compromise thousands of sessions simultaneously."*
 
 **White Hat Auditor Question:** *"Why is the absence of an anti-CSRF token on the transfer endpoint critical?"*
-
 **Engineering Statement:** *"Without a token, the server cannot distinguish between a legitimate user-initiated transfer and a forged request from a malicious third-party site. Because browsers automatically attach session cookies to all requests for a given domain, an attacker can embed the transfer URL in an image tag on any external page. The moment an authenticated user loads that page, their browser silently fires the request with their valid session cookie attached — transferring funds without any user interaction or awareness."*
 
 **White Hat Auditor Question:** *"How did you execute this lab without a local Ubuntu VM?"*
-
 **Mechanical Proof:** *"I provisioned the Titan Social Network Flask application inside Google Cloud Shell using the TA-provided script, then accessed the live web application via Cloud Shell's native Web Preview on port 8081. All three attack phases — Reflected XSS, Stored XSS cookie theft, and CSRF URL weaponization — were executed live in the browser, maintaining full mission capability without a local hypervisor."*
+
+---
+
+### 📡 T1-M1-S27: THE INVISIBLE LOGIC (API BOLA & Business Logic Exploitation)
+* **Evidence (Artifact):** [api_audit.log](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/api_audit.log)
+* **Vulnerability Targets:** TitanCorp Titan Shop REST API (Port 5000)
+* **Attack Chain:** BOLA ID Swap → CISO Secret Extraction → Discount Code Brute Force
+
+#### ⚖️ Architectural Comparison (Governance Chart)
+
+| Feature | Standard Desktop (x86) | Android Cyber Workbench (ARM64) |
+| :--- | :--- | :--- |
+| **Execution Environment** | Local Ubuntu VM + Burp Suite GUI | **Ephemeral Google Cloud Shell Bridge** |
+| **Interception Method** | Burp Suite Proxy + Built-in Browser | **Native `curl` CLI HTTP Client** |
+| **Brute Force Method** | Burp Suite Intruder (GUI) | **Bash `for` loop with `seq 9900-9999`** |
+| **Submission Mechanism** | Native `session-submit` | **Cloud Pivot Bypass + Git Push** |
+| **Artifact** | `api_audit.log` | **[api_audit.log](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/api_audit.log)** |
+
+#### 🧠 S27 Mission Defense Matrix (Executive Summary)
+* **Mission Objective:** Exploit TitanCorp's e-commerce REST API by exploiting a Broken Object Level Authorization (BOLA) vulnerability to extract a classified CISO secret, then brute-force a hidden discount code buried in the checkout business logic.
+* **Technical Mechanics:**
+    * **Phase 1 (BOLA — ID Swap):** Sent a GET request to `/api/v1/profile/101` (Standard User). Incremented the object ID to `102` and resent the request. The API returned the full CISO admin profile including a classified secret field — `TITAN_MASTER_KEY_2026` — with zero authorization check. The server never verified that the requesting session owned the requested object.
+    * **Phase 2 (Business Logic Brute Force):** Identified the checkout endpoint accepting a POST body with `discount_code`. Using a bash `for` loop iterating `curl` POST requests across codes `9900–9999` (equivalent to Burp Suite Intruder's number payload), detected a response anomaly at code `9912` — returning `100% OFF` and `$0.00` total versus the standard `$150.00` response for all other codes.
+* **Remediation:** BOLA requires server-side ownership validation on every object request — session tokens must be verified against the resource owner before data is returned. Business logic brute force requires rate limiting, request anomaly detection, and cryptographically random non-sequential discount codes.
+* **Mechanical Proof:** Both findings documented in `api_audit.log` with exact API responses, pushed to GitHub establishing a cryptographic audit trail of the full exploitation chain.
+
+#### 🛡️ Operational Defense Logic (White Hat Auditor Common Questions)
+
+**White Hat Auditor Question:** *"Why did you use `curl` instead of Burp Suite for this lab?"*
+**Engineering Statement:** *"Burp Suite Community Edition is a GUI-dependent Java application requiring a full desktop environment. Google Cloud Shell provides a headless terminal with no display server. Rather than being blocked by a tool dependency, I weaponized native `curl` — the same HTTP client that powers Burp's underlying request engine — to achieve identical results. A `GET` request with a modified ID parameter is mechanically equivalent to Burp's Proxy intercept and forward operation. The attack surface doesn't care what tool sends the packet."*
+
+**White Hat Auditor Question:** *"How does your bash brute force loop replicate Burp Intruder's number payload attack?"*
+**Engineering Statement:** *"Burp Intruder's number payload iterates a marked position through a defined range and logs response length anomalies. My bash loop executes the identical operation: `seq 9900 9999` generates the numeric range, each value is substituted into the `discount_code` field of a POST request via `curl`, and the full JSON response is printed per iteration. The winning code `9912` was identified by the response body change from `0%` to `100% OFF` — the same anomaly Burp Intruder would flag via response length deviation. The methodology is architecturally identical; only the interface differs."*
+
+**White Hat Auditor Question:** *"What makes BOLA the most critical API vulnerability class?"*
+**Engineering Statement:** *"BOLA (OWASP API Security Top 1) is critical because the attack requires zero technical sophistication — an attacker only needs to increment an integer. The vulnerability exists entirely in the server's failure to enforce ownership checks at the object level. In this case, changing `101` to `102` in a URL parameter exposed a classified admin credential with no authentication bypass, no exploit code, and no special tooling. At scale, a single BOLA vulnerability can expose every user record in a database through sequential enumeration."*
