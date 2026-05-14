@@ -67,6 +67,7 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | S24      | Lateral Movement | SSH Pivot / SOCKS Proxy Tunnel | PR.PT | CIS 4 | Confidentiality | [pivot_success.png](pivot_success.png) |
 | TLAB 8   | The Kill Chain | Vertical Escalation / Cross-Subnet Pivot | PR.PT | CIS 12 | Confidentiality | [Deep_Pivot_Report.md](Deep_Pivot_Report.md) |
 | S25      | Data Exfiltration    | SQL Injection / Authentication Bypass / UNION Attack | DE.CM       | CIS 18     | Confidentiality | [sqli_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/sqli_report.txt) |
+| S26      | Poisoned Browser     | XSS (Reflected & Stored) / CSRF / Cookie Theft       | DE.CM       | CIS 18     | Confidentiality | [xss_payloads.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/xss_payloads.txt) |
 
 ## 📂 Artifact Evidence & Operational History
 
@@ -774,3 +775,42 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 **Engineering Statement:** *"The application returned visible output in the browser — a classic in-band SQL injection scenario. UNION attacks are the most efficient extraction method when the application reflects query results directly. Blind injection (boolean-based or time-based) is reserved for black-box environments where no output is returned. Using UNION here was the operationally correct choice: maximum data extraction with minimum query complexity."*
 **White Hat Auditor Question:** *"How did you execute this lab without a local Ubuntu VM?"*
 **Mechanical Proof:** *"I provisioned the Flask/SQLite vulnerable application inside Google Cloud Shell using the TA-provided script, then accessed the live web application via Cloud Shell's native Web Preview on port 8080. This maintained full mission capability — including live browser-based SQL injection — without requiring a local hypervisor, preserving the Zero Trust integrity of the mobile Bunker device."*
+
+---
+
+### ⚗️ T1-M1-S26: THE POISONED BROWSER (XSS & CSRF Kill Chain)
+* **Evidence 1 (Artifact):** [xss_payloads.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/xss_payloads.txt)
+* **Vulnerability Targets:** Titan Social Network (Search Bar, Message Board, Fund Transfer Portal)
+* **Attack Chain:** Reflected XSS → Stored XSS Cookie Theft → CSRF Weaponization
+
+#### ⚖️ Architectural Comparison (Governance Chart)
+
+| Feature | Standard Desktop (x86) | Android Cyber Workbench (ARM64) |
+| :--- | :--- | :--- |
+| **Execution Environment** | Local Ubuntu VM (127.0.0.1:8081) | **Ephemeral Google Cloud Shell Bridge** |
+| **Web App Access** | Native localhost browser | **Cloud Shell Web Preview (Port 8081)** |
+| **Submission Mechanism** | Native `session-submit` | **Cloud Pivot Bypass + Git Push** |
+| **Artifact** | `xss_payloads.txt` | **[xss_payloads.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/xss_payloads.txt)** |
+
+#### 🧠 S26 Mission Defense Matrix (Executive Summary)
+* **Mission Objective:** Exploit three distinct client-side vulnerabilities in the Titan Social Network — proving that Reflected XSS, Stored XSS, and CSRF are not theoretical risks but fully executable attack chains capable of DOM manipulation, session hijacking, and unauthorized fund transfers.
+* **Technical Mechanics:**
+    * **Phase 1 (Reflected XSS):** Injected `<script>alert('XSS')</script>` into the Search Users bar. The server reflected the unsanitized input directly into the HTML response, executing the script in the victim's browser and firing a JavaScript alert — proving full DOM control.
+    * **Phase 2 (Stored XSS — Cookie Theft):** Posted `<script>alert(document.cookie)</script>` to the Message Board. The payload was permanently stored server-side. Every user loading the page triggered the script, exposing the admin session cookie: `session_id=admin_secret_99812_do_not_share`. This cookie can be used to hijack the admin session.
+    * **Phase 3 (CSRF Weaponization):** Analyzed the stateless fund transfer endpoint (`/transfer?to=Alice&amount=10`) and confirmed the absence of any anti-CSRF token. Crafted a malicious URL: `https://[host]/transfer?to=Attacker&amount=5000`. Any authenticated user who clicks this link silently transfers $5000 to the attacker with no confirmation or token validation.
+* **Remediation:** Output encoding and Content Security Policy (CSP) headers eliminate XSS. Anti-CSRF tokens tied to the user session prevent CSRF by ensuring state-changing requests cannot be forged from third-party origins.
+* **Mechanical Proof:** All three attack phases documented in `xss_payloads.txt` with 7 visual proof-of-exploitation screenshots covering the full kill chain from app access to cookie theft to CSRF execution.
+
+#### 🛡️ Operational Defense Logic (White Hat Auditor Interrogation)
+
+**White Hat Auditor Question:** *"What is the difference between Reflected and Stored XSS and why does Stored XSS represent a higher threat level?"*
+
+**Engineering Statement:** *"Reflected XSS requires the attacker to deliver a crafted URL to each individual victim — the payload only fires when the specific malicious link is clicked and is never written to the server. Stored XSS is a force multiplier: the payload is written permanently to the server's database and executes automatically for every user who loads the poisoned page, with no phishing link required. A single Stored XSS injection on a high-traffic page can compromise thousands of sessions simultaneously."*
+
+**White Hat Auditor Question:** *"Why is the absence of an anti-CSRF token on the transfer endpoint critical?"*
+
+**Engineering Statement:** *"Without a token, the server cannot distinguish between a legitimate user-initiated transfer and a forged request from a malicious third-party site. Because browsers automatically attach session cookies to all requests for a given domain, an attacker can embed the transfer URL in an image tag on any external page. The moment an authenticated user loads that page, their browser silently fires the request with their valid session cookie attached — transferring funds without any user interaction or awareness."*
+
+**White Hat Auditor Question:** *"How did you execute this lab without a local Ubuntu VM?"*
+
+**Mechanical Proof:** *"I provisioned the Titan Social Network Flask application inside Google Cloud Shell using the TA-provided script, then accessed the live web application via Cloud Shell's native Web Preview on port 8081. All three attack phases — Reflected XSS, Stored XSS cookie theft, and CSRF URL weaponization — were executed live in the browser, maintaining full mission capability without a local hypervisor."*
