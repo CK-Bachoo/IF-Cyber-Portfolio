@@ -69,8 +69,7 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | S25      | Data Exfiltration    | SQL Injection / Authentication Bypass / UNION Attack | DE.CM       | CIS 18     | Confidentiality | [sqli_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/sqli_report.txt) |
 | S26      | Poisoned Browser     | XSS (Reflected & Stored) / CSRF / Cookie Theft       | DE.CM       | CIS 18     | Confidentiality | [xss_payloads.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/xss_payloads.txt) |
 | S27      | Invisible Logic      | API BOLA (IDOR) / Business Logic Brute Force         | ID.RA       | CIS 16     | Confidentiality | [api_audit.log](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/api_audit.log) |
-
-## 📂 Artifact Evidence & Operational History
+| TLAB 9   | Operation Omni-Portal | Chained SQLi / Stored XSS / API BOLA Full-Stack Audit | RS.AN       | CIS 18     | All Tiers     | [OmniPortal_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/OmniPortal_Assessment.md) |## 📂 Artifact Evidence & Operational History
 
 ### 🛠️ T1-M1-S01: Portfolio Initialization
 * [Evidence: Commit 584f951](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/584f951)
@@ -848,3 +847,45 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 **White Hat Auditor Question:** *"What makes BOLA the most critical API vulnerability class?"*
 **Engineering Statement:** *"BOLA (OWASP API Security Top 1) is critical because the attack requires zero technical sophistication — an attacker only needs to increment an integer. The vulnerability exists entirely in the server's failure to enforce ownership checks at the object level. In this case, changing `101` to `102` in a URL parameter exposed a classified admin credential with no authentication bypass, no exploit code, and no special tooling. At scale, a single BOLA vulnerability can expose every user record in a database through sequential enumeration."*
+
+---
+
+### 🔗 P1-W9-TLAB9: OPERATION OMNI-PORTAL (Full-Stack Chained Attack Assessment)
+
+* **Evidence (Artifact):** [OmniPortal_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/OmniPortal_Assessment.md)
+* **Vulnerability Targets:** Titan Omni-Portal (Port 8090) — Login, Support Board, Orders API
+* **Attack Chain:** SQLi Auth Bypass → Stored XSS Cookie Theft → API BOLA Financial Exfiltration
+
+#### ⚖️ Architectural Comparison (Governance Chart)
+
+| Feature | Standard Desktop (x86) | Android Cyber Workbench (ARM64) |
+| :--- | :--- | :--- |
+| **Execution Environment** | Local Ubuntu VM + Burp Suite GUI | **Ephemeral Google Cloud Shell Bridge** |
+| **SQLi Method** | Burp Proxy Intercept | **Native `curl` GET with tautology payload** |
+| **XSS Method** | Browser-based payload injection | **Web Preview + Live browser interaction** |
+| **BOLA Method** | Burp Repeater ID enumeration | **Bash loop `curl` with stolen auth_token** |
+| **Submission Mechanism** | Native `session-submit` | **Cloud Pivot Bypass + Git Push** |
+| **Artifact** | `OmniPortal_Assessment.md` | **[OmniPortal_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/OmniPortal_Assessment.md)** |
+
+#### 🧠 TLAB9 Mission Defense Matrix (Executive Summary)
+* **Mission Objective:** Perform a black-box full-stack security audit of the Titan Omni-Portal — chaining SQL Injection, Stored XSS, and API BOLA in sequence to breach authentication, steal a session token, and exfiltrate confidential financial order data.
+* **Technical Mechanics:**
+    * **Phase 1 — Breaking the Gate (SQLi):** Injected tautology payload `' OR 1=1 --` into the login `user` field via GET request. The server evaluated the condition as always-true, bypassing password validation entirely and returning a valid session with `auth_token=SUPPORT_TIER_1_SECRET_TOKEN` and access to the orders API.
+    * **Phase 2 — Poisoning the Well (Stored XSS):** Posted `<script>alert(document.cookie)</script>` to the Support Board. The payload was stored server-side and executed on every page load — exposing `auth_token=SUPPORT_TIER_1_SECRET_TOKEN` to any visitor. This permanently poisons the board and enables mass session hijacking.
+    * **Phase 3 — Deep Data Mining (API BOLA):** Using the stolen `auth_token`, enumerated order IDs adjacent to the assigned `502`. Order `501` returned a confidential record never meant for this account: `{"amount":"$15,000.00","details":"Confidential Server Lease","order_id":501}` — full financial exfiltration with zero server-side authorization check.
+    * **Phase 4 — Remediation:** Parameterized queries eliminate SQLi. HTML encoding and CSP headers neutralize XSS. Server-side ownership validation on every API object request closes the BOLA vulnerability.
+* **Mechanical Proof:** All four phases documented in `OmniPortal_Assessment.md` with exact payloads, cookie values, and API responses — pushed to GitHub establishing a cryptographic audit trail of the full chained attack.
+
+#### 🛡️ Operational Defense Logic (White Hat Auditor Common Questions)
+
+**White Hat Auditor Question:** *"Why is a chained attack more dangerous than a single vulnerability in isolation?"*
+
+**Engineering Statement:** *"Each vulnerability in this chain unlocked the next attack surface. SQLi alone grants portal access but not financial data. Stored XSS alone requires a victim to visit the poisoned page. BOLA alone requires a valid session token. Chained together, they form a complete kill chain: SQLi provides the initial foothold, Stored XSS harvests credentials passively at scale, and BOLA converts those credentials into financial exfiltration. The compounding effect means the total risk is exponentially greater than any single finding scored in isolation."*
+
+**White Hat Auditor Question:** *"How did you replicate Burp Suite Repeater's ID enumeration without a GUI?"*
+
+**Engineering Statement:** *"Burp Repeater manually resends a modified request and displays the response. My bash loop executes the identical operation programmatically: iterating order IDs 501–505, injecting the stolen `auth_token` cookie into each `curl` request, and printing the full JSON response per iteration. The anomaly — a `$15,000.00 Confidential Server Lease` versus a `$50.00 Office Supplies` order — was immediately visible in the output, replicating Burp's response comparison workflow without requiring a desktop GUI."*
+
+**White Hat Auditor Question:** *"How did you execute this full-stack lab without a local Ubuntu VM?"*
+
+**Mechanical Proof:** *"I provisioned the Titan Omni-Portal Flask application inside Google Cloud Shell using the TA-provided script. Phase 1 (SQLi) and Phase 3 (BOLA) were executed via native `curl` CLI commands. Phase 2 (Stored XSS) was executed live in the browser via Cloud Shell's Web Preview on port 8090. All three attack phases were completed with full mission capability — no local hypervisor, no GUI dependency, zero thermal overhead on the mobile device."*
