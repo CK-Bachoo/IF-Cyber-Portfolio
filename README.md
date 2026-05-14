@@ -867,7 +867,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 | **Submission Mechanism** | Native `session-submit` | **Cloud Pivot Bypass + Git Push** |
 | **Artifact** | `OmniPortal_Assessment.md` | **[OmniPortal_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/OmniPortal_Assessment.md)** |
 
-#### 🧠 TLAB9 Mission Defense Matrix (Executive Summary)
+#### 🧠 W9 TLAB9 Mission Defense Matrix (Executive Summary)
 * **Mission Objective:** Perform a black-box full-stack security audit of the Titan Omni-Portal — chaining SQL Injection, Stored XSS, and API BOLA in sequence to breach authentication, steal a session token, and exfiltrate confidential financial order data.
 * **Technical Mechanics:**
     * **Phase 1 — Breaking the Gate (SQLi):** Injected tautology payload `' OR 1=1 --` into the login `user` field via GET request. The server evaluated the condition as always-true, bypassing password validation entirely and returning a valid session with `auth_token=SUPPORT_TIER_1_SECRET_TOKEN` and access to the orders API.
@@ -888,4 +888,4 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 **White Hat Auditor Question:** *"How did you execute this full-stack lab without a local Ubuntu VM?"*
 
-**Mechanical Proof:** *"I provisioned the Titan Omni-Portal Flask application inside Google Cloud Shell using the TA-provided script. Phase 1 (SQLi) and Phase 3 (BOLA) were executed via native `curl` CLI commands. Phase 2 (Stored XSS) was executed live in the browser via Cloud Shell's Web Preview on port 8090. All three attack phases were completed with full mission capability — no local hypervisor, no GUI dependency, zero thermal overhead on the mobile device."*
+**Mechanical Proof:** *"I provisioned the Titan Omni-Portal Flask application inside Google Cloud Shell using the Professor-provided script. Phase 1 (SQLi) and Phase 3 (BOLA) were executed via native `curl` CLI commands. Phase 2 (Stored XSS) was executed live in the browser via Cloud Shell's Web Preview on port 8090. All three attack phases were completed with full mission capability — no local hypervisor, no GUI dependency, zero thermal overhead on the mobile device."*
