@@ -69,7 +69,11 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | S25      | Data Exfiltration    | SQL Injection / Authentication Bypass / UNION Attack | DE.CM       | CIS 18     | Confidentiality | [sqli_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/sqli_report.txt) |
 | S26      | Poisoned Browser     | XSS (Reflected & Stored) / CSRF / Cookie Theft       | DE.CM       | CIS 18     | Confidentiality | [xss_payloads.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/xss_payloads.txt) |
 | S27      | Invisible Logic      | API BOLA (IDOR) / Business Logic Brute Force         | ID.RA       | CIS 16     | Confidentiality | [api_audit.log](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/api_audit.log) |
-| TLAB 9   | Operation Omni-Portal | Chained SQLi / Stored XSS / API BOLA Full-Stack Audit | RS.AN       | CIS 18     | All Tiers     | [OmniPortal_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/OmniPortal_Assessment.md) |## 📂 Artifact Evidence & Operational History
+| TLAB 9   | Operation Omni-Portal | Chained SQLi / Stored XSS / API BOLA Full-Stack Audit | RS.AN       | CIS 18     | All Tiers     | [OmniPortal_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/OmniPortal_Assessment.md) |
+| S28      | The Crime Scene      | DFIR Live Triage / Cryptographic Chain of Custody     | RS.AN       | CIS 8      | Availability   | [collection_log.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/collection_log.txt) |
+
+
+## 📂 Artifact Evidence & Operational History
 
 ### 🛠️ T1-M1-S01: Portfolio Initialization
 * [Evidence: Commit 584f951](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/584f951)
