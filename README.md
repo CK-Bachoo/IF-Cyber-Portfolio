@@ -71,6 +71,7 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | S27      | Invisible Logic      | API BOLA (IDOR) / Business Logic Brute Force         | ID.RA       | CIS 16     | Confidentiality | [api_audit.log](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/api_audit.log) |
 | TLAB 9   | Operation Omni-Portal | Chained SQLi / Stored XSS / API BOLA Full-Stack Audit | RS.AN       | CIS 18     | All Tiers     | [OmniPortal_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/OmniPortal_Assessment.md) |
 | S28      | The Crime Scene      | DFIR Live Triage / Cryptographic Chain of Custody     | RS.AN       | CIS 8      | Availability   | [collection_log.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/collection_log.txt) |
+| S29      | The Digital Autopsy  | DFIR Disk & Memory Carving / Malware Recovery         | RS.AN       | CIS 8      | Integrity      | [forensic_findings.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/forensic_findings.md) |
 
 
 ## 📂 Artifact Evidence & Operational History
@@ -977,3 +978,36 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 **White Hat Auditor Question:** *"How did you execute this DFIR lab without a local Ubuntu VM?"*
 
 **Mechanical Proof:** *"I provisioned the compromised container inside Google Cloud Shell using the TA-provided script. Phase 1 (live triage) was executed via native `docker exec -it` and `netstat -antp` commands. Phase 2 (hash verification) was executed via `md5sum` and `sha256sum` on the staged evidence files. The entire DFIR workflow was completed with full mission capability — no local hypervisor, no GUI dependency, zero thermal overhead on the mobile device."*
+
+
+### 🚨 T1-M1-S29: THE DIGITAL AUTOPSY (Malware Recovery & Disk Carving)
+
+* **Evidence (Artifact):** [forensic_findings.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/forensic_findings.md)
+* **Vulnerability Target:** Corrupted FAT32 Raw Disk Image (`compromised_drive.dd`)
+* **Mission Chain:** Memory Dump Simulation → Raw Disk Carving → Binary String Extraction
+
+#### ⚖️ Architectural Comparison (Governance Chart)
+
+| Feature | Standard Desktop (x86) | Android Cyber Workbench (ARM64) |
+| :--- | :--- | :--- |
+| **Execution Environment** | Local Ubuntu VM | **Ephemeral Google Cloud Shell Bridge** |
+| **Extraction Tool** | Sleuth Kit (`fls` / `icat`) | **Raw Binary Analysis (`strings` + `grep`)** |
+| **Filesystem Handling** | Native Loopback Mount | **Headless Flat-file Parsing Bypass** |
+| **Submission Mechanism** | Native `session-submit` | **Cloud Pivot Bypass + Manual Git Push** |
+| **Artifact** | `forensic_findings.md` | **[forensic_findings.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/forensic_findings.md)** |
+
+#### 🧠 S29 Mission Defense Matrix (Executive Summary)
+* **Mission Objective:** Carve raw memory and corrupted disk images to recover a deleted malware payload (`Resume.exe`), identify the threat actor, and extract persistence mechanisms without relying on standard filesystem mounting operations.
+* **Technical Mechanics:**
+    * **Phase 1 — Environmental Adaptation:** The provisioning script attempted to inject a deleted payload into a synthesized FAT32 raw disk image. However, Google Cloud Shell's kernel restrictions actively blocked the loopback device creation (`mount: wrong fs type, bad option... on /dev/loop0`). This left the disk image unreadable to standard DFIR parsers like The Sleuth Kit (`fls`).
+    * **Phase 2 — Raw Binary Carving:** Bypassed the broken filesystem geometry by abandoning standard `icat` extraction. Pivoted to raw sector carving, treating the entire drive image as a flat binary file. Executed `strings compromised_drive.dd` piped to `grep -i` to surgically locate the target intelligence headers ("Actor", "File", "Timestamp", "Persistence").
+ 
+* **Remediation:** Advanced forensic recovery proves that adversaries cannot hide their tracks by simply deleting executables or unmounting drives. Raw disk sectors retain binary data until physically overwritten.
+* **Mechanical Proof:** Documented findings (Threat Actor: `TitanCorp_Ex-Employee_99`, Executable: `Resume.exe`, Timestamp: `2026-03-15 08:42:01 UTC`, Persistence: `Registry Run Key HKLM\Software\Microsoft\Windows\CurrentVersion\Run`) in `forensic_findings.md`. Pushed to GitHub establishing an immutable audit trail.
+
+#### 🛡️ Operational Defense Logic (White Hat Auditor Common Questions)
+
+**White Hat Auditor Question:** *"Why did you use `strings` and `grep` instead of industry-standard DFIR tools like Sleuth Kit (`fls`/`icat`)?"*
+
+**Engineering Statement:** *"Environmental adaptation. Google Cloud Shell's containerized kernel restricts loopback mounts and custom filesystems at the kernel level. When the `dfir_mock` mount failed, the disk image became unreadable to standard filesystem parsers. I pivoted to raw binary string analysis, proving that an analyst can extract critical forensic intelligence directly from disk sectors even when the underlying infrastructure fails."*
+
