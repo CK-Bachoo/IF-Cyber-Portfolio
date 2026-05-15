@@ -1001,7 +1001,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 * **Technical Mechanics:**
     * **Phase 1 — Environmental Adaptation:** The provisioning script attempted to inject a deleted payload into a synthesized FAT32 raw disk image. However, Google Cloud Shell's kernel restrictions actively blocked the loopback device creation (`mount: wrong fs type, bad option... on /dev/loop0`). This left the disk image unreadable to standard DFIR parsers like The Sleuth Kit (`fls`).
     * **Phase 2 — Raw Binary Carving:** Bypassed the broken filesystem geometry by abandoning standard `icat` extraction. Pivoted to raw sector carving, treating the entire drive image as a flat binary file. Executed `strings compromised_drive.dd` piped to `grep -i` to surgically locate the target intelligence headers ("Actor", "File", "Timestamp", "Persistence").
-    * **Phase 3 — Manual Ledger Update:** After finalizing the forensic report, the proprietary `session-submit` script failed due to environmental paths. Bypassed the script failure by manually stripping hidden clipboard control characters from the command line, navigating to the repository, and forcing the artifact into the remote repository via raw Git commands. 
+ 
 * **Remediation:** Advanced forensic recovery proves that adversaries cannot hide their tracks by simply deleting executables or unmounting drives. Raw disk sectors retain binary data until physically overwritten.
 * **Mechanical Proof:** Documented findings (Threat Actor: `TitanCorp_Ex-Employee_99`, Executable: `Resume.exe`, Timestamp: `2026-03-15 08:42:01 UTC`, Persistence: `Registry Run Key HKLM\Software\Microsoft\Windows\CurrentVersion\Run`) in `forensic_findings.md`. Pushed to GitHub establishing an immutable audit trail.
 
@@ -1010,6 +1010,4 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 **White Hat Auditor Question:** *"Why did you use `strings` and `grep` instead of industry-standard DFIR tools like Sleuth Kit (`fls`/`icat`)?"*
 
 **Engineering Statement:** *"Environmental adaptation. Google Cloud Shell's containerized kernel restricts loopback mounts and custom filesystems at the kernel level. When the `dfir_mock` mount failed, the disk image became unreadable to standard filesystem parsers. I pivoted to raw binary string analysis, proving that an analyst can extract critical forensic intelligence directly from disk sectors even when the underlying infrastructure fails."*
-
-
 
