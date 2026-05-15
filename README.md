@@ -926,7 +926,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 🛡️ **Technical Analysis:** Instead of relying on heavy desktop API clients, I engineered a highly optimized Bash brute-force loop natively in Termux. Utilized `curl -X POST -H "Content-Type: application/json"` inside a `seq` loop to autonomously iterate through 10,000 PIN combinations against a protected API endpoint, extracting the access token with near-zero RAM overhead.
 
-<br>
+
 
 💥 **T1-M1-TLAB9: Operation Agentic Threat Hunt (Web Breach)**
 | Data Point | Desktop User (Standard Cohort) | Android Cyber Workbench (Note 20 Ultra) |
@@ -937,6 +937,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 🛡️ **Technical Analysis:** Synthesized Week 9 offensive tactics (SQLi, XSS, API Abuse) with defensive automation. Leveraged Python scripting to parse massive web server logs for HTTP 200 responses tied to malicious SQL payloads. Integrated an Agentic AI workflow to autonomously classify the Threat Actor's TTPs and generate incident response commands, successfully defending the perimeter from the Note 20 Ultra.
 
 ---
+
 
 ### 🚨 T1-M1-S28: THE CRIME SCENE (DFIR Live Triage & Chain of Custody)
 
