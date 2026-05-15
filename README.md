@@ -69,7 +69,11 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | S25      | Data Exfiltration    | SQL Injection / Authentication Bypass / UNION Attack | DE.CM       | CIS 18     | Confidentiality | [sqli_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/sqli_report.txt) |
 | S26      | Poisoned Browser     | XSS (Reflected & Stored) / CSRF / Cookie Theft       | DE.CM       | CIS 18     | Confidentiality | [xss_payloads.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/xss_payloads.txt) |
 | S27      | Invisible Logic      | API BOLA (IDOR) / Business Logic Brute Force         | ID.RA       | CIS 16     | Confidentiality | [api_audit.log](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/api_audit.log) |
-| TLAB 9   | Operation Omni-Portal | Chained SQLi / Stored XSS / API BOLA Full-Stack Audit | RS.AN       | CIS 18     | All Tiers     | [OmniPortal_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/OmniPortal_Assessment.md) |## 📂 Artifact Evidence & Operational History
+| TLAB 9   | Operation Omni-Portal | Chained SQLi / Stored XSS / API BOLA Full-Stack Audit | RS.AN       | CIS 18     | All Tiers     | [OmniPortal_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/OmniPortal_Assessment.md) |
+| S28      | The Crime Scene      | DFIR Live Triage / Cryptographic Chain of Custody     | RS.AN       | CIS 8      | Availability   | [collection_log.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/collection_log.txt) |
+
+
+## 📂 Artifact Evidence & Operational History
 
 ### 🛠️ T1-M1-S01: Portfolio Initialization
 * [Evidence: Commit 584f951](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/584f951)
@@ -922,7 +926,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 🛡️ **Technical Analysis:** Instead of relying on heavy desktop API clients, I engineered a highly optimized Bash brute-force loop natively in Termux. Utilized `curl -X POST -H "Content-Type: application/json"` inside a `seq` loop to autonomously iterate through 10,000 PIN combinations against a protected API endpoint, extracting the access token with near-zero RAM overhead.
 
-<br>
+
 
 💥 **T1-M1-TLAB9: Operation Agentic Threat Hunt (Web Breach)**
 | Data Point | Desktop User (Standard Cohort) | Android Cyber Workbench (Note 20 Ultra) |
@@ -931,3 +935,45 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 | **Evidence** | N/A | Evidence: `tlab9_web_breach_report.md` |
 
 🛡️ **Technical Analysis:** Synthesized Week 9 offensive tactics (SQLi, XSS, API Abuse) with defensive automation. Leveraged Python scripting to parse massive web server logs for HTTP 200 responses tied to malicious SQL payloads. Integrated an Agentic AI workflow to autonomously classify the Threat Actor's TTPs and generate incident response commands, successfully defending the perimeter from the Note 20 Ultra.
+
+---
+
+
+### 🚨 T1-M1-S28: THE CRIME SCENE (DFIR Live Triage & Chain of Custody)
+
+* **Evidence (Artifact):** [collection_log.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/collection_log.txt)
+* **Vulnerability Target:** Quarantined Docker Container — Compromised Host with Active C2
+* **Mission Chain:** Live Network Triage → Process Identification → Cryptographic Hash Verification
+
+#### ⚖️ Architectural Comparison (Governance Chart)
+
+| Feature | Standard Desktop (x86) | Android Cyber Workbench (ARM64) |
+| :--- | :--- | :--- |
+| **Execution Environment** | Local Ubuntu VM + Docker Desktop | **Ephemeral Google Cloud Shell with Docker** |
+| **Container Access Method** | `docker exec -it` via GUI terminal | **Native `docker exec -it` CLI shell** |
+| **Network Triage Tool** | `netstat -antp` in VM | **`netstat -antp` in live container** |
+| **Hash Verification** | `md5sum` / `sha256sum` GUI file manager | **`md5sum` / `sha256sum` CLI on staged evidence** |
+| **Submission Mechanism** | Native `session-submit` | **Cloud Pivot Bypass + Git Push** |
+| **Artifact** | `collection_log.txt` | **[collection_log.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/collection_log.txt)** |
+
+#### 🧠 S28 Mission Defense Matrix (Executive Summary)
+* **Mission Objective:** Respond as a First Responder to a suspected Command and Control (C2) beacon on a TitanCorp production server. Perform rapid live triage on the quarantined container without destroying volatile data, identify the malicious process and its network socket, then cryptographically lock forensic artifacts using MD5 and SHA256 hashing to establish an immutable Chain of Custody.
+* **Technical Mechanics:**
+    * **Phase 1 — Live Triage:** Accessed the compromised container via `docker exec -it compromised_host /bin/sh`. Executed `netstat -antp` to enumerate all active TCP connections and their associated Process IDs. Identified a suspicious `nc` (netcat) process bound to port `4444` with PID `10` — a classic reverse shell C2 beacon signature. Exited the container without terminating the process to preserve volatile evidence.
+    * **Phase 2 — Evidence Capture:** Navigated to the pre-staged forensic evidence directory at `~/DFIR_Evidence/`. Verified the presence of `memory_dump.raw` and `system_artifacts.zip`. Calculated the MD5 hash of the memory dump (`c3839fa6a19e8fb322122daa246cd168`) for rapid integrity verification, then calculated the SHA256 hash of the artifact package (`178eff2f8dc70951306222100ed56f29bce252ccf364846e269fea700c26e25b`) for cryptographic-grade tamper detection. Both hashes were recorded in `collection_log.txt` to establish a verifiable Chain of Custody.
+* **Remediation:** Live triage prevents evidence destruction. Cryptographic hashing ensures forensic integrity — any modification to the evidence files will break the hash, proving tampering in court or internal audit.
+* **Mechanical Proof:** All findings documented in `collection_log.txt` with process name, PID, and both hash values — pushed to GitHub establishing a cryptographic audit trail with git commit timestamp.
+
+#### 🛡️ Operational Defense Logic (White Hat Auditor Common Questions)
+
+**White Hat Auditor Question:** *"Why use both MD5 and SHA256 for hash verification?"*
+
+**Engineering Statement:** *"MD5 is faster and sufficient for quick integrity checks during live triage, but it is cryptographically broken — collision attacks exist. SHA256 is the current NIST-approved standard for forensic evidence and legal proceedings. Using both provides speed (MD5) and legal defensibility (SHA256). In a court case, the SHA256 hash is what prosecutors submit as proof the evidence was not tampered with between seizure and trial."*
+
+**White Hat Auditor Interrogation:** *"Why didn't you terminate the malicious process during live triage?"*
+
+**Engineering Statement:** *"Killing the process destroys volatile evidence stored in RAM — open network connections, decryption keys, active payloads, and the full execution context. Forensic best practice is to observe, document, and isolate, not terminate. The container was already quarantined by the TA's provisioning script, so the C2 beacon could not spread. Preserving the live process allows memory forensics tools (like Volatility) to extract the attacker's full toolchain from the memory dump artifact."*
+
+**White Hat Auditor Question:** *"How did you execute this DFIR lab without a local Ubuntu VM?"*
+
+**Mechanical Proof:** *"I provisioned the compromised container inside Google Cloud Shell using the TA-provided script. Phase 1 (live triage) was executed via native `docker exec -it` and `netstat -antp` commands. Phase 2 (hash verification) was executed via `md5sum` and `sha256sum` on the staged evidence files. The entire DFIR workflow was completed with full mission capability — no local hypervisor, no GUI dependency, zero thermal overhead on the mobile device."*
