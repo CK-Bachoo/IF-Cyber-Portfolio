@@ -842,7 +842,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 * **Remediation:** BOLA requires server-side ownership validation on every object request — session tokens must be verified against the resource owner before data is returned. Business logic brute force requires rate limiting, request anomaly detection, and cryptographically random non-sequential discount codes.
 * **Mechanical Proof:** Both findings documented in `api_audit.log` with exact API responses, pushed to GitHub establishing a cryptographic audit trail of the full exploitation chain.
 
-#### 🛡️ Operational Defense Logic (White Hat Auditor Common Questions)
+#### 🛡️ Operational Defense Logic (White Hat Auditor Interrogation)
 
 **White Hat Auditor Question:** *"Why did you use `curl` instead of Burp Suite for this lab?"*
 **Engineering Statement:** *"Burp Suite Community Edition is a GUI-dependent Java application requiring a full desktop environment. Google Cloud Shell provides a headless terminal with no display server. Rather than being blocked by a tool dependency, I weaponized native `curl` — the same HTTP client that powers Burp's underlying request engine — to achieve identical results. A `GET` request with a modified ID parameter is mechanically equivalent to Burp's Proxy intercept and forward operation. The attack surface doesn't care what tool sends the packet."*
@@ -881,7 +881,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
     * **Phase 4 — Remediation:** Parameterized queries eliminate SQLi. HTML encoding and CSP headers neutralize XSS. Server-side ownership validation on every API object request closes the BOLA vulnerability.
 * **Mechanical Proof:** All four phases documented in `OmniPortal_Assessment.md` with exact payloads, cookie values, and API responses — pushed to GitHub establishing a cryptographic audit trail of the full chained attack.
 
-#### 🛡️ Operational Defense Logic (White Hat Auditor Common Questions)
+#### 🛡️ Operational Defense Logic (White Hat Auditor Interrogation)
 
 **White Hat Auditor Question:** *"Why is a chained attack more dangerous than a single vulnerability in isolation?"*
 
@@ -965,7 +965,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 * **Remediation:** Live triage prevents evidence destruction. Cryptographic hashing ensures forensic integrity — any modification to the evidence files will break the hash, proving tampering in court or internal audit.
 * **Mechanical Proof:** All findings documented in `collection_log.txt` with process name, PID, and both hash values — pushed to GitHub establishing a cryptographic audit trail with git commit timestamp.
 
-#### 🛡️ Operational Defense Logic (White Hat Auditor Common Questions)
+#### 🛡️ Operational Defense Logic (White Hat Auditor Interrogation)
 
 **White Hat Auditor Question:** *"Why use both MD5 and SHA256 for hash verification?"*
 
@@ -983,6 +983,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 ### 🚨 T1-M1-S29: THE DIGITAL AUTOPSY (Malware Recovery & Disk Carving)
 
 * **Evidence (Artifact):** [forensic_findings.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/forensic_findings.md)
+* **Evidence (Visual):** https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/s29%20terminal%20screenshot.jpeg
 * **Vulnerability Target:** Corrupted FAT32 Raw Disk Image (`compromised_drive.dd`)
 * **Mission Chain:** Memory Dump Simulation → Raw Disk Carving → Binary String Extraction
 
@@ -1005,7 +1006,9 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 * **Remediation:** Advanced forensic recovery proves that adversaries cannot hide their tracks by simply deleting executables or unmounting drives. Raw disk sectors retain binary data until physically overwritten.
 * **Mechanical Proof:** Documented findings (Threat Actor: `TitanCorp_Ex-Employee_99`, Executable: `Resume.exe`, Timestamp: `2026-03-15 08:42:01 UTC`, Persistence: `Registry Run Key HKLM\Software\Microsoft\Windows\CurrentVersion\Run`) in `forensic_findings.md`. Pushed to GitHub establishing an immutable audit trail.
 
-#### 🛡️ Operational Defense Logic (White Hat Auditor Common Questions)
+![S29 Terminal Evidence](s29%20terminal%20screenshot.jpeg)
+
+#### 🛡️ Operational Defense Logic (White Hat Auditor Interrogation)
 
 **White Hat Auditor Question:** *"Why did you use `strings` and `grep` instead of industry-standard DFIR tools like Sleuth Kit (`fls`/`icat`)?"*
 
