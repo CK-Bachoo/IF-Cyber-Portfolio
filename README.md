@@ -983,6 +983,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 ### 🚨 T1-M1-S29: THE DIGITAL AUTOPSY (Malware Recovery & Disk Carving)
 
 * **Evidence (Artifact):** [forensic_findings.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/forensic_findings.md)
+* **Evidence (Visual):** https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/s29%20terminal%20screenshot.jpeg
 * **Vulnerability Target:** Corrupted FAT32 Raw Disk Image (`compromised_drive.dd`)
 * **Mission Chain:** Memory Dump Simulation → Raw Disk Carving → Binary String Extraction
 
