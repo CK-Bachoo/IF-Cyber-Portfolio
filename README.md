@@ -1005,7 +1005,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
  
 * **Remediation:** Advanced forensic recovery proves that adversaries cannot hide their tracks by simply deleting executables or unmounting drives. Raw disk sectors retain binary data until physically overwritten.
 * **Mechanical Proof:** Documented findings (Threat Actor: `TitanCorp_Ex-Employee_99`, Executable: `Resume.exe`, Timestamp: `2026-03-15 08:42:01 UTC`, Persistence: `Registry Run Key HKLM\Software\Microsoft\Windows\CurrentVersion\Run`) in `forensic_findings.md`. Pushed to GitHub establishing an immutable audit trail.
-
+![S29 Terminal Evidence](s29%20terminal%20screenshot.jpeg)
 [s29 terminal screenshot.jpeg](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/s29%20terminal%20screenshot.jpeg)
 
 #### 🛡️ Operational Defense Logic (White Hat Auditor Interrogation)
