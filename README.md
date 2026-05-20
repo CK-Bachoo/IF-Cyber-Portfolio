@@ -63,8 +63,8 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | S21      | Vulnerability Triage  | Web Application Scanning / Risk Prioritization   | ID.RA       | CIS 7      | All Tiers     | [remediation_plan.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/remediation_plan.md) |
 | TLAB W7  | Perimeter Assessment | Active Recon / Vulnerability Audit / Risk Triage | ID.RA       | CIS 7      | All Tiers     | [Perimeter_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Perimeter_Assessment.md) |
 | S22      | Vulnerability Verification | MSF: usermap_script / Samba Exploit | PR.IP | CIS 7 | Confidentiality | [exploit_verification.png](exploit_verification.png) |
-| S23      | Privilege Escalation  | Cron Job Wildcard / Unquoted Service Path        | PR.AC        | CIS 5       | Integrity     | [escalation_path.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/018e7631f51db14d6e5d07420be135941b7fe512) |
-| S24      | Lateral Movement | SSH Pivot / SOCKS Proxy Tunnel | PR.PT | CIS 4 | Confidentiality | [pivot_success.png](pivot_success.png) |
+| S23      | Privilege Escalation | Cron Job Wildcard / Unquoted Service Path        | PR.AC        | CIS 5       | Integrity     | [escalation_path.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/018e7631f51db14d6e5d07420be135941b7fe512) |
+| S24      | Lateral Movement     | SSH Pivot / SOCKS Proxy Tunnel | PR.PT | CIS 4 | Confidentiality | [pivot_success.png](pivot_success.png) |
 | TLAB 8   | The Kill Chain | Vertical Escalation / Cross-Subnet Pivot | PR.PT | CIS 12 | Confidentiality | [Deep_Pivot_Report.md](Deep_Pivot_Report.md) |
 | S25      | Data Exfiltration    | SQL Injection / Authentication Bypass / UNION Attack | DE.CM       | CIS 18     | Confidentiality | [sqli_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/sqli_report.txt) |
 | S26      | Poisoned Browser     | XSS (Reflected & Stored) / CSRF / Cookie Theft       | DE.CM       | CIS 18     | Confidentiality | [xss_payloads.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/xss_payloads.txt) |
@@ -72,8 +72,7 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | TLAB 9   | Operation Omni-Portal | Chained SQLi / Stored XSS / API BOLA Full-Stack Audit | RS.AN       | CIS 18     | All Tiers     | [OmniPortal_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/OmniPortal_Assessment.md) |
 | S28      | The Crime Scene      | DFIR Live Triage / Cryptographic Chain of Custody     | RS.AN       | CIS 8      | Availability   | [collection_log.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/collection_log.txt) |
 | S29      | The Digital Autopsy  | DFIR Disk & Memory Carving / Malware Recovery         | RS.AN       | CIS 8      | Integrity      | [forensic_findings.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/forensic_findings.md) |
-| S30 | SIEM Engineering | Threat Hunting / Privilege Escalation | DE.AE | CIS 8 | Integrity | attack_timeline.csv |
-
+| S30      | SIEM Engineering     | Threat Hunting / Privilege Escalation | DE.AE | CIS 8 | Integrity | attack_timeline.csv | [attack_timeline.csv](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/attack_timeline.csv)
 
 
 ## 📂 Artifact Evidence & Operational History
