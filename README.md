@@ -1008,11 +1008,12 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ![S29 Terminal Evidence](s29%20terminal%20screenshot.jpeg)
 
-#### 💥 T1-M1-S30: OPERATION CENTRAL NERVOUS SYSTEM (SIEM Engineering & Threat Hunting)
-*   **Evidence (Artifact):** `attack_timeline.csv`
-*   **Evidence (Visual):** Commit a4e18e4 - Forensic Timeline & SIEM Deployment
-*   **Vulnerability Target:** Memory-Constrained Cloud Shell (SIEM Stack) & TitanCorp Enterprise Network
-*   **Mission Chain:** Infrastructure Resource Capping → SIEM Provisioning → Log Correlation → Attack Path Reconstruction
+### 💥 T1-M1-S30: OPERATION CENTRAL NERVOUS SYSTEM (SIEM Engineering & Threat Hunting)
+
+* **Evidence (Artifact):** [attack_timeline.csv](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/attack_timeline.csv)
+* **Evidence (Visual):** [Commit a4e18e4 - Forensic Timeline & Privilege Escalation](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/a4e18e4)
+* **Vulnerability Target:** Memory-Constrained Cloud Shell (SIEM Stack) & TitanCorp Enterprise Network
+* **Mission Chain:** Infrastructure Resource Capping → SIEM Provisioning → Log Correlation → Attack Path Reconstruction
 
 ###### ⚖️ Architectural Comparison (Governance Chart)
 | Feature | Standard Desktop (x86) | Mobile-to-Cloud Bridge (ARM64/Cloud Shell) |
