@@ -1008,34 +1008,30 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ![S29 Terminal Evidence](s29%20terminal%20screenshot.jpeg)
 
-### 💥 T1-M1-S30: OPERATION CENTRAL NERVOUS SYSTEM (SIEM Engineering & Threat Hunting)
+#### 💥 T1-M1-S30: OPERATION CENTRAL NERVOUS SYSTEM (SIEM Engineering & Threat Hunting)
+*   **Evidence (Artifact):** `attack_timeline.csv`
+*   **Evidence (Visual):** Commit a4e18e4 - Forensic Timeline & SIEM Deployment
+*   **Vulnerability Target:** Memory-Constrained Cloud Shell (SIEM Stack) & TitanCorp Enterprise Network
+*   **Mission Chain:** Infrastructure Resource Capping → SIEM Provisioning → Log Correlation → Attack Path Reconstruction
 
-* **Evidence (Artifact):** [attack_timeline.csv](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/attack_timeline.csv)
-* **Evidence (Visual):** [Commit a4e18e4 - Forensic Timeline & Privilege Escalation](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/a4e18e4)
-* **Vulnerability Target:** Memory/Disk Constrained Cloud Shell (SIEM Stack)
-* **Mission Chain:** Process Killing → Memory Capping → SIEM Provisioning → SUID Escalation
-
-#### ⚖️ Architectural Comparison (Governance Chart)
-
+###### ⚖️ Architectural Comparison (Governance Chart)
 | Feature | Standard Desktop (x86) | Mobile-to-Cloud Bridge (ARM64/Cloud Shell) |
 | :--- | :--- | :--- |
-| **Execution Environment** | Local Ubuntu VM (Persistent) | **Ephemeral Google Cloud Shell Bridge** |
+| **Execution Environment** | Local Ubuntu VM (Persistent) | Ephemeral Google Cloud Shell Bridge |
 | **SIEM RAM Allocation** | Full Heap (3.5GB+) | **Hard-capped (256MB JVM Heap)** |
 | **Port Accessibility** | Direct (localhost) | **Proxy (0.0.0.0 via Cloud Proxy)** |
 | **Infrastructure Lifecycle** | Permanent | **Ephemeral (Provisioned via Script)** |
 
-#### 🧠 S30 Mission Defense Matrix (Executive Summary)
-* **Mission Objective:** Deploy and harden an Elasticsearch/Kibana SIEM stack within a resource-constrained Cloud Shell container and extract threat intelligence from simulated log data.
-* **Technical Mechanics:**
-    * **Phase 1 — Resource Management:** Cloud Shell terminated the default ELK configuration due to Out-Of-Memory (OOM) errors (Exit 137). Resolved by manually capping JVM heap size to 256MB using `ES_JAVA_OPTS` and limiting Node.js memory via `NODE_OPTIONS`.
-    * **Phase 2 — Network Persistence:** Addressed port binding conflicts on 5601 by forcing Kibana to bind to 0.0.0.0, enabling the Cloud Shell proxy to bridge the internal container port to the browser-accessible Web Preview.
-    * **Phase 3 — Escalation:** Utilized the SUID bit on the `find` binary to bypass restrictive shell environments, achieving `root` (uid=0) persistence.
- 
-* **Remediation:** Automated SIEM provisioning now includes resource-capping flags to ensure stability across ephemeral environments.
-* **Mechanical Proof:** Documented all logs in `attack_timeline.csv`. Pushed to GitHub (Commit `a4e18e4`) establishing an immutable audit trail of the SIEM deployment and incident timeline.
+###### 🧠 S30 Mission Defense Matrix (Executive Summary)
+*   **Mission Objective:** Deploy and harden an Elasticsearch/Kibana SIEM stack within a resource-constrained Cloud Shell container, then execute an advanced threat hunt to reconstruct a multi-stage enterprise breach timeline [1].
+*   **Technical Mechanics:**
+    *   **Phase 1 — Resource Management (The Engine):** Cloud Shell terminated the default ELK configuration due to Out-Of-Memory (OOM) errors (Exit 137). I bypassed this by manually capping the JVM heap size to 256MB using `ES_JAVA_OPTS` and limiting Node.js memory, forcing the heavy SIEM to run flawlessly in an ephemeral micro-container.
+    *   **Phase 2 — Network Persistence:** Addressed port binding conflicts on 5601 by forcing Kibana to bind to `0.0.0.0`, enabling the Cloud Shell proxy to securely bridge the internal container port to the mobile browser's Web Preview.
+    *   **Phase 3 — Attack Path Reconstruction (The Hunt):** Configured the `enterprise_logs*` index pattern and utilized KQL to trace the adversary's lifecycle. Correlated the Initial Access vector via "Failed Login" external IPs, tracked Lateral Movement by isolating "Domain Admin" Windows Security events, and verified Data Exfiltration by hunting anomalous outbound traffic volume in the Firewall logs.
+*   **Remediation:** Automated SIEM provisioning must include dynamic resource-capping flags for stability across ephemeral environments. Furthermore, anomalous firewall data spikes must trigger automated XDR containment protocols to prevent exfiltration. 
+*   **Mechanical Proof:** Documented the exact timestamps, IPs, and event types for all three breach phases (Access, Lateral Movement, Exfiltration) in `attack_timeline.csv`. Pushed to GitHub (Commit a4e18e4) establishing an immutable audit trail of both the infrastructure deployment and the incident timeline.
 
-#### 🛡️ Operational Defense Logic (White Hat Auditor Interrogation)
+###### 🛡️ Operational Defense Logic (White Hat Auditor Interrogation)
+**White Hat Auditor Question:** *"Why fight with memory constraints to run a SIEM in Cloud Shell instead of using a standard VM?"*
 
-**White Hat Auditor Question:** *"Why fight with memory constraints instead of using a standard VM?"*
-
-**Engineering Statement:** *"Operational agility. By tuning the ELK stack to run on 256MB, I've proven that centralized log analysis can be decentralized and deployed on-demand in any containerized environment, regardless of hardware resource allocation."*
+**Engineering Statement:** *"Operational agility and Zero-Trust architecture. By surgically tuning the ELK stack to run on a 256MB JVM heap, I proved that centralized log analysis can be decentralized and deployed on-demand in any highly constrained, containerized environment. I don't need a persistent, resource-heavy desktop VM to hunt threats; I can spin up an entire enterprise SIEM directly from a mobile terminal, isolate the attack path, and destroy the ephemeral evidence locker the moment the threat is neutralized."*
