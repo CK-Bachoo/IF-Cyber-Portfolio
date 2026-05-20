@@ -72,6 +72,8 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | TLAB 9   | Operation Omni-Portal | Chained SQLi / Stored XSS / API BOLA Full-Stack Audit | RS.AN       | CIS 18     | All Tiers     | [OmniPortal_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/OmniPortal_Assessment.md) |
 | S28      | The Crime Scene      | DFIR Live Triage / Cryptographic Chain of Custody     | RS.AN       | CIS 8      | Availability   | [collection_log.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/collection_log.txt) |
 | S29      | The Digital Autopsy  | DFIR Disk & Memory Carving / Malware Recovery         | RS.AN       | CIS 8      | Integrity      | [forensic_findings.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/forensic_findings.md) |
+| S30 | SIEM Engineering | Threat Hunting / Privilege Escalation | DE.AE | CIS 8 | Integrity | attack_timeline.csv |
+
 
 
 ## 📂 Artifact Evidence & Operational History
@@ -1008,9 +1010,34 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ![S29 Terminal Evidence](s29%20terminal%20screenshot.jpeg)
 
+### 💥 T1-M1-S30: OPERATION CENTRAL NERVOUS SYSTEM (SIEM Engineering & Threat Hunting)
+
+* **Evidence (Artifact):** [attack_timeline.csv](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/attack_timeline.csv)
+* **Evidence (Visual):** [Commit a4e18e4 - SIEM Analysis & Artifact Submission](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/a4e18e4)
+* **Vulnerability Target:** Memory/Disk Constrained Cloud Shell (SIEM Stack)
+* **Mission Chain:** Process Killing → Memory Capping → SIEM Provisioning → SUID Escalation
+
+#### ⚖️ Architectural Comparison (Governance Chart)
+
+| Feature | Standard Desktop (x86) | Mobile-to-Cloud Bridge (ARM64/Cloud Shell) |
+| :--- | :--- | :--- |
+| **Execution Environment** | Local Ubuntu VM (Persistent) | **Ephemeral Google Cloud Shell Bridge** |
+| **SIEM RAM Allocation** | Full Heap (3.5GB+) | **Hard-capped (256MB JVM Heap)** |
+| **Port Accessibility** | Direct (localhost) | **Proxy (0.0.0.0 via Cloud Proxy)** |
+| **Infrastructure Lifecycle** | Permanent | **Ephemeral (Provisioned via Script)** |
+
+#### 🧠 S30 Mission Defense Matrix (Executive Summary)
+* **Mission Objective:** Deploy and harden an Elasticsearch/Kibana SIEM stack within a resource-constrained Cloud Shell container and extract threat intelligence from simulated log data.
+* **Technical Mechanics:**
+    * **Phase 1 — Resource Management:** Cloud Shell terminated the default ELK configuration due to Out-Of-Memory (OOM) errors (Exit 137). Resolved by manually capping JVM heap size to 256MB using `ES_JAVA_OPTS` and limiting Node.js memory via `NODE_OPTIONS`.
+    * **Phase 2 — Network Persistence:** Addressed port binding conflicts on 5601 by forcing Kibana to bind to 0.0.0.0, enabling the Cloud Shell proxy to bridge the internal container port to the browser-accessible Web Preview.
+    * **Phase 3 — Escalation:** Utilized the SUID bit on the `find` binary to bypass restrictive shell environments, achieving `root` (uid=0) persistence.
+ 
+* **Remediation:** Automated SIEM provisioning now includes resource-capping flags to ensure stability across ephemeral environments.
+* **Mechanical Proof:** Documented all logs in `attack_timeline.csv`. Pushed to GitHub (Commit `a4e18e4`) establishing an immutable audit trail of the SIEM deployment and incident timeline.
+
 #### 🛡️ Operational Defense Logic (White Hat Auditor Interrogation)
 
-**White Hat Auditor Question:** *"Why did you use `strings` and `grep` instead of industry-standard DFIR tools like Sleuth Kit (`fls`/`icat`)?"*
+**White Hat Auditor Question:** *"Why fight with memory constraints instead of using a standard VM?"*
 
-**Engineering Statement:** *"Environmental adaptation. Google Cloud Shell's containerized kernel restricts loopback mounts and custom filesystems at the kernel level. When the `dfir_mock` mount failed, the disk image became unreadable to standard filesystem parsers. I pivoted to raw binary string analysis, proving that an analyst can extract critical forensic intelligence directly from disk sectors even when the underlying infrastructure fails."*
-
+**Engineering Statement:** *"Operational agility. By tuning the ELK stack to run on 256MB, I've proven that centralized log analysis can be decentralized and deployed on-demand in any containerized environment, regardless of hardware resource allocation."*
