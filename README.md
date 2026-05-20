@@ -1011,7 +1011,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 ### 💥 T1-M1-S30: OPERATION CENTRAL NERVOUS SYSTEM (SIEM Engineering & Threat Hunting)
 
 * **Evidence (Artifact):** [attack_timeline.csv](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/attack_timeline.csv)
-* **Evidence (Visual):** [Commit a4e18e4 - SIEM Analysis & Artifact Submission](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/a4e18e4)
+* **Evidence (Visual):** [Commit a4e18e4 - Forensic Timeline & Privilege Escalation](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/a4e18e4)
 * **Vulnerability Target:** Memory/Disk Constrained Cloud Shell (SIEM Stack)
 * **Mission Chain:** Process Killing → Memory Capping → SIEM Provisioning → SUID Escalation
 
