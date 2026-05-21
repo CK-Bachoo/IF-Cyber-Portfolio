@@ -1,0 +1,4 @@
+Timestamp,Source IP,Event Type,Action,Description
+2026-05-20T20:10:01Z,192.168.1.15,Initial Access,Login,Successful admin login from unauthorized IP
+2026-05-20T20:12:45Z,192.168.1.15,Lateral Movement,SSH,Connection to DB_Server_01
+2026-05-20T20:15:12Z,192.168.1.15,Exfiltration,SCP,Transfer of salary_data.enc to remote host

@@ -63,8 +63,8 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | S21      | Vulnerability Triage  | Web Application Scanning / Risk Prioritization   | ID.RA       | CIS 7      | All Tiers     | [remediation_plan.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/remediation_plan.md) |
 | TLAB W7  | Perimeter Assessment | Active Recon / Vulnerability Audit / Risk Triage | ID.RA       | CIS 7      | All Tiers     | [Perimeter_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Perimeter_Assessment.md) |
 | S22      | Vulnerability Verification | MSF: usermap_script / Samba Exploit | PR.IP | CIS 7 | Confidentiality | [exploit_verification.png](exploit_verification.png) |
-| S23      | Privilege Escalation  | Cron Job Wildcard / Unquoted Service Path        | PR.AC        | CIS 5       | Integrity     | [escalation_path.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/018e7631f51db14d6e5d07420be135941b7fe512) |
-| S24      | Lateral Movement | SSH Pivot / SOCKS Proxy Tunnel | PR.PT | CIS 4 | Confidentiality | [pivot_success.png](pivot_success.png) |
+| S23      | Privilege Escalation | Cron Job Wildcard / Unquoted Service Path        | PR.AC        | CIS 5       | Integrity     | [escalation_path.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/018e7631f51db14d6e5d07420be135941b7fe512) |
+| S24      | Lateral Movement     | SSH Pivot / SOCKS Proxy Tunnel | PR.PT | CIS 4 | Confidentiality | [pivot_success.png](pivot_success.png) |
 | TLAB 8   | The Kill Chain | Vertical Escalation / Cross-Subnet Pivot | PR.PT | CIS 12 | Confidentiality | [Deep_Pivot_Report.md](Deep_Pivot_Report.md) |
 | S25      | Data Exfiltration    | SQL Injection / Authentication Bypass / UNION Attack | DE.CM       | CIS 18     | Confidentiality | [sqli_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/sqli_report.txt) |
 | S26      | Poisoned Browser     | XSS (Reflected & Stored) / CSRF / Cookie Theft       | DE.CM       | CIS 18     | Confidentiality | [xss_payloads.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/xss_payloads.txt) |
@@ -72,7 +72,8 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | TLAB 9   | Operation Omni-Portal | Chained SQLi / Stored XSS / API BOLA Full-Stack Audit | RS.AN       | CIS 18     | All Tiers     | [OmniPortal_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/OmniPortal_Assessment.md) |
 | S28      | The Crime Scene      | DFIR Live Triage / Cryptographic Chain of Custody     | RS.AN       | CIS 8      | Availability   | [collection_log.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/collection_log.txt) |
 | S29      | The Digital Autopsy  | DFIR Disk & Memory Carving / Malware Recovery         | RS.AN       | CIS 8      | Integrity      | [forensic_findings.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/forensic_findings.md) |
-
+| S30      | SIEM Engineering     | Threat Hunting / Privilege Escalation | DE.AE | CIS 8 | Integrity | [attack_timeline.csv](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/attack_timeline.csv) |
+| TLAB 10  | Operation Phantom Pursuit | DFIR Full Lifecycle / C2 Detection / Disk Forensics | RS.AN | CIS 8 | All Tiers | [Incident_Response_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Incident_Response_Report.md) |
 
 ## 📂 Artifact Evidence & Operational History
 
@@ -1008,9 +1009,59 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ![S29 Terminal Evidence](s29%20terminal%20screenshot.jpeg)
 
+### 💥 T1-M1-S30: OPERATION CENTRAL NERVOUS SYSTEM (SIEM Engineering & Threat Hunting)
+
+* **Evidence (Artifact):** [attack_timeline.csv](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/attack_timeline.csv)
+* **Evidence (Visual):** [Commit a4e18e4 - Forensic Timeline & Privilege Escalation](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/a4e18e4)
+* **Vulnerability Target:** Memory-Constrained Cloud Shell (SIEM Stack) & TitanCorp Enterprise Network
+* **Mission Chain:** Infrastructure Resource Capping → SIEM Provisioning → Log Correlation → Attack Path Reconstruction
+
+###### ⚖️ Architectural Comparison (Governance Chart)
+| Feature | Standard Desktop (x86) | Mobile-to-Cloud Bridge (ARM64/Cloud Shell) |
+| :--- | :--- | :--- |
+| **Execution Environment** | Local Ubuntu VM (Persistent) | Ephemeral Google Cloud Shell Bridge |
+| **SIEM RAM Allocation** | Full Heap (3.5GB+) | **Hard-capped (256MB JVM Heap)** |
+| **Port Accessibility** | Direct (localhost) | **Proxy (0.0.0.0 via Cloud Proxy)** |
+| **Infrastructure Lifecycle** | Permanent | **Ephemeral (Provisioned via Script)** |
+
+###### 🧠 S30 Mission Defense Matrix (Executive Summary)
+*   **Mission Objective:** Deploy and harden an Elasticsearch/Kibana SIEM stack within a resource-constrained Cloud Shell container, then execute an advanced threat hunt to reconstruct a multi-stage enterprise breach timeline [1].
+*   **Technical Mechanics:**
+    *   **Phase 1 — Resource Management (The Engine):** Cloud Shell terminated the default ELK configuration due to Out-Of-Memory (OOM) errors (Exit 137). I bypassed this by manually capping the JVM heap size to 256MB using `ES_JAVA_OPTS` and limiting Node.js memory, forcing the heavy SIEM to run flawlessly in an ephemeral micro-container.
+    *   **Phase 2 — Network Persistence:** Addressed port binding conflicts on 5601 by forcing Kibana to bind to `0.0.0.0`, enabling the Cloud Shell proxy to securely bridge the internal container port to the mobile browser's Web Preview.
+    *   **Phase 3 — Attack Path Reconstruction (The Hunt):** Configured the `enterprise_logs*` index pattern and utilized KQL to trace the adversary's lifecycle. Correlated the Initial Access vector via "Failed Login" external IPs, tracked Lateral Movement by isolating "Domain Admin" Windows Security events, and verified Data Exfiltration by hunting anomalous outbound traffic volume in the Firewall logs.
+*   **Remediation:** Automated SIEM provisioning must include dynamic resource-capping flags for stability across ephemeral environments. Furthermore, anomalous firewall data spikes must trigger automated XDR containment protocols to prevent exfiltration. 
+*   **Mechanical Proof:** Documented the exact timestamps, IPs, and event types for all three breach phases (Access, Lateral Movement, Exfiltration) in `attack_timeline.csv`. Pushed to GitHub (Commit a4e18e4) establishing an immutable audit trail of both the infrastructure deployment and the incident timeline.
+
+###### 🛡️ Operational Defense Logic (White Hat Auditor Interrogation)
+**White Hat Auditor Question:** *"Why fight with memory constraints to run a SIEM in Cloud Shell instead of using a standard VM?"*
+
+**Engineering Statement:** *"Operational agility and Zero-Trust architecture. By surgically tuning the ELK stack to run on a 256MB JVM heap, I proved that centralized log analysis can be decentralized and deployed on-demand in any highly constrained, containerized environment. I don't need a persistent, resource-heavy desktop VM to hunt threats; I can spin up an entire enterprise SIEM directly from a mobile terminal, isolate the attack path, and destroy the ephemeral evidence locker the moment the threat is neutralized."*
+
+### 🔍 T1-M1-TLAB10: OPERATION PHANTOM PURSUIT (Full DFIR Lifecycle)
+
+* Evidence (Artifact): [Incident_Response_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Incident_Response_Report.md)
+* Evidence (Commit): [Commit 9233499](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/9233499)
+
+#### 🧠 TLAB10 Mission Defense Matrix (Executive Summary)
+* Mission Objective: Execute a full breach lifecycle investigation — correlate SIEM alerts to identify attacker entry point, perform live triage on a quarantined C2 host, establish cryptographic chain of custody, and recover a deleted malware payload via disk forensics.
+* Technical Mechanics:
+    * Phase 1 — SIEM Correlation: Deployed ELK stack in Google Cloud Shell with memory optimization (256MB JVM heap cap). Configured enterprise_logs* index pattern in Kibana. Queried "Critical Alert" in Discover tab to identify attacker source IP: 203.0.113.99.
+    * Phase 2 — Live Triage: Accessed quarantined container via docker exec -it. Executed netstat -antp to identify active C2 beacon — nc (netcat) on port 4444, PID 10. Generated SHA256 hash of compromised_drive.dd: cd52d81e25f372e6fa4db2c0dfceb59862c1969cab17096da352b34950c973cc to establish chain of custody.
+    * Phase 3 — Disk Forensics: Cloud Shell kernel restrictions blocked loopback device mount. Applied raw binary carving bypass via strings pipeline to recover deleted beacon.exe payload. Extracted threat actor identity, C2 server, persistence mechanism, and mission objective.
+* Mechanical Proof: All three phases documented in Incident_Response_Report.md with exact PIDs, hashes, and payload contents. Pushed to GitHub (Commit 9233499) establishing cryptographic audit trail of full investigation.
+
+#### ⚖️ Architectural Comparison
+| Feature | Standard Desktop (x86) | Android Cyber Workbench (ARM64) |
+| :--- | :--- | :--- |
+| Execution Environment | Local Ubuntu VM + Docker Desktop | Ephemeral Google Cloud Shell Bridge |
+| SIEM Stack | Full ELK heap allocation | 256MB JVM heap-capped deployment |
+| Container Triage | docker exec via local terminal | docker exec via Cloud Shell CLI |
+| Disk Forensics | Native fls/icat via loopback mount | Raw binary carving via strings bypass |
+| Submission | Native session-submit |  **Cloud Pivot Bypass + Manual Git Push**  |
+
 #### 🛡️ Operational Defense Logic (White Hat Auditor Interrogation)
 
-**White Hat Auditor Question:** *"Why did you use `strings` and `grep` instead of industry-standard DFIR tools like Sleuth Kit (`fls`/`icat`)?"*
+**White Hat Auditor Question:** *"Why did you use raw binary carving instead of standard Sleuth Kit tools for Phase 3?"*
 
-**Engineering Statement:** *"Environmental adaptation. Google Cloud Shell's containerized kernel restricts loopback mounts and custom filesystems at the kernel level. When the `dfir_mock` mount failed, the disk image became unreadable to standard filesystem parsers. I pivoted to raw binary string analysis, proving that an analyst can extract critical forensic intelligence directly from disk sectors even when the underlying infrastructure fails."*
-
+**Engineering Statement:** *"Google Cloud Shell's kernel intentionally restricts loopback device creation — the same constraint documented in S29. The mount error on /dev/loop0 prevented standard filesystem parsing via fls and icat. Rather than abandoning the investigation, I pivoted to raw sector carving using strings piped through grep, treating the entire disk image as a flat binary object. This methodology is architecturally sound — deleted file artifacts persist in raw sectors until physically overwritten, regardless of filesystem integrity. The technique proved the investigative objective without requiring kernel-level privileges."*
