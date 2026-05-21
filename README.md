@@ -73,6 +73,7 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | S28      | The Crime Scene      | DFIR Live Triage / Cryptographic Chain of Custody     | RS.AN       | CIS 8      | Availability   | [collection_log.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/collection_log.txt) |
 | S29      | The Digital Autopsy  | DFIR Disk & Memory Carving / Malware Recovery         | RS.AN       | CIS 8      | Integrity      | [forensic_findings.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/forensic_findings.md) |
 | S30      | SIEM Engineering     | Threat Hunting / Privilege Escalation | DE.AE | CIS 8 | Integrity | [attack_timeline.csv](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/attack_timeline.csv) |
+| TLAB 10  | Operation Phantom Pursuit | DFIR Full Lifecycle / C2 Detection / Disk Forensics | RS.AN | CIS 8 | All Tiers | [Incident_Response_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Incident_Response_Report.md) |
 
 ## 📂 Artifact Evidence & Operational History
 
@@ -1036,3 +1037,31 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 **White Hat Auditor Question:** *"Why fight with memory constraints to run a SIEM in Cloud Shell instead of using a standard VM?"*
 
 **Engineering Statement:** *"Operational agility and Zero-Trust architecture. By surgically tuning the ELK stack to run on a 256MB JVM heap, I proved that centralized log analysis can be decentralized and deployed on-demand in any highly constrained, containerized environment. I don't need a persistent, resource-heavy desktop VM to hunt threats; I can spin up an entire enterprise SIEM directly from a mobile terminal, isolate the attack path, and destroy the ephemeral evidence locker the moment the threat is neutralized."*
+
+### 🔍 T1-M1-TLAB10: OPERATION PHANTOM PURSUIT (Full DFIR Lifecycle)
+
+* **Evidence (Artifact):** [Incident_Response_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Incident_Response_Report.md)
+* **Evidence (Commit):** [Commit c768017](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/c768017)
+
+#### 🧠 TLAB10 Mission Defense Matrix (Executive Summary)
+* **Mission Objective:** Execute a full breach lifecycle investigation — correlate SIEM alerts to identify attacker entry point, perform live triage on a quarantined C2 host, establish cryptographic chain of custody, and recover a deleted malware payload via disk forensics.
+* **Technical Mechanics:**
+    * **Phase 1 — SIEM Correlation:** Deployed ELK stack in Google Cloud Shell with memory optimization (256MB JVM heap cap). Configured enterprise_logs* index pattern in Kibana. Queried "Critical Alert" in Discover tab to identify attacker source IP: 203.0.113.99.
+    * **Phase 2 — Live Triage:** Accessed quarantined container via docker exec -it. Executed netstat -antp to identify active C2 beacon — nc (netcat) on port 4444, PID 10. Generated SHA256 hash of compromised_drive.dd: cd52d81e25f372e6fa4db2c0dfceb59862c1969cab17096da352b34950c973cc to establish chain of custody.
+    * **Phase 3 — Disk Forensics:** Cloud Shell kernel restrictions blocked loopback device mount (same constraint as S29). Applied raw binary carving bypass via strings pipeline to recover deleted beacon.exe payload. Extracted threat actor identity, C2 server, persistence mechanism, and mission objective.
+* **Mechanical Proof:** All three phases documented in Incident_Response_Report.md with exact PIDs, hashes, and payload contents. Pushed to GitHub establishing cryptographic audit trail of full investigation.
+
+#### ⚖️ Architectural Comparison (Governance Chart)
+| Feature | Standard Desktop (x86) | Android Cyber Workbench (ARM64) |
+| :--- | :--- | :--- |
+| **Execution Environment** | Local Ubuntu VM + Docker Desktop | Ephemeral Google Cloud Shell Bridge |
+| **SIEM Stack** | Full ELK heap allocation | 256MB JVM heap-capped deployment |
+| **Container Triage** | docker exec via local terminal | docker exec via Cloud Shell CLI |
+| **Disk Forensics** | Native fls/icat via loopback mount | Raw binary carving via strings bypass |
+| **Submission** | Native session-submit | Manual git push to GitHub |
+
+#### 🛡️ Operational Defense Logic (White Hat Auditor Interrogation)
+
+**White Hat Auditor Question:** *"Why did you use raw binary carving instead of standard Sleuth Kit tools for Phase 3?"*
+
+**Engineering Statement:** *"Google Cloud Shell's kernel intentionally restricts loopback device creation — the same constraint documented in S29. The mount error on /dev/loop0 prevented standard filesystem parsing via fls and icat. Rather than abandoning the investigation, I pivoted to raw sector carving using strings piped through grep, treating the entire disk image as a flat binary object. This methodology is architecturally sound — deleted file artifacts persist in raw sectors until physically overwritten, regardless of filesystem integrity. The technique proved the investigative objective without requiring kernel-level privileges."*
