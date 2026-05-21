@@ -1040,25 +1040,25 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ### 🔍 T1-M1-TLAB10: OPERATION PHANTOM PURSUIT (Full DFIR Lifecycle)
 
-* **Evidence (Artifact):** [Incident_Response_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Incident_Response_Report.md)
-* **Evidence (Commit):** [Commit c768017](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/c768017)
+* Evidence (Artifact): [Incident_Response_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Incident_Response_Report.md)
+* Evidence (Commit): [Commit 9233499](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/9233499)
 
 #### 🧠 TLAB10 Mission Defense Matrix (Executive Summary)
-* **Mission Objective:** Execute a full breach lifecycle investigation — correlate SIEM alerts to identify attacker entry point, perform live triage on a quarantined C2 host, establish cryptographic chain of custody, and recover a deleted malware payload via disk forensics.
-* **Technical Mechanics:**
-    * **Phase 1 — SIEM Correlation:** Deployed ELK stack in Google Cloud Shell with memory optimization (256MB JVM heap cap). Configured enterprise_logs* index pattern in Kibana. Queried "Critical Alert" in Discover tab to identify attacker source IP: 203.0.113.99.
-    * **Phase 2 — Live Triage:** Accessed quarantined container via docker exec -it. Executed netstat -antp to identify active C2 beacon — nc (netcat) on port 4444, PID 10. Generated SHA256 hash of compromised_drive.dd: cd52d81e25f372e6fa4db2c0dfceb59862c1969cab17096da352b34950c973cc to establish chain of custody.
-    * **Phase 3 — Disk Forensics:** Cloud Shell kernel restrictions blocked loopback device mount (same constraint as S29). Applied raw binary carving bypass via strings pipeline to recover deleted beacon.exe payload. Extracted threat actor identity, C2 server, persistence mechanism, and mission objective.
-* **Mechanical Proof:** All three phases documented in Incident_Response_Report.md with exact PIDs, hashes, and payload contents. Pushed to GitHub establishing cryptographic audit trail of full investigation.
+* Mission Objective: Execute a full breach lifecycle investigation — correlate SIEM alerts to identify attacker entry point, perform live triage on a quarantined C2 host, establish cryptographic chain of custody, and recover a deleted malware payload via disk forensics.
+* Technical Mechanics:
+    * Phase 1 — SIEM Correlation: Deployed ELK stack in Google Cloud Shell with memory optimization (256MB JVM heap cap). Configured enterprise_logs* index pattern in Kibana. Queried "Critical Alert" in Discover tab to identify attacker source IP: 203.0.113.99.
+    * Phase 2 — Live Triage: Accessed quarantined container via docker exec -it. Executed netstat -antp to identify active C2 beacon — nc (netcat) on port 4444, PID 10. Generated SHA256 hash of compromised_drive.dd: cd52d81e25f372e6fa4db2c0dfceb59862c1969cab17096da352b34950c973cc to establish chain of custody.
+    * Phase 3 — Disk Forensics: Cloud Shell kernel restrictions blocked loopback device mount. Applied raw binary carving bypass via strings pipeline to recover deleted beacon.exe payload. Extracted threat actor identity, C2 server, persistence mechanism, and mission objective.
+* Mechanical Proof: All three phases documented in Incident_Response_Report.md with exact PIDs, hashes, and payload contents. Pushed to GitHub (Commit 9233499) establishing cryptographic audit trail of full investigation.
 
-#### ⚖️ Architectural Comparison (Governance Chart)
+#### ⚖️ Architectural Comparison
 | Feature | Standard Desktop (x86) | Android Cyber Workbench (ARM64) |
 | :--- | :--- | :--- |
-| **Execution Environment** | Local Ubuntu VM + Docker Desktop | Ephemeral Google Cloud Shell Bridge |
-| **SIEM Stack** | Full ELK heap allocation | 256MB JVM heap-capped deployment |
-| **Container Triage** | docker exec via local terminal | docker exec via Cloud Shell CLI |
-| **Disk Forensics** | Native fls/icat via loopback mount | Raw binary carving via strings bypass |
-| **Submission** | Native session-submit | Manual git push to GitHub |
+| Execution Environment | Local Ubuntu VM + Docker Desktop | Ephemeral Google Cloud Shell Bridge |
+| SIEM Stack | Full ELK heap allocation | 256MB JVM heap-capped deployment |
+| Container Triage | docker exec via local terminal | docker exec via Cloud Shell CLI |
+| Disk Forensics | Native fls/icat via loopback mount | Raw binary carving via strings bypass |
+| Submission | Native session-submit |  **Cloud Pivot Bypass + Manual Git Push**  |
 
 #### 🛡️ Operational Defense Logic (White Hat Auditor Interrogation)
 
