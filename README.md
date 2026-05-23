@@ -75,6 +75,7 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | S30      | SIEM Engineering     | Threat Hunting / Privilege Escalation | DE.AE | CIS 8 | Integrity | [attack_timeline.csv](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/attack_timeline.csv) |
 | TLAB 10  | Operation Phantom Pursuit | DFIR Full Lifecycle / C2 Detection / Disk Forensics | RS.AN | CIS 8 | All Tiers | [Incident_Response_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Incident_Response_Report.md) |
 | S31      | The Barricade        | Firewall & DMZ Lockdown / Lateral Movement Prevention | PR.PT | CIS 4 | Availability + Integrity | [firewall_config.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/firewall_config.sh) |
+| S32 | The Tripwire | Custom Suricata IDS Signatures / Malware Detection | DE.CM | CIS 9 | Confidentiality | [custom_ids.rules](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/custom_ids.rules) |
 
 ## 📂 Artifact Evidence & Operational History
 
@@ -1103,3 +1104,29 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 **Engineering Statement:** "Defense in depth. Even if the database IP changes or additional hosts are added to the internal subnet, the rule still prevents lateral movement. The single exception rule for port 3306 to 10.0.5.50 maintains required functionality while enforcing least privilege."
 
 **Status:** DMZ Perimeter Hardened | Lateral Movement Blocked | Zero Trust Enforced
+
+### 🪤 T1-M1-S32: THE TRIPWIRE (Custom Suricata IDS Signatures)
+
+* **Evidence (Artifact):** [custom_ids.rules](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/custom_ids.rules)
+* **Evidence (Commit):** [Commit 3cff9f1](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/3cff9f1)
+
+#### 🧠 S32 Mission Defense Matrix (Executive Summary)
+* **Mission Objective:** Engineer custom Suricata IDS signatures to detect a ping sweep and a Ghost_Bear malware scanner, deploy the IDS sensor, and confirm both rules fire correctly.
+* **Technical Mechanics:**
+    * **Phase 1 — ICMP Trap:** Wrote rule sid:1000001 to alert on any ICMP traffic directed at 172.90.0.10. Deployed Suricata container on ids_net with cap-add net_admin. Confirmed alert: ICMP Ping Detected.
+    * **Phase 2 — Malware Signature:** Wrote rule sid:1000002 to alert on TCP port 80 traffic containing the exact string Ghost_Scanner_v1. Simulated attack via curl -A "Ghost_Scanner_v1". Confirmed alert: Ghost_Bear Malware Scanner Detected.
+* **Mechanical Proof:** Both rules verified in fast.log. custom_ids.rules pushed to GitHub (Commit 3cff9f1).
+
+#### ⚖️ Architectural Comparison
+| Feature | Standard Desktop (x86) | Android Cyber Workbench (ARM64) |
+| :--- | :--- | :--- |
+| **Execution Environment** | Local Ubuntu VM | Ephemeral Google Cloud Shell + Docker |
+| **IDS Deployment** | Native Suricata install | Dockerized jasonish/suricata container |
+| **Rule Testing** | Local ping/curl | Alpine container on ids_net + curl bypass |
+| **Log Verification** | Native fast.log read | sudo chmod + manual verification |
+| **Submission** | Native session-submit | Manual git push to GitHub |
+
+#### 🛡️ Operational Defense Logic (White Hat Auditor Interrogation)
+
+**White Hat Auditor Question:** *"Why write custom rules instead of using default Suricata rulesets?"*
+**Engineering Statement:** *"Default rulesets are broad and generate noise. Custom signatures are surgical — they target the exact threat actor TTPs relevant to the environment. By hardcoding the Ghost_Scanner_v1 User-Agent string, the rule fires only on that specific payload, eliminating false positives and proving mastery of the Suricata rule syntax rather than relying on prebuilt detection logic."*
