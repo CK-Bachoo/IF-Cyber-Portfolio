@@ -1071,7 +1071,8 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 ### 🚨 T1-M1-S31: THE BARRICADE (Firewall & DMZ Lockdown)
 
 * **Evidence (Artifact):** [firewall_config.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/firewall_config.sh)
-* **Evidence (Visual):** [s31_firewall_verification.png](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/S31_firewall_verification.png)* **Vulnerability Target:** Containerized DMZ Web Server with Internal Database (`10.0.5.50`)
+* **Evidence (Visual Terminal Screenshot):** [s31_firewall_verification.png](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/S31_firewall_verification.png)
+* **Vulnerability Target:** Containerized DMZ Web Server with Internal Database (`10.0.5.50`)
 * **Mission Chain:** UFW Default Deny → iptables Granular Rules → Lateral Movement Prevention
 
 #### ⚖️ Architectural Comparison (Governance Chart)
@@ -1080,7 +1081,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 |----------------------|------------------------------|---------------------------------------------|
 | **Architecture**     | Local Ubuntu VM              | Ephemeral Google Cloud Shell + Docker       |
 | **Firewall Method**  | UFW + iptables (local)       | UFW + iptables (via container)              |
-| **Evidence**         | firewall_config.sh + screenshot | **[firewall_config.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/firewall_config.sh)** + screenshot |
+| **Evidence**         | firewall_config.sh           | **[firewall_config.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/firewall_config.sh)** + screenshot |
 
 #### 🧠 S31 Mission Defense Matrix (Executive Summary)
 * **Mission Objective:** Deploy a hardened DMZ firewall to protect an internal database from lateral movement originating from a compromised web server.
@@ -1090,6 +1091,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
     * Used iptables to permit inbound web traffic on ports 80/443
     * Blocked all outbound traffic to internal subnet `10.0.5.0/24`
     * Created explicit exception for SQL traffic to database (`10.0.5.50:3306`)
+
 * **Mechanical Proof:** Rules verified with `iptables -L -v -n`. Script pushed to GitHub (Commit 885eee8) with screenshot evidence.
 
 #### 🛡️ Operational Defense Logic (White Hat Auditor Common Questions)
