@@ -74,6 +74,7 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | S29      | The Digital Autopsy  | DFIR Disk & Memory Carving / Malware Recovery         | RS.AN       | CIS 8      | Integrity      | [forensic_findings.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/forensic_findings.md) |
 | S30      | SIEM Engineering     | Threat Hunting / Privilege Escalation | DE.AE | CIS 8 | Integrity | [attack_timeline.csv](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/attack_timeline.csv) |
 | TLAB 10  | Operation Phantom Pursuit | DFIR Full Lifecycle / C2 Detection / Disk Forensics | RS.AN | CIS 8 | All Tiers | [Incident_Response_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Incident_Response_Report.md) |
+| S31      | The Barricade        | Firewall & DMZ Lockdown / Lateral Movement Prevention | PR.PT | CIS 4 | Availability + Integrity | [firewall_config.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/firewall_config.sh) |
 
 ## 📂 Artifact Evidence & Operational History
 
@@ -1065,3 +1066,39 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 **White Hat Auditor Question:** *"Why did you use raw binary carving instead of standard Sleuth Kit tools for Phase 3?"*
 
 **Engineering Statement:** *"Google Cloud Shell's kernel intentionally restricts loopback device creation — the same constraint documented in S29. The mount error on /dev/loop0 prevented standard filesystem parsing via fls and icat. Rather than abandoning the investigation, I pivoted to raw sector carving using strings piped through grep, treating the entire disk image as a flat binary object. This methodology is architecturally sound — deleted file artifacts persist in raw sectors until physically overwritten, regardless of filesystem integrity. The technique proved the investigative objective without requiring kernel-level privileges."*
+
+
+### 🚨 T1-M1-S31: THE BARRICADE (Firewall & DMZ Lockdown)
+
+* **Evidence (Artifact):** [firewall_config.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/firewall_config.sh)
+* **Evidence (Visual):** [s31_firewall_verification.png](s31_firewall_verification.png)
+* **Vulnerability Target:** Containerized DMZ Web Server with Internal Database (`10.0.5.50`)
+* **Mission Chain:** UFW Default Deny → iptables Granular Rules → Lateral Movement Prevention
+
+#### ⚖️ Architectural Comparison (Governance Chart)
+
+| Feature              | Standard Cohort              | Android Cyber Workbench (Note 20 Ultra)      |
+|----------------------|------------------------------|---------------------------------------------|
+| **Architecture**     | Local Ubuntu VM              | Ephemeral Google Cloud Shell + Docker       |
+| **Firewall Method**  | UFW + iptables (local)       | UFW + iptables (via container)              |
+| **Evidence**         | firewall_config.sh + screenshot | **[firewall_config.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/firewall_config.sh)** + screenshot |
+
+#### 🧠 S31 Mission Defense Matrix (Executive Summary)
+* **Mission Objective:** Deploy a hardened DMZ firewall to protect an internal database from lateral movement originating from a compromised web server.
+* **Technical Mechanics:**
+    * Applied UFW default deny incoming + allow outgoing
+    * Allowed SSH (22/tcp) and HTTPS (443/tcp)
+    * Used iptables to permit inbound web traffic on ports 80/443
+    * Blocked all outbound traffic to internal subnet `10.0.5.0/24`
+    * Created explicit exception for SQL traffic to database (`10.0.5.50:3306`)
+* **Mechanical Proof:** Rules verified with `iptables -L -v -n`. Script pushed to GitHub (Commit 885eee8) with screenshot evidence.
+
+#### 🛡️ Operational Defense Logic (White Hat Auditor Common Questions)
+
+**White Hat Auditor Question:** "Why use both UFW and iptables in this lab?"
+**Engineering Statement:** "UFW provides a clean, high-level default-deny posture for initial configuration. Iptables gives granular control for the specific DMZ lockdown requirements (inbound web + restricted outbound to DB). Using both shows mastery of both user-friendly and low-level firewall tooling."
+
+**White Hat Auditor Question:** "Why block the entire 10.0.5.0/24 subnet instead of just the database IP?"
+**Engineering Statement:** "Defense in depth. Even if the database IP changes or additional hosts are added to the internal subnet, the rule still prevents lateral movement. The single exception rule for port 3306 to 10.0.5.50 maintains required functionality while enforcing least privilege."
+
+**Status:** DMZ Perimeter Hardened | Lateral Movement Blocked | Zero Trust Enforced
