@@ -1071,8 +1071,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 ### 🚨 T1-M1-S31: THE BARRICADE (Firewall & DMZ Lockdown)
 
 * **Evidence (Artifact):** [firewall_config.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/firewall_config.sh)
-* **Evidence (Visual):** [s31_firewall_verification.png](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/b0eded6bd891c52cdc9b7395d15da392e1dd5a15/s31_firewall_verification.png)
-* **Vulnerability Target:** Containerized DMZ Web Server with Internal Database (`10.0.5.50`)
+* **Evidence (Visual):** [s31_firewall_verification.png](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/S31_firewall_verification.png)* **Vulnerability Target:** Containerized DMZ Web Server with Internal Database (`10.0.5.50`)
 * **Mission Chain:** UFW Default Deny → iptables Granular Rules → Lateral Movement Prevention
 
 #### ⚖️ Architectural Comparison (Governance Chart)
