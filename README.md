@@ -152,6 +152,7 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 
 **🛡️ S09 Technical Analysis:** During this audit, the Android security model (Samsung Knox) actively blocked the `sudo` command required for unauthorized malware provisioning. A custom Python auditor parsed JSON threat seeds manually to prove detection accuracy against known signatures without compromising the OS.
 
+---
 
 #### 🛡 TLAB-03: OPERATION AUTOMATED Hunt (Zero-Trust Execution)
 | Data Point | Desktop User (Standard) | Android Cyber Workbench (Note 20 Ultra) |
