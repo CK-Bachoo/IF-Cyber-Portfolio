@@ -1174,4 +1174,4 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
    `docker run -it --rm --name forensic_triage [IMAGE_NAME] /bin/bash`
 2. **Persistence by Export:** If container runtime is unstable on the mobile ARM64 SOC, utilize `docker export` to pipe the filesystem directly to an encrypted local archive:
    `docker export [CONTAINER_ID] | gzip > forensic_snapshot.tar.gz`
-3. **Data Exfiltration:** Once the container state is captured as a compressed binary, transfer the artifact to GitHub using your standard `git` workflow. This bypasses the need for long-lived cloud instances and handles resource-constrained environments by treating the entire containerized OS as a single, portable binary file.
+3. **Data Exfiltration:** Once the container state is captured as a compressed binary, transfer the artifact to GitHub using my standard `git` workflow. This bypasses the need for long-lived cloud instances and handles resource-constrained environments by treating the entire containerized OS as a single, portable binary file.
