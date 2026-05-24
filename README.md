@@ -75,7 +75,7 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | TLAB 10 | Operation Phantom Pursuit | DFIR Full Lifecycle / C2 Detection / Disk Forensics | RS.AN | CIS 8 | All Tiers | [Incident_Response_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Incident_Response_Report.md) |
 | S31 | The Barricade | Firewall & DMZ Lockdown / Lateral Movement Prevention | PR.PT | CIS 4 | Availability + Integrity | [firewall_config.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/firewall_config.sh) |
 | S32 | The Tripwire | Custom Suricata IDS Signatures / Malware Detection | DE.CM | CIS 9 | Confidentiality | [custom_ids.rules](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/custom_ids.rules) |
-| S33 | Endpoint Detection | Ransomware Precursor (VSS Deletion) | DE.CM | CIS 8 | Availability + Integrity |[edr_policy.xml](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/5eac0952d790d96d7092928574187f3422171120/edr_policy.xml)|
+| S33 | Endpoint Detection | Ransomware Precursor (VSS Deletion) | DE.CM | CIS 8 | Availability + Integrity |[edr_policy.xml](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/edr_policy.xml)|
 | TLAB 11 | Operation Fortress | Defense in Depth / Egress Filtering | PR.PT | CIS 4 | All Tiers | [Operation_Fortress_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Operation_Fortress_Report.md) |
 
 ## 📂 Artifact Evidence & Operational History
