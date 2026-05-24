@@ -1,6 +1,6 @@
 # IF-Cyber-Portfolio: Mobile Cybersecurity Workbench
 
-**Built 100% on Samsung Galaxy Note 20 Ultra + Termux **
+**Built 100% on Samsung Galaxy Note 20 Ultra + Termux**
 Professional mobile-first Purple Team environment demonstrating Zero Trust principles, network audits, automation scripts, forensic logging, and AI-assisted analysis engineered during The Knowledge House NY Innovation Fellowship (Cohort IF-CS-26).
 
 **Key Capabilities**
@@ -10,26 +10,25 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 - Multi-AI orchestration via custom God Mode intent bridging
 - True hardware-constrained execution (ARM64)
 
-**Evidence & Operational Labs**
-- See "Artifact Evidence & Operational History" section below for cryptographic, commit-linked proofs of execution.
-
 ***
 
 # 🛡️ IF-Cyber-Portfolio: Mobile Cybersecurity Workbench
 ==========================================================
-### 🏫 The Knowledge House Innovation Fellow: Chad K. Bachoo (IF-CS-26 NY)
-<p align="left">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=1000&color=00F72D&width=750&lines=Purple+Team+Operations+C.K.+BACHOO+TKH+Innovation+Fellow+IF-CS-26+NY;Mobile-to-Cloud+SecOps;AI+Security+Architecture;Penetration+Testing+%26+DFIR;Samsung+Galaxy+Note+20+Ultra+%2B+Termux;Zero-Trust+Automation+Pipelines" />
-</p>
-***
 
+### 🏫 The Knowledge House Innovation Fellow: Chad K. Bachoo (IF-CS-26 NY)
 [📱 Android Mobile Cybersecurity Workbench](https://github.com/CK-Bachoo/Android-mobile-cybersecurity-workbench)
 
 > **Professional Statement:** This portfolio and all associated artifacts were engineered exclusively using a Samsung Note 20 Ultra 5G / Termux Bunker configuration. This environment demonstrates a mobile-first, headless-first approach to systems administration, network security, and defensive automation.
 
 ---
 
-**The Mobile-to-Cloud Bridge:** `Note 20 Ultra` → `Termux (Dual Terminal / PRoot)` → `Google Cloud Shell / Github Codespaces / Azure / AWS` → `GitHub`
+**The Mobile-to-Cloud Bridge:** `Note 20 Ultra` → `Termux (Dual Terminal / PRoot)` → `Google Cloud Shell` → `GitHub`
+
+<p align="left">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=1000&color=00F72D&width=750&lines=Purple+Team+Operations;Mobile-to-Cloud+SecOps;AI+Security+Architecture;Penetration+Testing+%26+DFIR;Samsung+Galaxy+Note+20+Ultra+%2B+Termux;Zero-Trust+Automation+Pipelines" />
+</p>
+
+---
 
 ## ⚖️ Governance & Framework Alignment
 
@@ -77,7 +76,7 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | S31 | The Barricade | Firewall & DMZ Lockdown / Lateral Movement Prevention | PR.PT | CIS 4 | Availability + Integrity | [firewall_config.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/firewall_config.sh) |
 | S32 | The Tripwire | Custom Suricata IDS Signatures / Malware Detection | DE.CM | CIS 9 | Confidentiality | [custom_ids.rules](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/custom_ids.rules) |
 | S33 | Endpoint Detection | Ransomware Precursor (VSS Deletion) | DE.CM | CIS 8 | Availability + Integrity | [edr_policy.xml](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/5eac0952d790d96d7092928574187f3422171120/edr_policy.xml) |
-| TLAB 11 | Operation Fortress | Defense in Depth / Egress Filtering | PR.PT | CIS 4 | All Tiers | [Operation_Fortress_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/6386770bdde312e8214193a412103d42aa14fbe1/Operation_Fortress_Report.md) |
+| TLAB 11 | Operation Fortress | Defense in Depth / Egress Filtering | PR.PT | CIS 4 | All Tiers | [Operation_Fortress_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/6386770bdde312e8214193a412103d42aa14fbe1/TLAB11/Operation_Fortress_Report.md) |
 
 ## 📂 Artifact Evidence & Operational History
 
@@ -938,7 +937,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 🛡️ **Technical Analysis:** Instead of relying on heavy desktop API clients, I engineered a highly optimized Bash brute-force loop natively in Termux. Utilized `curl -X POST -H "Content-Type: application/json"` inside a `seq` loop to autonomously iterate through 10,000 PIN combinations against a protected API endpoint, extracting the access token with near-zero RAM overhead.
 
-
+---
 
 💥 **T1-M1-TLAB9: Operation Agentic Threat Hunt (Web Breach)**
 | Data Point | Desktop User (Standard Cohort) | Android Cyber Workbench (Note 20 Ultra) |
@@ -949,7 +948,6 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 🛡️ **Technical Analysis:** Synthesized Week 9 offensive tactics (SQLi, XSS, API Abuse) with defensive automation. Leveraged Python scripting to parse massive web server logs for HTTP 200 responses tied to malicious SQL payloads. Integrated an Agentic AI workflow to autonomously classify the Threat Actor's TTPs and generate incident response commands, successfully defending the perimeter from the Note 20 Ultra.
 
 ---
-
 
 ### 🚨 T1-M1-S28: THE CRIME SCENE (DFIR Live Triage & Chain of Custody)
 
@@ -990,6 +988,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 **Mechanical Proof:** *"I provisioned the compromised container inside Google Cloud Shell using the TA-provided script. Phase 1 (live triage) was executed via native `docker exec -it` and `netstat -antp` commands. Phase 2 (hash verification) was executed via `md5sum` and `sha256sum` on the staged evidence files. The entire DFIR workflow was completed with full mission capability — no local hypervisor, no GUI dependency, zero thermal overhead on the mobile device."*
 
+---
 
 ### 🚨 T1-M1-S29: THE DIGITAL AUTOPSY (Malware Recovery & Disk Carving)
 
@@ -1018,6 +1017,8 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 * **Mechanical Proof:** Documented findings (Threat Actor: `TitanCorp_Ex-Employee_99`, Executable: `Resume.exe`, Timestamp: `2026-03-15 08:42:01 UTC`, Persistence: `Registry Run Key HKLM\Software\Microsoft\Windows\CurrentVersion\Run`) in `forensic_findings.md`. Pushed to GitHub establishing an immutable audit trail.
 
 ![S29 Terminal Evidence](s29%20terminal%20screenshot.jpeg)
+
+---
 
 ### 💥 T1-M1-S30: OPERATION CENTRAL NERVOUS SYSTEM (SIEM Engineering & Threat Hunting)
 
@@ -1048,6 +1049,8 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 **Engineering Statement:** *"Operational agility and Zero-Trust architecture. By surgically tuning the ELK stack to run on a 256MB JVM heap, I proved that centralized log analysis can be decentralized and deployed on-demand in any highly constrained, containerized environment. I don't need a persistent, resource-heavy desktop VM to hunt threats; I can spin up an entire enterprise SIEM directly from a mobile terminal, isolate the attack path, and destroy the ephemeral evidence locker the moment the threat is neutralized."*
 
+---
+
 ### 🔍 T1-M1-TLAB10: OPERATION PHANTOM PURSUIT (Full DFIR Lifecycle)
 
 * Evidence (Artifact): [Incident_Response_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Incident_Response_Report.md)
@@ -1076,6 +1079,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 **Engineering Statement:** *"Google Cloud Shell's kernel intentionally restricts loopback device creation — the same constraint documented in S29. The mount error on /dev/loop0 prevented standard filesystem parsing via fls and icat. Rather than abandoning the investigation, I pivoted to raw sector carving using strings piped through grep, treating the entire disk image as a flat binary object. This methodology is architecturally sound — deleted file artifacts persist in raw sectors until physically overwritten, regardless of filesystem integrity. The technique proved the investigative objective without requiring kernel-level privileges."*
 
+---
 
 ### 🚨 T1-M1-S31: THE BARRICADE (Firewall & DMZ Lockdown)
 
@@ -1115,6 +1119,8 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 **Status:** DMZ Perimeter Hardened | Lateral Movement Blocked | Zero Trust Enforced
 
+---
+
 ### 🪤 T1-M1-S32: THE TRIPWIRE (Custom Suricata IDS Signatures)
 
 * **Evidence (Artifact):** [custom_ids.rules](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/custom_ids.rules)
@@ -1142,6 +1148,8 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 **Engineering Statement:** *"Default rulesets are broad and generate noise. Custom signatures are surgical — they target the exact threat actor TTPs relevant to the environment. By hardcoding the Ghost_Scanner_v1 User-Agent string, the rule fires only on that specific payload, eliminating false positives and proving mastery of the Suricata rule syntax rather than relying on prebuilt detection logic."*
 
+---
+
 ### 🏁 T1-M1-S33: THE LAST MILE (Endpoint Detection & Response)
 * **Evidence (Artifact):** [edr_policy.xml](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/5eac0952d790d96d7092928574187f3422171120/edr_policy.xml)
 * **Evidence (Commit):** [Commit 5eac095](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/5eac0952d790d96d7092928574187f3422171120)
@@ -1153,7 +1161,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
     * **Phase 2 — Threat Identification:** Bypassed the daemon failure by executing the obfuscated PowerShell payload (`invoice_macro.ps1`) and manually interrogating the script's output. Discovered the script spawned a child process attempting to execute `vssadmin delete shadows` to destroy backups before encrypting the drive.
     * **Phase 3 — The Ransomware Trap (IaC Bypass):** Engineered an EDR XML policy (`edr_policy.xml`) containing the `<CommandLine condition="contains">delete shadows</CommandLine>` signature. Since the live daemon was blocked by the cloud kernel, I validated the policy structure using an Infrastructure-as-Code (IaC) bypass and securely committed the detection rule to the repository.
 * **Mechanical Proof:** Simulated Sysmon EventID 1 alert generation (`vssadmin delete shadows`). `edr_policy.xml` successfully pushed to GitHub via Git rebase/stash resolution (Commit 5eac095).
-
+* 
 #### ⚖️ Architectural Comparison
 | Feature | Standard Desktop (x86) | Android Cyber Workbench (ARM64) |
 | :--- | :--- | :--- |
@@ -1169,7 +1177,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ---
 
-### 🔍 T1-M1-TLAB-11: OPERATION FORTRESS (Defense in Depth)
+### 🔍 T1-M1-TLAB11: OPERATION FORTRESS (Defense in Depth)
 
 * **Evidence (Artifact):** [Operation_Fortress_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/6386770bdde312e8214193a412103d42aa14fbe1/TLAB11/Operation_Fortress_Report.md)
 * **Evidence (Commit):** [Commit 6386770](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/6386770bdde312e8214193a412103d42aa14fbe1)
@@ -1182,7 +1190,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 | **IDS (L2)** | Native Suricata Service | **Dockerized Suricata container** |
 | **EDR (L3)** | Native Sysmon (`systemd`) | **IaC XML Policy (IaC Bypass)** |
 
-#### 🧠 TLAB-11 Mission Defense Matrix (Executive Summary)
+#### 🧠 TLAB11 Mission Defense Matrix (Executive Summary)
 * **Mission Objective:** Implement a three-tiered Defense in Depth architecture to neutralize an active Advanced Persistent Threat (APT) utilizing a known C2 subnet, web shell exploits, and post-exploitation payloads.
 * **Technical Mechanics:**
     * **Layer 1 (The Firewall):** Engineered an iptables egress filter (`iptables -A OUTPUT -d 198.51.100.0/24 -j DROP`) to sever all outbound communication to the attacker's Command and Control infrastructure.
@@ -1200,6 +1208,6 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 #### 🛡️ Secondary Contingency Protocol: Ephemeral Artifact Extraction
 **Scenario:** Primary Cloud Shell deployment fails due to vCPU exhaustion or persistent protocol friction.
 **Strategy:** Node-Based Ephemeral Compute (Container Export).
-1. **Docker Export:** `docker export [CONTAINER_ID] | gzip > forensic_snapshot.tar.gz`
-2. **Data Exfiltration:** Treat the entire containerized OS as a single, portable binary file.
-3. **Ledger:** Commit the binary snapshot to the repository to bypass live VM dependencies.
+1. **Local Sandbox Injection:** Instead of relying on a pre-provisioned cloud VM, execute a localized Docker container within a Termux `proot-distro` (e.g., Debian/Ubuntu) environment using: `docker run -it --rm --name forensic_triage [IMAGE_NAME] /bin/bash`
+2. **Persistence by Export:** If container runtime is unstable on the mobile ARM64 SOC, utilize `docker export` to pipe the filesystem directly to an encrypted local archive: `docker export [CONTAINER_ID] | gzip > forensic_snapshot.tar.gz`
+3. **Data Exfiltration:** Once the container state is captured as a compressed binary, transfer the artifact to GitHub using standard `git` workflow. This bypasses the need for long-lived cloud instances and handles resource-constrained environments by treating the entire containerized OS as a single, portable binary file.
