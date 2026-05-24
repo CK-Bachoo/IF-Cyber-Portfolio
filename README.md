@@ -1151,7 +1151,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 ---
 
 ### 🏁 T1-M1-S33: THE LAST MILE (Endpoint Detection & Response)
-* **Evidence (Artifact):** [edr_policy.xml](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/5eac0952d790d96d7092928574187f3422171120/edr_policy.xml)
+* **Evidence (Artifact):** [edr_policy.xml](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/edr_policy.xml)
 * **Evidence (Commit):** [Commit 5eac095](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/5eac0957a2e96c62e09655df955be6469496fc3c)
 
 #### 🧠 S33 Mission Defense Matrix (Executive Summary)
