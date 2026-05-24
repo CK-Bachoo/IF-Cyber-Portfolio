@@ -1179,7 +1179,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ### 🔍 T1-M1-TLAB11: OPERATION FORTRESS (Defense in Depth)
 
-* **Evidence (Artifact):** [Operation_Fortress_Report.md]((https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Operation_Fortress_Report.md )
+* **Evidence (Artifact):** [Operation_Fortress_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Operation_Fortress_Report.md ) 
 * **Evidence (Commit):** [Commit 6386770](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/6386770)
 
 #### ⚖️ Architectural Comparison (Governance Chart)
