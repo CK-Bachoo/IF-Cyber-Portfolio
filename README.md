@@ -1164,3 +1164,14 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 **White Hat Auditor Question:** "How did you complete an EDR lab when the Cloud Shell kernel blocked the Sysmon service?"
 
 **Engineering Statement:** "Operational resilience. When the Cloud Shell container rejected `systemd` dependencies, I didn't abandon the mission. I analyzed the raw PowerShell macro to extract the exact Indicators of Attack (IoA) and manually engineered the XML detection policy. By shifting from live daemon monitoring to static Infrastructure-as-Code (IaC) rule generation, I achieved the exact same defensive objective without being stopped by environmental hypervisor limitations."
+
+### 🛡️ Secondary Contingency Protocol: Ephemeral Artifact Extraction
+**Scenario:** Primary Cloud Shell deployment (e.g., Azure/GCP Cloud Shell) fails due to vCPU exhaustion or persistent protocol friction.
+
+**Strategy:** Transition to a "Node-Based Ephemeral Compute" model.
+
+1. **Local Sandbox Injection:** Instead of relying on a pre-provisioned cloud VM, execute a localized Docker container within a Termux `proot-distro` (e.g., Debian/Ubuntu) environment using:
+   `docker run -it --rm --name forensic_triage [IMAGE_NAME] /bin/bash`
+2. **Persistence by Export:** If container runtime is unstable on the mobile ARM64 SOC, utilize `docker export` to pipe the filesystem directly to an encrypted local archive:
+   `docker export [CONTAINER_ID] | gzip > forensic_snapshot.tar.gz`
+3. **Data Exfiltration:** Once the container state is captured as a compressed binary, transfer the artifact to GitHub using your standard `git` workflow. This bypasses the need for long-lived cloud instances and handles resource-constrained environments by treating the entire containerized OS as a single, portable binary file.
