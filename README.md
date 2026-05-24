@@ -59,17 +59,17 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | S15       | Identity Integration  | Cross-Platform AD Join                           | PR.AC       | CIS 5      | Integrity    | s15_linux_prep.sh          |
 | TLAB 5    | Enterprise Synthesis  | Cross-Platform Integration                       | PR.AC       | CIS 5      | Integrity    | tlab5_report.txt           |
 | S16       | OSI Troubleshooting   | Configuration Sabotage / Isolation                | RS.MI       | CIS 4      | Availability | readiness_check.log        |
-| S17       | Technical Diagnostic   | Privilege Management / Log Security              | PR.DS       | CIS 3      | Integrity    | practical_exam_report.txt |
+| S17       | Technical Diagnostic  | Privilege Management / Log Security              | PR.DS       | CIS 3      | Integrity    | practical_exam_report.txt |
 | S18 Cap.  | Enterprise Capstone   | Lateral Movement / Infrastructure Breach         | PR.PS       | CIS 4      | All Tiers     | [HardenedOutpost_SAD.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/HardenedOutpost_SAD.md) |
 | S19       | OSINT & Passive Recon | Attack Surface Mapping / Data Leakage            | ID.RA       | CIS 2      | Confidentiality | [ThreatProfile_CloudNano.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/e267d6948ef9000a5aecd23dc42e2ea815817942) |
 | S20       | Network Enumeration   | Active Reconnaissance / Service Discovery        | ID.RA       | CIS 12     | Confidentiality | [nmap_scan_results.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/nmap_scan_results.txt) |
-| S21       | Vulnerability Triage   | Web Application Scanning / Risk Prioritization   | ID.RA       | CIS 7      | All Tiers     | [remediation_plan.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/remediation_plan.md) |
+| S21       | Vulnerability Triage  | Web Application Scanning / Risk Prioritization   | ID.RA       | CIS 7      | All Tiers     | [remediation_plan.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/remediation_plan.md) |
 | TLAB W7   | Perimeter Assessment  | Active Recon / Vulnerability Audit / Risk Triage | ID.RA       | CIS 7      | All Tiers     | [Perimeter_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Perimeter_Assessment.md) |
 | S22       | Vulnerability Verification | MSF: usermap_script / Samba Exploit | PR.IP | CIS 7 | Confidentiality | [exploit_verification.png](exploit_verification.png) |
 | S23       | Privilege Escalation  | Cron Job Wildcard / Unquoted Service Path        | PR.AC        | CIS 5        | Integrity      | [escalation_path.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/018e7631f51db14d6e5d07420be135941b7fe512) |
 | S24       | Lateral Movement      | SSH Pivot / SOCKS Proxy Tunnel | PR.PT | CIS 4 | Confidentiality | [pivot_success.png](pivot_success.png) |
-| TLAB 8    | The Kill Chain | Vertical Escalation / Cross-Subnet Pivot | PR.PT | CIS 12 | Confidentiality | [Deep_Pivot_Report.md](Deep_Pivot_Report.md) |
-| S25       | Data Exfiltration    | SQL Injection / Authentication Bypass / UNION Attack | DE.CM       | CIS 18     | Confidentiality | [sqli_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/sqli_report.txt) |
+| TLAB 8    | The Kill Chain        | Vertical Escalation / Cross-Subnet Pivot | PR.PT | CIS 12 | Confidentiality | [Deep_Pivot_Report.md](Deep_Pivot_Report.md) |
+| S25       | Data Exfiltration     | SQL Injection / Authentication Bypass / UNION Attack | DE.CM       | CIS 18     | Confidentiality | [sqli_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/sqli_report.txt) |
 | S26       | Poisoned Browser      | XSS (Reflected & Stored) / CSRF / Cookie Theft        | DE.CM       | CIS 18     | Confidentiality | [xss_payloads.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/xss_payloads.txt) |
 | S27       | Invisible Logic       | API BOLA (IDOR) / Business Logic Brute Force          | ID.RA       | CIS 16     | Confidentiality | [api_audit.log](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/api_audit.log) |
 | TLAB 9    | Operation Omni-Portal | Chained SQLi / Stored XSS / API BOLA Full-Stack Audit | RS.AN       | CIS 18     | All Tiers     | [OmniPortal_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/OmniPortal_Assessment.md) |
@@ -78,9 +78,11 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | S30       | SIEM Engineering      | Threat Hunting / Privilege Escalation | DE.AE | CIS 8 | Integrity | [attack_timeline.csv](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/attack_timeline.csv) |
 | TLAB 10   | Operation Phantom Pursuit | DFIR Full Lifecycle / C2 Detection / Disk Forensics | RS.AN | CIS 8 | All Tiers | [Incident_Response_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Incident_Response_Report.md) |
 | S31       | The Barricade         | Firewall & DMZ Lockdown / Lateral Movement Prevention | PR.PT | CIS 4 | Availability + Integrity | [firewall_config.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/firewall_config.sh) |
-| S32       | The Tripwire | Custom Suricata IDS Signatures / Malware Detection | DE.CM | CIS 9 | Confidentiality | [custom_ids.rules](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/custom_ids.rules) |
-| S33       | Endpoint Detection & Response | Ransomware Precursor (VSS Deletion) | DE.CM | CIS 8 | Availability + Integrity | [edr_policy.xml](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/5eac0952d790d96d7092928574187f3422171120/edr_policy.xml) |
-| TLAB 11   | Operation Fortress | Defense in Depth / Egress Filtering | PR.PT | CIS 4 | All Tiers | [Operation_Fortress_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/6386770bdde312e8214193a412103d42aa14fbe1/TLAB11/Operation_Fortress_Report.md) |
+| S32       | The Tripwire          | Custom Suricata IDS Signatures / Malware Detection | DE.CM | CIS 9 | Confidentiality | [custom_ids.rules](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/custom_ids.rules) |
+| S33       | Endpoint Detection    | Ransomware Precursor (VSS Deletion) | DE.CM | CIS 8 | Availability + Integrity | [edr_policy.xml](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/5eac0952d790d96d7092928574187f3422171120/edr_policy.xml) |
+| TLAB 11   | Operation Fortress    | Defense in Depth / Egress Filtering | PR.PT | CIS 4 | All Tiers | [Operation_Fortress_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/6386770bdde312e8214193a412103d42aa14fbe1/Operation_Fortress_Report.md) |
+
+---
 
 <p align="left">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=1000&color=00F72D&width=750&lines=Purple+Team+Operations;Mobile-to-Cloud+SecOps;AI+Security+Architecture;Penetration+Testing+%26+DFIR;Samsung+Galaxy+Note+20+Ultra+%2B+Termux;Zero-Trust+Automation+Pipelines" />
@@ -1155,22 +1157,29 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
     * **Phase 3 — The Ransomware Trap (IaC Bypass):** Engineered an EDR XML policy (`edr_policy.xml`) containing the `<CommandLine condition="contains">delete shadows</CommandLine>` signature. Since the live daemon was blocked by the cloud kernel, I validated the policy structure using an Infrastructure-as-Code (IaC) bypass and securely committed the detection rule to the repository.
 * **Mechanical Proof:** Simulated Sysmon EventID 1 alert generation (`vssadmin delete shadows`). `edr_policy.xml` successfully pushed to GitHub via Git rebase/stash resolution (Commit 5eac095).
 
+#### 🧠 S32 Mission Defense Matrix (Executive Summary)
+* **Mission Objective:** Engineer custom Suricata IDS signatures to detect a ping sweep and a Ghost_Bear malware scanner, deploy the IDS sensor, and confirm both rules fire correctly.
+* **Technical Mechanics:**
+    * **Phase 1 — ICMP Trap:** Wrote rule sid:1000001 to alert on any ICMP traffic directed at 172.90.0.10. Deployed Suricata container on ids_net with cap-add net_admin. Confirmed alert: ICMP Ping Detected.
+    * **Phase 2 — Malware Signature:** Wrote rule sid:1000002 to alert on TCP port 80 traffic containing the exact string Ghost_Scanner_v1. Simulated attack via curl -A "Ghost_Scanner_v1". Confirmed alert: Ghost_Bear Malware Scanner Detected.
+* **Mechanical Proof:** Both rules verified in fast.log. custom_ids.rules pushed to GitHub (Commit 3cff9f1).
+
+#### ⚖️ Architectural Comparison
+| Feature | Standard Desktop (x86) | Android Cyber Workbench (ARM64) |
+| :--- | :--- | :--- |
+| **Execution Environment** | Local Ubuntu VM | Ephemeral Google Cloud Shell + Docker |
+| **IDS Deployment** | Native Suricata install | Dockerized jasonish/suricata container |
+| **Rule Testing** | Local ping/curl | Alpine container on ids_net + curl bypass |
+| **Log Verification** | Native fast.log read | sudo chmod + manual verification |
+| **Submission** | Native session-submit | Manual git push to GitHub |
+
 #### 🛡️ Operational Defense Logic (White Hat Auditor Interrogation)
 **White Hat Auditor Question:** "How did you complete an EDR lab when the Cloud Shell kernel blocked the Sysmon service?"
 **Engineering Statement:** "Operational resilience. When the Cloud Shell container rejected `systemd` dependencies, I didn't abandon the mission. I analyzed the raw PowerShell macro to extract the exact Indicators of Attack (IoA) and manually engineered the XML detection policy. By shifting from live daemon monitoring to static Infrastructure-as-Code (IaC) rule generation, I achieved the exact same defensive objective without being stopped by environmental hypervisor limitations."
 
 ---
 
-### 🛡️ Secondary Contingency Protocol: Ephemeral Artifact Extraction
-**Scenario:** Primary Cloud Shell deployment fails due to vCPU exhaustion or protocol friction.
-**Strategy:** Node-Based Ephemeral Compute (Container Export).
-1. **Docker Export:** `docker export [CONTAINER_ID] | gzip > forensic_snapshot.tar.gz`
-2. **Data Exfiltration:** Treat the entire containerized OS as a single, portable binary file.
-3. **Ledger:** Commit the binary snapshot to the repository to bypass live VM dependencies.
-
----
-
-### 🔍 T1-M1-TLAB-11: OPERATION FORTRESS (Defense in Depth)
+### 🔍 T1-M1-TLAB11: OPERATION FORTRESS (Defense in Depth)
 
 * **Evidence (Artifact):** [Operation_Fortress_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/6386770bdde312e8214193a412103d42aa14fbe1/TLAB11/Operation_Fortress_Report.md)
 * **Evidence (Commit):** [Commit 6386770](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/6386770bdde312e8214193a412103d42aa14fbe1)
@@ -1183,7 +1192,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 | **IDS (L2)** | Native Suricata Service | **Dockerized Suricata container** |
 | **EDR (L3)** | Native Sysmon (`systemd`) | **IaC XML Policy (IaC Bypass)** |
 
-#### 🧠 TLAB-11 Mission Defense Matrix (Executive Summary)
+#### 🧠 TLAB11 Mission Defense Matrix (Executive Summary)
 * **Mission Objective:** Implement a three-tiered Defense in Depth architecture to neutralize an active Advanced Persistent Threat (APT) utilizing a known C2 subnet, web shell exploits, and post-exploitation payloads.
 * **Technical Mechanics:**
     * **Layer 1 (The Firewall):** Engineered an iptables egress filter (`iptables -A OUTPUT -d 198.51.100.0/24 -j DROP`) to sever all outbound communication to the attacker's Command and Control infrastructure.
@@ -1197,3 +1206,10 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 **White Hat Auditor Question:** "Given the ephemeral nature of the Google Cloud Shell environment, how do you verify the integrity of the firewall rules if the instance is terminated and redeployed?"
 **Engineering Statement:** "Governance through Version Control. The firewall configuration is not a 'live' change that relies on persistent instance state; it is defined as Infrastructure as Code (IaC) within the `firewall_task.sh` provisioning script. By committing this script to the GitHub repository, I ensure that any future redeployment is mathematically identical to the verified configuration. The repository acts as the authoritative source of truth, and the git commit hash provides the cryptographic assurance that the rules have not been modified post-deployment."
+
+#### 🛡️ Secondary Contingency Protocol: Ephemeral Artifact Extraction
+**Scenario:** Primary Cloud Shell deployment fails due to vCPU exhaustion or persistent protocol friction.
+**Strategy:** Node-Based Ephemeral Compute (Container Export).
+1. **Docker Export:** `docker export [CONTAINER_ID] | gzip > forensic_snapshot.tar.gz`
+2. **Data Exfiltration:** Treat the entire containerized OS as a single, portable binary file.
+3. **Ledger:** Commit the binary snapshot to the repository to bypass live VM dependencies.
