@@ -114,7 +114,7 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 * [Evidence: protocol_audit.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/protocol_audit.txt)
 * **Explanation:** Protocol parsing via grep, awk, and sed in Termux. Isolated network protocol anomalies (Verified Google IP: 142.250.217.14) to transform traffic into actionable threat intelligence.
 
-### 🛰️ T1-M2.TLAB: Operation Blackout (Linux Hardening)
+### 🛰️ T1-M2.TLAB-2: Operation Blackout (Linux Hardening)
 * [Evidence: harden.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/harden.sh)
 * **Explanation:** Initialization of Module 2 Capstone. Leveraging Google Cloud Shell for high-compute security assessments and advanced automation workflows using the Note 20 Ultra.
 
