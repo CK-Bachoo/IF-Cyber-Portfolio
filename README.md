@@ -79,6 +79,12 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | S33       | Endpoint Detection & Response | Ransomware Precursor (VSS Deletion) | DE.CM | CIS 8 | Availability + Integrity | [edr_policy.xml](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/5eac0952d790d96d7092928574187f3422171120/edr_policy.xml) |
 | TLAB 11   | Operation Fortress | Defense in Depth / Egress Filtering | PR.PT | CIS 4 | All Tiers | [Operation_Fortress_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/6386770bdde312e8214193a412103d42aa14fbe1/TLAB11/Operation_Fortress_Report.md) |
 
+<p align="left">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=1000&color=00F72D&width=750&lines=Purple+Team+Operations;Mobile-to-Cloud+SecOps;AI+Security+Architecture;Penetration+Testing+%26+DFIR;Samsung+Galaxy+Note+20+Ultra+%2B+Termux;Zero-Trust+Automation+Pipelines" />
+</p>
+
+---
+
 ## 📂 Artifact Evidence & Operational History
 
 ### 🛠️ T1-M1-S01: Portfolio Initialization
