@@ -11,6 +11,10 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 - Multi-AI orchestration via custom God Mode intent bridging
 - True hardware-constrained execution (ARM64)
 
+<p align="left">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=1000&color=00F72D&width=750&lines=Purple+Team+Operations+C.K.+BACHOO+TKH+Innovation+Fellow+IF-CS-26+NY;Mobile-to-Cloud+SecOps;AI+Security+Architecture;Penetration+Testing+%26+DFIR;Samsung+Galaxy+Note+20+Ultra+%2B+Termux;Zero-Trust+Automation+Pipelines" />
+</p>
+
 **Evidence & Operational Labs**
 - See "Artifact Evidence & Operational History" section below for cryptographic, commit-linked proofs of execution.
 
@@ -28,61 +32,56 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 ---
 
 **The Mobile-to-Cloud Bridge:** `Note 20 Ultra` → `Termux (Dual Terminal / PRoot)` → `Google Cloud Shell / Github Codespaces / Azure / AWS` → `GitHub`
-<p align="left">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=1000&color=00F72D&width=750&lines=Purple+Team+Operations;Mobile-to-Cloud+SecOps;AI+Security+Architecture;Penetration+Testing+%26+DFIR;Samsung+Galaxy+Note+20+Ultra+%2B+Termux;Zero-Trust+Automation+Pipelines" />
-</p>
-
----
 
 ## ⚖️ Governance & Framework Alignment
 
-| Session   | Function                | Attack Vector / Concept                                  | NIST CSF 2.0 | CIS Control | CIA Triad     | Evidence Artifact          |
-|-----------|-----------------------|--------------------------------------------------|--------------|-------------|---------------|----------------------------|
-| S01       | System Discovery      | Unmapped Asset Inventory                         | ID.AM       | CIS 1      | Integrity    | discovery.txt             |
-| S02       | Access Control        | Privilege Escalation                             | PR.AC       | CIS 3      | Confidentiality | harden.sh                |
-| S03       | Log Parsing           | SQLi / Brute Force                               | DE.AE       | CIS 8      | Integrity    | threat_ips.txt            |
-| TLAB 1    | Clean Sweep           | Active Intrusion / Persistence                   | RS.AN       | CIS 17     | Integrity    | TLAB-01_Report.md         |
-| S04       | The Wire              | Network Sabotage                                 | PR.PT       | CIS 4      | Availability | network_audit.txt         |
-| S05       | Subnetting            | Network Isolation                                | PR.NW       | CIS 12     | Availability | subnet_audit.txt          |
-| S06       | Protocol Analysis     | DNS Deception / Service Discovery                | DE.CM       | CIS 9      | Confidentiality | protocol_audit.txt        |
-| TLAB 2    | Blackout              | System Sabotage / Recovery                       | RS.RP       | CIS 17     | Availability | tlab_report.txt           |
-| S07       | Python Sentry         | Reconnaissance (Vulnerability)                   | ID.RA       | CIS 12     | Availability | port_check.py             |
-| S08       | Memory Audit          | RAM-Resident Brute Force                         | DE.CM       | CIS 8      | Confidentiality | brute_report.txt         |
-| S09       | Automation Pivot      | Malware Detonation Attempt                       | PR.IP       | CIS 16     | Integrity    | system_auditor.py         |
-| TLAB 3    | Automated Hunt        | Remote Code Execution (RCE)                      | RS.MI       | CIS 17     | Integrity    | incident_response.py      |
-| S10       | Layer 3 Sandbox       | C2 Exfiltration (The Air Gap)                    | PR.PT       | CIS 12     | Confidentiality | sandbox_verify.txt       |
-| S11       | Container Rev         | Configuration Drift / Static Infra               | PR.DS       | CIS 12     | Integrity    | deploy_web.sh             |
-| S12       | Fleet Orchestr.       | Lateral Movement / Data Breach                   | PR.NW       | CIS 14     | Confidentiality | docker-compose.yml       |
-| TLAB 4    | Cloud Fleet           | Rogue Service Infrastructure                     | ID.GV       | CIS 1      | Accountability | hyperstack_audit.json    |
-| S13       | Automated Onboarding  | Identity Provisioning                            | PR.AC       | CIS 5      | Integrity    | onboard_engineers.ps1      |
-| S14       | Policy Enforcement    | Active Directory / GPO                           | PR.AC       | CIS 5      | Integrity    | gpo_audit.txt              |
-| S15       | Identity Integration  | Cross-Platform AD Join                           | PR.AC       | CIS 5      | Integrity    | s15_linux_prep.sh          |
-| TLAB 5    | Enterprise Synthesis  | Cross-Platform Integration                       | PR.AC       | CIS 5      | Integrity    | tlab5_report.txt           |
-| S16       | OSI Troubleshooting   | Configuration Sabotage / Isolation                | RS.MI       | CIS 4      | Availability | readiness_check.log        |
-| S17       | Technical Diagnostic  | Privilege Management / Log Security              | PR.DS       | CIS 3      | Integrity    | practical_exam_report.txt |
-| S18 Cap.  | Enterprise Capstone   | Lateral Movement / Infrastructure Breach         | PR.PS       | CIS 4      | All Tiers     | [HardenedOutpost_SAD.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/HardenedOutpost_SAD.md) |
-| S19       | OSINT & Passive Recon | Attack Surface Mapping / Data Leakage            | ID.RA       | CIS 2      | Confidentiality | [ThreatProfile_CloudNano.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/e267d6948ef9000a5aecd23dc42e2ea815817942) |
-| S20       | Network Enumeration   | Active Reconnaissance / Service Discovery        | ID.RA       | CIS 12     | Confidentiality | [nmap_scan_results.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/nmap_scan_results.txt) |
-| S21       | Vulnerability Triage  | Web Application Scanning / Risk Prioritization   | ID.RA       | CIS 7      | All Tiers     | [remediation_plan.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/remediation_plan.md) |
-| TLAB W7   | Perimeter Assessment  | Active Recon / Vulnerability Audit / Risk Triage | ID.RA       | CIS 7      | All Tiers     | [Perimeter_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Perimeter_Assessment.md) |
-| S22       | Vulnerability Verification | MSF: usermap_script / Samba Exploit | PR.IP | CIS 7 | Confidentiality | [exploit_verification.png](exploit_verification.png) |
-| S23       | Privilege Escalation  | Cron Job Wildcard / Unquoted Service Path        | PR.AC        | CIS 5        | Integrity      | [escalation_path.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/018e7631f51db14d6e5d07420be135941b7fe512) |
-| S24       | Lateral Movement      | SSH Pivot / SOCKS Proxy Tunnel | PR.PT | CIS 4 | Confidentiality | [pivot_success.png](pivot_success.png) |
-| TLAB 8    | The Kill Chain        | Vertical Escalation / Cross-Subnet Pivot | PR.PT | CIS 12 | Confidentiality | [Deep_Pivot_Report.md](Deep_Pivot_Report.md) |
-| S25       | Data Exfiltration     | SQL Injection / Authentication Bypass / UNION Attack | DE.CM       | CIS 18     | Confidentiality | [sqli_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/sqli_report.txt) |
-| S26       | Poisoned Browser      | XSS (Reflected & Stored) / CSRF / Cookie Theft        | DE.CM       | CIS 18     | Confidentiality | [xss_payloads.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/xss_payloads.txt) |
-| S27       | Invisible Logic       | API BOLA (IDOR) / Business Logic Brute Force          | ID.RA       | CIS 16     | Confidentiality | [api_audit.log](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/api_audit.log) |
-| TLAB 9    | Operation Omni-Portal | Chained SQLi / Stored XSS / API BOLA Full-Stack Audit | RS.AN       | CIS 18     | All Tiers     | [OmniPortal_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/OmniPortal_Assessment.md) |
-| S28       | The Crime Scene       | DFIR Live Triage / Cryptographic Chain of Custody      | RS.AN       | CIS 8      | Availability   | [collection_log.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/collection_log.txt) |
-| S29       | The Digital Autopsy   | DFIR Disk & Memory Carving / Malware Recovery          | RS.AN       | CIS 8      | Integrity      | [forensic_findings.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/forensic_findings.md) |
-| S30       | SIEM Engineering      | Threat Hunting / Privilege Escalation | DE.AE | CIS 8 | Integrity | [attack_timeline.csv](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/attack_timeline.csv) |
-| TLAB 10   | Operation Phantom Pursuit | DFIR Full Lifecycle / C2 Detection / Disk Forensics | RS.AN | CIS 8 | All Tiers | [Incident_Response_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Incident_Response_Report.md) |
-| S31       | The Barricade         | Firewall & DMZ Lockdown / Lateral Movement Prevention | PR.PT | CIS 4 | Availability + Integrity | [firewall_config.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/firewall_config.sh) |
-| S32       | The Tripwire          | Custom Suricata IDS Signatures / Malware Detection | DE.CM | CIS 9 | Confidentiality | [custom_ids.rules](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/custom_ids.rules) |
-| S33       | Endpoint Detection    | Ransomware Precursor (VSS Deletion) | DE.CM | CIS 8 | Availability + Integrity | [edr_policy.xml](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/5eac0952d790d96d7092928574187f3422171120/edr_policy.xml) |
-| TLAB 11   | Operation Fortress    | Defense in Depth / Egress Filtering | PR.PT | CIS 4 | All Tiers | [Operation_Fortress_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/6386770bdde312e8214193a412103d42aa14fbe1/Operation_Fortress_Report.md) |
+| Session | Function | Attack Vector / Concept | NIST CSF 2.0 | CIS Control | CIA Triad | Evidence Artifact |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| S01 | System Discovery | Unmapped Asset Inventory | ID.AM | CIS 1 | Integrity | [discovery.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/discovery.txt) |
+| S02 | Access Control | Privilege Escalation | PR.AC | CIS 3 | Confidentiality | [harden.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/harden.sh) |
+| S03 | Log Parsing | SQLi / Brute Force | DE.AE | CIS 8 | Integrity | [threat_ips.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/threat_ips.txt) |
+| TLAB 1 | Clean Sweep | Active Intrusion / Persistence | RS.AN | CIS 17 | Integrity | [TLAB-01_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/TLAB-01_Report.md) |
+| S04 | The Wire | Network Sabotage | PR.PT | CIS 4 | Availability | [network_audit.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/network_audit.txt) |
+| S05 | Subnetting | Network Isolation | PR.NW | CIS 12 | Availability | [subnet_audit.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/subnet_audit.txt) |
+| S06 | Protocol Analysis | DNS Deception / Service Discovery | DE.CM | CIS 9 | Confidentiality | [protocol_audit.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/protocol_audit.txt) |
+| TLAB 2 | Blackout | System Sabotage / Recovery | RS.RP | CIS 17 | Availability | [tlab_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/tlab_report.txt) |
+| S07 | Python Sentry | Reconnaissance (Vulnerability) | ID.RA | CIS 12 | Availability | [port_check.py](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/port_check.py) |
+| S08 | Memory Audit | RAM-Resident Brute Force | DE.CM | CIS 8 | Confidentiality | [brute_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/brute_report.txt) |
+| S09 | Automation Pivot | Malware Detonation Attempt | PR.IP | CIS 16 | Integrity | [system_auditor.py](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/system_auditor.py) |
+| TLAB 3 | Automated Hunt | Remote Code Execution (RCE) | RS.MI | CIS 17 | Integrity | [incident_response.py](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/incident_response.py) |
+| S10 | Layer 3 Sandbox | C2 Exfiltration (The Air Gap) | PR.PT | CIS 12 | Confidentiality | [sandbox_verify.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/sandbox_verify.txt) |
+| S11 | Container Rev | Configuration Drift / Static Infra | PR.DS | CIS 12 | Integrity | [deploy_web.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/deploy_web.sh) |
+| S12 | Fleet Orchestr. | Lateral Movement / Data Breach | PR.NW | CIS 14 | Confidentiality | [docker-compose.yml](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/docker-compose.yml) |
+| TLAB 4 | Cloud Fleet | Rogue Service Infrastructure | ID.GV | CIS 1 | Accountability | [hyperstack_audit.json](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/hyperstack_audit.json) |
+| S13 | Automated Onboarding | Identity Provisioning | PR.AC | CIS 5 | Integrity | [onboard_engineers.ps1](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/onboard_engineers.ps1) |
+| S14 | Policy Enforcement | Active Directory / GPO | PR.AC | CIS 5 | Integrity | [gpo_audit.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/gpo_audit.txt) |
+| S15 | Identity Integration | Cross-Platform AD Join | PR.AC | CIS 5 | Integrity | [s15_linux_prep.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/s15_linux_prep.sh) |
+| TLAB 5 | Enterprise Synthesis | Cross-Platform Integration | PR.AC | CIS 5 | Integrity | [tlab5_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/tlab5_report.txt) |
+| S16 | OSI Troubleshooting | Configuration Sabotage / Isolation | RS.MI | CIS 4 | Availability | [readiness_check.log](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/readiness_check.log) |
+| S17 | Technical Diagnostic | Privilege Management / Log Security | PR.DS | CIS 3 | Integrity | [practical_exam_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/practical_exam_report.txt) |
+| S18 Cap. | Enterprise Capstone | Lateral Movement / Infrastructure Breach | PR.PS | CIS 4 | All Tiers | [HardenedOutpost_SAD.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/HardenedOutpost_SAD.md) |
+| S19 | OSINT & Passive Recon | Attack Surface Mapping / Data Leakage | ID.RA | CIS 2 | Confidentiality | [ThreatProfile_CloudNano.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/e267d6948ef9000a5aecd23dc42e2ea815817942) |
+| S20 | Network Enumeration | Active Reconnaissance / Service Discovery | ID.RA | CIS 12 | Confidentiality | [nmap_scan_results.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/nmap_scan_results.txt) |
+| S21 | Vulnerability Triage | Web Application Scanning / Risk Prioritization | ID.RA | CIS 7 | All Tiers | [remediation_plan.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/remediation_plan.md) |
+| TLAB W7 | Perimeter Assessment | Active Recon / Vulnerability Audit / Risk Triage | ID.RA | CIS 7 | All Tiers | [Perimeter_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Perimeter_Assessment.md) |
+| S22 | Vulnerability Verification | MSF: usermap_script / Samba Exploit | PR.IP | CIS 7 | Confidentiality | [exploit_verification.png](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/exploit_verification.png) |
+| S23 | Privilege Escalation | Cron Job Wildcard / Unquoted Service Path | PR.AC | CIS 5 | Integrity | [escalation_path.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/018e7631f51db14d6e5d07420be135941b7fe512) |
+| S24 | Lateral Movement | SSH Pivot / SOCKS Proxy Tunnel | PR.PT | CIS 4 | Confidentiality | [pivot_success.png](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/pivot_success.png) |
+| TLAB 8 | The Kill Chain | Vertical Escalation / Cross-Subnet Pivot | PR.PT | CIS 12 | Confidentiality | [Deep_Pivot_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Deep_Pivot_Report.md) |
+| S25 | Data Exfiltration | SQL Injection / Authentication Bypass / UNION Attack | DE.CM | CIS 18 | Confidentiality | [sqli_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/sqli_report.txt) |
+| S26 | Poisoned Browser | XSS (Reflected & Stored) / CSRF / Cookie Theft | DE.CM | CIS 18 | Confidentiality | [xss_payloads.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/xss_payloads.txt) |
+| S27 | Invisible Logic | API BOLA (IDOR) / Business Logic Brute Force | ID.RA | CIS 16 | Confidentiality | [api_audit.log](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/api_audit.log) |
+| TLAB 9 | Operation Omni-Portal | Chained SQLi / Stored XSS / API BOLA Full-Stack Audit | RS.AN | CIS 18 | All Tiers | [OmniPortal_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/OmniPortal_Assessment.md) |
+| S28 | The Crime Scene | DFIR Live Triage / Cryptographic Chain of Custody | RS.AN | CIS 8 | Availability | [collection_log.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/collection_log.txt) |
+| S29 | The Digital Autopsy | DFIR Disk & Memory Carving / Malware Recovery | RS.AN | CIS 8 | Integrity | [forensic_findings.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/forensic_findings.md) |
+| S30 | SIEM Engineering | Threat Hunting / Privilege Escalation | DE.AE | CIS 8 | Integrity | [attack_timeline.csv](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/attack_timeline.csv) |
+| TLAB 10 | Operation Phantom Pursuit | DFIR Full Lifecycle / C2 Detection / Disk Forensics | RS.AN | CIS 8 | All Tiers | [Incident_Response_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Incident_Response_Report.md) |
+| S31 | The Barricade | Firewall & DMZ Lockdown / Lateral Movement Prevention | PR.PT | CIS 4 | Availability + Integrity | [firewall_config.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/firewall_config.sh) |
+| S32 | The Tripwire | Custom Suricata IDS Signatures / Malware Detection | DE.CM | CIS 9 | Confidentiality | [custom_ids.rules](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/custom_ids.rules) |
+| S33 | Endpoint Detection | Ransomware Precursor (VSS Deletion) | DE.CM | CIS 8 | Availability + Integrity | [edr_policy.xml](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/5eac0952d790d96d7092928574187f3422171120/edr_policy.xml) |
+| TLAB 11 | Operation Fortress | Defense in Depth / Egress Filtering | PR.PT | CIS 4 | All Tiers | [Operation_Fortress_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/6386770bdde312e8214193a412103d42aa14fbe1/Operation_Fortress_Report.md) |
 
----
+## 📂 Artifact Evidence & Operational History
 
 <p align="left">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=1000&color=00F72D&width=750&lines=Purple+Team+Operations;Mobile-to-Cloud+SecOps;AI+Security+Architecture;Penetration+Testing+%26+DFIR;Samsung+Galaxy+Note+20+Ultra+%2B+Termux;Zero-Trust+Automation+Pipelines" />
@@ -1157,13 +1156,6 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
     * **Phase 3 — The Ransomware Trap (IaC Bypass):** Engineered an EDR XML policy (`edr_policy.xml`) containing the `<CommandLine condition="contains">delete shadows</CommandLine>` signature. Since the live daemon was blocked by the cloud kernel, I validated the policy structure using an Infrastructure-as-Code (IaC) bypass and securely committed the detection rule to the repository.
 * **Mechanical Proof:** Simulated Sysmon EventID 1 alert generation (`vssadmin delete shadows`). `edr_policy.xml` successfully pushed to GitHub via Git rebase/stash resolution (Commit 5eac095).
 
-#### 🧠 S32 Mission Defense Matrix (Executive Summary)
-* **Mission Objective:** Engineer custom Suricata IDS signatures to detect a ping sweep and a Ghost_Bear malware scanner, deploy the IDS sensor, and confirm both rules fire correctly.
-* **Technical Mechanics:**
-    * **Phase 1 — ICMP Trap:** Wrote rule sid:1000001 to alert on any ICMP traffic directed at 172.90.0.10. Deployed Suricata container on ids_net with cap-add net_admin. Confirmed alert: ICMP Ping Detected.
-    * **Phase 2 — Malware Signature:** Wrote rule sid:1000002 to alert on TCP port 80 traffic containing the exact string Ghost_Scanner_v1. Simulated attack via curl -A "Ghost_Scanner_v1". Confirmed alert: Ghost_Bear Malware Scanner Detected.
-* **Mechanical Proof:** Both rules verified in fast.log. custom_ids.rules pushed to GitHub (Commit 3cff9f1).
-
 #### ⚖️ Architectural Comparison
 | Feature | Standard Desktop (x86) | Android Cyber Workbench (ARM64) |
 | :--- | :--- | :--- |
@@ -1179,7 +1171,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ---
 
-### 🔍 T1-M1-TLAB11: OPERATION FORTRESS (Defense in Depth)
+### 🔍 T1-M1-TLAB-11: OPERATION FORTRESS (Defense in Depth)
 
 * **Evidence (Artifact):** [Operation_Fortress_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/6386770bdde312e8214193a412103d42aa14fbe1/TLAB11/Operation_Fortress_Report.md)
 * **Evidence (Commit):** [Commit 6386770](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/6386770bdde312e8214193a412103d42aa14fbe1)
@@ -1192,7 +1184,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 | **IDS (L2)** | Native Suricata Service | **Dockerized Suricata container** |
 | **EDR (L3)** | Native Sysmon (`systemd`) | **IaC XML Policy (IaC Bypass)** |
 
-#### 🧠 TLAB11 Mission Defense Matrix (Executive Summary)
+#### 🧠 TLAB-11 Mission Defense Matrix (Executive Summary)
 * **Mission Objective:** Implement a three-tiered Defense in Depth architecture to neutralize an active Advanced Persistent Threat (APT) utilizing a known C2 subnet, web shell exploits, and post-exploitation payloads.
 * **Technical Mechanics:**
     * **Layer 1 (The Firewall):** Engineered an iptables egress filter (`iptables -A OUTPUT -d 198.51.100.0/24 -j DROP`) to sever all outbound communication to the attacker's Command and Control infrastructure.
