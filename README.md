@@ -77,7 +77,7 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | S31      | The Barricade        | Firewall & DMZ Lockdown / Lateral Movement Prevention | PR.PT | CIS 4 | Availability + Integrity | [firewall_config.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/firewall_config.sh) |
 | S32      | The Tripwire | Custom Suricata IDS Signatures / Malware Detection | DE.CM | CIS 9 | Confidentiality | [custom_ids.rules](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/custom_ids.rules) |
 | S33      | Endpoint Detection & Response | Ransomware Precursor (VSS Deletion) | DE.CM | CIS 8 | Availability + Integrity | [edr_policy.xml](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/edr_policy.xml) |
-| TLAB 11 | Operation Fortress | Defense in Depth / Egress Filtering | PR.PT | CIS 4 | All Tiers | [Operation_Fortress_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/TLAB11/Operation_Fortress_Report.md) |
+| TLAB 11 | Operation Fortress | Defense in Depth / Egress Filtering | PR.PT | CIS 4 | All Tiers | [Operation_Fortress_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Operation_Fortress_Report.md ) |
 
 ## 📂 Artifact Evidence & Operational History
 
@@ -1179,7 +1179,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ### 🔍 T1-M1-TLAB11: OPERATION FORTRESS (Defense in Depth)
 
-* **Evidence (Artifact):** [Operation_Fortress_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/TLAB11/Operation_Fortress_Report.md)
+* **Evidence (Artifact):** [Operation_Fortress_Report.md]((https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Operation_Fortress_Report.md )
 * **Evidence (Commit):** [Commit 6386770](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/6386770)
 
 #### ⚖️ Architectural Comparison (Governance Chart)
