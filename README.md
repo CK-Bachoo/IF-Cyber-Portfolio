@@ -75,8 +75,8 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | TLAB 10 | Operation Phantom Pursuit | DFIR Full Lifecycle / C2 Detection / Disk Forensics | RS.AN | CIS 8 | All Tiers | [Incident_Response_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Incident_Response_Report.md) |
 | S31 | The Barricade | Firewall & DMZ Lockdown / Lateral Movement Prevention | PR.PT | CIS 4 | Availability + Integrity | [firewall_config.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/firewall_config.sh) |
 | S32 | The Tripwire | Custom Suricata IDS Signatures / Malware Detection | DE.CM | CIS 9 | Confidentiality | [custom_ids.rules](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/custom_ids.rules) |
-| S33 | Endpoint Detection | Ransomware Precursor (VSS Deletion) | DE.CM | CIS 8 | Availability + Integrity | [edr_policy.xml](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/5eac0952d790d96d7092928574187f3422171120/edr_policy.xml) |
-| TLAB 11 | Operation Fortress | Defense in Depth / Egress Filtering | PR.PT | CIS 4 | All Tiers | [Operation_Fortress_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/6386770bdde312e8214193a412103d42aa14fbe1/TLAB11/Operation_Fortress_Report.md) |
+| S33 | Endpoint Detection | Ransomware Precursor (VSS Deletion) | DE.CM | CIS 8 | Availability + Integrity |[edr_policy.xml](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/5eac0952d790d96d7092928574187f3422171120/edr_policy.xml)|
+| TLAB 11 | Operation Fortress | Defense in Depth / Egress Filtering | PR.PT | CIS 4 | All Tiers | [Operation_Fortress_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Operation_Fortress_Report.md) |
 
 ## 📂 Artifact Evidence & Operational History
 
@@ -1152,7 +1152,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ### 🏁 T1-M1-S33: THE LAST MILE (Endpoint Detection & Response)
 * **Evidence (Artifact):** [edr_policy.xml](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/5eac0952d790d96d7092928574187f3422171120/edr_policy.xml)
-* **Evidence (Commit):** [Commit 5eac095](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/5eac0952d790d96d7092928574187f3422171120)
+* **Evidence (Commit):** [Commit 5eac095](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/5eac0957a2e96c62e09655df955be6469496fc3c)
 
 #### 🧠 S33 Mission Defense Matrix (Executive Summary)
 * **Mission Objective:** Deploy Sysmon to monitor endpoint processes, deobfuscate a malicious PowerShell macro, and engineer an XML detection policy to trap ransomware precursor behavior.
@@ -1177,9 +1177,9 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ---
 
-### 🔍 T1-M1-TLAB11: OPERATION FORTRESS (Defense in Depth)
+### 🔍 T1-M1-TLAB-11: OPERATION FORTRESS (Defense in Depth)
 
-* **Evidence (Artifact):** [Operation_Fortress_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/6386770bdde312e8214193a412103d42aa14fbe1/TLAB11/Operation_Fortress_Report.md)
+* **Evidence (Artifact):** [Operation_Fortress_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Operation_Fortress_Report.md)
 * **Evidence (Commit):** [Commit 6386770](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/6386770bdde312e8214193a412103d42aa14fbe1)
 
 #### ⚖️ Architectural Comparison (Governance Chart)
@@ -1190,7 +1190,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 | **IDS (L2)** | Native Suricata Service | **Dockerized Suricata container** |
 | **EDR (L3)** | Native Sysmon (`systemd`) | **IaC XML Policy (IaC Bypass)** |
 
-#### 🧠 TLAB11 Mission Defense Matrix (Executive Summary)
+#### 🧠 TLAB-11 Mission Defense Matrix (Executive Summary)
 * **Mission Objective:** Implement a three-tiered Defense in Depth architecture to neutralize an active Advanced Persistent Threat (APT) utilizing a known C2 subnet, web shell exploits, and post-exploitation payloads.
 * **Technical Mechanics:**
     * **Layer 1 (The Firewall):** Engineered an iptables egress filter (`iptables -A OUTPUT -d 198.51.100.0/24 -j DROP`) to sever all outbound communication to the attacker's Command and Control infrastructure.
@@ -1211,3 +1211,4 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 1. **Local Sandbox Injection:** Instead of relying on a pre-provisioned cloud VM, execute a localized Docker container within a Termux `proot-distro` (e.g., Debian/Ubuntu) environment using: `docker run -it --rm --name forensic_triage [IMAGE_NAME] /bin/bash`
 2. **Persistence by Export:** If container runtime is unstable on the mobile ARM64 SOC, utilize `docker export` to pipe the filesystem directly to an encrypted local archive: `docker export [CONTAINER_ID] | gzip > forensic_snapshot.tar.gz`
 3. **Data Exfiltration:** Once the container state is captured as a compressed binary, transfer the artifact to GitHub using standard `git` workflow. This bypasses the need for long-lived cloud instances and handles resource-constrained environments by treating the entire containerized OS as a single, portable binary file.
+---
