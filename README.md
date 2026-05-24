@@ -1177,3 +1177,31 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
    `docker export [CONTAINER_ID] | gzip > forensic_snapshot.tar.gz`
 3. **Data Exfiltration:** Once the container state is captured as a compressed binary, transfer the artifact to GitHub using my standard `git` workflow. This bypasses the need for long-lived cloud instances and handles resource-constrained environments by treating the entire containerized OS as a single, portable binary file.
 
+### 🔍 T1-M1-TLAB-11: OPERATION FORTRESS (Defense in Depth)
+
+* **Evidence (Artifact):** [Operation_Fortress_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/TLAB11/Operation_Fortress_Report.md)
+* **Evidence (Commit):** [Commit 6386770](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/6386770)
+
+#### 🧠 TLAB-11 Mission Defense Matrix (Executive Summary)
+* **Mission Objective:** Implement a three-tiered Defense in Depth architecture to neutralize an active Advanced Persistent Threat (APT) utilizing a known C2 subnet, web shell exploits, and post-exploitation payloads.
+* **Technical Mechanics:**
+    * **Layer 1 (The Firewall):** Engineered an iptables egress filter (`iptables -A OUTPUT -d 198.51.100.0/24 -j DROP`) to sever all outbound communication to the attacker's Command and Control infrastructure.
+    * **Layer 2 (The Tripwire):** Engineered a custom Suricata IDS signature (`alert tcp any any -> any 80 (msg:"Web Shell Detected"; content:"cmd=whoami"; sid:1000005; rev:1;)`) to detect the specific web shell exploit string crossing the network perimeter.
+    * **Layer 3 (The Endpoint):** Engineered a Sysmon EDR XML policy (`<CommandLine condition="contains">curl http://198.51.100.5</CommandLine>`) to catch the post-exploitation payload download executing natively on the Linux host.
+* **Mechanical Proof:** All three defensive layers documented in `Operation_Fortress_Report.md` and pushed to GitHub (Commit 6386770).
+
+#### ⚖️ Architectural Comparison (Governance Chart)
+
+| Feature | Standard Desktop (x86) | Android Cyber Workbench (ARM64) |
+| :--- | :--- | :--- |
+| **Execution Environment** | Local Ubuntu VM (VirtualBox) | **Ephemeral Google Cloud Shell Bridge** |
+| **Firewall (L1)** | Native `iptables` on VM | **Cloud-Provisioned `iptables`** |
+| **IDS (L2)** | Native Suricata Service | **Dockerized Suricata container** |
+| **EDR (L3)** | Native Sysmon (`systemd`) | **IaC XML Policy (IaC Bypass)** |
+| **Submission** | Local `session-submit` | **Cloud Pivot Bypass + Git Push** |
+
+#### 🛡️ Operational Defense Logic (White Hat Auditor Interrogation)
+
+**White Hat Auditor Question:** "Why implement three different controls for a single threat actor?"
+
+**Engineering Statement:** "A single point of failure is a guaranteed breach. Defense in Depth assumes that preventative controls will eventually fail. If the firewall egress filter (Layer 1) is bypassed, the IDS (Layer 2) alerts the SOC to the intrusion attempt. If the network payload is encrypted and blinds the IDS, the Endpoint Detection (Layer 3) catches the malicious execution directly on the host. Overlapping controls ensure continuous visibility and containment."
