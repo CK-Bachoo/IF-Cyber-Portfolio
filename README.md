@@ -10,10 +10,6 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 - Multi-AI orchestration via custom God Mode intent bridging
 - True hardware-constrained execution (ARM64)
 
-<p align="left">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=1000&color=00F72D&width=750&lines=Purple+Team+Operations+C.K.+BACHOO+TKH+Innovation+Fellow+IF-CS-26+NY;Mobile-to-Cloud+SecOps;AI+Security+Architecture;Penetration+Testing+%26+DFIR;Samsung+Galaxy+Note+20+Ultra+%2B+Termux;Zero-Trust+Automation+Pipelines" />
-</p>
-
 **Evidence & Operational Labs**
 - See "Artifact Evidence & Operational History" section below for cryptographic, commit-linked proofs of execution.
 
@@ -86,7 +82,7 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 ## 📂 Artifact Evidence & Operational History
 
 <p align="left">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=1000&color=00F72D&width=750&lines=Purple+Team+Operations;Mobile-to-Cloud+SecOps;AI+Security+Architecture;Penetration+Testing+%26+DFIR;Samsung+Galaxy+Note+20+Ultra+%2B+Termux;Zero-Trust+Automation+Pipelines" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=1000&color=00F72D&width=750&lines=Purple+Team+Operations+C.K.+BACHOO+TKH+Innovation+Fellow+IF-CS-26+NY;Mobile-to-Cloud+SecOps;AI+Security+Architecture;Penetration+Testing+%26+DFIR;Samsung+Galaxy+Note+20+Ultra+%2B+Termux;Zero-Trust+Automation+Pipelines" />
 </p>
 
 ## 📂 Artifact Evidence & Operational History
