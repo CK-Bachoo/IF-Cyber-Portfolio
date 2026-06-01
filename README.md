@@ -77,6 +77,8 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | S32 | The Tripwire | Custom Suricata IDS Signatures / Malware Detection | DE.CM | CIS 9 | Confidentiality | [custom_ids.rules](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/custom_ids.rules) |
 | S33 | Endpoint Detection | Ransomware Precursor (VSS Deletion) | DE.CM | CIS 8 | Availability + Integrity |[edr_policy.xml](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/edr_policy.xml)|
 | TLAB 11 | Operation Fortress | Defense in Depth / Egress Filtering | PR.PT | CIS 4 | All Tiers | [Operation_Fortress_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Operation_Fortress_Report.md) |
+| TLAB 12 | Final Portfolio Synthesis | Full Kill Chain Reconstruction | RS.AN / PR.PT | CIS 17 / CIS 18 | All Tiers | [Operation_Fortress_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Operation_Fortress_Report.md) + [portfolio_audit.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-12/portfolio_audit.md) |
+| Week 12 | TEPP Final Reckoning | Portfolio Audit + Postmortem | ID.GV / RS.IM | CIS 1 / CIS 17 | All Tiers | [tepp_postmortem.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-12/tepp_postmortem.md) + [portfolio_audit.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-12/portfolio_audit.md) |
 
 ## 📂 Artifact Evidence & Operational History
 
@@ -270,8 +272,7 @@ By engineering a **Mobile-to-Cloud Bridge**, I decoupled the Command Layer from 
 | **Evidence** | N/A | **[docker-compose.yml](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/docker-compose.yml)** |
 
 * **Android Cyber Workbench screenshot Status Up:**
-![S12 Status Up](s12%20status%20up%20screenshot2.png)
-
+![S12 Status Up](s12/s12%20status%20up%20screenshot2.png)
 🛡️ **Operational Defense Logic (White Hat Auditor Common Questions)**
 
 **White Hat Auditor Question:** \"Why did you use Docker Compose instead of manual 'docker run' commands for this stack?\"
@@ -1213,3 +1214,28 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 2. **Persistence by Export:** If container runtime is unstable on the mobile ARM64 SOC, utilize `docker export` to pipe the filesystem directly to an encrypted local archive: `docker export [CONTAINER_ID] | gzip > forensic_snapshot.tar.gz`
 3. **Data Exfiltration:** Once the container state is captured as a compressed binary, transfer the artifact to GitHub using standard `git` workflow. This bypasses the need for long-lived cloud instances and handles resource-constrained environments by treating the entire containerized OS as a single, portable binary file.
 ---
+
+
+---
+### 🏁 TLAB 12 & W12 TEPP Final  ( Tlab 12  — Portfolio Review & Week 12 TEPP — Final Reckoning )
+
+**Evidence (Artifact):** [portfolio_audit.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-12/portfolio_audit.md)
+
+**Evidence (Artifact):** [tepp_postmortem.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-12/tepp_postmortem.md)
+
+⚖️ Architectural Comparison (Governance Chart)
+Feature | Standard Desktop (x86) | Android Cyber Workbench (ARM64)
+--- | --- | ---
+Audit Scope | Manual Documentation | Automated Git-Ledgered Artifacts
+Governance | NIST CSF 2.0 / CIS 18 Alignment | Zero-Trust Verified Mobile SOC
+Execution Environment | Local Ubuntu VM | Samsung Note 20 Ultra + Termux + Cloud Shell Bridge
+Submission Mechanism | Native session-submit | Git Push with Cryptographic Audit Trail
+
+🧠 TLAB 12 Mission Defense Matrix (Executive Summary)
+Mission Objective: Complete full portfolio synthesis, reconstruct kill chains across all modules, perform final governance audit, and deliver TEPP postmortem on constrained mobile hardware.
+
+Technical Mechanics: Consolidated S01–S33 + TLAB01–11 evidence into immutable GitHub ledger. Verified all mobile-first artifacts (curl/bash/Python workflows) against NIST CSF 2.0 and CIS Controls. Conducted final Zero-Trust validation from Note 20 Ultra Termux environment.
+
+Mechanical Proof: Full audit trail in portfolio_audit.md and tepp_postmortem.md. All commits and screenshots (including S12 status) pushed establishing cryptographic proof of completion.
+
+**Status:** 🟢End Phase 1 - MISSION ACCOMPLISHED — Full IF-Cyber-Portfolio delivered via Samsung Note 20 Ultra Mobile SOC.
