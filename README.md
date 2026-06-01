@@ -34,50 +34,50 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 
 | Session | Function | Attack Vector / Concept | NIST CSF 2.0 | CIS Control | CIA Triad | Evidence Artifact |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| S01 | System Discovery | Unmapped Asset Inventory | ID.AM | CIS 1 | Integrity | [discovery.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/discovery.txt) |
-| S02 | Access Control | Privilege Escalation | PR.AC | CIS 3 | Confidentiality | [harden.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/harden.sh) |
-| S03 | Log Parsing | SQLi / Brute Force | DE.AE | CIS 8 | Integrity | [threat_ips.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/threat_ips.txt) |
-| TLAB 1 | Clean Sweep | Active Intrusion / Persistence | RS.AN | CIS 17 | Integrity | [TLAB-01_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/TLAB-01_Report.md) |
-| S04 | The Wire | Network Sabotage | PR.PT | CIS 4 | Availability | [network_audit.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/network_audit.txt) |
-| S05 | Subnetting | Network Isolation | PR.NW | CIS 12 | Availability | [subnet_audit.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/subnet_audit.txt) |
-| S06 | Protocol Analysis | DNS Deception / Service Discovery | DE.CM | CIS 9 | Confidentiality | [protocol_audit.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/protocol_audit.txt) |
-| TLAB 2 | Blackout | System Sabotage / Recovery | RS.RP | CIS 17 | Availability | [tlab_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/tlab_report.txt) |
-| S07 | Python Sentry | Reconnaissance (Vulnerability) | ID.RA | CIS 12 | Availability | [port_check.py](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/port_check.py) |
-| S08 | Memory Audit | RAM-Resident Brute Force | DE.CM | CIS 8 | Confidentiality | [brute_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/brute_report.txt) |
-| S09 | Automation Pivot | Malware Detonation Attempt | PR.IP | CIS 16 | Integrity | [system_auditor.py](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/system_auditor.py) |
+| S01 | System Discovery | Unmapped Asset Inventory | ID.AM | CIS 1 | Integrity | [discovery.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-01/discovery.txt) |
+| S02 | Access Control | Privilege Escalation | PR.AC | CIS 3 | Confidentiality | [harden.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-01/harden.sh) |
+| S03 | Log Parsing | SQLi / Brute Force | DE.AE | CIS 8 | Integrity | [threat_ips.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-01/threat_ips.txt) |
+| TLAB 1 | Clean Sweep | Active Intrusion / Persistence | RS.AN | CIS 17 | Integrity | [TLAB-01_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-01/TLAB-01_Report.md) |
+| S04 | The Wire | Network Sabotage | PR.PT | CIS 4 | Availability | [network_audit.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-02/network_audit.txt) |
+| S05 | Subnetting | Network Isolation | PR.NW | CIS 12 | Availability | [subnet_audit.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-02/subnet_audit.txt) |
+| S06 | Protocol Analysis | DNS Deception / Service Discovery | DE.CM | CIS 9 | Confidentiality | [protocol_audit.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-02/protocol_audit.txt) |
+| TLAB 2 | Blackout | System Sabotage / Recovery | RS.RP | CIS 17 | Availability | [tlab_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-02/tlab_report.txt) |
+| S07 | Python Sentry | Reconnaissance (Vulnerability) | ID.RA | CIS 12 | Availability | [port_check.py](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-03/port_check.py) |
+| S08 | Memory Audit | RAM-Resident Brute Force | DE.CM | CIS 8 | Confidentiality | [brute_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-03/brute_report.txt) |
+| S09 | Automation Pivot | Malware Detonation Attempt | PR.IP | CIS 16 | Integrity | [system_auditor.py](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-03/system_auditor.py) |
 | TLAB 3 | Automated Hunt | Remote Code Execution (RCE) | RS.MI | CIS 17 | Integrity | [incident_response.py](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/incident_response.py) |
 | S10 | Layer 3 Sandbox | C2 Exfiltration (The Air Gap) | PR.PT | CIS 12 | Confidentiality | [sandbox_verify.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/sandbox_verify.txt) |
-| S11 | Container Rev | Configuration Drift / Static Infra | PR.DS | CIS 12 | Integrity | [deploy_web.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/deploy_web.sh) |
-| S12 | Fleet Orchestr. | Lateral Movement / Data Breach | PR.NW | CIS 14 | Confidentiality | [docker-compose.yml](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/docker-compose.yml) |
-| TLAB 4 | Cloud Fleet | Rogue Service Infrastructure | ID.GV | CIS 1 | Accountability | [hyperstack_audit.json](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/hyperstack_audit.json) |
-| S13 | Automated Onboarding | Identity Provisioning | PR.AC | CIS 5 | Integrity | [onboard_engineers.ps1](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/onboard_engineers.ps1) |
-| S14 | Policy Enforcement | Active Directory / GPO | PR.AC | CIS 5 | Integrity | [gpo_audit.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/gpo_audit.txt) |
-| S15 | Identity Integration | Cross-Platform AD Join | PR.AC | CIS 5 | Integrity | [s15_linux_prep.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/s15_linux_prep.sh) |
-| TLAB 5 | Enterprise Synthesis | Cross-Platform Integration | PR.AC | CIS 5 | Integrity | [tlab5_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/tlab5_report.txt) |
-| S16 | OSI Troubleshooting | Configuration Sabotage / Isolation | RS.MI | CIS 4 | Availability | [readiness_check.log](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/readiness_check.log) |
-| S17 | Technical Diagnostic | Privilege Management / Log Security | PR.DS | CIS 3 | Integrity | [practical_exam_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/practical_exam_report.txt) |
-| S18 Cap. | Enterprise Capstone | Lateral Movement / Infrastructure Breach | PR.PS | CIS 4 | All Tiers | [HardenedOutpost_SAD.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/HardenedOutpost_SAD.md) |
+| S11 | Container Rev | Configuration Drift / Static Infra | PR.DS | CIS 12 | Integrity | [deploy_web.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-04/deploy_web.sh) |
+| S12 | Fleet Orchestr. | Lateral Movement / Data Breach | PR.NW | CIS 14 | Confidentiality | [docker-compose.yml](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-04/docker-compose.yml) |
+| TLAB 4 | Cloud Fleet | Rogue Service Infrastructure | ID.GV | CIS 1 | Accountability | [hyperstack_audit.json](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-04/hyperstack_audit.json) |
+| S13 | Automated Onboarding | Identity Provisioning | PR.AC | CIS 5 | Integrity | [onboard_engineers.ps1](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-05/onboard_engineers.ps1) |
+| S14 | Policy Enforcement | Active Directory / GPO | PR.AC | CIS 5 | Integrity | [gpo_audit.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-05/gpo_audit.txt) |
+| S15 | Identity Integration | Cross-Platform AD Join | PR.AC | CIS 5 | Integrity | [s15_linux_prep.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-05/s15_linux_prep.sh) |
+| TLAB 5 | Enterprise Synthesis | Cross-Platform Integration | PR.AC | CIS 5 | Integrity | [tlab5_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-05/tlab5_report.txt) |
+| S16 | OSI Troubleshooting | Configuration Sabotage / Isolation | RS.MI | CIS 4 | Availability | [readiness_check.log](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-06/readiness_check.log) |
+| S17 | Technical Diagnostic | Privilege Management / Log Security | PR.DS | CIS 3 | Integrity | [practical_exam_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-06/practical_exam_report.txt) |
+| S18 Cap. | Enterprise Capstone | Lateral Movement / Infrastructure Breach | PR.PS | CIS 4 | All Tiers | [HardenedOutpost_SAD.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-06/HardenedOutpost_SAD.md) |
 | S19 | OSINT & Passive Recon | Attack Surface Mapping / Data Leakage | ID.RA | CIS 2 | Confidentiality | [ThreatProfile_CloudNano.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/e267d6948ef9000a5aecd23dc42e2ea815817942) |
-| S20 | Network Enumeration | Active Reconnaissance / Service Discovery | ID.RA | CIS 12 | Confidentiality | [nmap_scan_results.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/nmap_scan_results.txt) |
-| S21 | Vulnerability Triage | Web Application Scanning / Risk Prioritization | ID.RA | CIS 7 | All Tiers | [remediation_plan.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/remediation_plan.md) |
-| TLAB W7 | Perimeter Assessment | Active Recon / Vulnerability Audit / Risk Triage | ID.RA | CIS 7 | All Tiers | [Perimeter_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Perimeter_Assessment.md) |
-| S22 | Vulnerability Verification | MSF: usermap_script / Samba Exploit | PR.IP | CIS 7 | Confidentiality | [exploit_verification.png](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/exploit_verification.png) |
+| S20 | Network Enumeration | Active Reconnaissance / Service Discovery | ID.RA | CIS 12 | Confidentiality | [nmap_scan_results.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-07/nmap_scan_results.txt) |
+| S21 | Vulnerability Triage | Web Application Scanning / Risk Prioritization | ID.RA | CIS 7 | All Tiers | [remediation_plan.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-07/remediation_plan.md) |
+| TLAB W7 | Perimeter Assessment | Active Recon / Vulnerability Audit / Risk Triage | ID.RA | CIS 7 | All Tiers | [Perimeter_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-07/Perimeter_Assessment.md) |
+| S22 | Vulnerability Verification | MSF: usermap_script / Samba Exploit | PR.IP | CIS 7 | Confidentiality | [exploit_verification.png](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-09/exploit_verification.png) |
 | S23 | Privilege Escalation | Cron Job Wildcard / Unquoted Service Path | PR.AC | CIS 5 | Integrity | [escalation_path.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/018e7631f51db14d6e5d07420be135941b7fe512) |
 | S24 | Lateral Movement | SSH Pivot / SOCKS Proxy Tunnel | PR.PT | CIS 4 | Confidentiality | [pivot_success.png](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/pivot_success.png) |
-| TLAB 8 | The Kill Chain | Vertical Escalation / Cross-Subnet Pivot | PR.PT | CIS 12 | Confidentiality | [Deep_Pivot_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Deep_Pivot_Report.md) |
-| S25 | Data Exfiltration | SQL Injection / Authentication Bypass / UNION Attack | DE.CM | CIS 18 | Confidentiality | [sqli_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/sqli_report.txt) |
-| S26 | Poisoned Browser | XSS (Reflected & Stored) / CSRF / Cookie Theft | DE.CM | CIS 18 | Confidentiality | [xss_payloads.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/xss_payloads.txt) |
-| S27 | Invisible Logic | API BOLA (IDOR) / Business Logic Brute Force | ID.RA | CIS 16 | Confidentiality | [api_audit.log](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/api_audit.log) |
-| TLAB 9 | Operation Omni-Portal | Chained SQLi / Stored XSS / API BOLA Full-Stack Audit | RS.AN | CIS 18 | All Tiers | [OmniPortal_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/OmniPortal_Assessment.md) |
-| S28 | The Crime Scene | DFIR Live Triage / Cryptographic Chain of Custody | RS.AN | CIS 8 | Availability | [collection_log.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/collection_log.txt) |
-| S29 | The Digital Autopsy | DFIR Disk & Memory Carving / Malware Recovery | RS.AN | CIS 8 | Integrity | [forensic_findings.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/forensic_findings.md) |
-| S30 | SIEM Engineering | Threat Hunting / Privilege Escalation | DE.AE | CIS 8 | Integrity | [attack_timeline.csv](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/attack_timeline.csv) |
-| TLAB 10 | Operation Phantom Pursuit | DFIR Full Lifecycle / C2 Detection / Disk Forensics | RS.AN | CIS 8 | All Tiers | [Incident_Response_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Incident_Response_Report.md) |
-| S31 | The Barricade | Firewall & DMZ Lockdown / Lateral Movement Prevention | PR.PT | CIS 4 | Availability + Integrity | [firewall_config.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/firewall_config.sh) |
-| S32 | The Tripwire | Custom Suricata IDS Signatures / Malware Detection | DE.CM | CIS 9 | Confidentiality | [custom_ids.rules](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/custom_ids.rules) |
-| S33 | Endpoint Detection | Ransomware Precursor (VSS Deletion) | DE.CM | CIS 8 | Availability + Integrity |[edr_policy.xml](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/edr_policy.xml)|
-| TLAB 11 | Operation Fortress | Defense in Depth / Egress Filtering | PR.PT | CIS 4 | All Tiers | [Operation_Fortress_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Operation_Fortress_Report.md) |
-| TLAB 12 | Final Portfolio Synthesis | Full Kill Chain Reconstruction | RS.AN / PR.PT | CIS 17 / CIS 18 | All Tiers | [Operation_Fortress_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Operation_Fortress_Report.md) + [portfolio_audit.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-12/portfolio_audit.md) |
+| TLAB 8 | The Kill Chain | Vertical Escalation / Cross-Subnet Pivot | PR.PT | CIS 12 | Confidentiality | [Deep_Pivot_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-08/Deep_Pivot_Report.md) |
+| S25 | Data Exfiltration | SQL Injection / Authentication Bypass / UNION Attack | DE.CM | CIS 18 | Confidentiality | [sqli_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-09/sqli_report.txt) |
+| S26 | Poisoned Browser | XSS (Reflected & Stored) / CSRF / Cookie Theft | DE.CM | CIS 18 | Confidentiality | [xss_payloads.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-09/xss_payloads.txt) |
+| S27 | Invisible Logic | API BOLA (IDOR) / Business Logic Brute Force | ID.RA | CIS 16 | Confidentiality | [api_audit.log](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-09/api_audit.log) |
+| TLAB 9 | Operation Omni-Portal | Chained SQLi / Stored XSS / API BOLA Full-Stack Audit | RS.AN | CIS 18 | All Tiers | [OmniPortal_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-09/OmniPortal_Assessment.md) |
+| S28 | The Crime Scene | DFIR Live Triage / Cryptographic Chain of Custody | RS.AN | CIS 8 | Availability | [collection_log.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-10/collection_log.txt) |
+| S29 | The Digital Autopsy | DFIR Disk & Memory Carving / Malware Recovery | RS.AN | CIS 8 | Integrity | [forensic_findings.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-10/forensic_findings.md) |
+| S30 | SIEM Engineering | Threat Hunting / Privilege Escalation | DE.AE | CIS 8 | Integrity | [attack_timeline.csv](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-10/attack_timeline.csv) |
+| TLAB 10 | Operation Phantom Pursuit | DFIR Full Lifecycle / C2 Detection / Disk Forensics | RS.AN | CIS 8 | All Tiers | [Incident_Response_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-10/Incident_Response_Report.md) |
+| S31 | The Barricade | Firewall & DMZ Lockdown / Lateral Movement Prevention | PR.PT | CIS 4 | Availability + Integrity | [firewall_config.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-11/firewall_config.sh) |
+| S32 | The Tripwire | Custom Suricata IDS Signatures / Malware Detection | DE.CM | CIS 9 | Confidentiality | [custom_ids.rules](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-11/custom_ids.rules) |
+| S33 | Endpoint Detection | Ransomware Precursor (VSS Deletion) | DE.CM | CIS 8 | Availability + Integrity |[edr_policy.xml](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-11/edr_policy.xml)|
+| TLAB 11 | Operation Fortress | Defense in Depth / Egress Filtering | PR.PT | CIS 4 | All Tiers | [Operation_Fortress_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-11/Operation_Fortress_Report.md) |
+| TLAB 12 | Final Portfolio Synthesis | Full Kill Chain Reconstruction | RS.AN / PR.PT | CIS 17 / CIS 18 | All Tiers | [Operation_Fortress_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-11/Operation_Fortress_Report.md) + [portfolio_audit.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-12/portfolio_audit.md) |
 | Week 12 | TEPP Final Reckoning | Portfolio Audit + Postmortem | ID.GV / RS.IM | CIS 1 / CIS 17 | All Tiers | [tepp_postmortem.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-12/tepp_postmortem.md) + [portfolio_audit.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-12/portfolio_audit.md) |
 
 ## 📂 Artifact Evidence & Operational History
@@ -97,27 +97,27 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 * **Explanation:** CLI proficiency. Demonstrated mastery of directory traversal, file permission management, and core Linux I/O operations required for headless systems administration.
 
 ### 🛠️ T1-M1-S03: Network Foundations
-* [Evidence: network_audit.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/network_audit.txt)
+* [Evidence: network_audit.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-02/network_audit.txt)
 * **Explanation:** Network layer analysis performed in Termux using dual-terminal sessions for concurrent monitoring. Conducted packet analysis and connectivity verification (Ping 8.8.8.8: 0% loss).
 
 ### 🔍 TLAB-01: OPERATION CLEAN SWEEP
-* [Evidence: TLAB-01_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/TLAB-01_Report.md)
+* [Evidence: TLAB-01_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-01/TLAB-01_Report.md)
 * **Explanation:** Advanced incident response and log interrogation. Leveraged dual Termux terminals to identify and eradicate IoCs (Malicious IPs: 10.99.88.77, 45.33.22.11). Confirmed system integrity post-remediation.
 
 ### 🛠️ T1-M1-S04: Portfolio Artifact Git Commit
-* [Evidence: harden.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/harden.sh)
+* [Evidence: harden.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-01/harden.sh)
 * **Explanation:** Infrastructure-as-Code deployment. Synchronized the local mobile workbench with curriculum dependencies strictly via Google Cloud Shell (Chrome Mobile) and Termux.
 
 ### 🛠️ T1-M1-S05: Portfolio Artifact Git Commit
-* [Evidence: subnet_audit.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/subnet_audit.txt)
+* [Evidence: subnet_audit.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-02/subnet_audit.txt)
 * **Explanation:** Connectivity verification. Leveraged ip addr and ping in Termux to blueprint subnetting architectures and ensure routing integrity. (Target: 192.168.1.200)
 
 ### 🛠️ T1-M1-S06: Protocol Interrogation (Wireshark Analysis)
-* [Evidence: protocol_audit.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/protocol_audit.txt)
+* [Evidence: protocol_audit.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-02/protocol_audit.txt)
 * **Explanation:** Protocol parsing via grep, awk, and sed in Termux. Isolated network protocol anomalies (Verified Google IP: 142.250.217.14) to transform traffic into actionable threat intelligence.
 
 ### 🛰️ TLAB-2: Operation Blackout (Linux Hardening)
-* [Evidence: harden.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/harden.sh)
+* [Evidence: harden.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-01/harden.sh)
 * **Explanation:** Initialization of Module 2 Capstone. Leveraging Google Cloud Shell for high-compute security assessments and advanced automation workflows using the Note 20 Ultra.
 
 ---
@@ -127,7 +127,7 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | Data Point | Desktop/Laptop User (Standard) | Android Cyber Workbench (Note 20 Ultra) |
 | :--- | :--- | :--- |
 | **Architecture** | Standard x86/x64 Linux Desktop | ARM64 Mobile Sandbox (Termux) |
-| **Evidence & Data** | Automated Script Execution | 1. [Evidence 1: port_check.py](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/port_check.py) <br> 2. [Evidence 2: s07reflection.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/s07reflection.md) |
+| **Evidence & Data** | Automated Script Execution | 1. [Evidence 1: port_check.py](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-03/port_check.py) <br> 2. [Evidence 2: s07reflection.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-03/s07reflection.md) |
 
 **🛡️ S07 Technical Analysis:** Python-based socket logic executed within the ARM64 Termux environment. The scan proved mobile-driven reconnaissance is viable in enterprise network topologies without requiring native root permissions.
 
@@ -138,7 +138,7 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | Data Point | Desktop User (Standard) | Android Cyber Workbench (Note 20 Ultra) |
 | :--- | :--- | :--- |
 | **Source Data** | Static `auth_audit.log` file | Live `ps aux` Memory Snapshot |
-| **Evidence & Data** | IPs: 10.0.0.55 / 172.16.0.5 | 1. [Evidence 1: brute_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/brute_report.txt) (Data: 10.0.0.55 / 172.16.0.5) <br> 2. [Evidence 2: monitoring_log.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/monitoring_log.txt) (Timestamp: Tue Mar 24 23:57:04 EDT 2026) |
+| **Evidence & Data** | IPs: 10.0.0.55 / 172.16.0.5 | 1. [Evidence 1: brute_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-03/brute_report.txt) (Data: 10.0.0.55 / 172.16.0.5) <br> 2. [Evidence 2: monitoring_log.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/monitoring_log.txt) (Timestamp: Tue Mar 24 23:57:04 EDT 2026) |
 
 **🛡️ S08 Technical Analysis:** The forensic task was performed by capturing a live memory snapshot via `ps aux`. The system successfully extracted target IPs from active system noise, demonstrating effective forensic recovery in a live mobile environment.
 
@@ -149,7 +149,7 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | Data Point | Desktop User (Standard) | Android Cyber Workbench (Note 20 Ultra) |
 | :--- | :--- | :--- |
 | **Provisioning** | `sudo bash` (Success) | No superuser binary detected (Blocked by Android Security) |
-| **Evidence & Data** | {"severity": "High"} (Automatic) | 1. [Evidence 1: audit_brief.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/lab_prep/audit_brief.txt) (Data: Cryptominer JSON Seed) <br> 2. [Evidence 2: system_auditor.py](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/system_auditor.py) |
+| **Evidence & Data** | {"severity": "High"} (Automatic) | 1. [Evidence 1: audit_brief.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/lab_prep/audit_brief.txt) (Data: Cryptominer JSON Seed) <br> 2. [Evidence 2: system_auditor.py](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-03/system_auditor.py) |
 | **Audit Result** | Malware Detected via Root Access | [Result: [-] Clean / System Secured] |
 
 **🛡️ S09 Technical Analysis:** During this audit, the Android security model (Samsung Knox) actively blocked the `sudo` command required for unauthorized malware provisioning. A custom Python auditor parsed JSON threat seeds manually to prove detection accuracy against known signatures without compromising the OS.
@@ -269,10 +269,10 @@ By engineering a **Mobile-to-Cloud Bridge**, I decoupled the Command Layer from 
 | **Provisioning** | Manual Container Launch | **Infrastructure as Code (Docker Compose)** |
 | **Networking** | Shared Bridge Network | **Segmented FrontEnd/Internal BackEnd** |
 | **Isolation** | Standard Exposure | **Verified Layer 3 Air-Gap (Internal: True)** |
-| **Evidence** | N/A | **[docker-compose.yml](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/docker-compose.yml)** |
+| **Evidence** | N/A | **[docker-compose.yml](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-04/docker-compose.yml)** |
 
 * **Android Cyber Workbench screenshot Status Up:**
-![S12 Status Up](s12/s12%20status%20up%20screenshot2.png)
+![S12 Status Up](week-04/s12%20status%20up%20screenshot2.png)
 🛡️ **Operational Defense Logic (White Hat Auditor Common Questions)**
 
 **White Hat Auditor Question:** \"Why did you use Docker Compose instead of manual 'docker run' commands for this stack?\"
@@ -391,14 +391,14 @@ Mechanical Proof: \"I documented the exact inheritance resolution logic (Local, 
 
 ### 👔 T1-M1-S15: BRIDGING THE KINGDOMS (The Final Handshake)
 
-* [Evidence 1: s15_win_prep.ps1](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/s15_win_prep.ps1)
-* [Evidence 2: s15_linux_prep.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/s15_linux_prep.sh)
+* [Evidence 1: s15_win_prep.ps1](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-05/s15_win_prep.ps1)
+* [Evidence 2: s15_linux_prep.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-05/s15_linux_prep.sh)
 
 | Data Point | Standard Cohort | Android Cyber Workbench |
 | :--- | :--- | :--- |
 | **Architecture** | Heavy VMs | Ephemeral Cloud Shell / IaC |
 | **Constraint** | N/A | Azure vCPU Quotas & Mobile RDP Protocol Friction |
-| **Evidence** | `unified_identity.png` | Infrastructure as Code [s15_win_prep.ps1](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/s15_win_prep.ps1) & [s15_linux_prep.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/s15_linux_prep.sh) |
+| **Evidence** | `unified_identity.png` | Infrastructure as Code [s15_win_prep.ps1](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-05/s15_win_prep.ps1) & [s15_linux_prep.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-05/s15_linux_prep.sh) |
 
 🛡️ **Operational Defense Logic (White Hat Auditor Common Questions)**
 
@@ -414,7 +414,7 @@ Mechanical Proof: \"I documented the exact inheritance resolution logic (Local, 
 
 ### 🛡️ TLAB-05: OPERATION UNIFIED FRONT (Enterprise Synthesis)
 
-* [Evidence: tlab5_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/tlab5_report.txt)
+* [Evidence: tlab5_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-05/tlab5_report.txt)
 
 | Data Point | Standard Cohort | Android Cyber Workbench |
 | :--- | :--- | :--- |
@@ -427,7 +427,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ### 🛡️ T1-M1-S16: THE ARCHITECT'S WAR ROOM (OSI Troubleshooting)
 
-* [Evidence: readiness_check.log](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/readiness_check.log)
+* [Evidence: readiness_check.log](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-06/readiness_check.log)
 
 | Data Point | Standard Cohort | Android Cyber Workbench |
 | :--- | :--- | :--- |
@@ -457,7 +457,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ### 🛡️ T1-M1-S17: THE FORGE FINAL (Technical Diagnostic)
 
-* [Evidence: practical_exam_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/practical_exam_report.txt)
+* [Evidence: practical_exam_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-06/practical_exam_report.txt)
 
 | Data Point | Standard Cohort | Android Cyber Workbench |
 | :--- | :--- | :--- |
@@ -487,16 +487,16 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ### 🛡️ T1-M1-S18: THE HARDENED OUTPOST (Enterprise Capstone)
 * [Evidence: Capstone Commit](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/bcd5d22faac9d35e5016e4cca17c7a7c3ea1e9f6)
-* [HardenedOutpost_SAD.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/HardenedOutpost_SAD.md)
-* [dc_auditor.py](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/dc_auditor.py)
-* [docker-compose.yml](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/docker-compose.yml)
+* [HardenedOutpost_SAD.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-06/HardenedOutpost_SAD.md)
+* [dc_auditor.py](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-06/dc_auditor.py)
+* [docker-compose.yml](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-04/docker-compose.yml)
 
 | Feature | Desktop / Laptop (x86) | Android Cyber Workbench (ARM64) |
 | :--- | :--- | :--- |
 | **Orchestration** | Local VirtualBox GUI | **Headless Mobile-to-Cloud Bridge** |
 | **Network Isolation** | GUI-Based "Host-Only" Adapter | **Internal Docker Network (Zero Gateway)** |
 | **Persistence** | VM Snapshot / Save State | **Git Commit Hash / SHA-256 Ledger** |
-| **Audit Logic** | Manual Log Review | **Automated Python Watchdog [dc_auditor.py](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/dc_auditor.py)** |
+| **Audit Logic** | Manual Log Review | **Automated Python Watchdog [dc_auditor.py](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-06/dc_auditor.py)** |
 | **Hardening Method** | GUI-Based Config Edits | **Sed-Driven CLI Automation** |
 
 🛡️ **Operational Defense Logic**
@@ -507,7 +507,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 **🧠 S18 Mission Defense Matrix (Executive Summary)**
 * **Mission Objective:** Solo-deploy a hardened, fully integrated full-stack enterprise environment for Titan Small Business Services.
-* **Technical Mechanics:** Executed a tiered hardening protocol including SSH configuration management (PermitRootLogin no), UFW perimeter filtering (8080/tcp), and a Python-based watchdog script [dc_auditor.py](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/dc_auditor.py) for high availability monitoring.
+* **Technical Mechanics:** Executed a tiered hardening protocol including SSH configuration management (PermitRootLogin no), UFW perimeter filtering (8080/tcp), and a Python-based watchdog script [dc_auditor.py](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-06/dc_auditor.py) for high availability monitoring.
 * **Mechanical Proof:** Orchestrated a segmented container fleet via Docker Compose with a mathematical air-gap. Pushed the final Security Architecture Document (SAD) to GitHub, establishing the authoritative record of deployment.
 
 ### 🛡️ Intel Report: (X86) Cohort Standard vs (ARM64) Android Smartphone Note 20 Ultra 5g 12gb ram Exynos 990 256gb storage exp sdcard 
@@ -527,21 +527,21 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 | :--- | :--- | :--- |
 | **Execution Environment** | Local Ubuntu VM | **Ephemeral Cloud Shell Bridge** |
 | **Submission Mechanism** | Native `session-submit` | **Cloud Pivot Bypass** |
-| **Artifact** | `ThreatProfile_CloudNano.md` | **[ThreatProfile_CloudNano.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/ThreatProfile_CloudNano.md)** |
+| **Artifact** | `ThreatProfile_CloudNano.md` | **[ThreatProfile_CloudNano.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-07/ThreatProfile_CloudNano.md)** |
 
 🛡️ **Operational Defense Logic**
 * **Passive Reconnaissance:** Utilized third-party datasets (Shodan, HaveIBeenPwned, Sublist3r) to map the target's attack surface without sending direct packets, ensuring zero attribution or alarm triggers on the target's perimeter.
 * **Architectural Bypass:** When the evaluation script (`session-submit`) was blocked by the Android/Termux security model (no `sudo`), an ephemeral Google Cloud Shell instance was deployed to execute the submission securely, demonstrating adaptability in constrained environments.
 
 ### 👁️ T1-M1-S20: MAPPING THE SHADOWS (Active Network Enumeration)
-* [Evidence: nmap_scan_results.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/nmap_scan_results.txt)
+* [Evidence: nmap_scan_results.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-07/nmap_scan_results.txt)
 
 | Feature | Desktop / Laptop (x86) | Android Cyber Workbench (ARM64) |
 | :--- | :--- | :--- |
 | **Execution Environment** | Local Ubuntu VM | **Ephemeral Google Cloud Shell Bridge** |
 | **Submission Mechanism** | Native `session-submit` | **Cloud Pivot Bypass + Git Push** |
 | **Scan Target** | 172.99.0.0/24 Sandbox | **172.99.0.0/24 Docker Target Network** |
-| **Artifact** | `nmap_scan_results.txt` | **[nmap_scan_results.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/nmap_scan_results.txt)** |
+| **Artifact** | `nmap_scan_results.txt` | **[nmap_scan_results.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-07/nmap_scan_results.txt)** |
 
 🛡️ **Operational Defense Logic (White Hat Auditor Common Questions)**
 
@@ -563,14 +563,14 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 * **Mechanical Proof:** Documented all findings in `nmap_scan_results.txt`, pushed to GitHub (Commit a6e1a6a), establishing a cryptographic audit trail of the enumeration operation.
 
 ### 🛡️ T1-M1-S21: THE PRIORITIZATION MATRIX (Vulnerability Triage)
-* [Evidence: remediation_plan.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/remediation_plan.md)
+* [Evidence: remediation_plan.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-07/remediation_plan.md)
 
 | Feature | Desktop / Laptop (x86) | Android Cyber Workbench (ARM64) |
 | :--- | :--- | :--- |
 | **Execution Environment** | Local Ubuntu VM | **Ephemeral Google Cloud Shell Bridge** |
 | **Scanner** | Nikto v2.1.5 | **Nikto v2.1.5 (Cloud-installed)** |
 | **Submission Mechanism** | Native `session-submit` | **Cloud Pivot Bypass + Git Push** |
-| **Artifact** | `remediation_plan.md` | **[remediation_plan.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/remediation_plan.md)** |
+| **Artifact** | `remediation_plan.md` | **[remediation_plan.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-07/remediation_plan.md)** |
 
 🛡️ **Operational Defense Logic (White Hat Auditor Common Questions)**
 
@@ -594,7 +594,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 * **Mechanical Proof:** Documented triage in `remediation_plan.md`, pushed to GitHub (Commit 0387cdd), establishing an immutable audit record of the prioritization decision.
 
 ### 🏴 TLAB W7:(W7 | TLAB ) OPERATION SHADOW MAP (Perimeter Assessment)
-* [Evidence: Perimeter_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Perimeter_Assessment.md)
+* [Evidence: Perimeter_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-07/Perimeter_Assessment.md)
 
 | Feature | Desktop / Laptop (x86) | Android Cyber Workbench (ARM64) |
 | :--- | :--- | :--- |
@@ -602,7 +602,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 | **Recon Tool** | Nmap 7.94 | **Nmap 7.94 (Cloud-installed)** |
 | **Audit Tool** | Nikto v2.1.5 | **Nikto v2.1.5 (Cloud-installed)** |
 | **Submission Mechanism** | Native `session-submit` | **Cloud Pivot Bypass + Git Push** |
-| **Artifact** | `Perimeter_Assessment.md` | **[Perimeter_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Perimeter_Assessment.md)** |
+| **Artifact** | `Perimeter_Assessment.md` | **[Perimeter_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-07/Perimeter_Assessment.md)** |
 
 🛡️ **Operational Defense Logic (White Hat Auditor Common Questions)**
 
@@ -639,7 +639,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
     * **Phase 4 (Root Verification):** Executed the exploit and confirmed total system compromise by interrogating the resulting TTY shell with `whoami`, `id`, `uname -a`, and `hostname`.
 * **Mechanical Proof:** Documented the successful `Command shell session 1 opened` event and root-level outputs via screenshot, pushed to GitHub (Commit a508377), establishing a cryptographic audit trail of the exploit.
 
-* **Evidence:** [![S22 Root Shell Verification](exploit_verification.png)](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/exploit_verification.png)
+* **Evidence:** [![S22 Root Shell Verification](exploit_verification.png)](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-09/exploit_verification.png)
 
 #### ⚖️ Architectural Comparison (Governance Chart)
 | Feature | Standard Desktop (x86) | Android Cyber Workbench (ARM64) |
@@ -700,7 +700,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 | **Command Logic** | MSF-internal routing | `proxychains4` via Native Socket |
 | **Identity Proof** | `session-submit` local binary | `git push` timestamped cryptographic hash |
 
-* **Evidence:** [![S24 Pivot Verification](pivot_success.png)](pivot_success.png)
+* **Evidence:** [![S24 Pivot Verification](week-08/pivot_success.png)](week-08/pivot_success.png)
 #### 🧠 S24 Mission Defense Matrix (Executive Summary)
 * **Mission Objective:** Compromise a public-facing web server (`172.50.0.10`) and weaponize it as a network bridge to discover and scan an isolated, non-routable internal database (`10.0.9.50`).
 * **Technical Mechanics:** * Established initial access on the target web server via SSH.
@@ -722,7 +722,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ### 💥 T1-M1-TLAB8: OPERATION DEEP PIVOT (The Kill Chain)
 * **Evidence:** [Deep_Pivot_Report.md](Deep_Pivot_Report.md)
-* **Visual Proof:** ![Escalation Verification](escalation_verification.png)
+* **Visual Proof:** ![Escalation Verification](week-08/escalation_verification.png)
 * **Vulnerability Target:** Air-Gapped Database (`10.0.10.50`) via Bastion (`172.60.0.10`)
 * **Framework:** Metasploit, Proxychains4, and Cron-Persistence
 
@@ -754,7 +754,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 ---
 
 ### 💉 T1-M1-S25: THE DATA EXFILTRATION (SQL Injection Kill Chain)
-* **Evidence 1 (Artifact):** [sqli_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/sqli_report.txt)
+* **Evidence 1 (Artifact):** [sqli_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-09/sqli_report.txt)
 * **Evidence 2 (Visual):** Screenshots — Auth Bypass, UNION Attack, CEO Salary Extraction, Git Push
 * **Vulnerability Target:** TitanCorp Legacy CloudNano Web Application (SQLite Backend)
 * **Attack Chain:** Tautology Bypass → Column Enumeration → Schema Discovery → Data Exfiltration
@@ -766,7 +766,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 | **Execution Environment** | Local Ubuntu VM (127.0.0.1) | **Ephemeral Google Cloud Shell Bridge** |
 | **Web App Access** | Native localhost browser | **Cloud Shell Web Preview (Port 8080)** |
 | **Submission Mechanism** | Native `session-submit` | **Cloud Pivot Bypass + Git Push** |
-| **Artifact** | `sqli_report.txt` | **[sqli_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/sqli_report.txt)** |
+| **Artifact** | `sqli_report.txt` | **[sqli_report.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-09/sqli_report.txt)** |
 
 #### 🧠 S25 Mission Defense Matrix (Executive Summary)
 * **Mission Objective:** Prove that TitanCorp's legacy CloudNano web application is fully exploitable — not merely theoretically vulnerable — by bypassing authentication, mapping the database schema, and extracting the CEO's salary data via a live UNION attack.
@@ -796,7 +796,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 ---
 
 ### ⚗️ T1-M1-S26: THE POISONED BROWSER (XSS & CSRF Kill Chain)
-* **Evidence 1 (Artifact):** [xss_payloads.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/xss_payloads.txt)
+* **Evidence 1 (Artifact):** [xss_payloads.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-09/xss_payloads.txt)
 * **Vulnerability Targets:** Titan Social Network (Search Bar, Message Board, Fund Transfer Portal)
 * **Attack Chain:** Reflected XSS → Stored XSS Cookie Theft → CSRF Weaponization
 
@@ -807,7 +807,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 | **Execution Environment** | Local Ubuntu VM (127.0.0.1:8081) | **Ephemeral Google Cloud Shell Bridge** |
 | **Web App Access** | Native localhost browser | **Cloud Shell Web Preview (Port 8081)** |
 | **Submission Mechanism** | Native `session-submit` | **Cloud Pivot Bypass + Git Push** |
-| **Artifact** | `xss_payloads.txt` | **[xss_payloads.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/xss_payloads.txt)** |
+| **Artifact** | `xss_payloads.txt` | **[xss_payloads.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-09/xss_payloads.txt)** |
 
 #### 🧠 S26 Mission Defense Matrix (Executive Summary)
 * **Mission Objective:** Exploit three distinct client-side vulnerabilities in the Titan Social Network — proving that Reflected XSS, Stored XSS, and CSRF are not theoretical risks but fully executable attack chains capable of DOM manipulation, session hijacking, and unauthorized fund transfers.
@@ -832,7 +832,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 ---
 
 ### 📡 T1-M1-S27: THE INVISIBLE LOGIC (API BOLA & Business Logic Exploitation)
-* **Evidence (Artifact):** [api_audit.log](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/api_audit.log)
+* **Evidence (Artifact):** [api_audit.log](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-09/api_audit.log)
 * **Vulnerability Targets:** TitanCorp Titan Shop REST API (Port 5000)
 * **Attack Chain:** BOLA ID Swap → CISO Secret Extraction → Discount Code Brute Force
 
@@ -844,7 +844,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 | **Interception Method** | Burp Suite Proxy + Built-in Browser | **Native `curl` CLI HTTP Client** |
 | **Brute Force Method** | Burp Suite Intruder (GUI) | **Bash `for` loop with `seq 9900-9999`** |
 | **Submission Mechanism** | Native `session-submit` | **Cloud Pivot Bypass + Git Push** |
-| **Artifact** | `api_audit.log` | **[api_audit.log](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/api_audit.log)** |
+| **Artifact** | `api_audit.log` | **[api_audit.log](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-09/api_audit.log)** |
 
 #### 🧠 S27 Mission Defense Matrix (Executive Summary)
 * **Mission Objective:** Exploit TitanCorp's e-commerce REST API by exploiting a Broken Object Level Authorization (BOLA) vulnerability to extract a classified CISO secret, then brute-force a hidden discount code buried in the checkout business logic.
@@ -869,7 +869,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ### 🔗 P1-W9-TLAB9: OPERATION OMNI-PORTAL (Full-Stack Chained Attack Assessment)
 
-* **Evidence (Artifact):** [OmniPortal_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/OmniPortal_Assessment.md)
+* **Evidence (Artifact):** [OmniPortal_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-09/OmniPortal_Assessment.md)
 * **Vulnerability Targets:** Titan Omni-Portal (Port 8090) — Login, Support Board, Orders API
 * **Attack Chain:** SQLi Auth Bypass → Stored XSS Cookie Theft → API BOLA Financial Exfiltration
 
@@ -882,7 +882,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 | **XSS Method** | Browser-based payload injection | **Web Preview + Live browser interaction** |
 | **BOLA Method** | Burp Repeater ID enumeration | **Bash loop `curl` with stolen auth_token** |
 | **Submission Mechanism** | Native `session-submit` | **Cloud Pivot Bypass + Git Push** |
-| **Artifact** | `OmniPortal_Assessment.md` | **[OmniPortal_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/OmniPortal_Assessment.md)** |
+| **Artifact** | `OmniPortal_Assessment.md` | **[OmniPortal_Assessment.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-09/OmniPortal_Assessment.md)** |
 
 #### 🧠 W9 TLAB9 Mission Defense Matrix (Executive Summary)
 * **Mission Objective:** Perform a black-box full-stack security audit of the Titan Omni-Portal — chaining SQL Injection, Stored XSS, and API BOLA in sequence to breach authentication, steal a session token, and exfiltrate confidential financial order data.
@@ -953,7 +953,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ### 🚨 T1-M1-S28: THE CRIME SCENE (DFIR Live Triage & Chain of Custody)
 
-* **Evidence (Artifact):** [collection_log.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/collection_log.txt)
+* **Evidence (Artifact):** [collection_log.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-10/collection_log.txt)
 * **Vulnerability Target:** Quarantined Docker Container — Compromised Host with Active C2
 * **Mission Chain:** Live Network Triage → Process Identification → Cryptographic Hash Verification
 
@@ -966,7 +966,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 | **Network Triage Tool** | `netstat -antp` in VM | **`netstat -antp` in live container** |
 | **Hash Verification** | `md5sum` / `sha256sum` GUI file manager | **`md5sum` / `sha256sum` CLI on staged evidence** |
 | **Submission Mechanism** | Native `session-submit` | **Cloud Pivot Bypass + Git Push** |
-| **Artifact** | `collection_log.txt` | **[collection_log.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/collection_log.txt)** |
+| **Artifact** | `collection_log.txt` | **[collection_log.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-10/collection_log.txt)** |
 
 #### 🧠 S28 Mission Defense Matrix (Executive Summary)
 * **Mission Objective:** Respond as a First Responder to a suspected Command and Control (C2) beacon on a TitanCorp production server. Perform rapid live triage on the quarantined container without destroying volatile data, identify the malicious process and its network socket, then cryptographically lock forensic artifacts using MD5 and SHA256 hashing to establish an immutable Chain of Custody.
@@ -994,7 +994,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ### 🚨 T1-M1-S29: THE DIGITAL AUTOPSY (Malware Recovery & Disk Carving)
 
-* **Evidence (Artifact):** [forensic_findings.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/forensic_findings.md)
+* **Evidence (Artifact):** [forensic_findings.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-10/forensic_findings.md)
 * **Evidence (Visual):** https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/s29%20terminal%20screenshot.jpeg
 * **Vulnerability Target:** Corrupted FAT32 Raw Disk Image (`compromised_drive.dd`)
 * **Mission Chain:** Memory Dump Simulation → Raw Disk Carving → Binary String Extraction
@@ -1007,7 +1007,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 | **Extraction Tool** | Sleuth Kit (`fls` / `icat`) | **Raw Binary Analysis (`strings` + `grep`)** |
 | **Filesystem Handling** | Native Loopback Mount | **Headless Flat-file Parsing Bypass** |
 | **Submission Mechanism** | Native `session-submit` | **Cloud Pivot Bypass + Manual Git Push** |
-| **Artifact** | `forensic_findings.md` | **[forensic_findings.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/forensic_findings.md)** |
+| **Artifact** | `forensic_findings.md` | **[forensic_findings.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-10/forensic_findings.md)** |
 
 #### 🧠 S29 Mission Defense Matrix (Executive Summary)
 * **Mission Objective:** Carve raw memory and corrupted disk images to recover a deleted malware payload (`Resume.exe`), identify the threat actor, and extract persistence mechanisms without relying on standard filesystem mounting operations.
@@ -1024,7 +1024,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ### 💥 T1-M1-S30: OPERATION CENTRAL NERVOUS SYSTEM (SIEM Engineering & Threat Hunting)
 
-* **Evidence (Artifact):** [attack_timeline.csv](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/attack_timeline.csv)
+* **Evidence (Artifact):** [attack_timeline.csv](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-10/attack_timeline.csv)
 * **Evidence (Visual):** [Commit a4e18e4 - Forensic Timeline & Privilege Escalation](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/a4e18e4)
 * **Vulnerability Target:** Memory-Constrained Cloud Shell (SIEM Stack) & TitanCorp Enterprise Network
 * **Mission Chain:** Infrastructure Resource Capping → SIEM Provisioning → Log Correlation → Attack Path Reconstruction
@@ -1055,7 +1055,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ### 🔍 T1-M1-TLAB10: OPERATION PHANTOM PURSUIT (Full DFIR Lifecycle)
 
-* Evidence (Artifact): [Incident_Response_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Incident_Response_Report.md)
+* Evidence (Artifact): [Incident_Response_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-10/Incident_Response_Report.md)
 * Evidence (Commit): [Commit 9233499](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/9233499)
 
 #### 🧠 TLAB10 Mission Defense Matrix (Executive Summary)
@@ -1085,8 +1085,8 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ### 🚨 T1-M1-S31: THE BARRICADE (Firewall & DMZ Lockdown)
 
-* **Evidence (Artifact):** [firewall_config.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/firewall_config.sh)
-* **Evidence (Visual Terminal Screenshot):** [s31_firewall_verification.png](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/S31_firewall_verification.png)
+* **Evidence (Artifact):** [firewall_config.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-11/firewall_config.sh)
+* **Evidence (Visual Terminal Screenshot):** [s31_firewall_verification.png](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-11/S31_firewall_verification.png)
 * **Vulnerability Target:** Containerized DMZ Web Server with Internal Database (`10.0.5.50`)
 * **Mission Chain:** UFW Default Deny → iptables Granular Rules → Lateral Movement Prevention
 
@@ -1096,7 +1096,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 |----------------------|------------------------------|---------------------------------------------|
 | **Architecture** | Local Ubuntu VM              | Ephemeral Google Cloud Shell + Docker       |
 | **Firewall Method** | UFW + iptables (local)       | UFW + iptables (via container)              |
-| **Evidence** | firewall_config.sh           | **[firewall_config.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/firewall_config.sh)** + screenshot |
+| **Evidence** | firewall_config.sh           | **[firewall_config.sh](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-11/firewall_config.sh)** + screenshot |
 
 #### 🧠 S31 Mission Defense Matrix (Executive Summary)
 * **Mission Objective:** Deploy a hardened DMZ firewall to protect an internal database from lateral movement originating from a compromised web server.
@@ -1125,7 +1125,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ### 🪤 T1-M1-S32: THE TRIPWIRE (Custom Suricata IDS Signatures)
 
-* **Evidence (Artifact):** [custom_ids.rules](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/custom_ids.rules)
+* **Evidence (Artifact):** [custom_ids.rules](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-11/custom_ids.rules)
 * **Evidence (Commit):** [Commit 3cff9f1](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/3cff9f1)
 
 #### 🧠 S32 Mission Defense Matrix (Executive Summary)
@@ -1153,7 +1153,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 ---
 
 ### 🏁 T1-M1-S33: THE LAST MILE (Endpoint Detection & Response)
-* **Evidence (Artifact):** [edr_policy.xml](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/edr_policy.xml)
+* **Evidence (Artifact):** [edr_policy.xml](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-11/edr_policy.xml)
 * **Evidence (Commit):** [Commit 5eac095](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/5eac0957a2e96c62e09655df955be6469496fc3c)
 
 #### 🧠 S33 Mission Defense Matrix (Executive Summary)
@@ -1181,7 +1181,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ### 🔍 T1-M1-TLAB-11: OPERATION FORTRESS (Defense in Depth)
 
-* **Evidence (Artifact):** [Operation_Fortress_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/Operation_Fortress_Report.md)
+* **Evidence (Artifact):** [Operation_Fortress_Report.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-11/Operation_Fortress_Report.md)
 * **Evidence (Commit):** [Commit 6386770](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/6386770bdde312e8214193a412103d42aa14fbe1)
 
 #### ⚖️ Architectural Comparison (Governance Chart)
