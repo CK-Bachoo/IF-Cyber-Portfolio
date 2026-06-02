@@ -781,10 +781,10 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 | Phase | Screenshot |
 | :--- | :--- |
-| **Phase 1 — Tautology Payload Injected** | ![Auth Bypass Input](Screen%20Shot%202026-05-13%20at%2021.39.03%20(2).png) |
-| **Phase 2 — AUTH BYPASS SUCCESS** | ![Auth Bypass Success](Screen%20Shot%202026-05-13%20at%2021.40.58%20(2).png) |
-| **Phase 3 — UNION Attack: CEO Salary Extracted** | ![Data Exfiltration](Screen%20Shot%202026-05-13%20at%2021.42.49%20(2).png) |
-| **Phase 4 — Git Push Confirmed** | ![Git Push](Screen%20Shot%202026-05-13%20at%2022.04.47%20(2).png) |#### 🛡️ Operational Defense Logic (White Hat Auditor Interrogation)
+| **Phase 1 — Tautology Payload Injected** | ![Auth Bypass Input](Screen%20Shot%202026-05-13%20at%2021.39.03%20%282%29.png) |
+| **Phase 2 — AUTH BYPASS SUCCESS** | ![Auth Bypass Success](Screen%20Shot%202026-05-13%20at%2021.40.58%20%282%29.png) |
+| **Phase 3 — UNION Attack: CEO Salary Extracted** | ![Data Exfiltration](Screen%20Shot%202026-05-13%20at%2021.42.49%20%282%29.png) |
+| **Phase 4 — Git Push Confirmed** | ![Git Push](Screen%20Shot%202026-05-13%20at%2022.04.47%20%282%29.png) |#### 🛡️ Operational Defense Logic (White Hat Auditor Interrogation)
 
 **White Hat Auditor Question:** *"Why is a tautology injection like `' OR 1=1 --` so dangerous in production environments?"*
 **Engineering Statement:** *"Because it requires zero credentials and zero prior knowledge of the database. The payload hijacks the SQL parser itself — the server executes the injected logic as native SQL, making `1=1` always evaluate to true and granting access to any account in the table. In a production environment, this single payload can compromise thousands of user accounts in milliseconds."*
