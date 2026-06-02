@@ -19,9 +19,6 @@ build/
 htmlcov/
 
 # ===== LOGS & FORENSIC DATA =====
-*.log
-access.log
-audit.log
 security_alert.json
 
 # ===== OS & EDITOR =====
