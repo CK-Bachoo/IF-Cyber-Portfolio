@@ -1,6 +1,6 @@
 
-# The Knowledge House Bronx, NY Innovation Fellowship Cohort **IF-CS-26 
-C.K. Bachoo IF-Cyber-Portfolio** 
+# The Knowledge House Bronx, NY Innovation Fellowship Cohort: IF-CS-26 
+**C.K. Bachoo IF-Cyber-Portfolio** 
 
 <p align="left">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=1000&color=00F72D&width=750&lines=Purple+Team+Operations+C.K.+BACHOO+TKH+Innovation+Fellow+IF-CS-26+NY;Mobile-to-Cloud+SecOps;AI+Security+Architecture;Penetration+Testing+%26+DFIR;Samsung+Galaxy+Note+20+Ultra+%2B+Termux;Zero-Trust+Automation+Pipelines" />
