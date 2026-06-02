@@ -1,6 +1,5 @@
 
-# The Knowledge House Bronx, NY
-Innovation Fellowship Cohort **IF-CS-26 
+# The Knowledge House Bronx, NY Innovation Fellowship Cohort **IF-CS-26 
 C.K. Bachoo IF-Cyber-Portfolio** 
 
 <p align="left">
