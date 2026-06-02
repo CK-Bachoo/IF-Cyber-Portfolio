@@ -1,0 +1,2 @@
+Apr 1 12:00:01 bunker sshd[101]: Failed password for root from 192.168.1.50 port 22 ssh2
+Apr 1 12:00:05 bunker sshd[102]: Failed password for admin from 10.0.0.25 port 22 ssh2
