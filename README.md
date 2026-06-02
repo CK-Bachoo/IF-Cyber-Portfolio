@@ -790,11 +790,10 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 | Phase | Screenshot |
 | :--- | :--- |
-| **Phase 1 — Tautology Payload Injected** | ![Auth Bypass Input](Screen%20Shot%202026-05-13%20at%2021.39.03%20%282%29.png) |
-| **Phase 2 — AUTH BYPASS SUCCESS** | ![Auth Bypass Success](Screen%20Shot%202026-05-13%20at%2021.40.58%20%282%29.png) |
-| **Phase 3 — UNION Attack: CEO Salary Extracted** | ![Data Exfiltration](Screen%20Shot%202026-05-13%20at%2021.42.49%20%282%29.png) |
-| **Phase 4 — Git Push Confirmed** | ![Git Push](Screen%20Shot%202026-05-13%20at%2022.04.47%20%282%29.png) |
-
+| **Phase 1 — Tautology Payload Injected** | ![Auth Bypass Input](week-09/Screen_Shot_2026-05-13_at_21.39.03_2.png) |
+| **Phase 2 — AUTH BYPASS SUCCESS** | ![Auth Bypass Success](week-09/Screen_Shot_2026-05-13_at_21.40.58_2.png) |
+| **Phase 3 — UNION Attack: CEO Salary Extracted** | ![Data Exfiltration](week-09/Screen_Shot_2026-05-13_at_21.42.49_2.png) |
+| **Phase 4 — Git Push Confirmed** | ![Git Push](week-09/Screen_Shot_2026-05-13_at_22.04.47_2.png) |
 #### 🛡️ Operational Defense Logic (White Hat Auditor Interrogation)
 
 **White Hat Auditor Question:** *"Why is a tautology injection like `' OR 1=1 --` so dangerous in production environments?"*
