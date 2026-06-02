@@ -272,7 +272,7 @@ By engineering a **Mobile-to-Cloud Bridge**, I decoupled the Command Layer from 
 | **Evidence** | N/A | **[docker-compose.yml](week-04/docker-compose.yml)** |
 
 * **Android Cyber Workbench screenshot Status Up:**
-![S12 Status Up](week-04/s12%20status%20up%20screenshot2.png)
+![S12 Status Up](https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-04/s12%20status%20up%20screenshot2.png)
 🛡️ **Operational Defense Logic (White Hat Auditor Common Questions)**
 
 **White Hat Auditor Question:** \"Why did you use Docker Compose instead of manual 'docker run' commands for this stack?\"
@@ -722,7 +722,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ### 💥 T1-M1-TLAB8: OPERATION DEEP PIVOT (The Kill Chain)
 * **Evidence:** [Deep_Pivot_Report.md](week-08/Deep_Pivot_Report.md)
-* **Visual Proof:** ![Escalation Verification](week-08/escalation_verification.png)
+* **Visual Proof:** ![Escalation Verification](https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-08/escalation_verification.png)
 * **Vulnerability Target:** Air-Gapped Database (`10.0.10.50`) via Bastion (`172.60.0.10`)
 * **Framework:** Metasploit, Proxychains4, and Cron-Persistence
 
@@ -1018,7 +1018,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 * **Remediation:** Advanced forensic recovery proves that adversaries cannot hide their tracks by simply deleting executables or unmounting drives. Raw disk sectors retain binary data until physically overwritten.
 * **Mechanical Proof:** Documented findings (Threat Actor: `TitanCorp_Ex-Employee_99`, Executable: `Resume.exe`, Timestamp: `2026-03-15 08:42:01 UTC`, Persistence: `Registry Run Key HKLM\Software\Microsoft\Windows\CurrentVersion\Run`) in `forensic_findings.md`. Pushed to GitHub establishing an immutable audit trail.
 
-![S29 Terminal Evidence](week-10/s29%20terminal%20screenshot.jpeg)
+![S29 Terminal Evidence](https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-10/s29%20terminal%20screenshot.jpeg)
 
 ---
 
