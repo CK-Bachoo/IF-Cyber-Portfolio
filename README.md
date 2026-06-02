@@ -149,7 +149,7 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 | Data Point | Desktop User (Standard) | Android Cyber Workbench (Note 20 Ultra) |
 | :--- | :--- | :--- |
 | **Provisioning** | `sudo bash` (Success) | No superuser binary detected (Blocked by Android Security) |
-| **Evidence & Data** | {"severity": "High"} (Automatic) | 1. [Evidence 1: audit_brief.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/lab_prep/audit_brief.txt) (Data: Cryptominer JSON Seed) <br> 2. [Evidence 2: system_auditor.py](week-03/system_auditor.py) |
+| **Evidence & Data** | {"severity": "High"} (Automatic) | 1. [Evidence 1: audit_brief.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/week-01/lab_prep/audit_brief.txt) (Data: Cryptominer JSON Seed) <br> 2. [Evidence 2: system_auditor.py](week-03/system_auditor.py) |
 | **Audit Result** | Malware Detected via Root Access | [Result: [-] Clean / System Secured] |
 
 **🛡️ S09 Technical Analysis:** During this audit, the Android security model (Samsung Knox) actively blocked the `sudo` command required for unauthorized malware provisioning. A custom Python auditor parsed JSON threat seeds manually to prove detection accuracy against known signatures without compromising the OS.

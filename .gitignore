@@ -21,7 +21,6 @@ htmlcov/
 # ===== LOGS & FORENSIC DATA =====
 *.log
 access.log
-monitoring_log.txt
 audit.log
 security_alert.json
 
