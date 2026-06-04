@@ -26,7 +26,7 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 
 ---
 
-**The Mobile-to-Cloud Bridge:** `Note 20 Ultra` → Termux (Dual Terminal / (proot-distro login debian) → Google Cloud Shell → Azure → Aws → `GitHub`
+**The Mobile-to-Cloud Bridge:** `Note 20 Ultra` → Termux [Dual Terminal / (proot-distro login debian)] → Google Cloud Shell → Azure → Aws → `GitHub`
 
 <p align="left">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=1000&color=00F72D&width=750&lines=Purple+Team+Operations;Mobile-to-Cloud+SecOps;AI+Security+Architecture;Penetration+Testing+%26+DFIR;Samsung+Galaxy+Note+20+Ultra+%2B+Termux;Zero-Trust+Automation+Pipelines" />
