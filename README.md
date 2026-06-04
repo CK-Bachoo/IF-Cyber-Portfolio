@@ -4,7 +4,8 @@
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=1000&color=00F72D&width=750&lines=Purple+Team+Operations+C.K.+BACHOO+TKH+Innovation+Fellow+IF-CS-26+NY;Mobile-to-Cloud+SecOps;AI+Security+Architecture;Penetration+Testing+%26+DFIR;Samsung+Galaxy+Note+20+Ultra+%2B+Termux;Zero-Trust+Automation+Pipelines" />
 </p>
 
-  IF-Cyber-Portfolio: Mobile Cybersecurity Workbench
+  IF-Cyber-Portfolio: Mobile Cybersecurity Workbench / SOC Rig
+[📱 Android Mobile Cybersecurity Workbench](https://github.com/CK-Bachoo/Android-mobile-cybersecurity-workbench)
 
 **Built 100% on Samsung Galaxy Note 20 Ultra + Termux**
 Professional mobile-first Purple Team environment demonstrating Zero Trust principles, network audits, automation scripts, forensic logging, and AI-assisted analysis engineered during The Knowledge House NY Innovation Fellowship (Cohort IF-CS-26).
@@ -16,11 +17,7 @@ Professional mobile-first Purple Team environment demonstrating Zero Trust princ
 - Multi-AI orchestration via custom God Mode intent bridging
 - True hardware-constrained execution (ARM64)
 
-# 🛡️ IF-Cyber-Portfolio: Mobile Cybersecurity Workbench
-==========================================================
-
-### 🏫 The Knowledge House Innovation Fellow: Chad K. Bachoo (IF-CS-26 NY)
-[📱 Android Mobile Cybersecurity Workbench](https://github.com/CK-Bachoo/Android-mobile-cybersecurity-workbench)
+### 🏫 The Knowledge House Innovation Fellow: Chad K. Bachoo (IF-CS-26 NY) [📱 Android Mobile Cybersecurity Workbench](https://github.com/CK-Bachoo/Android-mobile-cybersecurity-workbench)
 
 > **Professional Statement:** This portfolio and all associated artifacts were engineered exclusively using a Samsung Note 20 Ultra 5G / Termux Bunker configuration. This environment demonstrates a mobile-first, headless-first approach to systems administration, network security, and defensive automation.
 
