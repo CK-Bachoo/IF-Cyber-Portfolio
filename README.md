@@ -1241,3 +1241,37 @@ Mechanical Proof: Full audit trail in portfolio_audit.md and tepp_postmortem.md.
 **Documented and delivered via: 🛡️[Samsung Note 20 Ultra 5g - Android Mobile Cybersecurity Workbench](https://github.com/CK-Bachoo/Android-mobile-cybersecurity-workbench)🛡️**
 
 ---
+
+## ☁️ Phase 2: Cloud Architecture & DevSecOps (Infrastructure as Code)
+
+### ⚖️ White Hat Audit: Governance & Framework Alignment
+| Session | Function | Attack Vector / Concept | NIST CSF 2.0 | CIS Control | CIA Triad | Evidence Artifact |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| S13 | Cloud Governance | Denial of Wallet / Cost Overruns | ID.GV | CIS 1 | Availability | `budget_plan.tf` |
+| S14 | IAM Surgery | Privilege Escalation / Wildcard Auth | PR.AC | CIS 5 | Confidentiality | `iam_surgery.tf` |
+| S15 | State Recovery | State Loss / Orphaned Infrastructure | RC.RP | CIS 11 | Availability | `terraform import` log |
+| TLAB 5 | Enterprise IaC | Unauthorized Access / Financial Sabotage | PR.DS | CIS 4 | All Tiers | `main.tf` |
+
+---
+
+### 📂 Artifact Evidence & Operational History (The Cloud Matrix)
+
+#### 🧱 T2-M2-S13: The Financial Firewall (Budget Governance)
+*   **Attack Vector:** Denial of Wallet / Cloud Resource Hijacking.
+*   **Strategic Explanation:** Defended the organization's financial reservoir by engineering an automated cloud billing alarm using HashiCorp Configuration Language (HCL). This robotic flow-meter trips a digital tripwire the exact millisecond compute costs hit a specified threshold, preventing catastrophic cloud cost overruns.
+*   **Technical Mechanics:** Identified a syntax sabotage inside the `budget_plan.tf` file. Intervened and explicitly defined the missing `notification_type = "ACTUAL"` validator metric, mapped the subscriber email (`ckizzzle@gmail.com`) to a 50% threshold limit, and deployed the live guardrails via `terraform apply`.
+
+#### 🔑 T2-M2-S14: The Keymaster's Ring (Identity & Access Surgery)
+*   **Attack Vector:** Privilege Escalation / Wildcard Authorization.
+*   **Strategic Explanation:** Neutralized a highly dangerous wildcard "Suicide Policy" that granted a junior developer overarching administrative access across the entire cloud environment. I mathematically enforced the Principle of Least Privilege (PoLP) . 
+*   **Technical Mechanics:** Rewrote the `iam_surgery.tf` layout to declare an explicit IAM user profile (`Dave_The_Dev`). Surgically hard-scoped their access strictly down to `s3:GetObject` and `s3:ListBucket` parameters, pointing precisely to the target `arn:aws:s3:::tkh-finance-bucket` and its nested `/*` object-level arrays.
+
+#### 🗺️ T2-M2-S15: The Vault & The State (Disaster Recovery)
+*   **Attack Vector:** State Loss / Orphaned Infrastructure Collisions.
+*   **Strategic Explanation:** Simulated a catastrophic hardware failure that wiped out the local infrastructure state file memory. Instead of panicking and building a duplicate server—which would cause a catastrophic infrastructure collision—I re-tethered my local code back to the live, floating cloud assets without causing an operational outage.
+*   **Technical Mechanics:** Forcefully purged `terraform.tfstate` from system storage memory. Resolved the orphaned tracking error by executing the active recovery routine: `terraform import aws_instance.state_target [Live-EC2-Instance-ID]` [4]. I threw a mathematical grappling hook up to the live `t3.micro` EC2 instance and pulled its exact coordinates back into my local memory bank.
+
+#### 💳 P2-W5-TLAB-05: The Budgeted Identity (Enterprise Synthesis)
+*   **Attack Vector:** Multi-Vector Sabotage / Full Stack Compromise.
+*   **Strategic Explanation:** Synthesized all previous DevSecOps lessons to build a fully operational, self-contained cloud outpost. I deployed a strict financial budget, an invisible encrypted storage vault, and assigned a compute server with a very specific, limited mission. Once the architecture was proven successful, I executed a "Ghost Protocol" to incinerate the base entirely so adversaries had nothing left to shoot at, perfectly protecting my operational stipend.
+*   **Technical Mechanics:** Unified a hard monthly budget guardrail limit ($10.00 max), a secure dynamic S3 bucket vault using random ID hexadecimal suffix generators, an IAM Role profile equipped with an internal `PutObject` lookup block, and an active Ubuntu compute server inside `main.tf`. Compiled all resources successfully via `terraform apply` [5]. Finally, executed `terraform destroy` to wipe the live AWS infrastructure footprint, verifying 0 added, 0 changed, and X destroyed.
