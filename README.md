@@ -1242,6 +1242,8 @@ Mechanical Proof: Full audit trail in portfolio_audit.md and tepp_postmortem.md.
 
 ---
 
+
+
 ## ☁️ Phase 2: Cloud Architecture & DevSecOps (Infrastructure as Code)
 
 ### ⚖️ White Hat Audit: Governance & Framework Alignment
