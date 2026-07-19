@@ -1335,4 +1335,5 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 
 * **Destroy Mandate Proof (Total Asset Decommissioning & Stipend Protection):**
   ![Destroy Verification](./tlab-05-budgeted-identity/destroy_verification.png)
----
+
+  ---
