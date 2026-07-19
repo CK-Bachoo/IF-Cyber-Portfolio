@@ -1242,27 +1242,26 @@ Mechanical Proof: Full audit trail in portfolio_audit.md and tepp_postmortem.md.
 
 ---
 
+# ☁️ Phase 2 Week 5: Cloud Architecture & DevSecOps (Infrastructure as Code)
 
-## ☁️ Phase 2 Week 5: Cloud Architecture & DevSecOps (Infrastructure as Code)
-
-### ⚖️ White Hat Audit: Governance & Framework Alignment
+## ⚖️ White Hat Audit: Governance & Framework Alignment
 
 | Session | Function | Attack Vector / Concept | NIST CSF 2.0 | CIS Control | CIA Triad | Evidence Artifact |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| S13 | Cloud Governance | Denial of Wallet / Cost Overruns | ID.GV | CIS 1 | Availability | [`budget_plan.tf`](./budget_plan.tf) |
-| S14 | IAM Surgery | Privilege Escalation / Wildcard Auth | PR.AC | CIS 5 | Confidentiality | [`iam_surgery.tf`](./iam_surgery.tf) |
-| S15 | State Recovery | State Loss / Orphaned Infrastructure | RC.RP | CIS 11 | Availability | `terraform import` log |
+| Lab 13 | Cloud Governance | Denial of Wallet / Cost Overruns | ID.GV | CIS 1 | Availability | [`budget_plan.tf`](./budget_plan.tf) |
+| Lab 14 | IAM Surgery | Privilege Escalation / Wildcard Auth | PR.AC | CIS 5 | Confidentiality | [`iam_surgery.tf`](./iam_surgery.tf) |
+| Lab 15 | State Recovery | State Loss / Orphaned Infrastructure | RC.RP | CIS 11 | Availability | `terraform import` log |
 | TLAB 5 | Enterprise IaC | Unauthorized Access / Financial Sabotage | PR.DS | CIS 4 | All Tiers | [`main.tf`](./tlab-05-budgeted-identity/main.tf) |
 
 ---
 
 ### 📂 Artifact Evidence & Operational History (The Cloud Matrix)
 
-#### 🧱 P2-W5-S13: The Financial Firewall (Budget Governance)
+#### 🧱 P2 · W5 · D1 · S-XIII: 🧱 The Financial Firewall — Module 13: Lab Submission
 *   **Attack Vector:** Denial of Wallet / Cloud Resource Hijacking.
 *   **Strategic Explanation:** Defended the organization's financial reservoir by engineering an automated cloud billing alarm using HashiCorp Configuration Language (HCL). This robotic flow-meter trips a digital tripwire the exact millisecond compute costs hit a specified threshold, preventing catastrophic cloud cost overruns.
 
-| Data Point | Standard Cohort | Android Cyber Workbench (Note 20 Ultra) |
+| Data Point | Standard Cohort | Android Mobile Cybersecurity Workbench (Note 20 Ultra) |
 | :--- | :--- | :--- |
 | **Architecture** | Local Desktop Configuration | Ephemeral GitHub Codespaces Bridge |
 | **Provisioning** | AWS Management Console Clicks | Terraform IaC (HashiCorp Configuration Language) |
@@ -1273,13 +1272,14 @@ Mechanical Proof: Full audit trail in portfolio_audit.md and tepp_postmortem.md.
 🛡 **Operational Defense Logic (White Hat Auditor Interrogation)**
 *   **White Hat Auditor Question:** "Why must cloud financial budgets be deployed as code rather than configured manually in the AWS billing console?"
 *   **Engineering Statement:** "Manual configuration is prone to human error and cannot be securely version-controlled. By deploying the budget alarm using HashiCorp Configuration Language (HCL), I established an immutable, robotic flow-meter. This ensures that the moment our $75 operational stipend hits a hard 50% threshold, an exact `ACTUAL` notification triggers to mathematically prevent a 'Denial of Wallet' attack."
+
 ---
 
-#### 🔑 P2-W5-S14: The Keymaster's Ring (Identity & Access Surgery)
+#### 🔑 P2 · W5 · D2 · S-XIV: 🔑 The Keymaster's Ring — Module 14: Lab Submission
 *   **Attack Vector:** Privilege Escalation / Wildcard Authorization.
-*   **Strategic Explanation:** Neutralized a highly dangerous wildcard "Suicide Policy" that granted a junior developer overarching administrative access across the entire cloud environment. I mathematically enforced the Principle of Least Privilege (PoLP). 
+*   **Strategic Explanation:** Neutralized a highly dangerous wildcard "Suicide Policy" that granted a junior developer overarching administrative access across the entire cloud environment. I mathematically enforced the Principle of Least Privilege (PoLP).
 
-| Data Point | Standard Cohort | Android Cyber Workbench (Note 20 Ultra) |
+| Data Point | Standard Cohort | Android Mobile Cybersecurity Workbench (Note 20 Ultra) |
 | :--- | :--- | :--- |
 | **Architecture** | GUI IAM Management | Declarative IAM Policy Engineering |
 | **Vulnerability** | Wildcard `*` Policy (Suicide Policy) | Principle of Least Privilege (PoLP) |
@@ -1289,13 +1289,14 @@ Mechanical Proof: Full audit trail in portfolio_audit.md and tepp_postmortem.md.
 *   **Engineering Statement:** "A wildcard policy essentially grants a junior contractor a 'Master Skeleton Key' to the entire cloud infrastructure, allowing full administrative access. I intercepted this 'Suicide Policy' assigned to 'Dave_The_Dev' and mathematically enforced the Principle of Least Privilege. I forged a biometric padlock by hard-scoping their permissions strictly down to `s3:GetObject` and `s3:ListBucket`, pointing exclusively to the `arn:aws:s3:::tkh-finance-bucket`."
 
 *   **Technical Mechanics:** Rewrote the [`iam_surgery.tf`](./iam_surgery.tf) layout to declare an explicit IAM user profile (`Dave_The_Dev`). Surgically hard-scoped their access strictly down to `s3:GetObject` and `s3:ListBucket` parameters, pointing precisely to the target `arn:aws:s3:::tkh-finance-bucket` and its nested `/*` object-level arrays. Initialized directory plugins, generated architectural previews, successfully applied configurations to IAM, verified the live console matrix layout, and cleanly ran `terraform destroy` to vaporize the architecture.
+
 ---
 
-#### 🗺️ P2-W5-S15: The Vault & The State (Disaster Recovery)
+#### 🗺️ P2 · W5 · D3 · S-XV: 🗺️ The Vault & The State — Module 15: Lab Submission
 *   **Attack Vector:** State Loss / Orphaned Infrastructure Collisions.
 *   **Strategic Explanation:** Simulated a catastrophic hardware failure that wiped out the local infrastructure state file memory. Instead of panicking and building a duplicate server—which would cause a catastrophic infrastructure collision—I re-tethered my local code back to the live, floating cloud assets without causing an operational outage.
 
-| Data Point | Standard Cohort | Android Cyber Workbench (Note 20 Ultra) |
+| Data Point | Standard Cohort | Android Mobile Cybersecurity Workbench (Note 20 Ultra) |
 | :--- | :--- | :--- |
 | **Disaster Event** | Complete Memory Matrix Wipe | Local `terraform.tfstate` Deletion |
 | **Recovery Strategy** | Manual Rebuild (Risk of Outage) | Live State Re-tethering via CLI |
@@ -1305,13 +1306,14 @@ Mechanical Proof: Full audit trail in portfolio_audit.md and tepp_postmortem.md.
 *   **Engineering Statement:** "In cloud engineering, the state file is the memory matrix connecting your local terminal to the live cloud. If it is deleted, the terminal suffers amnesia. Running a blind `terraform apply` will attempt to build an entirely new duplicate environment, causing a catastrophic infrastructure collision. Instead of panicking, I used `terraform import` as a cybernetic grappling hook to pull the exact metadata coordinates of the floating EC2 instance back into my local memory bank."
 
 *   **Technical Mechanics:** Forcefully purged `terraform.tfstate` from system storage memory. Resolved the orphaned tracking error by executing the active recovery routine: `terraform import aws_instance.state_target [Live-EC2-Instance-ID]`. I threw a mathematical grappling hook up to the live `t3.micro` EC2 instance and pulled its exact coordinates back into my local memory bank. Re-ran plan tools to achieve perfect 'No Changes' alignment proof, then executed total teardown demolition via `terraform destroy`.
+
 ---
 
-#### 💳 P2-W5-TLAB-05: The Budgeted Identity (Enterprise Synthesis)
+#### P2 · W5 · TLAB 5: 💳 The Budgeted Identity — TLab Submission
 *   **Attack Vector:** Multi-Vector Sabotage / Full Stack Compromise.
 *   **Strategic Explanation:** Synthesized all previous DevSecOps lessons to build a fully operational, self-contained cloud outpost. I deployed a strict financial budget, an invisible encrypted storage vault, and assigned a compute server with a very specific, limited mission. Once the architecture was proven successful, I executed a "Ghost Protocol" to incinerate the base entirely so adversaries had nothing left to shoot at, perfectly protecting my operational stipend.
 
-| Data Point | Standard Cohort | Android Cyber Workbench (Note 20 Ultra) |
+| Data Point | Standard Cohort |Android Mobile Cybersecurity Workbench (Note 20 Ultra) |
 | :--- | :--- | :--- |
 | **Architecture** | Fragmented Cloud Resources | Unified DevSecOps Outpost |
 | **IAM Control** | Default Roles | Custom Biometric Vault Role |
@@ -1323,7 +1325,7 @@ Mechanical Proof: Full audit trail in portfolio_audit.md and tepp_postmortem.md.
 
 🧠 **TLAB 5 Mission Defense Matrix (Executive Summary)**
 *   **Technical Mechanics:** Unified a hard monthly budget guardrail limit ($10.00 max with an 80% threshold notification trigger), a secure dynamic S3 bucket vault using random ID hexadecimal suffix generators, an IAM Role profile equipped with an internal `PutObject` surgical bucket interpolation lookup block, an instance mapping profile, and an active Ubuntu compute server. Compiled all 7 resources successfully via `terraform apply`. Finally, returned to the deployment context path using `cd /workspaces/TLAB5-Budgeted-Identity` and executed `terraform destroy` to completely wipe the live AWS infrastructure footprint. Evidence [`main.tf`](./tlab-05-budgeted-identity/main.tf)
-  
+
 ##### 📸 Enterprise Deployment Verification & Security Audit Evidence
 To ensure full accountability and continuous logging alignment, the entire lifecycle of this enterprise build was audited, verified, and safely decommissioned.
 
@@ -1335,5 +1337,3 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 
 * **Destroy Mandate Proof (Total Asset Decommissioning & Stipend Protection):**
   ![Destroy Verification](./tlab-05-budgeted-identity/destroy_verification.png)
-
-  ---
