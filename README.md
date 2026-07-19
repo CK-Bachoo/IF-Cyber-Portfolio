@@ -1248,10 +1248,10 @@ Mechanical Proof: Full audit trail in portfolio_audit.md and tepp_postmortem.md.
 
 | Session | Function | Attack Vector / Concept | NIST CSF 2.0 | CIS Control | CIA Triad | Evidence Artifact |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Lab 13 | Cloud Governance | Denial of Wallet / Cost Overruns | ID.GV | CIS 1 | Availability | [`budget_plan.tf`](./budget_plan.tf) |
-| Lab 14 | IAM Surgery | Privilege Escalation / Wildcard Auth | PR.AC | CIS 5 | Confidentiality | [`iam_surgery.tf`](./iam_surgery.tf) |
-| Lab 15 | State Recovery | State Loss / Orphaned Infrastructure | RC.RP | CIS 11 | Availability | `terraform import` log |
-| TLAB 5 | Enterprise IaC | Unauthorized Access / Financial Sabotage | PR.DS | CIS 4 | All Tiers | [`main.tf`](./tlab-05-budgeted-identity/main.tf) |
+| Module 13 Lab Submission | Cloud Governance | Denial of Wallet / Cost Overruns | ID.GV | CIS 1 | Availability | [`budget_plan.tf`](./budget_plan.tf) |
+| Module 14 Lab Submission | IAM Surgery | Privilege Escalation / Wildcard Auth | PR.AC | CIS 5 | Confidentiality | [`iam_surgery.tf`](./iam_surgery.tf) |
+| Module 15 Lab Submission | State Recovery | State Loss / Orphaned Infrastructure | RC.RP | CIS 11 | Availability | `terraform import` log |
+| TLAB 5 TLab Submission | Enterprise IaC | Unauthorized Access / Financial Sabotage | PR.DS | CIS 4 | All Tiers | [`main.tf`](./tlab-05-budgeted-identity/main.tf) |
 
 ---
 
