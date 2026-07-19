@@ -1261,7 +1261,7 @@ Mechanical Proof: Full audit trail in portfolio_audit.md and tepp_postmortem.md.
 *   **Attack Vector:** Denial of Wallet / Cloud Resource Hijacking.
 *   **Strategic Explanation:** Defended the organization's financial reservoir by engineering an automated cloud billing alarm using HashiCorp Configuration Language (HCL). This robotic flow-meter trips a digital tripwire the exact millisecond compute costs hit a specified threshold, preventing catastrophic cloud cost overruns.
 
-| Data Point | Standard Cohort | Android Mobile Cybersecurity Workbench (Note 20 Ultra) |
+| Data Point | Standard Cohort Laptop/Desktop (X86) | Android Mobile Cybersecurity Workbench (Samsung Note 20 Ultra 5g - Arm64) |
 | :--- | :--- | :--- |
 | **Architecture** | Local Desktop Configuration | Ephemeral GitHub Codespaces Bridge |
 | **Provisioning** | AWS Management Console Clicks | Terraform IaC (HashiCorp Configuration Language) |
@@ -1279,7 +1279,7 @@ Mechanical Proof: Full audit trail in portfolio_audit.md and tepp_postmortem.md.
 *   **Attack Vector:** Privilege Escalation / Wildcard Authorization.
 *   **Strategic Explanation:** Neutralized a highly dangerous wildcard "Suicide Policy" that granted a junior developer overarching administrative access across the entire cloud environment. I mathematically enforced the Principle of Least Privilege (PoLP).
 
-| Data Point | Standard Cohort | Android Mobile Cybersecurity Workbench (Note 20 Ultra) |
+| Data Point | Standard Cohort Laptop/Desktop (X86) | Android Mobile Cybersecurity Workbench (Samsung Note 20 Ultra 5g - Arm64) |
 | :--- | :--- | :--- |
 | **Architecture** | GUI IAM Management | Declarative IAM Policy Engineering |
 | **Vulnerability** | Wildcard `*` Policy (Suicide Policy) | Principle of Least Privilege (PoLP) |
@@ -1296,7 +1296,7 @@ Mechanical Proof: Full audit trail in portfolio_audit.md and tepp_postmortem.md.
 *   **Attack Vector:** State Loss / Orphaned Infrastructure Collisions.
 *   **Strategic Explanation:** Simulated a catastrophic hardware failure that wiped out the local infrastructure state file memory. Instead of panicking and building a duplicate server—which would cause a catastrophic infrastructure collision—I re-tethered my local code back to the live, floating cloud assets without causing an operational outage.
 
-| Data Point | Standard Cohort | Android Mobile Cybersecurity Workbench (Note 20 Ultra) |
+| Data Point | Standard Cohort Laptop/Desktop (X86) | Android Mobile Cybersecurity Workbench (Samsung Note 20 Ultra 5g - Arm64) |
 | :--- | :--- | :--- |
 | **Disaster Event** | Complete Memory Matrix Wipe | Local `terraform.tfstate` Deletion |
 | **Recovery Strategy** | Manual Rebuild (Risk of Outage) | Live State Re-tethering via CLI |
@@ -1313,7 +1313,7 @@ Mechanical Proof: Full audit trail in portfolio_audit.md and tepp_postmortem.md.
 *   **Attack Vector:** Multi-Vector Sabotage / Full Stack Compromise.
 *   **Strategic Explanation:** Synthesized all previous DevSecOps lessons to build a fully operational, self-contained cloud outpost. I deployed a strict financial budget, an invisible encrypted storage vault, and assigned a compute server with a very specific, limited mission. Once the architecture was proven successful, I executed a "Ghost Protocol" to incinerate the base entirely so adversaries had nothing left to shoot at, perfectly protecting my operational stipend.
 
-| Data Point | Standard Cohort |Android Mobile Cybersecurity Workbench (Note 20 Ultra) |
+| Data Point | Standard Cohort Laptop/Desktop (X86) | Android Mobile Cybersecurity Workbench (Samsung Note 20 Ultra 5g - Arm64) |
 | :--- | :--- | :--- |
 | **Architecture** | Fragmented Cloud Resources | Unified DevSecOps Outpost |
 | **IAM Control** | Default Roles | Custom Biometric Vault Role |
