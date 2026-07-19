@@ -4,26 +4,31 @@
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=1000&color=00F72D&width=750&lines=Purple+Team+Operations+C.K.+BACHOO+TKH+Innovation+Fellow+IF-CS-26+NY;Mobile-to-Cloud+SecOps;AI+Security+Architecture;Penetration+Testing+%26+DFIR;Samsung+Galaxy+Note+20+Ultra+%2B+Termux;Zero-Trust+Automation+Pipelines" />
 </p>
 
-**IF-Cyber-Portfolio:** This portfolio and all associated artifacts were engineered exclusively using a Samsung Note 20 Ultra 5G / Termux Bunker configuration with Google Cloud Shell as my OOB. This environment demonstrates a mobile-first, headless-first approach to systems administration, network security, defensive automation, DFIR, AI Security Architecture and Purple Team operations.
 
-[📱 Android Mobile Cybersecurity Workbench](https://github.com/CK-Bachoo/Android-mobile-cybersecurity-workbench) / SOC Rig
-**Built 100% on Samsung Galaxy Note 20 Ultra + Termux**
-Professional mobile-first Purple Team environment demonstrating Zero Trust principles, network audits, automation scripts, forensic logging, and AI-assisted analysis engineered during The Knowledge House NY Innovation Fellowship (Cohort IF-CS-26).
+**IF-Cyber-Portfolio:** This portfolio and all associated artifacts were engineered exclusively using a Samsung Note 20 Ultra 5G / Termux Bunker configuration, seamlessly utilizing a Zero-Trust "Mobile-to-Cloud Bridge" spanning Google Cloud Shell, GitHub Codespaces, and AWS . This environment demonstrates a mobile-first, headless-first approach to systems administration, network security, defensive automation, DFIR, Cloud Infrastructure as Code (IaC), AI Security Architecture, and Purple Team operations.
 
-**Key Capabilities**
-- Real-time brute-force detection and logging
-- Network reconnaissance and protocol analysis
-- Immutable audit trails (Mapped to NIST CSF & CIS Controls)
-- Multi-AI orchestration via custom God Mode intent bridging
-- True hardware-constrained execution (ARM64)
+**📱 Android Mobile Cybersecurity Workbench / SOC Rig**
+*Built 100% on Samsung Galaxy Note 20 Ultra + Termux + Cloud Compute Bridging*
+
+A professional, mobile-first Purple Team environment demonstrating Zero-Trust principles, network audits, automated Python/Bash scripting, forensic logging, and AI-assisted analysis engineered during The Knowledge House NY Innovation Fellowship (Cohort IF-CS-26).
+
+**🔥 Key Capabilities & DevSecOps Arsenal**
+*   **Real-time Threat Hunting:** Brute-force detection, live process interrogation, and automated log parsing.
+*   **Network & Protocol Intelligence:** Deep packet analysis and reconnaissance executed without graphical interfaces.
+*   **Mobile-to-Cloud Zero-Trust Bridging:** Seamless offloading of heavy compute workloads from an ARM64 Exynos 990 processor to ephemeral x86_64 cloud containers to bypass hardware limitations.
+*   **Infrastructure as Code (IaC) & Cloud Governance:** Autonomous deployment of AWS financial firewalls, encrypted S3 vaults, and surgical IAM Role matrices using Terraform.
+*   **Multi-AI Orchestration:** Cross-validation of threat telemetry via custom God Mode intent bridging and localized, offline LLM execution.
+*   **Immutable Cryptographic Ledgers:** Continuous integration of all operational artifacts, mathematically mapped to NIST CSF 2.0 and CIS Controls.
+*   **True Hardware-Constrained Execution (ARM64):** Outperforming standard x86 hypervisor environments through OS-level routing bypasses and native stream-editing logic.
 
 ### 🏫 The Knowledge House Innovation Fellow: Chad K. Bachoo (IF-CS-26 NY) [📱 Android Mobile Cybersecurity Workbench](https://github.com/CK-Bachoo/Android-mobile-cybersecurity-workbench) /SOC Rig
 
 ---
 
-**The Mobile-to-Cloud Bridge:** `Note 20 Ultra` → Termux [Dual Terminal / (proot-distro login debian)] → Google Cloud Shell → Azure → Aws → `GitHub`
-
-<p align="left">
+**The Mobile-to-Cloud Bridge:** `Note 20 Ultra` → Termux [Dual Terminal / (proot-distro login debian)] → Google Cloud Shell → Azure → Aws → `GitHub` 
+**The Mobile-to-Cloud Bridge:**  Android mobile Chrome browser → Github Codespaces → Github
+ 
+ <p align="left">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=1000&color=00F72D&width=750&lines=Purple+Team+Operations;Mobile-to-Cloud+SecOps;AI+Security+Architecture;Penetration+Testing+%26+DFIR;Samsung+Galaxy+Note+20+Ultra+%2B+Termux;Zero-Trust+Automation+Pipelines" />
 </p>
 
