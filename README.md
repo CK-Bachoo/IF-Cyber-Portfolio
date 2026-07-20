@@ -1253,10 +1253,10 @@ Mechanical Proof: Full audit trail in portfolio_audit.md and tepp_postmortem.md.
 
 | Session | Function | Attack Vector / Concept | NIST CSF 2.0 | CIS Control | CIA Triad | Evidence Artifact |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Module 13 Lab Submission | Cloud Governance | Denial of Wallet / Cost Overruns | ID.GV | CIS 1 | Availability | [`budget_plan.tf`](./budget_plan.tf) |
-| Module 14 Lab Submission | IAM Surgery | Privilege Escalation / Wildcard Auth | PR.AC | CIS 5 | Confidentiality | [`iam_surgery.tf`](./iam_surgery.tf) |
-| Module 15 Lab Submission | State Recovery | State Loss / Orphaned Infrastructure | RC.RP | CIS 11 | Availability | `terraform import` log |
-| TLAB 5 TLab Submission | Enterprise IaC | Unauthorized Access / Financial Sabotage | PR.DS | CIS 4 | All Tiers | [`main.tf`](./tlab-05-budgeted-identity/main.tf) |
+| P2 · W5 · D1 · S-XIII: 🧱 The Financial Firewall — Module 13 Lab Submission | Cloud Governance | Denial of Wallet / Cost Overruns | ID.GV | CIS 1 | Availability | [`budget_plan.tf`](./budget_plan.tf) |
+| P2 · W5 · D2 · S-XIV: 🔑 The Keymaster's Ring — Module 14 Lab Submission | IAM Surgery | Privilege Escalation / Wildcard Auth | PR.AC | CIS 5 | Confidentiality | [`iam_surgery.tf`](./iam_surgery.tf) |
+| P2 · W5 · D3 · S-XV: 🗺️ The Vault & The State — Module 15 Lab Submission | State Recovery | State Loss / Orphaned Infrastructure | RC.RP | CIS 11 | Availability | `terraform import` log |
+| P2 · W5 · TLAB 5: 💳 The Budgeted Identity — TLab Submission | Enterprise IaC | Unauthorized Access / Financial Sabotage | PR.DS | CIS 4 | All Tiers | [`main.tf`](./tlab-05-budgeted-identity/main.tf) |
 
 ---
 
