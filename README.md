@@ -1257,7 +1257,11 @@ Mechanical Proof: Full audit trail in portfolio_audit.md and tepp_postmortem.md.
 | P2 · W5 · D2 · S-XIV: 🔑 The Keymaster's Ring — Module 14 Lab Submission | IAM Surgery | Privilege Escalation / Wildcard Auth | PR.AC | CIS 5 | Confidentiality | [`iam_surgery.tf`](./iam_surgery.tf) |
 | P2 · W5 · D3 · S-XV: 🗺️ The Vault & The State — Module 15 Lab Submission | State Recovery | State Loss / Orphaned Infrastructure | RC.RP | CIS 11 | Availability | `terraform import` log |
 | P2 · W5 · TLAB 5: 💳 The Budgeted Identity — TLab Submission | Enterprise IaC | Unauthorized Access / Financial Sabotage | PR.DS | CIS 4 | All Tiers | [`main.tf`](./tlab-05-budgeted-identity/main.tf) |
-
+| P2 · W6 · D1 · S-16: 🌐 The War Room — Module 16 Lab Submission | OSI Environment Repair | Configuration Drift & Layer Outages | DE.AE | CIS 12 | Availability | [`vpc_architecture.tf`](./p2-week-06-lab-16/vpc_architecture.tf) |
+| P2 · W6 · D2 · S-17: 🎧 The Silent Wiretap — Module 17 Lab Submission | Network Metric Wiretap | Visibility Deficit & Telemetry Bypass | DE.CM | CIS 13 | Integrity | [`main.tf`](./p2-week-06-lab-17/main.tf) |
+| P2 · W6 · D3 · S-18: 🛑 The Zero Trust Terminal — Module 18 Lab Submission | Keyless Remote Access | Credential Theft & Port Piercing | PR.AC | CIS 6 | Confidentiality | [`ssm_access.tf`](./p2-week-06-lab-18/ssm_access.tf) |
+| P2 · W6 · TLAB 6: 👁️ The Monitored Fortress — TLab Submission | Production Fortress | Threat Invisibility & Exfiltration | PR.PT | CIS 4 | All Tiers | [`main.tf`](./tlab-06-monitored-fortress/main.tf) |
+Use code with caution.
 ---
 
 ### 📂 Artifact Evidence & Operational History (The Cloud Matrix)
@@ -1342,3 +1346,84 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 *   **White Hat Auditor Question:** "Why is the `terraform destroy` command considered a mandatory graded security operation for this mission rather than just a cleanup step?"
 *   **Engineering Statement:** "In standard IT, junior developers build a server and leave it running forever, essentially erecting a permanent brick-and-mortar facility on the internet that accumulates vulnerabilities over time. As an AI Security Architect, I deploy a Phantom Forward Operating Base. I use IaC to summon the infrastructure precisely when needed, execute the mission, and initiate the Ghost Protocol (`terraform destroy`) the exact millisecond I am finished. This vaporizes the attack surface to absolute zero and mathematically prevents 'Denial of Wallet' extortion attacks against the organization."
 ---
+
+# 🌐 P2 · W6 · D1 · S-XVI: 🌐 The War Room — Module 16: Lab Submission
+*   **Attack Vector:** Configuration Sabotage / Outage Inducement.
+*   **Strategic Explanation:** Diagnosed and repaired a deliberately sabotaged cloud environment by identifying and resolving configuration failures across multiple OSI layers [INDEX]. This simulation mirrors an enterprise service restoration incident where misconfigurations induce immediate operational downtime [INDEX].
+
+| Data Point | Standard Cohort (Laptop/Desktop - X86) | Android Mobile Cybersecurity Workbench (Samsung Note 20 Ultra 5g - Arm64) |
+| :--- | :--- | :--- |
+| **Environment** | Local VirtualBox VMs | Ephemeral GitHub Codespaces Container |
+| **Verification** | GUI Network Diagnostics | Headless CLI Process Interrogation |
+
+*   **Technical Mechanics:** Executed file permission fixes (`chmod 755`) to restore script execution rights at the Application Layer (Layer 7) [INDEX]. Identified a port collision at the Transport Layer (Layer 4) where a rogue `ghost_web` container was squatting on port 8080, and evicted it via `docker rm -f` [INDEX]. Cleared a misconfigured local firewall rule blocking outbound ICMP packets at the Network Layer (Layer 3) to restore the network heartbeat [INDEX]. Evidence File: [`vpc_architecture.tf`](./p2-week-06-lab-16/vpc_architecture.tf)
+
+🛡 **Operational Defense Logic (White Hat Auditor Interrogation)**
+*   **White Hat Auditor Question:** "Why did you approach the system failures using a structured OSI Layered methodology instead of random troubleshooting?"
+*   **Engineering Statement:** "Operating within a headless mobile CLI deprives the analyst of graphical diagnostic tools. By systematically auditing Layer 7 file permissions, Layer 4 TCP port bindings, and Layer 3 ICMP routing rules, I mathematically isolated the anomalies. This structured approach eliminates guesswork, shortens the Mean Time to Repair (MTTR), and ensures downtime is mitigated safely without introducing further drift."
+
+---
+
+#### 🎧 P2 · W6 · D2 · S-XVII: 🎧 The Silent Wiretap — Module 17: Lab Submission (Dual-Execution)
+*   **Attack Vector:** Visibility Deficit / Telemetry Bypass.
+*   **Strategic Explanation:** Engineered an isolated network logging outpost to capture and parse raw packet metadata [INDEX]. Due to conflicting operational guidance between instructional tiers, this engineering module was executed and submitted via two completely distinct architectural models to prove total compliance under any paradigm [INDEX].
+
+| Data Point | Approach A: The Closed Baseline (George's Guide) | Approach B: The Exposed Honeypot (Jane's Detour) |
+| :--- | :--- | :--- |
+| **Scope** | Clean Telemetry Isolation (Rubric Standard) | Multi-Tier Live Route Over-Engineering |
+| **Network Path** | Closed VPC (Internal Traffic Loop) | Open Gateway (`0.0.0.0/0` Routing Tables) |
+| **Target Node** | Background Telemetry Collection Loop | Live `t3.micro` EC2 Compute Endpoint [INDEX] |
+
+*   **Technical Mechanics:** Formulated an enterprise-grade IAM AssumeRole policy specifically restricting access to the `://amazonaws.com` service principal [INDEX]. Bound an inline CloudWatch policy allowing log group and log stream creation [INDEX]. Launched an `aws_cloudwatch_log_group` with a 1-day retention cap to manage storage overhead [INDEX]. Deployed `aws_flow_log` configured to ingest `ALL` transit metadata [INDEX], verified execution under both isolated background parameters and full public gateway environments, and forensically purged the assets using `terraform destroy` [INDEX]. Evidence File: [`main.tf`](./p2-week-06-lab-17/main.tf)
+
+🛡 **Operational Defense Logic (White Hat Auditor Interrogation)**
+*   **White Hat Auditor Question:** "Why must VPC Flow Logs be combined with strict CloudWatch retention limits in an enterprise architecture?"
+*   **Engineering Statement:** "VPC Flow Logs ingest an immense volume of raw network metadata, which can rapidly lead to massive storage inflation and a 'Denial of Wallet' scenario if left unmanaged. By hardcoding an explicit `retention_in_days = 1` policy directly into the CloudWatch log group using infrastructure as code, I enforce data-hygiene policies automatically. This provides security teams with enough forensic visibility to trace active threats while capping corporate data storage costs."
+
+---
+
+#### 🛑 P2 · W6 · D3 · S-XVIII: 🛑 The Zero Trust Terminal — Module 18: Lab Submission
+*   **Attack Vector:** Perimeter Piercing / SSH Credential Theft.
+*   **Strategic Explanation:** Enforced a strict Zero Trust perimeter by completely outlawing traditional, high-risk SSH port access (Port 22) [INDEX]. Instead, established a secure, keyless cloud administrative terminal utilizing AWS Systems Manager (SSM) Session Manager [INDEX].
+
+| Data Point | Standard Cohort (Laptop/Desktop - X86) | Android Mobile Cybersecurity Workbench (Samsung Note 20 Ultra 5g - Arm64) |
+| :--- | :--- | :--- |
+| **Access Method** | Traditional SSH Key Pairs (Port 22) | Keyless AWS Systems Manager Tunnel |
+| **Firewall State** | Open Inbound Security Groups | Zero Inbound Rules (Outbound Only) |
+
+*   **Technical Mechanics:** Oversaw a completely locked-down security group featuring zero ingress rules and an egress allow-all rule. Resolved an architectural sabotage by instantiating an `aws_iam_role_policy_attachment` that stitched the vendor-managed `AmazonSSMManagedInstanceCore` policy straight onto the server's IAM role [INDEX]. Bound the profile to a current-generation `t3.micro` EC2 compute node to satisfy sandbox platform constraints [INDEX], verified communication parameters, and safely initiated `terraform destroy` to tear down the environment [INDEX]. Evidence File: [`ssm_access.tf`](./p2-week-06-lab-18/ssm_access.tf)
+
+🛡 **Operational Defense Logic (White Hat Auditor Interrogation)**
+*   **White Hat Auditor Question:** "How can an administrative terminal session be established if the firewall blocks 100% of all inbound traffic?"
+*   **Engineering Statement:** "Traditional management models rely on inbound open ports, which creates a permanent attack surface for brute-force attacks and zero-day exploits. By attaching the `AmazonSSMManagedInstanceCore` policy to the instance's identity profile, we flip the network connection direction. The local SSM agent on the EC2 instance securely initiates an *outbound* connection to the AWS systems manager endpoint. The administrative terminal is safely tunneled through this outbound connection, allowing engineers to command the host while the inbound firewall remains completely closed."
+
+---
+
+#### 👁️ P2 · W6 · TLAB 6: 👁️ The Monitored Fortress — TLab Submission
+*   **Attack Vector:** Multi-Vector Perimeter Compromise / Threat Invisibility.
+*   **Strategic Explanation:** Synthesized all network segmentation, cloud logging telemetry, and Zero Trust identity principles into a cohesive full-stack infrastructure deployment [INDEX]. This architecture exposes a live honeypot computing node to the internet to trigger real threat logs while keeping the core server completely closed off to direct external manipulation [INDEX].
+
+| Data Point | Standard Cohort (Laptop/Desktop - X86) | Android Mobile Cybersecurity Workbench (Samsung Note 20 Ultra 5g - Arm64) |
+| :--- | :--- | :--- |
+| **Architecture** | Fragmented Individual Labs | Cohesive Production Perimeter Stack |
+| **Telemetry State** | Local Log Capture | Live CloudWatch Honeypot Monitoring |
+| **Inbound Gate** | Standard Port Exposure | Zero-Inbound Air-Gapped Firewall |
+
+🧠 **TLAB 6 Mission Defense Matrix (Executive Summary)**
+*   **Technical Mechanics:** Unified a complete production perimeter tier including an `aws_vpc` (`10.0.0.0/16`), an `aws_subnet` (`10.0.1.0/24`) pinned to `us-east-1a`, an `aws_internet_gateway`, and an active routing engine [INDEX]. Integrated an automated telemetry tier via `aws_cloudwatch_log_group` named exactly `/tkh/titan-prod-vpc-logs` wired to an `aws_flow_log` capture node [INDEX]. Finally, deployed an air-gapped security group with zero inbound rules housing a keyless `t3.micro` Ubuntu server [INDEX]. Applied all 14 resources successfully via `terraform apply` [INDEX], audited the live web noise logs, and initiated `terraform destroy` to safely decommission the stack [INDEX]. Evidence File: [`main.tf`](./tlab-06-monitored-fortress/main.tf)
+
+##### 📸 Enterprise Deployment Verification & Security Audit Evidence
+To ensure full accountability and continuous logging alignment, the entire lifecycle of this enterprise build was audited, verified, and safely decommissioned [INDEX].
+
+* **Zero Trust Browser Terminal Proof (Session Manager `whoami` Identity Check):**  
+  ![SSM Terminal Proof](./tlab-06-monitored-fortress/ssm_terminal_proof.png)
+
+* **CloudWatch Ingestion Telemetry Audit (Active Wiretap Live `REJECT` Capture):**  
+  ![CloudWatch Flow Logs](./tlab-06-monitored-fortress/cloudwatch_flow_logs.png)
+
+* **Destroy Mandate Proof (Total Asset Decommissioning & Stipend Protection):**  
+  ![Destroy Verification](./tlab-06-monitored-fortress/destroy_verification.png)
+
+🛡 **Operational Defense Logic (White Hat Auditor Interrogation)**
+*   **White Hat Auditor Question:** "What specific evidence in your CloudWatch logs verifies that your fortress network is successfully mitigating real external threats?"
+*   **Engineering Statement:** "The proof is recorded directly inside our live telemetry audit log. Because our compute node was deployed inside a public subnet with a routed internet gateway, automated scanning bots crawling the public web discovered and targeted the instance almost immediately. Our log events table catches these precise events, displaying an influx of external adversary IPs attempting connection sweeps. Crucially, each entry maps back to our honeypot's internal host IP (`10.0.1.44`) and concludes with a clear **`REJECT OK`** action string. This mathematically verifies that our zero-inbound firewall successfully dropped the attack vectors and captured the threat data without exposing the internal machine."
