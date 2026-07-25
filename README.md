@@ -1375,7 +1375,7 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 
 🛡 **Operational Defense Logic (White Hat Auditor Interrogation)**
 *   **White Hat Auditor Question:** "Why must VPC Flow Logs be combined with strict CloudWatch retention limits in an enterprise architecture?"
-*   **Engineering Statement:** "VPC Flow Logs ingest an immense volume of raw network metadata, which can rapidly lead to massive storage inflation and a 'Denial of Wallet' scenario if left unmanaged [INDEX]. By hardcoding an explicit `retention_in_days = 1` policy directly into the CloudWatch log group using infrastructure as code, I enforce data-hygiene policies automatically [INDEX]. This provides security teams with enough forensic visibility to trace active threats while capping corporate data storage costs [INDEX]."
+*   **Engineering Statement:** "VPC Flow Logs ingest an immense volume of raw network metadata, which can rapidly lead to massive storage inflation and a 'Denial of Wallet' scenario if left unmanaged. By hardcoding an explicit `retention_in_days = 1` policy directly into the CloudWatch log group using infrastructure as code, I enforce data-hygiene policies automatically. This provides security teams with enough forensic visibility to trace active threats while capping corporate data storage costs"
 ---
 
 #### 🛑 P2 · W6 · D3 · S-XVIII: 🛑 The Zero Trust Terminal — Module 18: Lab Submission
