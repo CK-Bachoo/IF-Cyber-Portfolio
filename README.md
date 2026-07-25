@@ -1261,7 +1261,6 @@ Mechanical Proof: Full audit trail in portfolio_audit.md and tepp_postmortem.md.
 | P2 · W6 · D2 · S-17: 🎧 The Silent Wiretap — Module 17 Lab Submission | Network Metric Wiretap | Visibility Deficit & Telemetry Bypass | DE.CM | CIS 13 | Integrity | [`main.tf`](./p2-week-06-lab-17/main.tf) |
 | P2 · W6 · D3 · S-18: 🛑 The Zero Trust Terminal — Module 18 Lab Submission | Keyless Remote Access | Credential Theft & Port Piercing | PR.AC | CIS 6 | Confidentiality | [`ssm_access.tf`](./p2-week-06-lab-18/ssm_access.tf) |
 | P2 · W6 · TLAB 6: 👁️ The Monitored Fortress — TLab Submission | Production Fortress | Threat Invisibility & Exfiltration | PR.PT | CIS 4 | All Tiers | [`main.tf`](./tlab-06-monitored-fortress/main.tf) |
-Use code with caution.
 ---
 
 ### 📂 Artifact Evidence & Operational History (The Cloud Matrix)
@@ -1367,7 +1366,7 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 *   **Attack Vector:** Visibility Deficit / Telemetry Bypass.
 *   **Strategic Explanation:** Engineered an isolated network logging outpost to capture and parse raw packet metadata. Due to conflicting operational guidance between instructional tiers, I conducted and completed this lab two separate ways: the original baseline submission assigned on Canvas, and a subsequent modified, over-engineered submission after Technical Instructor Jane P. directed the cohort to capture live threat traffic. The stored configuration script captures the modified version, which pulled 5 unrequested resources into the network matrix.
 
-| Data Point | Approach A: The Original Canvas Submission (George's Guide) | Approach B: The Modified Codespaces Submission (Jane's Detour) |
+| Data Point | Approach A: The Original Canvas Submission (George's Guide) | Approach B: The Honeypot Modified Submission (Jane's Guide) |
 | :--- | :--- | :--- |
 | **Objective** | Clean Telemetry Isolation (Official Standard) | Multi-Tier Live Route Over-Engineering |
 | **Network Path** | Closed VPC (Internal Traffic Loop) | Open Gateway (`0.0.0.0/0` Routing Tables) |
