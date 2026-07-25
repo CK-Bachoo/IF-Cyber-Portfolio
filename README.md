@@ -1230,9 +1230,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 ⚖️ Architectural Comparison (Governance Chart)
 Feature | Standard Desktop (x86) | Android Cyber Workbench (ARM64)
 --- | --- | ---
-Audit Scope | Manual Documentation | Automated Git-Ledgered Artifacts
-Governance | NIST CSF 2.0 / CIS 18 Alignment | Zero-Trust Verified Mobile SOC
-Execution Environment | Local Ubuntu VM | Samsung Note 20 Ultra + Termux + Cloud Shell Bridge
+Audit Scope | Manual D| Local Ubuntu VM | Samsung Note 20 Ultra + Termux + Cloud Shell Bridge
 Submission Mechanism | Native session-submit | Git Push with Cryptographic Audit Trail
 
 🧠 TLAB 12 Mission Defense Matrix (Executive Summary)
@@ -1246,19 +1244,18 @@ Mechanical Proof: Full audit trail in portfolio_audit.md and tepp_postmortem.md.
 **Documented and delivered via: 🛡️[Samsung Note 20 Ultra 5g - Android Mobile Cybersecurity Workbench](https://github.com/CK-Bachoo/Android-mobile-cybersecurity-workbench)🛡️**
 
 ---
+# ☁️ Phase 2 Week 5 & 6: Cloud Architecture & DevSecOps (Infrastructure as Code)
 
-# ☁️ Phase 2 Week 5: Cloud Architecture & DevSecOps (Infrastructure as Code)
-
-## ⚖️ White Hat Audit: Governance & Framework Alignment
+## ⚖️ Governance & Framework Alignment
 
 | Session | Function | Attack Vector / Concept | NIST CSF 2.0 | CIS Control | CIA Triad | Evidence Artifact |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| P2 · W5 · D1 · S-XIII: 🧱 The Financial Firewall — Module 13 Lab Submission | Cloud Governance | Denial of Wallet / Cost Overruns | ID.GV | CIS 1 | Availability | [`budget_plan.tf`](./budget_plan.tf) |
-| P2 · W5 · D2 · S-XIV: 🔑 The Keymaster's Ring — Module 14 Lab Submission | IAM Surgery | Privilege Escalation / Wildcard Auth | PR.AC | CIS 5 | Confidentiality | [`iam_surgery.tf`](./iam_surgery.tf) |
-| P2 · W5 · D3 · S-XV: 🗺️ The Vault & The State — Module 15 Lab Submission | State Recovery | State Loss / Orphaned Infrastructure | RC.RP | CIS 11 | Availability | `terraform import` log |
+| P2 · W5 · D1 · S-XIII: 🧱 The Financial Firewall — Module 13 Lab Submission | Cloud Governance | Denial of Wallet / Cost Overruns | ID.GV | CIS 1 | Availability | [`budget_plan.tf`](./p2-week-05-lab-13/budget_plan.tf) |
+| P2 · W5 · D2 · S-XIV: 🔑 The Keymaster's Ring — Module 14 Lab Submission | IAM Surgery | Privilege Escalation / Wildcard Auth | PR.AC | CIS 5 | Confidentiality | [`iam_surgery.tf`](./p2-week-05-lab-14/iam_surgery.tf) |
+| P2 · W5 · D3 · S-XV: 🗺️ The Vault & The State — Module 15 Lab Submission | State Recovery | State Loss / Orphaned Infrastructure | RC.RP | CIS 11 | Availability | [`CHANGELOG.md`](./p2-week-05-lab-15/CHANGELOG.md) |
 | P2 · W5 · TLAB 5: 💳 The Budgeted Identity — TLab Submission | Enterprise IaC | Unauthorized Access / Financial Sabotage | PR.DS | CIS 4 | All Tiers | [`main.tf`](./tlab-05-budgeted-identity/main.tf) |
 | P2 · W6 · D1 · S-16: 🌐 The War Room — Module 16 Lab Submission | OSI Environment Repair | Configuration Drift & Layer Outages | DE.AE | CIS 12 | Availability | [`vpc_architecture.tf`](./p2-week-06-lab-16/vpc_architecture.tf) |
-| P2 · W6 · D2 · S-17: 🎧 The Silent Wiretap — Module 17 Lab Submission | Network Metric Wiretap | Visibility Deficit & Telemetry Bypass | DE.CM | CIS 13 | Integrity | [`main.tf`](./p2-week-06-lab-17/main.tf) |
+| P2 · W6 · D2 · S-17: 🎧 The Silent Wiretap — Module 17 Lab Submission | Network Metric Wiretap | Visibility Deficit & Telemetry Bypass | DE.CM | CIS 13 | Integrity | Baseline: [`original_baseline_main.tf`](./p2-week-06-lab-17/original_baseline_main.tf) <br> Honeypot: [`janes_honeypot_main.tf`](./p2-week-06-lab-17/janes_honeypot_main.tf) |
 | P2 · W6 · D3 · S-18: 🛑 The Zero Trust Terminal — Module 18 Lab Submission | Keyless Remote Access | Credential Theft & Port Piercing | PR.AC | CIS 6 | Confidentiality | [`ssm_access.tf`](./p2-week-06-lab-18/ssm_access.tf) |
 | P2 · W6 · TLAB 6: 👁️ The Monitored Fortress — TLab Submission | Production Fortress | Threat Invisibility & Exfiltration | PR.PT | CIS 4 | All Tiers | [`main.tf`](./tlab-06-monitored-fortress/main.tf) |
 ---
@@ -1362,22 +1359,23 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 *   **Engineering Statement:** "Operating within a headless mobile CLI deprives the analyst of graphical diagnostic tools. By systematically auditing Layer 7 file permissions, Layer 4 TCP port bindings, and Layer 3 ICMP routing rules, I mathematically isolated the anomalies. This structured approach eliminates guesswork, shortens the Mean Time to Repair (MTTR), and ensures downtime is mitigated safely without introducing further drift."
 ---
 
-#### 🎧 P2 · W6 · D2 · S-XVII: 🎧 The Silent Wiretap — Module 17 Lab Submission (Dual-Execution)
+#### 🎧 P2 · W6 · D2 · S-17: 🎧 The Silent Wiretap — Module 17 Lab Submission (Dual-Execution)
 *   **Attack Vector:** Visibility Deficit / Telemetry Bypass.
-*   **Strategic Explanation:** Engineered an isolated network logging outpost to capture and parse raw packet metadata. Due to conflicting operational guidance between instructional tiers, I conducted and completed this lab two separate ways: the original baseline submission assigned on Canvas, and a subsequent modified, over-engineered submission after Technical Instructor Jane P. directed the cohort to capture live threat traffic. The stored configuration script captures the modified version, which pulled 5 unrequested resources into the network matrix.
+*   **Strategic Explanation:** Engineered an isolated network logging outpost to capture and parse raw packet metadata. Due to conflicting operational guidance between instructional tiers, I conducted and completed this lab two separate ways: the original baseline submission assigned on Canvas, and a subsequent modified, over-engineered submission after Technical Instructor Jane P. directed the cohort to capture live threat traffic. Both explicit variations have been tracked concurrently inside the repository subdirectory.
 
 | Data Point | Approach A: The Original Canvas Submission (George's Guide) | Approach B: The Honeypot Modified Submission (Jane's Guide) |
 | :--- | :--- | :--- |
 | **Objective** | Clean Telemetry Isolation (Official Standard) | Multi-Tier Live Route Over-Engineering |
 | **Network Path** | Closed VPC (Internal Traffic Loop) | Open Gateway (`0.0.0.0/0` Routing Tables) |
-| **Compute Target** | Background Telemetry Collection Loop | Live `t3.micro` EC2 Compute Endpoint  |
-| **Resource State** | Isolated VPC Loop (5 Resources Built) | Live Honeypot Grid (11 Resources Staged)|
+| **Compute Target** | Background Telemetry Collection Loop | Live `t3.micro` EC2 Compute Endpoint |
+| **Resource State** | Isolated VPC Loop (5 Resources Built) | Live Honeypot Grid (11 Resources Staged) |
+| **Source Asset Link** | [`original_baseline_main.tf`](./p2-week-06-lab-17/original_baseline_main.tf) | [`janes_honeypot_main.tf`](./p2-week-06-lab-17/janes_honeypot_main.tf) |
 
-*   **Technical Mechanics:** Initialized an `aws_vpc` network perimeter layer (`10.0.0.0/16`). Formulated an enterprise-grade IAM AssumeRole policy for the `://amazonaws.com` service principal paired with an inline policy allowing log stream creation. Launched an `aws_cloudwatch_log_group` named `/tkh/vpc-flow-logs` pinned to a strict 1-day storage retention window. To satisfy the modified submission, I updated the file to inject 5 unrequested resources: a public subnet pinned to `us-east-1a`, an internet gateway, custom public route tables, a zero-ingress security group, and an active `t3.micro` Ubuntu EC2 instance. Verified live web scanner logging traffic records, and executed `terraform destroy` to cleanly incinerate all 11 live resources. Stored Evidence File: [`main.tf`](./p2-week-06-lab-17/main.tf)
+*   **Technical Mechanics:** Initialized an `aws_vpc` network perimeter layer (`10.0.0.0/16`). Formulated an enterprise-grade IAM AssumeRole policy specifically restricting access to the `vpc-flow-logs.amazonaws.com` service principal paired with an inline policy allowing log stream creation. Launched an `aws_cloudwatch_log_group` named `/tkh/vpc-flow-logs` pinned to a strict 1-day storage retention window. To satisfy the modified submission, I updated the file to inject 5 unrequested resources: a public subnet pinned to `us-east-1a`, an internet gateway, custom public route tables, a zero-ingress security group, and an active `t3.micro` Ubuntu EC2 instance. Verified live web scanner logging traffic records, and executed `terraform destroy` to cleanly incinerate all 11 live resources.
 
 🛡 **Operational Defense Logic (White Hat Auditor Interrogation)**
 *   **White Hat Auditor Question:** "Why must VPC Flow Logs be combined with strict CloudWatch retention limits in an enterprise architecture?"
-*   **Engineering Statement:** "VPC Flow Logs ingest an immense volume of raw network metadata, which can rapidly lead to massive storage inflation and a 'Denial of Wallet' scenario if left unmanaged. By hardcoding an explicit `retention_in_days = 1` policy directly into the CloudWatch log group using infrastructure as code, I enforce data-hygiene policies automatically. This provides security teams with enough forensic visibility to trace active threats while capping corporate data storage costs."
+*   **Engineering Statement:** "VPC Flow Logs ingest an immense volume of raw network metadata, which can rapidly lead to massive storage inflation and a 'Denial of Wallet' scenario if left unmanaged [INDEX]. By hardcoding an explicit `retention_in_days = 1` policy directly into the CloudWatch log group using infrastructure as code, I enforce data-hygiene policies automatically [INDEX]. This provides security teams with enough forensic visibility to trace active threats while capping corporate data storage costs [INDEX]."
 ---
 
 #### 🛑 P2 · W6 · D3 · S-XVIII: 🛑 The Zero Trust Terminal — Module 18: Lab Submission
