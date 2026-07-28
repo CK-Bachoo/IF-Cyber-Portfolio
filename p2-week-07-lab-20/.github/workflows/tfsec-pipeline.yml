@@ -10,8 +10,5 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
-      - name: Run tfsec
-        uses: aquasecurity/tfsec-pr-commenter-action@v1.2.0
-        with:
-          tfsec_args: --soft-fail=false
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Run tfsec Scan
+        uses: aquasecurity/tfsec-action@v1.0.0
