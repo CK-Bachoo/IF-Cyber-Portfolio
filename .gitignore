@@ -34,3 +34,7 @@ Thumbs.db
 # ===== TERMUX SPECIFIC =====
 .termux/
 .local/
+
+.terraform/
+.terraform.lock.hcl
+*.png
