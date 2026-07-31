@@ -1454,7 +1454,7 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 *   **Strategic Explanation:** Implemented a Shift-Left static application security testing (SAST) mechanism directly inside the check-in timeline. This scanning tool audits configuration files before deployment to block high-risk perimeter bugs before they can reach live environments.
 
 **Lab 20 Mission Defense Matrix (Executive Summary)**
-*   **Technical Mechanics:** Structured a dedicated pipeline script using a folder-scoped analysis configuration tool. The engine runs an internal check with strict pass parameters (`--soft-fail=false`) . It scans code patterns to enforce mandatory enterprise S3 baselines, requiring customer-managed encryption wrappers (`SSE-KMS`) and explicit public access control blocks. Evidence Files: `p2-week-07-lab-20/main.tf` and `.github/workflows/tfsec-pipeline.yml`.
+*   **Technical Mechanics:** Structured a dedicated pipeline script using a folder-scoped analysis configuration tool. The engine runs an internal check with strict pass parameters (`--soft-fail=false`). It scans code patterns to enforce mandatory enterprise S3 baselines, requiring customer-managed encryption wrappers (`SSE-KMS`) and explicit public access control blocks. Evidence Files: `p2-week-07-lab-20/main.tf` and `.github/workflows/tfsec-pipeline.yml`.
 
 ### 🏢 Enterprise Deployment Verification & Security Audit Trail
 *   **SAST Security Quality Gate Failure Intercept:**
@@ -1474,7 +1474,7 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 *   **Strategic Explanation:** Eliminated high-risk, permanent IAM account access keys from long-term storage platforms. Established an identity federation trust model to exchange short-lived, single-use security tokens during automated workflows.
 
 **Lab 21 Mission Defense Matrix (Executive Summary)**
-*   **Technical Mechanics:** Provisioned an AWS Identity Provider tracking dynamic handshake trust strings. Configured a token federation script utilizing an ephemeral credential block. The process requests single-use session authorizations (`sts:AssumeRoleWithWebIdentity`) locked exclusively to your repository's branch context. Evidence Files: `p2-week-07-lab-21/trust-policy.json` and `.github/workflows/deploy.yml` .
+*   **Technical Mechanics:** Provisioned an AWS Identity Provider tracking dynamic handshake trust strings. Configured a token federation script utilizing an ephemeral credential block. The process requests single-use session authorizations (`sts:AssumeRoleWithWebIdentity`) locked exclusively to your repository's branch context. Evidence Files: `p2-week-07-lab-21/trust-policy.json` and `.github/workflows/deploy.yml`.
 
 ### 🏢 Enterprise Deployment Verification & Security Audit Trail
 *   **Keyless Token Federation Handshake Plan:**
@@ -1489,15 +1489,15 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 
 ***
 
-## 🛠️ P2 · W7 · TLAB 7: The Automated Forge — Capstone Submission
+## 🛡️ P2 · W7 · TLAB 7: The Automated Forge — Capstone Submission
 *   **Attack Vector:** Malicious Infrastructure Ingress / Broken Compliance Gates.
-*   **Strategic Explanation:** Synthesized a complete, three-stage keyless deployment pipeline . This workflow combines OpenID Connect federation, automated static analysis scanners, and deployment blockers to enforce strict network perimeter rules natively inside version control .
+*   **Strategic Explanation:** Synthesized a complete, three-stage keyless deployment pipeline. This workflow combines OpenID Connect federation, automated tfsec static analysis scanners, and deployment blockers to enforce strict network perimeter rules natively inside version control.
 
 ### **TLAB 7 Mission Defense Matrix (Executive Summary)**
-*   **Technical Mechanics:** Programmed a custom pipeline configuration file using a hard folder-scope restriction (`working_directory: p2-week-07-tlab-07`) . The engine runs an internal analysis with a hard blocking threshold (`--soft-fail=false`) to evaluate network structures. It intercepts unhardened inbound rules (`0.0.0.0/0`) and blocks deployment until ingress blocks are restricted to single management workstations. Evidence File: `p2-tlab-07-the-automated-forge/main.tf` .
+*   **Technical Mechanics:** Programmed a custom pipeline configuration file using a hard folder-scope restriction (`working_directory: p2-tlab-07-the-automated-forge`). The engine runs an internal analysis with a hard blocking threshold (`--soft-fail=false`) to evaluate network structures. It intercepts unhardened inbound rules (`0.0.0.0/0`) and blocks deployment until ingress blocks are restricted to single management workstations. Evidence File: `p2-tlab-07-the-automated-forge/main.tf`.
 
-### **Enterprise Deployment Verification & Security Audit Trail**
-*   **Zero Trust Token Exchange (OIDC Handshake Intercept):**
+### **Enterprise Deployment Verification & Security Audit Trail
+*   **Zero Zero Trust Token Exchange (OIDC Handshake Intercept):**
     ![Screenshot A](./p2-tlab-07-the-automated-forge/sast_failed_proof%20SCREENSHOT%20A.png)
 
 *   **Shift-Left Security Gate Execution Pass Check:**
@@ -1505,5 +1505,10 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 
 *   **Destroy Mandate Proof (Total Asset Decommissioning & Stipend Protection):**
     ![Screenshot C](./p2-tlab-07-the-automated-forge/oidc_destroy_proof%20TERRAFORM%20DESTROY.png)
+    
     `Destroy complete! Resources: 0 destroyed.`
+
+*   **Operational Defense Logic (White Hat Auditor Interrogation):**
+    *   **White Hat Auditor Question:** *"How does a fully automated security forge ensure zero-trust integrity across continuous deployment flows?"*
+    *   ***Engineering Statement:** "The automated forge ensures that your infrastructure code is fully checked and validated before any resources are built. By requiring clean security scans to pass the quality gate before running deployment steps, the system prevents misconfigured or vulnerable endpoints from ever reaching production environments."
 ---
