@@ -38,3 +38,7 @@ Thumbs.db
 .terraform/
 .terraform.lock.hcl
 *.png
+
+# Local state files
+*.tfstate
+*.tfstate.backup
