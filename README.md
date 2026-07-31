@@ -1244,7 +1244,7 @@ Mechanical Proof: Full audit trail in portfolio_audit.md and tepp_postmortem.md.
 **Documented and delivered via: 🛡️[Samsung Note 20 Ultra 5g - Android Mobile Cybersecurity Workbench](https://github.com/CK-Bachoo/Android-mobile-cybersecurity-workbench)🛡️**
 
 ---
-# ☁️ Phase 2 Week 5 & 6: Cloud Architecture & DevSecOps (Infrastructure as Code)
+# ☁️ Phase 2 The Knowledge House IF-CS-26
 
 ## ⚖️ Governance & Framework Alignment
 
@@ -1427,3 +1427,71 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 *   **White Hat Auditor Question:** "What specific evidence in your CloudWatch logs verifies that your fortress network is successfully mitigating real external threats?"
 *   **Engineering Statement:** "The proof is recorded directly inside our live telemetry audit log. Because our compute node was deployed inside a public subnet with a routed internet gateway, automated scanning bots crawling the public web discovered and targeted the instance almost immediately. Our log events table catches these precise events, displaying an influx of external adversary IPs attempting connection sweeps. Crucially, each entry maps back to our honeypot's internal host IP (`10.0.1.44`) and concludes with a clear **`REJECT OK`** action string. This mathematically verifies that our zero-inbound firewall successfully dropped the attack vectors and captured the threat data without exposing the internal machine."
 ---
+
+## ⚖️ Phase 2, Week 7: CI/CD Pipeline Security & Static Analysis
+
+### 📦 P2 · W7 · Lab 19: The Conveyor Belt
+* **Attack Vector:** Continuous Integration Bypass / Manual Configuration Drift.
+* **Strategic Explanation:** Engineered an automated GitHub Actions runner to transform fragmented individual labs into a cohesive production perimeter stack. Configured main branch push listeners to execute serial step verification, mapping the telemetry state and enforcing pipeline consistency.
+* **Commands Executed:** `mkdir -p .github/workflows`, `touch .github/workflows/pulse.yml`, `git add .`, `git commit -m "Deploy pulse pipeline"`, `git push origin main`
+* **Verification Artifact:** [terraform_plan_proof.png](p2-week-07-lab-19/terraform_plan_proof.png)
+* **Evidence Files:** [main.tf](p2-week-07-lab-19/main.tf), [pulse.yml](./.github/workflows/pulse.yml)
+
+**🛡 Operational Defense Logic (White Hat Auditor Interrogation)**
+* **White Hat Auditor Question:** "How does the CI/CD pipeline prevent unauthorized configuration drift in your production environment?"
+* **Engineering Statement:** "By binding the pipeline to the `main` branch, any infrastructure changes must pass through our version control ledger. The Actions runner provides an immutable execution map, ensuring that every deployment is tracked, authorized, and completely repeatable, eliminating human error from the deployment phase."
+
+---
+
+### 🛡️ P2 · W7 · Lab 20: The Quality Inspector
+* **Attack Vector:** Unpatched IaC Vulnerabilities / Cloud Storage Exposure.
+* **Strategic Explanation:** Integrated Shift-Left SAST compliance via Aqua Security (`tfsec`) policy scanning. Enforced a hardened S3 framework block and customer-managed KMS key requirements by capturing live security violation interrupt logs and tuning inline parameter scopes.
+* **Commands Executed:** `tfsec .`, integrated `aquasecurity/tfsec-action@v1.0.0` into workflow YAML, modified `main.tf` to mandate AES256 server-side encryption.
+* **Verification Artifacts:** [sast_failed_proof.png](p2-week-07-lab-20/sast_failed_proof.png), [sast_passed_proof.png](p2-week-07-lab-20/sast_passed_proof.png)
+* **Evidence Files:** [main.tf](p2-week-07-lab-20/main.tf), [tfsec-pipeline.yml](./.github/workflows/tfsec-pipeline.yml)
+
+**🛡 Operational Defense Logic (White Hat Auditor Interrogation)**
+* **White Hat Auditor Question:** "Why deploy a SAST scanner directly into the pipeline rather than relying on engineers to scan locally before a push?"
+* **Engineering Statement:** "Implementing a Shift-Left SAST gate natively within the pipeline ensures mathematical compliance. Even if a local scan is bypassed or forgotten, the automated quality inspector will definitively halt any pull request containing unencrypted storage or perimeter vulnerabilities before they can ever reach the live cloud environment."
+
+---
+
+### 🔑 P2 · W7 · Lab 21: The Delivery Drone
+* **Attack Vector:** Static Credential Theft / Long-Term Key Compromise.
+* **Strategic Explanation:** Architected keyless cloud automation utilizing token federation trust identity (OIDC). Established ephemeral identity provider handshakes and STS session token generation bounded by hard-scoped IAM trust policy constraints, ensuring zero static keys are stored in the CI/CD environment.
+* **Commands Executed:** Applied `trust-policy.json` to AWS IAM, configured `aws-actions/configure-aws-credentials@v4` in YAML, executed `terraform apply -auto-approve` via runner.
+* **Verification Artifacts:** [oidc_plan_proof.png](p2-week-07-lab-21/oidc_plan_proof.png), [oidc_destroy_proof.png](p2-week-07-lab-21/oidc_destroy_proof.png)
+* **Evidence Files:** [trust-policy.json](p2-week-07-lab-21/trust-policy.json), [deploy.yml](./.github/workflows/deploy.yml)
+
+**🛡 Operational Defense Logic (White Hat Auditor Interrogation)**
+* **White Hat Auditor Question:** "What is the primary security advantage of using OpenID Connect (OIDC) over standard IAM access keys for GitHub Actions?"
+* **Engineering Statement:** "OIDC completely eliminates the risk of long-term credential theft. Instead of hardcoding highly privileged, static AWS root keys into GitHub secrets, the pipeline mathematically verifies its identity and requests a short-lived, ephemeral STS session token. This token automatically burns itself up after an hour, maintaining a flawless Zero-Trust identity federation."
+
+---
+
+### 🚀 P2 · W7 · TLAB 7: The Automated Forge — Capstone Submission
+* **Attack Vector:** Perimeter Compromise Prevention / Unauthorized Infrastructure Proliferation.
+* **Strategic Explanation:** Integrated a three-stage keyless deployment pipeline combining OpenID Connect federation, automated `tfsec` static analysis scanners, and conditional deployment handlers to enforce rigorous organizational cloud governance metrics natively inside version control. 
+* **Commands Executed:** ```bash
+  mkdir -p /workspaces/IF-Cyber-Portfolio/.github/workflows
+  printf "name: The Automated Forge\n..." > .github/workflows/forge-pipeline.yml
+  git commit -m "p2-week-07-tlab-07: Structured assignment folders and deployed initial vulnerable baseline"
+  # Post-Scanner Abort Remediation:
+  cat > p2-week-07-tlab-07/main.tf << 'EOF' # Patched 0.0.0.0/0 to 10.0.0.0/16
+  git commit -m "fix(tlab7): patched critical tfsec ingress vulnerabilities"
+  Verification Artifacts: * Zero Trust Token Exchange & Abort: sast_failed_proof.png
+ - Shows initial OIDC handshake and the scanner hard-blocking the vulnerable 0.0.0.0/0 blueprint.
+
+Shift-Left Security Gate Pass: sast_passed_proof.png
+ - Shows the scanner passing the remediated ingress baseline.
+
+Destroy Mandate Proof: oidc_destroy_proof.jpg
+ - Verifies total asset decommissioning (Destroy complete! Resources: 0 destroyed.) to maintain zero footprint.
+
+Evidence Files: main.tf
+
+🛡 Operational Defense Logic (White Hat Auditor Interrogation)
+
+White Hat Auditor Question: "When your initial vulnerable blueprint was rejected by the deployment pipeline, how did the system preserve perimeter integrity, and how was it remediated?"
+
+Engineering Statement: "The tfsec quality gate detected a critical Layer 4 exposure (SSH left open to 0.0.0.0/0) and executed a hard abort, proving our Shift-Left defenses work exactly as designed. I remediated the blueprint by modifying the Terraform code to restrict the ingress CIDR block to an internal corporate network (10.0.0.0/16), re-committed the code, and the pipeline successfully verified and deployed the hardened architecture. The factory configuration is fully codified, ensuring zero unhardened network endpoints can reach our live environment while maintaining a verified keyless footprint."
