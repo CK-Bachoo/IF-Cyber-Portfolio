@@ -1,15 +1,16 @@
-provider "aws" {  
-  region = "us-east-1"  
-}  
-  
-resource "aws_security_group" "sabotaged_sg" {  
-  name        = "tlab7-exposed-sg"  
-  description = "A dangerously exposed security group"  
-  
-  ingress {  
-    from_port   = 22  
-    to_port     = 22  
-    protocol    = "tcp"  
-    cidr_blocks = ["0.0.0.0/0"] # SABOTAGE: SSH exposed to the world  
-  }  
-}  
+provider "aws" {
+  region = "us-east-1"
+}
+
+resource "aws_security_group" "forge_sg" {
+  name        = "forge-secure-sg"
+  description = "Hardened perimeter security group"
+
+  ingress {
+    description = "Secure SSH access from mobile cockpit edge"
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["172.56.21.43/32"]
+  }
+}
