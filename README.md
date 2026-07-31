@@ -1409,24 +1409,26 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 | **Inbound Gate** | Standard Port Exposure | Zero-Inbound Air-Gapped Firewall |
 
 **TLAB 6 Mission Defense Matrix (Executive Summary)**
-*   **Technical Mechanics:** Unified a complete production perimeter tier including an `aws_vpc` (`10.0.0.0/16`), an `aws_subnet` (`10.0.1.0/24`) pinned to `us-east-1`, an `aws_internet_gateway`, and an active routing engine. Integrated an automated telemetry tier via `aws_flow_log` named exactly `/tkn/titan-prod-vpc-logs` wired to an `aws_flow_log_capture` log group. Finally, deployed an air-gapped security group with zero inbound rules housing a keyless `t3.micro` Ubuntu Server. Applied all 14 resources successfully via `terraform apply`, audited the live web noise logs, and initiated `terraform destroy` to safely decommission the stack. Evidence File: `p2-tlab-06-the-automated-forge/main.tf`.
+*   **Technical Mechanics:** Unified a complete production perimeter tier including an `aws_vpc` (`10.0.0.0/16`), an `aws_subnet` (`10.0.1.0/24`) pinned to `us-east-1`, an `aws_internet_gateway`, and an active routing engine. Deployed an air-gapped security group with zero inbound rules housing a keyless `t3.micro` Ubuntu Server. Applied all 14 resources successfully via `terraform apply`, audited the live web noise logs, and initiated `terraform destroy` to safely decommission the stack. Evidence File: `p2-tlab-06-the-automated-forge/main.tf`.
 
 ### 🏢 Enterprise Deployment Verification & Security Audit Trail
 To ensure full accountability and continuous logging alignment, the entire lifecycle of this enterprise build was audited, verified, and safely decommissioned.
 
 *   **Zero Trust Browser Terminal Process (Session Manager 'whoami' Identity Check):**
-    ![SSM Terminal Proof](./p2-tlab-06-the-automated-forge/ssm_terminal_proof.png)
+    ![SSM Terminal Proof](./p2-week-07-lab-20/ssm_terminal_proof.png)
 
 *   **CloudWatch Ingestion Telemetry Audit (Active Wiretap Live 'REJECT' Capture):**
-    ![CloudWatch Flow Logs](./p2-tlab-06-the-automated-forge/cloudwatch_flow_logs.png)
+    ![CloudWatch Flow Logs](./p2-week-07-lab-20/cloudwatch_flow_logs.png)
 
 *   **Destroy Mandate Proof (Total Asset Decommissioning & Stipend Protection):**
-    ![Destroy Verification](./p2-tlab-06-the-automated-forge/destroy_verification.png)
+    ![Destroy Verification](./p2-week-07-lab-20/destroy_verification.png)
 
 *   **Operational Defense Logic (White Hat Auditor Interrogation):**
     *   **White Hat Auditor Question:** *"What specific evidence in your CloudWatch logs verifies that your fortress network is successfully mitigating real external threats?"*
     *   **Engineering Statement:** *"The proof is recorded directly inside our live telemetry audit log. Because our edge security tier rejects unauthorized packets at the interface, the wiretap registers real inbound scan attempts with clear 'REJECT' status tags. This confirms that malicious noise is blocked and logged long before it can interact with internal application code paths."*
----
+
+***
+
 
 ## ⚖️ Phase 2, Week 7: CI/CD Pipeline Security & Static Analysis
 
@@ -1504,3 +1506,4 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 *   **Destroy Mandate Proof (Total Asset Decommissioning & Stipend Protection):**
     ![Screenshot C](./p2-tlab-07-the-automated-forge/oidc_destroy_proof%20TERRAFORM%20DESTROY.png)
     `Destroy complete! Resources: 0 destroyed.`
+---
