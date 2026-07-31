@@ -1398,37 +1398,24 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 *   **Engineering Statement:** "Traditional management models rely on inbound open ports, which creates a permanent attack surface for brute-force attacks and zero-day exploits. By attaching the `AmazonSSMManagedInstanceCore` policy to the instance's identity profile, we flip the network connection direction. The local SSM agent on the EC2 instance securely initiates an *outbound* connection to the AWS systems manager endpoint. The administrative terminal is safely tunneled through this outbound connection, allowing engineers to command the host while the inbound firewall remains completely closed."
 ---
 
-#### 🗺️ P2 · W6 · TLAB 6: The Monitored Fortress — TLab Submission
+## 🗺️ P2 · W6 · TLAB 6: The Monitored Fortress — Take-Home Lab Submission
 *   **Attack Vector:** Multi-Vector Perimeter Compromise / Threat Invisibility.
-*   **Strategic Explanation:** Synthesized all network segmentation, cloud logging telemetry, and Zero Trust identity principles into a cohesive full-stack infrastructure deployment. This architecture exposes a live honeypot computing node to the internet to trigger real threat logs while keeping the core server completely closed off to direct external manipulation.
+*   **Strategic Explanation:** Synthesized network segmentation and logging telemetry into a cohesive perimeter stack, tracking real-time inbound scan attempts.
+*   **Technical Mechanics:** Unified a production perimeter tier with an active internet gateway, route tables, and an `aws_flow_log` engine targeted to an isolated log stream group. Deployed a honeypot compute instance with an air-gapped security group framework.
+*   **Evidence File:** `p2-tlab-06-monitored-fortress/main.tf`
 
-| Data Point | Standard Cohort (Laptop/Desktop - X86) | Android Mobile Cybersecurity Workbench (Samsung Note 20 Ultra 5G - Arm64) |
-| :--- | :--- | :--- |
-| **Architecture** | Fragmented Individual Labs | Cohesive Production Perimeter Stack |
-| **Telemetry State** | Local Log Capture | Live CloudWatch Honeypot Monitoring |
-| **Inbound Gate** | Standard Port Exposure | Zero-Inbound Air-Gapped Firewall |
-
-**TLAB 6 Mission Defense Matrix (Executive Summary)**
-*   **Technical Mechanics:** Unified a complete production perimeter tier including an `aws_vpc` (`10.0.0.0/16`), an `aws_subnet` (`10.0.1.0/24`) pinned to `us-east-1`, an `aws_internet_gateway`, and an active routing engine. Deployed an air-gapped security group with zero inbound rules housing a keyless `t3.micro` Ubuntu Server. Applied all 14 resources successfully via `terraform apply`, audited the live web noise logs, and initiated `terraform destroy` to safely decommission the stack. Evidence File: `p2-tlab-06-the-automated-forge/main.tf`.
-
-### 🏢 Enterprise Deployment Verification & Security Audit Trail
-To ensure full accountability and continuous logging alignment, the entire lifecycle of this enterprise build was audited, verified, and safely decommissioned.
-
+### **Enterprise Deployment Verification & Security Audit Trail**
 *   **Zero Trust Browser Terminal Process (Session Manager 'whoami' Identity Check):**
-    ![SSM Terminal Proof](./p2-week-07-lab-20/ssm_terminal_proof.png)
-
+    ![SSM Terminal Proof](./p2-tlab-06-monitored-fortress/ssm_terminal_proof.png)
 *   **CloudWatch Ingestion Telemetry Audit (Active Wiretap Live 'REJECT' Capture):**
-    ![CloudWatch Flow Logs](./p2-week-07-lab-20/cloudwatch_flow_logs.png)
-
+    ![CloudWatch Flow Logs](./p2-tlab-06-monitored-fortress/cloudwatch_flow_logs.png)
 *   **Destroy Mandate Proof (Total Asset Decommissioning & Stipend Protection):**
-    ![Destroy Verification](./p2-week-07-lab-20/destroy_verification.png)
+    ![Destroy Verification](./p2-tlab-06-monitored-fortress/destroy_verification.png)
 
-*   **Operational Defense Logic (White Hat Auditor Interrogation):**
-    *   **White Hat Auditor Question:** *"What specific evidence in your CloudWatch logs verifies that your fortress network is successfully mitigating real external threats?"*
-    *   **Engineering Statement:** *"The proof is recorded directly inside our live telemetry audit log. Because our edge security tier rejects unauthorized packets at the interface, the wiretap registers real inbound scan attempts with clear 'REJECT' status tags. This confirms that malicious noise is blocked and logged long before it can interact with internal application code paths."*
+*   **White Hat Audit Question:** *"What specific evidence in your CloudWatch logs verifies that your fortress network is successfully mitigating real external threats?"*
+*   **Engineering Statement:** *"The wiretap registers real inbound scan attempts with clear 'REJECT' status tags right at the interface border, confirming that malicious traffic is dropped and logged before interacting with code environments."*
 
 ***
-
 
 ## ⚖️ Phase 2, Week 7: CI/CD Pipeline Security & Static Analysis
 
@@ -1494,21 +1481,19 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 *   **Strategic Explanation:** Synthesized a complete, three-stage keyless deployment pipeline. This workflow combines OpenID Connect federation, automated tfsec static analysis scanners, and deployment blockers to enforce strict network perimeter rules natively inside version control.
 
 ### **TLAB 7 Mission Defense Matrix (Executive Summary)**
-*   **Technical Mechanics:** Programmed a custom pipeline configuration file using a hard folder-scope restriction (`working_directory: p2-tlab-07-the-automated-forge`). The engine runs an internal analysis with a hard blocking threshold (`--soft-fail=false`) to evaluate network structures. It intercepts unhardened inbound rules (`0.0.0.0/0`) and blocks deployment until ingress blocks are restricted to single management workstations. Evidence File: `p2-tlab-07-the-automated-forge/main.tf`.
+*   **Technical Mechanics:** Programmed a custom pipeline configuration file using a hard folder-scope restriction (`working_directory: p2-tlab-07-the-automated-forge`). The engine runs an internal analysis with a hard blocking threshold (`--soft-fail=false`) to evaluate network structures. It intercepts unhardened inbound rules (`0.0.0.0/0`) and blocks deployment until ingress blocks are restricted to single management workstations.
+*   **Evidence File:** `p2-tlab-07-the-automated-forge/main.tf`
 
-### **Enterprise Deployment Verification & Security Audit Trail
-*   **Zero Zero Trust Token Exchange (OIDC Handshake Intercept):**
+### **Enterprise Deployment Verification & Security Audit Trail**
+*   **Zero Trust Token Exchange (OIDC Handshake Intercept):**
     ![Screenshot A](./p2-tlab-07-the-automated-forge/sast_failed_proof%20SCREENSHOT%20A.png)
-
 *   **Shift-Left Security Gate Execution Pass Check:**
     ![Screenshot B](./p2-tlab-07-the-automated-forge/sast_passed_proof%20SCREENSHOT%20B.png)
-
 *   **Destroy Mandate Proof (Total Asset Decommissioning & Stipend Protection):**
     ![Screenshot C](./p2-tlab-07-the-automated-forge/oidc_destroy_proof%20TERRAFORM%20DESTROY.png)
     
     `Destroy complete! Resources: 0 destroyed.`
 
-*   **Operational Defense Logic (White Hat Auditor Interrogation):**
-    *   **White Hat Auditor Question:** *"How does a fully automated security forge ensure zero-trust integrity across continuous deployment flows?"*
-    *   ***Engineering Statement:** "The automated forge ensures that your infrastructure code is fully checked and validated before any resources are built. By requiring clean security scans to pass the quality gate before running deployment steps, the system prevents misconfigured or vulnerable endpoints from ever reaching production environments."
+*   **White Hat Audit Question:** *"How does a fully automated security forge ensure zero-trust integrity across continuous deployment flows?"*
+*   **Engineering Statement:** *"By requiring clean static analysis scans to clear the pipeline quality gate before triggering any resource modification, the system blocks misconfigured or vulnerable endpoints from ever reaching production environments."*
 ---
