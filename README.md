@@ -1259,7 +1259,7 @@ Mechanical Proof: Full audit trail in portfolio_audit.md and tepp_postmortem.md.
 | P2 · W6 · D2 · S-17: 🎧 The Silent Wiretap — Module 17 Lab Submission | Network Metric Wiretap | Visibility Deficit & Telemetry Bypass | DE.CM | CIS 13 | Integrity | Baseline: [`original_baseline_main.tf`](./p2-week-06-lab-17/original_baseline_main.tf) <br> Honeypot: [`janes_honeypot_main.tf`](./p2-week-06-lab-17/janes_honeypot_main.tf) |
 | P2 · W6 · D3 · S-18: 🛑 The Zero Trust Terminal — Module 18 Lab Submission | Keyless Remote Access | Credential Theft & Port Piercing | PR.AC | CIS 6 | Confidentiality | [`ssm_access.tf`](./p2-week-06-lab-18/ssm_access.tf) |
 | P2 · W6 · TLAB 6: 👁️ The Monitored Fortress | Production Fortress | Threat Invisibility & Exfiltration | PR.PT | CIS 4 | All Tiers | [`main.tf`](./p2-tlab-06-the-monitored-fortress/main.tf) |
-| P2 · W7 · D1 · Lab 19: 📦 The Conveyor Belt | Production Perimeter | CI/CD Configuration Drift | PR.AC | CIS 16 | Availability | [`pulse.yml`](./.github/workflows/pulse.yml) |
+| P2 · W7 · D1 · Lab 19: 📦 The Conveyor Belt | Production Perimeter | CI/CD Configuration Drift | PR.AC | CIS 16 | Availability | [`pulse.yml`](./p2-week-07-lab-19/.github/workflows/pulse.yml) |
 | P2 · W7 · D2 · Lab 20: 🛡️ The Quality Inspector | SAST Compliance | Unpatched IaC Vulnerabilities | PR.PT | CIS 8 | Integrity | [`tfsec-pipeline.yml`](./.github/workflows/tfsec-pipeline.yml) |
 | P2 · W7 · D3 · Lab 21: 🔑 The Delivery Drone | Token Federation Trust | Long-Term Key Compromise | PR.AC | CIS 6 | Confidentiality | [`deploy.yml`](./.github/workflows/deploy.yml) |
 | P2 · W7 · TLAB 7: 🚀 The Automated Forge | Zero Trust CI/CD | Unauthorized Proliferation | PR.IP | CIS 13 | All Tiers | [`main.tf`](./p2-tlab-07-the-automated-forge/main.tf) |
