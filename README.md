@@ -1506,6 +1506,7 @@ To ensure full accountability and continuous logging alignment, the entire lifec
     ![screenshot b p2 week 7 tlab7.png](./p2-tlab-07-the-automated-forge/screenshot%20b%20p2%20week%207%20tlab7.png)
 *   **Destroy Mandate Proof (Total Asset Decommissioning & Stipend Protection):**
     ![screenshot c destroy complete p2week7 tlab7.jpg](./p2-tlab-07-the-automated-forge/screenshot%20c%20destroy%20complete%20p2week7%20tlab7.jpg)
+
     `Destroy complete! Resources: 0 destroyed.`
 
 *   **White Hat Audit Question:** *"How does a fully automated security forge ensure zero-trust integrity across continuous deployment flows?"*
