@@ -1497,7 +1497,7 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 | **Identity** | Static Access Keys (Risk of Leak) | OpenID Connect (OIDC) Zero-Trust Federation |
 
 *   **Technical Mechanics:** Programmed a custom pipeline configuration file using a hard folder-scope restriction (`working_directory: p2-tlab-07-the-automated-forge`). The engine runs an internal analysis with a hard blocking threshold (`--soft-fail=false`) to evaluate network structures. It intercepts unhardened inbound rules (`0.0.0.0/0`) and blocks deployment until ingress blocks are restricted to single management workstations.
-*   **Evidence File:** [`main.tf`](./p2-tlab-07-the-automated-forge/main.tf), [`forge-pipeline.yml`](./p2-tlab-07-the-automated-forge/forge-pipeline.yml)
+*   **Evidence File:** [`main.tf`](./p2-tlab-07-the-automated-forge/main.tf) 
 
 ### **Enterprise Deployment Verification & Security Audit Trail**
 *   **Zero Trust Token Exchange (OIDC Handshake Intercept):**
@@ -1505,7 +1505,7 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 *   **Shift-Left Security Gate Execution Pass Check:**
     ![screenshot b p2 week 7 tlab7.png](./p2-tlab-07-the-automated-forge/screenshot%20b%20p2%20week%207%20tlab7.png)
 *   **Destroy Mandate Proof (Total Asset Decommissioning & Stipend Protection):**
-    ![screenshot c destroy complete p2week7 tlab7.jpg](./p2-tlab-07-the-automated-forge/screenshot%20c%20destroy%20complete%20p2week7%20tlab7.jpg)    
+    ![screenshot c destroy complete p2week7 tlab7.jpg](./p2-tlab-07-the-automated-forge/screenshot%20c%20destroy%20complete%20p2week7%20tlab7.jpg)
     `Destroy complete! Resources: 0 destroyed.`
 
 *   **White Hat Audit Question:** *"How does a fully automated security forge ensure zero-trust integrity across continuous deployment flows?"*
