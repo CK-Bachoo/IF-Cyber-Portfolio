@@ -1244,6 +1244,7 @@ Mechanical Proof: Full audit trail in portfolio_audit.md and tepp_postmortem.md.
 **Documented and delivered via: 🛡️[Samsung Note 20 Ultra 5g - Android Mobile Cybersecurity Workbench](https://github.com/CK-Bachoo/Android-mobile-cybersecurity-workbench)🛡️**
 
 ---
+
 # ☁️ Phase 2 The Knowledge House IF-CS-26
 
 ## ⚖️ Governance & Framework Alignment
@@ -1262,6 +1263,7 @@ Mechanical Proof: Full audit trail in portfolio_audit.md and tepp_postmortem.md.
 | P2 · W7 · D2 · Lab 20: 🛡️ The Quality Inspector | SAST Compliance | Unpatched IaC Vulnerabilities | PR.PT | CIS 8 | Integrity | [`tfsec-pipeline.yml`](./.github/workflows/tfsec-pipeline.yml) |
 | P2 · W7 · D3 · Lab 21: 🔑 The Delivery Drone | Token Federation Trust | Long-Term Key Compromise | PR.AC | CIS 6 | Confidentiality | [`deploy.yml`](./.github/workflows/deploy.yml) |
 | P2 · W7 · TLAB 7: 🚀 The Automated Forge | Zero Trust CI/CD | Unauthorized Proliferation | PR.IP | CIS 13 | All Tiers | [`main.tf`](./p2-tlab-07-the-automated-forge/main.tf) |
+
 ---
 
 ### 📂 Artifact Evidence & Operational History (The Cloud Matrix)
@@ -1315,6 +1317,7 @@ Mechanical Proof: Full audit trail in portfolio_audit.md and tepp_postmortem.md.
 🛡 **Operational Defense Logic (White Hat Auditor Interrogation)**
 *   **White Hat Auditor Question:** "If your local `terraform.tfstate` file is deleted while your EC2 instances are still running, why is it dangerous to simply run `terraform apply` again?"
 *   **Engineering Statement:** "In cloud engineering, the state file is the memory matrix connecting your local terminal to the live cloud. If it is deleted, the terminal suffers amnesia. Running a blind `terraform apply` will attempt to build an entirely new duplicate environment, causing a catastrophic infrastructure collision. Instead of panicking, I used `terraform import` as a cybernetic grappling hook to pull the exact metadata coordinates of the floating EC2 instance back into my local memory bank."
+
 ---
 
 #### 💳 P2 · W5 · TLAB 5: 💳 The Budgeted Identity — TLab Submission
@@ -1344,6 +1347,7 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 🛡 **Operational Defense Logic (White Hat Auditor Interrogation)**
 *   **White Hat Auditor Question:** "Why is the `terraform destroy` command considered a mandatory graded security operation for this mission rather than just a cleanup step?"
 *   **Engineering Statement:** "In standard IT, junior developers build a server and leave it running forever, essentially erecting a permanent brick-and-mortar facility on the internet that accumulates vulnerabilities over time. As an AI Security Architect, I deploy a Phantom Forward Operating Base. I use IaC to summon the infrastructure precisely when needed, execute the mission, and initiate the Ghost Protocol (`terraform destroy`) the exact millisecond I am finished. This vaporizes the attack surface to absolute zero and mathematically prevents 'Denial of Wallet' extortion attacks against the organization."
+
 ---
 
 # 🌐 P2 · W6 · D1 · S-XVI: 🌐 The War Room — Module 16: Lab Submission
@@ -1360,6 +1364,7 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 🛡 **Operational Defense Logic (White Hat Auditor Interrogation)**
 *   **White Hat Auditor Question:** "Why did you approach the system failures using a structured OSI Layered methodology instead of random troubleshooting?"
 *   **Engineering Statement:** "Operating within a headless mobile CLI deprives the analyst of graphical diagnostic tools. By systematically auditing Layer 7 file permissions, Layer 4 TCP port bindings, and Layer 3 ICMP routing rules, I mathematically isolated the anomalies. This structured approach eliminates guesswork, shortens the Mean Time to Repair (MTTR), and ensures downtime is mitigated safely without introducing further drift."
+
 ---
 
 #### 🎧 P2 · W6 · D2 · S-17: 🎧 The Silent Wiretap — Module 17 Lab Submission (Dual-Execution)
@@ -1379,6 +1384,7 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 🛡 **Operational Defense Logic (White Hat Auditor Interrogation)**
 *   **White Hat Auditor Question:** "Why must VPC Flow Logs be combined with strict CloudWatch retention limits in an enterprise architecture?"
 *   **Engineering Statement:** "VPC Flow Logs ingest an immense volume of raw network metadata, which can rapidly lead to massive storage inflation and a 'Denial of Wallet' scenario if left unmanaged. By hardcoding an explicit `retention_in_days = 1` policy directly into the CloudWatch log group using infrastructure as code, I enforce data-hygiene policies automatically. This provides security teams with enough forensic visibility to trace active threats while capping corporate data storage costs"
+
 ---
 
 #### 🛑 P2 · W6 · D3 · S-XVIII: 🛑 The Zero Trust Terminal — Module 18: Lab Submission
@@ -1395,6 +1401,7 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 🛡 **Operational Defense Logic (White Hat Auditor Interrogation)**
 *   **White Hat Auditor Question:** "How can an administrative terminal session be established if the firewall blocks 100% of all inbound traffic?"
 *   **Engineering Statement:** "Traditional management models rely on inbound open ports, which creates a permanent attack surface for brute-force attacks and zero-day exploits. By attaching the `AmazonSSMManagedInstanceCore` policy to the instance's identity profile, we flip the network connection direction. The local SSM agent on the EC2 instance securely initiates an *outbound* connection to the AWS systems manager endpoint. The administrative terminal is safely tunneled through this outbound connection, allowing engineers to command the host while the inbound firewall remains completely closed."
+
 ---
 
 #### 🗺️ P2 · W6 · TLAB 6: The Monitored Fortress — TLab Submission
@@ -1421,8 +1428,9 @@ To ensure full accountability and continuous logging alignment, the entire lifec
     ![destroy_verification.png](./p2-tlab-06-the-monitored-fortress/destroy_verification.png)
 *   **Operational Defense Logic (White Hat Auditor Interrogation):**
     *   **White Hat Auditor Question:** *"What specific evidence in your CloudWatch logs verifies that your fortress network is successfully mitigating real external threats?"*
-    *   **Engineering Statement:** *"The proof is recorded directly inside our live telemetry audit log. Because our edge security tier rejects unauthorized packets at the interface, the wiretap registers real inbound scan attempts with clear 'REJECT' status tags. This confirms that malicious noise is blocked and logged long before it can interact with internal application code paths."*
-***
+    *   **Engineering Statement:** *"The proof is recorded directly inside our live telemetry audit log. Because our edge security tier rejects unauthorized packets at the interface, the wiretap registers real inbound scan attempts with clear 'REJECT' status tags. This confirms that malicious noise is blocked and logged long before it can interact with internal application code paths."
+
+---
 
 ## ⚖️ Phase 2, Week 7: CI/CD Pipeline Security & Static Analysis
 
@@ -1505,10 +1513,10 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 * **Shift-Left Security Gate Execution Pass Check:**
   ![screenshot b p2 week 7 tlab7.png](./p2-tlab-07-the-automated-forge/screenshot%20b%20p2%20week%207%20tlab7.png)
 * **Destroy Mandate Proof (Total Asset Decommissioning & Stipend Protection):**
-  ![screenshot c destroy complete p2week7 tlab7.png](./p2-tlab-07-the-automated-forge/destroy_verification.png)
-
+  ![screenshot c destroy complete p2week7 tlab7.png](./p2-tlab-07-the-automated-forge/screenshot%20c%20destroy%20complete%20p2week7%20tlab7.png)
   `Destroy complete! Resources: 0 destroyed.`
-
+  
 * **White Hat Audit Question:** *"How does a fully automated security forge ensure zero-trust integrity across continuous deployment flows?"*
 * **Engineering Statement:** *"By requiring clean static analysis scans to clear the pipeline quality gate before triggering any resource modification, the system blocks misconfigured or vulnerable endpoints from ever reaching production environments."*
+
 ---
