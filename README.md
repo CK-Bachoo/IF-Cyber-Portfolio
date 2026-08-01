@@ -1398,23 +1398,34 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 *   **Engineering Statement:** "Traditional management models rely on inbound open ports, which creates a permanent attack surface for brute-force attacks and zero-day exploits. By attaching the `AmazonSSMManagedInstanceCore` policy to the instance's identity profile, we flip the network connection direction. The local SSM agent on the EC2 instance securely initiates an *outbound* connection to the AWS systems manager endpoint. The administrative terminal is safely tunneled through this outbound connection, allowing engineers to command the host while the inbound firewall remains completely closed."
 ---
 
-## 🗺️ P2 · W6 · TLAB 6: The Monitored Fortress — Take-Home Lab Submission
-*   **Attack Vector:** Multi-Vector Perimeter Compromise / Threat Invisibility.
-*   **Strategic Explanation:** Synthesized network segmentation and logging telemetry into a cohesive perimeter stack, tracking real-time inbound scan attempts.
-*   **Technical Mechanics:** Unified a production perimeter tier with an active internet gateway, route tables, and an `aws_flow_log` engine targeted to an isolated log stream group. Deployed a honeypot compute instance with an air-gapped security group framework.
-*   **Evidence File:** `p2-tlab-06-monitored-fortress/main.tf`
+#### 🗺️ P2 · W6 · TLAB 6: The Monitored Fortress — TLab Submission
+*   **Attack Vector:** Multi-Vector Perimeter Compromise / Threat Invisibility
+*   **Strategic Explanation:** Synthesized all network segmentation, cloud logging telemetry, and Zero Trust identity principles into a cohesive full-stack infrastructure deployment. This architecture exposes a live honeypot computing node to the internet to trigger real threat logs while keeping the core server completely closed off to direct external manipulation.
 
-### **Enterprise Deployment Verification & Security Audit Trail**
+| Data Point | Standard Cohort (Laptop/Desktop - X86) | Android Mobile Cybersecurity Workbench (Samsung Note 20 Ultra 5G - Arm64) |
+| :--- | :--- | :--- |
+| **Architecture** | Fragmented Individual Labs | Cohesive Production Perimeter Stack |
+| **Telemetry State** | Local Log Capture | Live CloudWatch Honeypot Monitoring |
+| **Inbound Gate** | Standard Port Exposure | Zero-Inbound Air-Gapped Firewall |
+
+**TLAB 6 Mission Defense Matrix (Executive Summary)**
+*   **Technical Mechanics:** Unified a complete production perimeter tier including an `aws_vpc` (`10.0.0.0/16`), an `aws_subnet` (`10.0.1.0/24`) pinned to `us-east-1`, an `aws_internet_gateway`, and an active routing engine. Integrated an automated telemetry tier via `aws_flow_log` named exactly `/tkn/titan-prod-vpc-logs` wired to an `aws_flow_log_capture` log group. Finally, deployed an air-gapped security group with zero inbound rules housing a keyless `t3.micro` Ubuntu Server. Deployed all assets using your Android environment, audited incoming connection rejects, and verified via `terraform destroy` to clear the environment. Evidence File: `p2-tlab-06-monitored-fortress/main.tf`.
+
+### 🏢 Enterprise Deployment Verification & Security Audit Trail
+To ensure full accountability and continuous logging alignment, the entire lifecycle of this enterprise build was audited, verified, and safely decommissioned.
+
 *   **Zero Trust Browser Terminal Process (Session Manager 'whoami' Identity Check):**
     ![SSM Terminal Proof](./p2-tlab-06-monitored-fortress/ssm_terminal_proof.png)
+
 *   **CloudWatch Ingestion Telemetry Audit (Active Wiretap Live 'REJECT' Capture):**
     ![CloudWatch Flow Logs](./p2-tlab-06-monitored-fortress/cloudwatch_flow_logs.png)
+
 *   **Destroy Mandate Proof (Total Asset Decommissioning & Stipend Protection):**
     ![Destroy Verification](./p2-tlab-06-monitored-fortress/destroy_verification.png)
 
-*   **White Hat Audit Question:** *"What specific evidence in your CloudWatch logs verifies that your fortress network is successfully mitigating real external threats?"*
-*   **Engineering Statement:** *"The wiretap registers real inbound scan attempts with clear 'REJECT' status tags right at the interface border, confirming that malicious traffic is dropped and logged before interacting with code environments."*
-
+*   **Operational Defense Logic (White Hat Auditor Interrogation):**
+    *   **White Hat Auditor Question:** *"What specific evidence in your CloudWatch logs verifies that your fortress network is successfully mitigating real external threats?"*
+    *   **Engineering Statement:** *"The proof is recorded directly inside our live telemetry audit log. Because our edge security tier rejects unauthorized packets at the interface, the wiretap registers real inbound scan attempts with clear 'REJECT' status tags. This confirms that malicious noise is blocked and logged long before it can interact with internal application code paths."*
 ***
 
 ## ⚖️ Phase 2, Week 7: CI/CD Pipeline Security & Static Analysis
