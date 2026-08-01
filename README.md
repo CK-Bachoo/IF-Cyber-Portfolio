@@ -1497,7 +1497,7 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 | **Identity** | Static Access Keys (Risk of Leak) | OpenID Connect (OIDC) Zero-Trust Federation |
 
 *   **Technical Mechanics:** Programmed a custom pipeline configuration file using a hard folder-scope restriction (`working_directory: p2-tlab-07-the-automated-forge`). The engine runs an internal analysis with a hard blocking threshold (`--soft-fail=false`) to evaluate network structures. It intercepts unhardened inbound rules (`0.0.0.0/0`) and blocks deployment until ingress blocks are restricted to single management workstations.
-*   **Evidence File:** [`main.tf`](./p2-tlab-07-the-automated-forge/main.tf) 
+*   **Evidence File:** [`main.tf`](./p2-tlab-07-the-automated-forge/main.tf), [`forge-pipeline.yml`](./p2-tlab-07-the-automated-forge/forge-pipeline.yml)  
 
 ### **Enterprise Deployment Verification & Security Audit Trail**
 *   **Zero Trust Token Exchange (OIDC Handshake Intercept):**
