@@ -1444,7 +1444,8 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 | **Telemetry State** | Webhooks Listener Intercepts | Action Runner Console Output Streaming |
 | **Inbound Gate** | Corporate VCS Target Hooks | Main Branch Webhook Filters |
 
-*   **Technical Mechanics:** Provisioned a continuous integration script file inside your workflows track. The file defines an automated job flow that executes on standard runner instances to compile code. Evidence Files: `p2-week-07-lab-19/main.tf`, `.github/workflows/pulse.yml`
+*   **Technical Mechanics:** Provisioned a continuous integration script file inside your workflows track. The file defines an automated job flow that executes on standard runner instances to compile code.
+*   **Evidence Files:** [`main.tf`](./p2-week-07-lab-19/main.tf), [`pulse.yml`](./.github/workflows/pulse.yml)
 *   **White Hat Audit Question:** *"How does a centralized integration runner protect production architectures from unapproved structural changes?"*
 *   **Engineering Statement:** *"The runner acts as an automated verification checkpoint, evaluating structural designs within isolated containers before any cloud assets are touched."*
 *   **Verification Artifact:** 
@@ -1462,14 +1463,15 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 | **Telemetry State** | Terminal Check Output Logs | Automated GitHub Runner Violation Tracing |
 | **Inbound Gate** | Manual Security Group Audits | Inline Compliance Policy Enforcements |
 
-*   **Technical Mechanics:** Structured a dedicated pipeline script using a folder-scoped analysis configuration tool (`tfsec`) running an internal check with strict pass parameters (`--soft-fail=false`). Evidence Files: `p2-week-07-lab-20/main.tf`, `.github/workflows/tfsec-pipeline.yml`
+*   **Technical Mechanics:** Structured a dedicated pipeline script using a folder-scoped analysis configuration tool (`tfsec`) running an internal check with strict pass parameters (`--soft-fail=false`).
+*   **Evidence Files:** [`main.tf`](./p2-week-07-lab-20/main.tf), [`tfsec-pipeline.yml`](./.github/workflows/tfsec-pipeline.yml)
 *   **White Hat Audit Question:** *"Why should static security gates enforce customer-managed KMS keys rather than standard default platform encryption?"*
 *   **Engineering Statement:** *"Enforcing customer-managed KMS keys guarantees that storage systems remain under strict cryptographic visibility, with full control over custom access and usage tracking."*
 *   **Verification Artifacts:** 
-    *   **Screenshot A (Failure):** ![SAST Intercept](./p2-week-07-lab-20/sast_failed_proof%20SCREENSHOT%20A.png)
-    *   **Screenshot B (Pass):** ![SAST Remediation](./p2-week-07-lab-20/sast_passed_proof%20SCREENSHOT%20B.png)
+*   **Screenshot A (Failure):** ![SAST Intercept](./p2-week-07-lab-20/sast_failed_proof%20SCREENSHOT%20A.png)
+*   **Screenshot B (Pass):** ![SAST Remediation](./p2-week-07-lab-20/sast_passed_proof%20SCREENSHOT%20B.png)
 
-***
+---
 
 #### 🔑 p2-week-07-lab-21: The Delivery Drone
 *   **Attack Vector:** Static Credential Theft / Persistent Secrets Leakage.
@@ -1481,7 +1483,8 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 | **Telemetry State** | IAM Account Access Activity Logs | Real-Time STS AssumeRole Token Ingestion |
 | **Inbound Gate** | Persistent Vault Security Blocks | Hard-Scoped IAM Trust Policy Conditions |
 
-*   **Technical Mechanics:** Provisioned an AWS Identity Provider tracking dynamic handshake trust strings and an ephemeral credential configuration block. Evidence Files: `p2-week-07-lab-21/trust-policy.json`, `.github/workflows/deploy.yml`
+*   **Technical Mechanics:** Provisioned an AWS Identity Provider tracking dynamic handshake trust strings and an ephemeral credential configuration block.
+*   **Evidence Files:** [`trust-policy.json`](./p2-week-07-lab-21/trust-policy.json), [`deploy.yml`](./.github/workflows/deploy.yml)
 *   **White Hat Audit Question:** *"How does removing permanent access keys lower the overall attack surface of a cloud integration pipeline?"*
 *   **Engineering Statement:** *"OIDC identity federation uses short-lived tokens that expire immediately after the task runs, ensuring stolen or intercepted keys cannot be reused later by an attacker."*
 *   **Verification Artifacts:**
