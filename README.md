@@ -1434,63 +1434,59 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 
 ## ⚖️ Phase 2, Week 7: CI/CD Pipeline Security & Static Analysis
 
-### 📦 P2 · W7 · Lab 19: The Conveyor Belt
-* **Attack Vector:** Continuous Integration Bypass / Manual Configuration Drift.
-* **Strategic Explanation:** Engineered an automated GitHub Actions runner to transform fragmented individual labs into a cohesive production perimeter stack. Configured main branch push listeners to execute serial step verification, mapping the telemetry state and enforcing pipeline consistency.
+#### 📦 p2-week-07-lab-19: The Conveyor Belt
+*   **Attack Vector:** Configuration Drift / Automated Deployment Inefficiencies.
+*   **Strategic Explanation:** Replaced manually run infrastructure changes with an automated continuous delivery model listening for main branch pushes.
 
-| Data Point | Standard Cohort (Laptop/Desktop - X86) | Android Mobile Cybersecurity Workbench (Samsung Note 20 Ultra 5g - Arm64) |
+| Data Point | Standard Cohort (Laptop/Desktop - X86) | Android Mobile Cybersecurity Workbench (Samsung Note 20 Ultra 5G - Arm64) |
 | :--- | :--- | :--- |
-| **Architecture** | Fragmented Individual Labs | Cohesive Production Perimeter Stack |
-| **Telemetry State** | Local Log Capture | Automated Workflow Execution Mapping |
-| **Inbound Gate** | Manual Deployment Scripts | Main Branch Push Listeners & Serial Step Verification |
+| **Architecture** | Native Linux Integration Nodes | Sandboxed GitHub Container Proxies |
+| **Telemetry State** | Webhooks Listener Intercepts | Action Runner Console Output Streaming |
+| **Inbound Gate** | Corporate VCS Target Hooks | Main Branch Webhook Filters |
 
-* **Commands Executed:** `mkdir -p .github/workflows`, `touch .github/workflows/pulse.yml`, `git add .`, `git commit -m "Deploy pulse pipeline"`, `git push origin main`
-* **Verification Artifact:** [terraform_plan_proof.png](./p2-week-07-lab-19/terraform_plan_proof.png)
-* **Evidence Files:** [main.tf](./p2-week-07-lab-19/main.tf), [pulse.yml](./.github/workflows/pulse.yml)
+*   **Technical Mechanics:** Provisioned a continuous integration script file inside your workflows track. The file defines an automated job flow that executes on standard runner instances to compile code. Evidence Files: `p2-week-07-lab-19/main.tf`, `.github/workflows/pulse.yml`
+*   **White Hat Audit Question:** *"How does a centralized integration runner protect production architectures from unapproved structural changes?"*
+*   **Engineering Statement:** *"The runner acts as an automated verification checkpoint, evaluating structural designs within isolated containers before any cloud assets are touched."*
+*   **Verification Artifact:** 
+    ![Plan Proof](./p2-week-07-lab-19/terraform_plan_proof.png)
 
-**🛡 Operational Defense Logic (White Hat Auditor Interrogation)**
-* **White Hat Auditor Question:** "How does the CI/CD pipeline prevent unauthorized configuration drift in your production environment?"
-* **Engineering Statement:** "By binding the pipeline to the `main` branch, any infrastructure changes must pass through our version control ledger. The Actions runner provides an immutable execution map, ensuring that every deployment is tracked, authorized, and completely repeatable, eliminating human error from the deployment phase."
+***
 
----
+#### 🛡️ p2-week-07-lab-20: The Quality Inspector
+*   **Attack Vector:** Insecure Code Injection / Downstream Policy Violations.
+*   **Strategic Explanation:** Implemented a Shift-Left static application security testing (SAST) mechanism to scan files before deployment.
 
-### 🛡️ P2 · W7 · Lab 20: The Quality Inspector
-* **Attack Vector:** Unpatched IaC Vulnerabilities / Cloud Storage Exposure.
-* **Strategic Explanation:** Integrated Shift-Left SAST compliance via Aqua Security (`tfsec`) policy scanning. Enforced a hardened S3 framework block and customer-managed KMS key requirements by capturing live security violation interrupt logs and tuning inline parameter scopes.
-
-| Data Point | Standard Cohort (Laptop/Desktop - X86) | Android Mobile Cybersecurity Workbench (Samsung Note 20 Ultra 5g - Arm64) |
+| Data Point | Standard Cohort (Laptop/Desktop - X86) | Android Mobile Cybersecurity Workbench (Samsung Note 20 Ultra 5G - Arm64) |
 | :--- | :--- | :--- |
-| **Architecture** | Post-Deployment Scanning | Shift-Left SAST Compliance |
-| **Telemetry State** | Static Post-Mortem Logs | Live Security Violation Interrupt Logs |
-| **Inbound Gate** | Default Provider Security | Hardened S3 Framework & Aqua Security Policy Gate |
+| **Architecture** | Client-Side Pre-Commit Scanners | Cloud-Side Pipeline Quality Assurance Gates |
+| **Telemetry State** | Terminal Check Output Logs | Automated GitHub Runner Violation Tracing |
+| **Inbound Gate** | Manual Security Group Audits | Inline Compliance Policy Enforcements |
 
-* **Commands Executed:** `tfsec .`, integrated `aquasecurity/tfsec-action@v1.0.0` into workflow YAML, modified `main.tf` to mandate AES256 server-side encryption.
-* **Verification Artifacts:** [sast_failed_proof.png](./p2-week-07-lab-20/sast_failed_proof.png), [sast_passed_proof.png](./p2-week-07-lab-20/sast_passed_proof.png)
-* **Evidence Files:** [main.tf](./p2-week-07-lab-20/main.tf), [tfsec-pipeline.yml](./.github/workflows/tfsec-pipeline.yml)
+*   **Technical Mechanics:** Structured a dedicated pipeline script using a folder-scoped analysis configuration tool (`tfsec`) running an internal check with strict pass parameters (`--soft-fail=false`). Evidence Files: `p2-week-07-lab-20/main.tf`, `.github/workflows/tfsec-pipeline.yml`
+*   **White Hat Audit Question:** *"Why should static security gates enforce customer-managed KMS keys rather than standard default platform encryption?"*
+*   **Engineering Statement:** *"Enforcing customer-managed KMS keys guarantees that storage systems remain under strict cryptographic visibility, with full control over custom access and usage tracking."*
+*   **Verification Artifacts:** 
+    *   **Screenshot A (Failure):** ![SAST Intercept](./p2-week-07-lab-20/sast_failed_proof%20SCREENSHOT%20A.png)
+    *   **Screenshot B (Pass):** ![SAST Remediation](./p2-week-07-lab-20/sast_passed_proof%20SCREENSHOT%20B.png)
 
-**🛡 Operational Defense Logic (White Hat Auditor Interrogation)**
-* **White Hat Auditor Question:** "Why deploy a SAST scanner directly into the pipeline rather than relying on engineers to scan locally before a push?"
-* **Engineering Statement:** "Implementing a Shift-Left SAST gate natively within the pipeline ensures mathematical compliance. Even if a local scan is bypassed or forgotten, the automated quality inspector will definitively halt any pull request containing unencrypted storage or perimeter vulnerabilities before they can ever reach the live cloud environment."
+***
 
----
+#### 🔑 p2-week-07-lab-21: The Delivery Drone
+*   **Attack Vector:** Static Credential Theft / Persistent Secrets Leakage.
+*   **Strategic Explanation:** Eliminated high-risk, permanent IAM account access keys from long-term storage platforms using identity federation.
 
-### 🔑 P2 · W7 · Lab 21: The Delivery Drone
-* **Attack Vector:** Static Credential Theft / Long-Term Key Compromise.
-* **Strategic Explanation:** Architected keyless cloud automation utilizing token federation trust identity (OIDC). Established ephemeral identity provider handshakes and STS session token generation bounded by hard-scoped IAM trust policy constraints, ensuring zero static keys are stored in the CI/CD environment.
-
-| Data Point | Standard Cohort (Laptop/Desktop - X86) | Android Mobile Cybersecurity Workbench (Samsung Note 20 Ultra 5g - Arm64) |
+| Data Point | Standard Cohort (Laptop/Desktop - X86) | Android Mobile Cybersecurity Workbench (Samsung Note 20 Ultra 5G - Arm64) |
 | :--- | :--- | :--- |
-| **Architecture** | Hardcoded IAM Access Keys | Keyless Cloud Automation via Token Federation |
-| **Telemetry State** | Long-Term Static Keys | Ephemeral STS Session Token Generation |
-| **Inbound Gate** | Broad Repository Secrets | Hard-Scoped IAM Trust Policy Constraints |
+| **Architecture** | Long-Lived Static Infrastructure Keys | Ephemeral Token-Based Federated Access |
+| **Telemetry State** | IAM Account Access Activity Logs | Real-Time STS AssumeRole Token Ingestion |
+| **Inbound Gate** | Persistent Vault Security Blocks | Hard-Scoped IAM Trust Policy Conditions |
 
-* **Commands Executed:** Applied `trust-policy.json` to AWS IAM, configured `aws-actions/configure-aws-credentials@v4` in YAML, executed `terraform apply -auto-approve` via runner.
-* **Verification Artifacts:** [oidc_plan_proof.png](./p2-week-07-lab-21/oidc_plan_proof.png), [oidc_destroy_proof.png](./p2-week-07-lab-21/oidc_destroy_proof.png)
-* **Evidence Files:** [trust-policy.json](./p2-week-07-lab-21/trust-policy.json), [deploy.yml](./.github/workflows/deploy.yml)
-
-**🛡 Operational Defense Logic (White Hat Auditor Interrogation)**
-* **White Hat Auditor Question:** "What is the primary security advantage of using OpenID Connect (OIDC) over standard IAM access keys for GitHub Actions?"
-* **Engineering Statement:** "OIDC completely eliminates the risk of long-term credential theft. Instead of hardcoding highly privileged, static AWS root keys into GitHub secrets, the pipeline mathematically verifies its identity and requests a short-lived, ephemeral STS session token. This token automatically burns itself up after an hour, maintaining a flawless Zero-Trust identity federation."
+*   **Technical Mechanics:** Provisioned an AWS Identity Provider tracking dynamic handshake trust strings and an ephemeral credential configuration block. Evidence Files: `p2-week-07-lab-21/trust-policy.json`, `.github/workflows/deploy.yml`
+*   **White Hat Audit Question:** *"How does removing permanent access keys lower the overall attack surface of a cloud integration pipeline?"*
+*   **Engineering Statement:** *"OIDC identity federation uses short-lived tokens that expire immediately after the task runs, ensuring stolen or intercepted keys cannot be reused later by an attacker."*
+*   **Verification Artifacts:**
+*   **Screenshot A (Deploy Plan):** ![OIDC Plan](./p2-week-07-lab-21/oidc_plan_proof%20TERRAFORM%20DEPLOY.png)
+*   **Screenshot B (Destroy Mandate):** ![OIDC Teardown](./p2-week-07-lab-21/oidc_destroy_proof%20TERRAFORM%20DESTROY.png)
 
 ---
 
