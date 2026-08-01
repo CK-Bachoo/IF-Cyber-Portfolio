@@ -1328,20 +1328,19 @@ Mechanical Proof: Full audit trail in portfolio_audit.md and tepp_postmortem.md.
 | **OPSEC Finality** | Idle Servers Left Running | The Ghost Protocol (`terraform destroy`) |
 
 🧠 **TLAB 5 Mission Defense Matrix (Executive Summary)**
-*   **Technical Mechanics:** Unified a hard monthly budget guardrail limit ($10.00 max with an 80% threshold notification trigger), a secure dynamic S3 bucket vault using random ID hexadecimal suffix generators, an IAM Role profile equipped with an internal `PutObject` surgical bucket interpolation lookup block, an instance mapping profile, and an active Ubuntu compute server. Compiled all 7 resources successfully via `terraform apply`. Finally, returned to the deployment context path using `cd /workspaces/TLAB5-Budgeted-Identity` and executed `terraform destroy` to completely wipe the live AWS infrastructure footprint. Evidence [`main.tf`](./tlab-05-budgeted-identity/main.tf)
+*   **Technical Mechanics:** Unified a hard monthly budget guardrail limit ($10.00 max with an 80% threshold notification trigger), a secure dynamic S3 bucket vault using random ID hexadecimal suffix generators, an IAM Role profile equipped with an internal `PutObject` surgical bucket interpolation lookup block, an instance mapping profile, and an active Ubuntu compute server. Compiled all 7 resources successfully via `terraform apply`. Finally, returned to the deployment context path using `cd /workspaces/TLAB5-Budgeted-Identity` and executed `terraform destroy` to completely wipe the live AWS infrastructure footprint. Evidence [`main.tf`](./p2-tlab-05-the-budgeted-identity/main.tf)
 
 ##### 📸 Enterprise Deployment Verification & Security Audit Evidence
 To ensure full accountability and continuous logging alignment, the entire lifecycle of this enterprise build was audited, verified, and safely decommissioned.
 
 * **Build Artifact Verification (`terraform apply` Success Summary):**
-  ![Build Success](./tlab-05-budgeted-identity/build_success.png)
+  ![build_success.png](./p2-tlab-05-the-budgeted-identity/build_success.png)
 
 * **Identity Governance Audit (Compute Core with Surgical IAM Role Binding):**
-  ![Security Audit](./tlab-05-budgeted-identity/security_audit.png)
+  ![security_audit.png](./p2-tlab-05-the-budgeted-identity/security_audit.png)
 
 * **Destroy Mandate Proof (Total Asset Decommissioning & Stipend Protection):**
-  ![Destroy Verification](./tlab-05-budgeted-identity/destroy_verification.png)
-
+![destroy_verification.png](./p2-tlab-05-the-budgeted-identity/destroy_verification.png)
 🛡 **Operational Defense Logic (White Hat Auditor Interrogation)**
 *   **White Hat Auditor Question:** "Why is the `terraform destroy` command considered a mandatory graded security operation for this mission rather than just a cleanup step?"
 *   **Engineering Statement:** "In standard IT, junior developers build a server and leave it running forever, essentially erecting a permanent brick-and-mortar facility on the internet that accumulates vulnerabilities over time. As an AI Security Architect, I deploy a Phantom Forward Operating Base. I use IaC to summon the infrastructure precisely when needed, execute the mission, and initiate the Ghost Protocol (`terraform destroy`) the exact millisecond I am finished. This vaporizes the attack surface to absolute zero and mathematically prevents 'Denial of Wallet' extortion attacks against the organization."
@@ -1409,20 +1408,17 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 | **Inbound Gate** | Standard Port Exposure | Zero-Inbound Air-Gapped Firewall |
 
 **TLAB 6 Mission Defense Matrix (Executive Summary)**
-*   **Technical Mechanics:** Unified a complete production perimeter tier including an `aws_vpc` (`10.0.0.0/16`), an `aws_subnet` (`10.0.1.0/24`) pinned to `us-east-1`, an `aws_internet_gateway`, and an active routing engine. Integrated an automated telemetry tier via `aws_flow_log` named exactly `/tkn/titan-prod-vpc-logs` wired to an `aws_flow_log_capture` log group. Finally, deployed an air-gapped security group with zero inbound rules housing a keyless `t3.micro` Ubuntu Server. Deployed all assets using your Android environment, audited incoming connection rejects, and verified via `terraform destroy` to clear the environment. Evidence File: `p2-tlab-06-monitored-fortress/main.tf`.
+*   **Technical Mechanics:** Unified a complete production perimeter tier including an `aws_vpc` (`10.0.0.0/16`), an `aws_subnet` (`10.0.1.0/24`) pinned to `us-east-1`, an `aws_internet_gateway`, and an active routing engine. Integrated an automated telemetry tier via `aws_flow_log` named exactly `/tkn/titan-prod-vpc-logs` wired to an `aws_flow_log_capture` log group. Finally, deployed an air-gapped security group with zero inbound rules housing a keyless `t3.micro` Ubuntu Server. Deployed all assets using your Android environment, audited incoming connection rejects, and verified via `terraform destroy` to clear the environment. Evidence File: [`main.tf`](./p2-tlab-06-the-monitored-fortress/main.tf).
 
 ### 🏢 Enterprise Deployment Verification & Security Audit Trail
 To ensure full accountability and continuous logging alignment, the entire lifecycle of this enterprise build was audited, verified, and safely decommissioned.
 
 *   **Zero Trust Browser Terminal Process (Session Manager 'whoami' Identity Check):**
-    ![SSM Terminal Proof](./p2-tlab-06-monitored-fortress/ssm_terminal_proof.png)
-
+    ![ssm_terminal_proof.png](./p2-tlab-06-the-monitored-fortress/ssm_terminal_proof.png)
 *   **CloudWatch Ingestion Telemetry Audit (Active Wiretap Live 'REJECT' Capture):**
-    ![CloudWatch Flow Logs](./p2-tlab-06-monitored-fortress/cloudwatch_flow_logs.png)
-
+    ![cloudwatch_flow_logs.png](./p2-tlab-06-the-monitored-fortress/cloudwatch_flow_logs.png)
 *   **Destroy Mandate Proof (Total Asset Decommissioning & Stipend Protection):**
-    ![Destroy Verification](./p2-tlab-06-monitored-fortress/destroy_verification.png)
-
+    ![destroy_verification.png](./p2-tlab-06-the-monitored-fortress/destroy_verification.png)
 *   **Operational Defense Logic (White Hat Auditor Interrogation):**
     *   **White Hat Auditor Question:** *"What specific evidence in your CloudWatch logs verifies that your fortress network is successfully mitigating real external threats?"*
     *   **Engineering Statement:** *"The proof is recorded directly inside our live telemetry audit log. Because our edge security tier rejects unauthorized packets at the interface, the wiretap registers real inbound scan attempts with clear 'REJECT' status tags. This confirms that malicious noise is blocked and logged long before it can interact with internal application code paths."*
@@ -1501,16 +1497,15 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 | **Identity** | Static Access Keys (Risk of Leak) | OpenID Connect (OIDC) Zero-Trust Federation |
 
 *   **Technical Mechanics:** Programmed a custom pipeline configuration file using a hard folder-scope restriction (`working_directory: p2-tlab-07-the-automated-forge`). The engine runs an internal analysis with a hard blocking threshold (`--soft-fail=false`) to evaluate network structures. It intercepts unhardened inbound rules (`0.0.0.0/0`) and blocks deployment until ingress blocks are restricted to single management workstations.
-*   **Evidence File:** `p2-tlab-07-the-automated-forge/main.tf`
+*   **Evidence File:** [`main.tf`](./p2-tlab-07-the-automated-forge/main.tf), [`forge-pipeline.yml`](./p2-tlab-07-the-automated-forge/forge-pipeline.yml)
 
 ### **Enterprise Deployment Verification & Security Audit Trail**
 *   **Zero Trust Token Exchange (OIDC Handshake Intercept):**
-    ![Screenshot A](./p2-tlab-07-the-automated-forge/sast_failed_proof%20SCREENSHOT%20A.png)
+    ![screenshot a p2 week7 tlab 7.png](./p2-tlab-07-the-automated-forge/screenshot%20a%20p2%20week7%20tlab%207.png)
 *   **Shift-Left Security Gate Execution Pass Check:**
-    ![Screenshot B](./p2-tlab-07-the-automated-forge/sast_passed_proof%20SCREENSHOT%20B.png)
+    ![screenshot b p2 week 7 tlab7.png](./p2-tlab-07-the-automated-forge/screenshot%20b%20p2%20week%207%20tlab7.png)
 *   **Destroy Mandate Proof (Total Asset Decommissioning & Stipend Protection):**
-    ![Screenshot C](./p2-tlab-07-the-automated-forge/oidc_destroy_proof%20TERRAFORM%20DESTROY.png)
-    
+    ![screenshot c destroy complete p2week7 tlab7.jpg](./p2-tlab-07-the-automated-forge/screenshot%20c%20destroy%20complete%20p2week7%20tlab7.jpg)    
     `Destroy complete! Resources: 0 destroyed.`
 
 *   **White Hat Audit Question:** *"How does a fully automated security forge ensure zero-trust integrity across continuous deployment flows?"*
