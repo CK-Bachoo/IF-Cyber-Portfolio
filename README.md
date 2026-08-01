@@ -1253,15 +1253,15 @@ Mechanical Proof: Full audit trail in portfolio_audit.md and tepp_postmortem.md.
 | P2 · W5 · D1 · S-XIII: 🧱 The Financial Firewall — Module 13 Lab Submission | Cloud Governance | Denial of Wallet / Cost Overruns | ID.GV | CIS 1 | Availability | [`budget_plan.tf`](./p2-week-05-lab-13/budget_plan.tf) |
 | P2 · W5 · D2 · S-XIV: 🔑 The Keymaster's Ring — Module 14 Lab Submission | IAM Surgery | Privilege Escalation / Wildcard Auth | PR.AC | CIS 5 | Confidentiality | [`iam_surgery.tf`](./p2-week-05-lab-14/iam_surgery.tf) |
 | P2 · W5 · D3 · S-XV: 🗺️ The Vault & The State — Module 15 Lab Submission | State Recovery | State Loss / Orphaned Infrastructure | RC.RP | CIS 11 | Availability | [`CHANGELOG.md`](./p2-week-05-lab-15/CHANGELOG.md) |
-| P2 · W5 · TLAB 5: 💳 The Budgeted Identity — TLab Submission | Enterprise IaC | Unauthorized Access / Financial Sabotage | PR.DS | CIS 4 | All Tiers | [`main.tf`](./tlab-05-budgeted-identity/main.tf) |
+| P2 · W5 · TLAB 5: 💳 The Budgeted Identity | Enterprise IaC | Unauthorized Access / Financial Sabotage | PR.DS | CIS 4 | All Tiers | [`main.tf`](./p2-tlab-05-the-budgeted-identity/main.tf) |
 | P2 · W6 · D1 · S-16: 🌐 The War Room — Module 16 Lab Submission | OSI Environment Repair | Configuration Drift & Layer Outages | DE.AE | CIS 12 | Availability | [`vpc_architecture.tf`](./p2-week-06-lab-16/vpc_architecture.tf) |
 | P2 · W6 · D2 · S-17: 🎧 The Silent Wiretap — Module 17 Lab Submission | Network Metric Wiretap | Visibility Deficit & Telemetry Bypass | DE.CM | CIS 13 | Integrity | Baseline: [`original_baseline_main.tf`](./p2-week-06-lab-17/original_baseline_main.tf) <br> Honeypot: [`janes_honeypot_main.tf`](./p2-week-06-lab-17/janes_honeypot_main.tf) |
 | P2 · W6 · D3 · S-18: 🛑 The Zero Trust Terminal — Module 18 Lab Submission | Keyless Remote Access | Credential Theft & Port Piercing | PR.AC | CIS 6 | Confidentiality | [`ssm_access.tf`](./p2-week-06-lab-18/ssm_access.tf) |
-| P2 · W6 · TLAB 6: 👁️ The Monitored Fortress — TLab Submission | Production Fortress | Threat Invisibility & Exfiltration | PR.PT | CIS 4 | All Tiers | [`main.tf`](./tlab-06-monitored-fortress/main.tf) |
+| P2 · W6 · TLAB 6: 👁️ The Monitored Fortress | Production Fortress | Threat Invisibility & Exfiltration | PR.PT | CIS 4 | All Tiers | [`main.tf`](./p2-tlab-06-the-monitored-fortress/main.tf) |
 | P2 · W7 · D1 · Lab 19: 📦 The Conveyor Belt | Production Perimeter | CI/CD Configuration Drift | PR.AC | CIS 16 | Availability | [`pulse.yml`](./.github/workflows/pulse.yml) |
 | P2 · W7 · D2 · Lab 20: 🛡️ The Quality Inspector | SAST Compliance | Unpatched IaC Vulnerabilities | PR.PT | CIS 8 | Integrity | [`tfsec-pipeline.yml`](./.github/workflows/tfsec-pipeline.yml) |
 | P2 · W7 · D3 · Lab 21: 🔑 The Delivery Drone | Token Federation Trust | Long-Term Key Compromise | PR.AC | CIS 6 | Confidentiality | [`deploy.yml`](./.github/workflows/deploy.yml) |
-| P2 · W7 · TLAB 7: 🚀 The Automated Forge | Zero Trust CI/CD | Unauthorized Proliferation | PR.IP | CIS 13 | All Tiers | [`main.tf`](./p2-week-07-tlab-07/main.tf) |
+| P2 · W7 · TLAB 7: 🚀 The Automated Forge | Zero Trust CI/CD | Unauthorized Proliferation | PR.IP | CIS 13 | All Tiers | [`main.tf`](./p2-tlab-07-the-automated-forge/main.tf) |
 ---
 
 ### 📂 Artifact Evidence & Operational History (The Cloud Matrix)
