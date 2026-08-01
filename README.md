@@ -1445,7 +1445,7 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 | **Inbound Gate** | Corporate VCS Target Hooks | Main Branch Webhook Filters |
 
 *   **Technical Mechanics:** Provisioned a continuous integration script file inside your workflows track. The file defines an automated job flow that executes on standard runner instances to compile code.
-* **Evidence Files:** [`main.tf`](./p2-week-07-lab-19/main.tf), [`pulse.yml`](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/.github/workflows/pulse.yml)
+*   **Evidence Files:** [`main.tf`](./p2-week-07-lab-19/main.tf), [`pulse.yml`](./p2-week-07-lab-19/.github/workflows/pulse.yml)
 *   **White Hat Audit Question:** *"How does a centralized integration runner protect production architectures from unapproved structural changes?"*
 *   **Engineering Statement:** *"The runner acts as an automated verification checkpoint, evaluating structural designs within isolated containers before any cloud assets are touched."*
 *   **Verification Artifact:** 
