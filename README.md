@@ -1433,9 +1433,14 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 #### 📦 p2-week-07-lab-19: The Conveyor Belt
 *   **Attack Vector:** Configuration Drift / Automated Deployment Inefficiencies.
 *   **Strategic Explanation:** Replaced manually run infrastructure changes with an automated continuous delivery model. This pipeline listens for main branch additions to execute clean code builds sequentially inside cloud execution environments.
+| Data Point | Standard Cohort (Laptop/Desktop - X86) | Android Mobile Cybersecurity Workbench (Samsung Note 20 Ultra 5g - Arm64) |
+| :--- | :--- | :--- |
+| **Architecture** | Fragmented Individual Labs | Cohesive Production Perimeter Stack |
+| **Telemetry State** | Local Log Capture | Automated Workflow Execution Mapping |
+| **Inbound Gate** | Manual Deployment Scripts | Main Branch Push Listeners & Serial Step Verification |
 
-**Lab 19 Mission Defense Matrix (Executive Summary)**
 *   **Technical Mechanics:** Provisioned a continuous integration script file inside your workflows track. The file defines an automated job flow that executes on standard runner instances. It checks out the workspace repository branch, spins up native execution runners, and runs validation steps. Evidence Files: `p2-week-07-lab-19/main.tf` and `.github/workflows/pulse.yml`.
+* **Evidence Files:** [main.tf](./p2-week-07-lab-19/main.tf), [pulse.yml](./.github/workflows/pulse.yml)
 
 ### 🏢 Enterprise Deployment Verification & Security Audit Trail
 *   **Automated Action Runner Execution Track:**
@@ -1444,16 +1449,19 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 *   **Operational Defense Logic (White Hat Auditor Interrogation):**
     *   **White Hat Auditor Question:** *"How does a centralized integration runner protect production architectures from unapproved structural changes?"*
     *   **Engineering Statement:** *"The runner acts as an automated verification checkpoint. By isolating execution steps within ephemeral sandbox environments, it evaluates structural design blueprints cleanly before any physical resources are altered on the cloud platform."*
-
 ***
 
 #### 🛡️ p2-week-07-lab-20: The Quality Inspector
 *   **Attack Vector:** Insecure Code Injection / Downstream Policy Violations.
 *   **Strategic Explanation:** Implemented a Shift-Left static application security testing (SAST) mechanism directly inside the check-in timeline. This scanning tool audits configuration files before deployment to block high-risk perimeter bugs before they can reach live environments.
+| Data Point | Standard Cohort (Laptop/Desktop - X86) | Android Mobile Cybersecurity Workbench (Samsung Note 20 Ultra 5g - Arm64) |
+| :--- | :--- | :--- |
+| **Architecture** | Post-Deployment Scanning | Shift-Left SAST Compliance |
+| **Telemetry State** | Static Post-Mortem Logs | Live Security Violation Interrupt Logs |
+| **Inbound Gate** | Default Provider Security | Hardened S3 Framework & Aqua Security Policy Gate |
 
-**Lab 20 Mission Defense Matrix (Executive Summary)**
-*   **Technical Mechanics:** Structured a dedicated pipeline script using a folder-scoped analysis configuration tool. The engine runs an internal check with strict pass parameters (`--soft-fail=false`). It scans code patterns to enforce mandatory enterprise S3 baselines, requiring customer-managed encryption wrappers (`SSE-KMS`) and explicit public access control blocks. Evidence Files: `p2-week-07-lab-20/main.tf` and `.github/workflows/tfsec-pipeline.yml`.
-
+* **Evidence Files:** [main.tf](./p2-week-07-lab-20/main.tf), [tfsec-pipeline.yml](./.github/workflows/tfsec-pipeline.yml)
+* **Technical Mechanics:** Structured a dedicated pipeline script using a folder-scoped analysis configuration tool. The engine runs an internal check with strict pass parameters (`--soft-fail=false`). It scans code patterns to enforce mandatory enterprise S3 baselines, requiring customer-managed encryption wrappers (`SSE-KMS`) and explicit public access control blocks. Evidence Files: `p2-week-07-lab-20/main.tf` and `.github/workflows/tfsec-pipeline.yml`.
 ### 🏢 Enterprise Deployment Verification & Security Audit Trail
 *   **SAST Security Quality Gate Failure Intercept:**
     ![Screenshot A](./p2-week-07-lab-20/sast_failed_proof%20SCREENSHOT%20A.png)
@@ -1470,9 +1478,15 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 #### 🔑 p2-week-07-lab-21: The Delivery Drone
 *   **Attack Vector:** Static Credential Theft / Persistent Secrets Leakage.
 *   **Strategic Explanation:** Eliminated high-risk, permanent IAM account access keys from long-term storage platforms. Established an identity federation trust model to exchange short-lived, single-use security tokens during automated workflows.
+| Data Point | Standard Cohort (Laptop/Desktop - X86) | Android Mobile Cybersecurity Workbench (Samsung Note 20 Ultra 5g - Arm64) |
+| :--- | :--- | :--- |
+| **Architecture** | Hardcoded IAM Access Keys | Keyless Cloud Automation via Token Federation |
+| **Telemetry State** | Long-Term Static Keys | Ephemeral STS Session Token Generation |
+| **Inbound Gate** | Broad Repository Secrets | Hard-Scoped IAM Trust Policy Constraints |
 
-**Lab 21 Mission Defense Matrix (Executive Summary)**
-*   **Technical Mechanics:** Provisioned an AWS Identity Provider tracking dynamic handshake trust strings. Configured a token federation script utilizing an ephemeral credential block. The process requests single-use session authorizations (`sts:AssumeRoleWithWebIdentity`) locked exclusively to your repository's branch context. Evidence Files: `p2-week-07-lab-21/trust-policy.json` and `.github/workflows/deploy.yml`.
+* **Evidence Files:** [trust-policy.json](./p2-week-07-lab-21/trust-policy.json), [deploy.yml](./.github/workflows/deploy.yml)
+
+* **Technical Mechanics:** Provisioned an AWS Identity Provider tracking dynamic handshake trust strings. Configured a token federation script utilizing an ephemeral credential block. The process requests single-use session authorizations (`sts:AssumeRoleWithWebIdentity`) locked exclusively to your repository's branch context. Evidence Files: `p2-week-07-lab-21/trust-policy.json` and `.github/workflows/deploy.yml`.
 
 ### 🏢 Enterprise Deployment Verification & Security Audit Trail
 *   **Keyless Token Federation Handshake Plan:**
@@ -1490,8 +1504,12 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 ## 🛡️ P2 · W7 · TLAB 7: The Automated Forge — Capstone Submission
 *   **Attack Vector:** Malicious Infrastructure Ingress / Broken Compliance Gates.
 *   **Strategic Explanation:** Synthesized a complete, three-stage keyless deployment pipeline. This workflow combines OpenID Connect federation, automated tfsec static analysis scanners, and deployment blockers to enforce strict network perimeter rules natively inside version control.
+| Data Point | Standard Cohort (Laptop/Desktop - X86) | Android Mobile Cybersecurity Workbench (Samsung Note 20 Ultra 5g - Arm64) |
+| :--- | :--- | :--- |
+| **Architecture** | Manual Infrastructure Provisioning | 3-Stage Keyless Automated Deployment Pipeline |
+| **Verification** | Visual Code Review / Local Scanning | `tfsec` Hard-Abort Quality Gate (`--soft-fail=false`) |
+| **Identity** | Static Access Keys (Risk of Leak) | OpenID Connect (OIDC) Zero-Trust Federation |
 
-### **TLAB 7 Mission Defense Matrix (Executive Summary)**
 *   **Technical Mechanics:** Programmed a custom pipeline configuration file using a hard folder-scope restriction (`working_directory: p2-tlab-07-the-automated-forge`). The engine runs an internal analysis with a hard blocking threshold (`--soft-fail=false`) to evaluate network structures. It intercepts unhardened inbound rules (`0.0.0.0/0`) and blocks deployment until ingress blocks are restricted to single management workstations.
 *   **Evidence File:** `p2-tlab-07-the-automated-forge/main.tf`
 
