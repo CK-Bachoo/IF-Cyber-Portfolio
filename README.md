@@ -98,15 +98,13 @@ A professional, mobile-first Purple Team environment demonstrating Zero-Trust pr
 | **P2 · W7 · Lab 20**<br>The Quality Inspector | Shift-Left SAST<br>Scanning (tfsec) | Unpatched IaC<br>Deployment Flaws | PR.PT<br>*(800-53: SA-11)* | CIS 8<br>*(CMMC: RM.L2)* | Integrity | [main.tf](./p2-week-07-lab-20/main.tf)<br>[📸 Evidence](./p2-week-07-lab-20/sast_failed_proof.png) |
 | **P2 · W7 · Lab 21**<br>The Delivery Drone | OIDC Keyless<br>Token Federation | Static Credential Theft<br>& Supply Chain Attacks | PR.AC<br>*(800-53: IA-2)* | CIS 6<br>*(CMMC: IA.L2)* | Confidentiality | [deploy.yml](./.github/workflows/deploy.yml)<br>[📸 Evidence](./p2-week-07-lab-21/sast_passed_proof.png) |
 | **P2 · W7 · TLAB 7**<br>The Automated Forge | Zero-Trust CI/CD<br>Infrastructure Pipeline| Unauthorized Sprawl &<br>Open Ingress Exposure | PR.IP<br>*(800-53: CM-3)* | CIS 13<br>*(CMMC: CM.L2)* | All Tiers | [forge-pipeline.yml](./.github/workflows/forge-pipeline.yml)<br>[📸 Evidence](./p2-tlab-07-the-automated-forge/screenshot%20c%20destroy%20complete%20p2week7%20tlab7.png) |
-
+---
 
 ## 📂 Artifact Evidence & Operational History
 
 <p align="left">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=1000&color=00F72D&width=750&lines=Purple+Team+Operations+C.K.+BACHOO+TKH+Innovation+Fellow+IF-CS-26+NY;Mobile-to-Cloud+SecOps;AI+Security+Architecture;Penetration+Testing+%26+DFIR;Samsung+Galaxy+Note+20+Ultra+%2B+Termux;Zero-Trust+Automation+Pipelines" />
 </p>
-
-## 📂 Artifact Evidence & Operational History
 
 ### 🛠️ T1-M1-S01: Portfolio Initialization
 * [Evidence: Commit 584f951](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/584f951)
