@@ -1,9 +1,4 @@
-
 # The Knowledge House Bronx, NY: Cybersecurity Innovation Fellowship: (Cohort IF-CS-26 NY) C.K. Bachoo 
-
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=1000&color=00F72D&width=750&lines=Purple+Team+Operations+C.K.+BACHOO+TKH+Innovation+Fellow+IF-CS-26+NY;Mobile-to-Cloud+SecOps;AI+Security+Architecture;Penetration+Testing+%26+DFIR;Samsung+Galaxy+Note+20+Ultra+%2B+Termux;Zero-Trust+Automation+Pipelines" />
-</p>
-
 
 **IF-Cyber-Portfolio:** This portfolio and all associated artifacts were engineered exclusively using a Samsung Note 20 Ultra 5G / Termux Bunker configuration, seamlessly utilizing a Zero-Trust "Mobile-to-Cloud Bridge" spanning Google Cloud Shell, GitHub Codespaces, and AWS . This environment demonstrates a mobile-first, headless-first approach to systems administration, network security, defensive automation, DFIR, Cloud Infrastructure as Code (IaC), AI Security Architecture, and Purple Team operations.
 
@@ -27,11 +22,6 @@ A professional, mobile-first Purple Team environment demonstrating Zero-Trust pr
 
 **The Mobile-to-Cloud Bridge:** `Note 20 Ultra` → Termux [Dual Terminal / (proot-distro login debian)] → Google Cloud Shell → Azure → Aws → `GitHub` 
 **The Mobile-to-Cloud Bridge:**  Android mobile Chrome browser → Github Codespaces → Github
- 
- <p align="left">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=1000&color=00F72D&width=750&lines=Purple+Team+Operations;Mobile-to-Cloud+SecOps;AI+Security+Architecture;Penetration+Testing+%26+DFIR;Samsung+Galaxy+Note+20+Ultra+%2B+Termux;Zero-Trust+Automation+Pipelines" />
-</p>
-
 ---
 
 ## ⚖️ Phase 1 Governance & Framework Alignment
@@ -101,10 +91,6 @@ A professional, mobile-first Purple Team environment demonstrating Zero-Trust pr
 ---
 
 ## 📂 Artifact Evidence & Operational History
-
-<p align="left">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=1000&color=00F72D&width=750&lines=Purple+Team+Operations+C.K.+BACHOO+TKH+Innovation+Fellow+IF-CS-26+NY;Mobile-to-Cloud+SecOps;AI+Security+Architecture;Penetration+Testing+%26+DFIR;Samsung+Galaxy+Note+20+Ultra+%2B+Termux;Zero-Trust+Automation+Pipelines" />
-</p>
 
 ### 🛠️ T1-M1-S01: Portfolio Initialization
 * [Evidence: Commit 584f951](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/584f951)
@@ -1256,7 +1242,6 @@ Mechanical Proof: Full audit trail in portfolio_audit.md and tepp_postmortem.md.
 
 # Successfuly Completed Phase 1 of The Knowledge House: Cybersecurity Innovation Fellowship IF-CS-26 NY.
 **Documented and delivered via: 🛡️[Samsung Note 20 Ultra 5g - Android Mobile Cybersecurity Workbench](https://github.com/CK-Bachoo/Android-mobile-cybersecurity-workbench)🛡️**
-
 ---
 
 # ☁️ Phase 2 of the The Knowledge House: Cybersecurity Innovation Fellowship IF-CS-26 NY.
@@ -1512,5 +1497,4 @@ To ensure full accountability and continuous logging alignment, the entire lifec
   
 * **White Hat Audit Question:** *"How does a fully automated security forge ensure zero-trust integrity across continuous deployment flows?"*
 * **Engineering Statement:** *"By requiring clean static analysis scans to clear the pipeline quality gate before triggering any resource modification, the system blocks misconfigured or vulnerable endpoints from ever reaching production environments."*
-
 ---
