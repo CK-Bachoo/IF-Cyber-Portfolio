@@ -34,7 +34,7 @@ A professional, mobile-first Purple Team environment demonstrating Zero-Trust pr
 
 ---
 
-## ⚖️ Governance & Framework Alignment
+## ⚖️ Phase 1 Governance & Framework Alignment
 
 | Session | Function | Attack Vector / Concept | NIST CSF 2.0 | CIS Control | CIA Triad | Evidence Artifact |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -83,6 +83,21 @@ A professional, mobile-first Purple Team environment demonstrating Zero-Trust pr
 | TLAB 11 | Operation Fortress | Defense in Depth / Egress Filtering | PR.PT | CIS 4 | All Tiers | [Operation_Fortress_Report.md](week-11/Operation_Fortress_Report.md) |
 | TLAB 12 | Final Portfolio Synthesis | Full Kill Chain Reconstruction | RS.AN / PR.PT | CIS 17 / CIS 18 | All Tiers | [Operation_Fortress_Report.md](week-11/Operation_Fortress_Report.md) + [portfolio_audit.md](week-12/portfolio_audit.md) |
 | Week 12 | TEPP Final Reckoning | Portfolio Audit + Postmortem | ID.GV / RS.IM | CIS 1 / CIS 17 | All Tiers | [tepp_postmortem.md](week-12/tepp_postmortem.md) + [portfolio_audit.md](week-12/portfolio_audit.md) |
+#### ⚖️ Phase 2: Governance and Framework Alignment
+| Session | Function | Attack Vector / Concept | NIST CSF 2.0 &<br>FedRAMP (800-53r5) | CIS v8 &<br>CMMC 2.0 | CIA Triad | Evidence Artifact |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **P2 · W5 · S-13**<br>The Financial Firewall | Cloud Governance &<br>IAM Constraints | Denial of Wallet &<br>Resource Exhaustion | ID.GV<br>*(800-53: SA-2)* | CIS 1<br>*(CMMC: RM.L2)* | Availability | [budget_plan.tf](./p2-week-05-lab-13/budget_plan.tf) |
+| **P2 · W5 · S-14**<br>The Keymaster's Ring | IAM Surgery &<br>Policy Scoping | Privilege Escalation &<br>Wildcard Hijacking | PR.AC<br>*(800-53: AC-6)* | CIS 5<br>*(CMMC: AC.L2)* | Confidentiality | [iam_surgery.tf](./p2-week-05-lab-14/iam_surgery.tf) |
+| **P2 · W5 · S-15**<br>The Vault & The State | IaC State &<br>Telemetry Recovery | State Loss &<br>Orphaned Collisions | RC.RP<br>*(800-53: CP-9)* | CIS 11<br>*(CMMC: RE.L2)* | Availability | [vpc_architecture.tf](./p2-week-05-lab-15/vpc_architecture.tf) |
+| **P2 · W5 · TLAB 5**<br>The Budgeted Identity | Enterprise IaC Cost &<br>Identity Controls | Financial Sabotage &<br>Unauthorized Access | PR.DS<br>*(800-53: AC-6)* | CIS 4<br>*(CMMC: AC.L2)* | All Tiers | [main.tf](./p2-tlab-05-the-budgeted-identity/main.tf)<br>[📸 Proof](./p2-tlab-05-the-budgeted-identity/security_audit.png) |
+| **P2 · W6 · S-16**<br>The War Room | OSI Layer<br>Environment Repair | Configuration Drift &<br>Layer-Specific Outages | DE.AE<br>*(800-53: CM-6)* | CIS 12<br>*(CMMC: CM.L2)* | Availability | [main.tf](./p2-week-06-lab-16/main.tf) |
+| **P2 · W6 · S-17**<br>The Silent Wiretap | VPC Flow Logging &<br>Network Wiretaps | Visibility Deficit &<br>Silent Lateral Mvmt | DE.CM<br>*(800-53: AU-12)* | CIS 13<br>*(CMMC: AU.L2)* | Integrity | Baseline: [main.tf](./p2-week-06-lab-17/original_baseline_main.tf)<br>Honeypot: [main.tf](./p2-week-06-lab-17/janes_honeypot_main.tf) |
+| **P2 · W6 · S-18**<br>The Zero Trust Terminal| Keyless Access<br>(AWS SSM) | Inbound SSH Theft &<br>Port Piercing | PR.AC<br>*(800-53: AC-17)* | CIS 6<br>*(CMMC: AC.L2)* | Confidentiality | [ssm_access.tf](./p2-week-06-lab-18/ssm_access.tf) |
+| **P2 · W6 · TLAB 6**<br>The Monitored Fortress| Multi-Tier<br>Production Bastion | Threat Invisibility &<br>Perimeter Breaches | PR.PT<br>*(800-53: SC-7)* | CIS 4<br>*(CMMC: SC.L2)* | All Tiers | [main.tf](./p2-tlab-06-the-monitored-fortress/main.tf)<br>[📸 Proof](./p2-tlab-06-the-monitored-fortress/cloudwatch_flow_logs.png) |
+| **P2 · W7 · Lab 19**<br>The Conveyor Belt | CI/CD Pipeline<br>(GitHub Actions) | Manual Config Drift &<br>Human Error | PR.AC<br>*(800-53: CM-3)* | CIS 16<br>*(CMMC: CM.L2)* | Availability | [pulse.yml](./.github/workflows/pulse.yml)<br>[📸 Proof](./p2-week-07-lab-19/terraform_plan_proof.png) |
+| **P2 · W7 · Lab 20**<br>The Quality Inspector | Shift-Left SAST<br>Scanning (tfsec) | Unpatched IaC<br>Deployment Flaws | PR.PT<br>*(800-53: SA-11)* | CIS 8<br>*(CMMC: RM.L2)* | Integrity | [main.tf](./p2-week-07-lab-20/main.tf)<br>[📸 Proof](./p2-week-07-lab-20/sast_failed_proof.png) |
+| **P2 · W7 · Lab 21**<br>The Delivery Drone | OIDC Keyless<br>Token Federation | Static Credential Theft<br>& Supply Chain Attacks | PR.AC<br>*(800-53: IA-2)* | CIS 6<br>*(CMMC: IA.L2)* | Confidentiality | [deploy.yml](./.github/workflows/deploy.yml)<br>[📸 Proof](./p2-week-07-lab-21/sast_passed_proof.png) |
+| **P2 · W7 · TLAB 7**<br>The Automated Forge | Zero-Trust CI/CD<br>Infrastructure Pipeline| Unauthorized Sprawl &<br>Open Ingress Exposure | PR.IP<br>*(800-53: CM-3)* | CIS 13<br>*(CMMC: CM.L2)* | All Tiers | [forge.yml](./.github/workflows/forge-pipeline.yml)<br>[📸 Proof](./p2-tlab-07-the-automated-forge/sast_passed_proof.png) |
 
 ## 📂 Artifact Evidence & Operational History
 
