@@ -88,6 +88,7 @@ A professional, mobile-first Purple Team environment demonstrating Zero-Trust pr
 | **P2 · W7 · Lab 20**<br>The Quality Inspector | Shift-Left SAST<br>Scanning (tfsec) | Unpatched IaC<br>Deployment Flaws | PR.PT<br>*(800-53: SA-11)* | CIS 8<br>*(CMMC: RM.L2)* | Integrity | [main.tf](./p2-week-07-lab-20/main.tf)<br>[📸 Evidence](./p2-week-07-lab-20/sast_failed_proof.png) |
 | **P2 · W7 · Lab 21**<br>The Delivery Drone | OIDC Keyless<br>Token Federation | Static Credential Theft<br>& Supply Chain Attacks | PR.AC<br>*(800-53: IA-2)* | CIS 6<br>*(CMMC: IA.L2)* | Confidentiality | [deploy.yml](./.github/workflows/deploy.yml)<br>[📸 Evidence](./p2-week-07-lab-21/sast_passed_proof.png) |
 | **P2 · W7 · TLAB 7**<br>The Automated Forge | Zero-Trust CI/CD<br>Infrastructure Pipeline| Unauthorized Sprawl &<br>Open Ingress Exposure | PR.IP<br>*(800-53: CM-3)* | CIS 13<br>*(CMMC: CM.L2)* | All Tiers | [forge-pipeline.yml](./.github/workflows/forge-pipeline.yml)<br>[📸 Evidence](./p2-tlab-07-the-automated-forge/screenshot%20c%20destroy%20complete%20p2week7%20tlab7.png) |
+| **P2 · W8 · Lab 22**<br>The Cargo Ship | Container Hardening &<br>Privilege Dropping | Container Breakouts &<br>Root Process Hijacking | PR.PT<br>*(800-53: SC-2)* | CIS 4<br>*(CMMC: SC.L2)* | All Tiers | [Dockerfile](./p2-week-08-lab-22/Dockerfile)<br>[📸 Evidence](#-p2--w8--s-22-the-cargo-ship--module-23-lab-submission) |
 ---
 
 ## 📂 Artifact Evidence & Operational History
@@ -1497,4 +1498,28 @@ To ensure full accountability and continuous logging alignment, the entire lifec
   
 * **White Hat Audit Question:** *"How does a fully automated security forge ensure zero-trust integrity across continuous deployment flows?"*
 * **Engineering Statement:** *"By requiring clean static analysis scans to clear the pipeline quality gate before triggering any resource modification, the system blocks misconfigured or vulnerable endpoints from ever reaching production environments."*
+---
+
+## 🔬 Phase 2 · Week 8 Laboratory Deliverables Ledger
+
+#### 🚢 P2 · W8 · S-22: The Cargo Ship — Module 23: Lab Submission
+*   **Attack Vector:** Container Breakouts / Privilege Escalation via Root Process Hijacking.
+*   **Strategic Explanation:** Reengineered a dangerously bloated, root-privileged web application container blueprint handed over by development. Stripped the image footprint down to a minimal Alpine base and dropped administrative process capabilities, ensuring the containerized application executes strictly within non-privileged process namespaces.
+
+| Data Point | Standard Cohort (Laptop/Desktop - X86) | Android Mobile Cybersecurity Workbench (Samsung Note 20 Ultra 5g - Arm64) |
+| :--- | :--- | :--- |
+| **Architecture** | Bloated Base Images running as Root | Stripped Minimal Alpine Containers |
+| **Telemetry State** | Local Terminal Daemon Checks | Container Sandbox Runtime Auditing |
+| **Inbound Gate** | Default Host Port Redirection | Hardened Non-Root User Execution Policies |
+
+*   **Technical Mechanics:** Wiped the container workspace contents and built a hardened Nginx-Alpine structural manifest (\`FROM nginx:alpine\`). Configured safe, unprivileged directory parameters by manually staging pid and cache permissions configurations via runtime triggers (\`chown -R nginx:nginx\`). Dropped native security parameters securely by enforcing explicit runtime process ownership shifts (\`USER nginx\`). Evidence File: \`p2-week-08-lab-22/Dockerfile\`
+
+### 🏢 Enterprise Deployment Verification & Security Audit Trail
+*   **Unprivileged Non-Root Runtime Audit Proof:**
+    ![Screenshot A](./p2-week-08-lab-22/Screenshot%20A%20Nginx%20.png)
+*   **Hardened Web Delivery Verification:**
+    ![Screenshot B](./p2-week-08-lab-22/screenshot%20b%20.png)
+
+*   **White Hat Audit Question:** *"What is the core security advantage of shifting a container from root execution down to an explicit, non-privileged service user account?"*
+*   **Engineering Statement:** *"Running containerized application services as root creates an extreme escalation vulnerability; if an edge application is compromised via a web exploit, the attacker inherits full administrative root execution privileges directly over the underlying host kernel namespace. Forcing execution down to a non-privileged account like nginx constrains any potential post-exploitation footprint strictly within an unprivileged sandbox container layer, preventing lateral breakout progression onto the production host engine."*
 ---
