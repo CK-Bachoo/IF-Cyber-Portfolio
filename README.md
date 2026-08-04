@@ -1512,7 +1512,7 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 | **Telemetry State** | Local Terminal Daemon Checks | Container Sandbox Runtime Auditing |
 | **Inbound Gate** | Default Host Port Redirection | Hardened Non-Root User Execution Policies |
 
-*   **Technical Mechanics:** Wiped the container workspace contents and built a hardened Nginx-Alpine structural manifest (\`FROM nginx:alpine\`). Configured safe, unprivileged directory parameters by manually staging pid and cache permissions configurations via runtime triggers (\`chown -R nginx:nginx\`). Dropped native security parameters securely by enforcing explicit runtime process ownership shifts (\`USER nginx\`). Evidence File: \`p2-week-08-lab-22/Dockerfile\`
+*   **Technical Mechanics:** Wiped the container workspace contents and built a hardened Nginx-Alpine structural manifest (\`FROM nginx:alpine\`). Configured safe, unprivileged directory parameters by manually staging pid and cache permissions configurations via runtime triggers (\`chown -R nginx:nginx\`). Dropped native security parameters securely by enforcing explicit runtime process ownership shifts (\`USER nginx\`). Evidence File: [Dockerfile](./p2-week-08-lab-22/Dockerfile)
 
 ### 🏢 Enterprise Deployment Verification & Security Audit Trail
 *   **Unprivileged Non-Root Runtime Audit Proof:**
