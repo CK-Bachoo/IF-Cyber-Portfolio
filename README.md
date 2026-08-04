@@ -1500,7 +1500,7 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 * **Engineering Statement:** *"By requiring clean static analysis scans to clear the pipeline quality gate before triggering any resource modification, the system blocks misconfigured or vulnerable endpoints from ever reaching production environments."*
 ---
 
-#### 🚢 P2-Week-08-Lab-22: The Cargo Ship — Module 23: Lab Submission
+#### 🚢 P2-Week-08-Lab-22: The Cargo Ship 
 *   **Attack Vector:** Container Breakouts / Privilege Escalation via Root Process Hijacking.
 *   **Strategic Explanation:** Reengineered a dangerously bloated, root-privileged web application container blueprint handed over by development. Stripped the image footprint down to a minimal Alpine base and dropped administrative process capabilities, ensuring the containerized application executes strictly within non-privileged process namespaces.
 
