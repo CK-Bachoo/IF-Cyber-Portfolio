@@ -1533,14 +1533,12 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 | **Telemetry State** | Default Web Editor Console Checks | Natively Invoked CLI Session Validation |
 | **Inbound Gate** | Over-Permissive Wildcard Access Policies | Hardened Least-Privilege JSON Trust Maps |
 
-*   **Technical Mechanics:** Wiped the developer's over-privileged configuration templates and codified a rigid access control object framework (`logs:CreateLogGroup`, `logs:CreateLogStream`, `logs:PutLogEvents`). Constrained resource interaction targets tightly using strict regional boundary strings (`arn:aws:logs:*:*:*`), completely neutralizing horizontal perimeter traversal during exploitation events. Evidence Files: `execution-role.json](./p2-week-08-lab-23/execution-role.json), `p2-week-08-lab-23/lambda_function.py`
-
+*   **Technical Mechanics:** Wiped the developer's over-privileged configuration templates and codified a rigid access control object framework (`logs:CreateLogGroup`, `logs:CreateLogStream`, `logs:PutLogEvents`). Constrained resource interaction targets tightly using strict regional boundary strings (`arn:aws:logs:*:*:*`), completely neutralizing horizontal perimeter traversal during exploitation events. Evidence Files: `execution-role.json](./p2-week-08-lab-23/execution-role.json), `p2-week-08-lab-23/lambda_function.py` [lambda_function.py](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/p2-week-08-lab-23/lambda_function.py)
 ### 🏢 Enterprise Deployment Verification & Security Audit Trail
 *   **DevSecOps Direct Cloud Code Execution Proof:**
-    ![Screenshot A](./p2-week-08-lab-23/screenshot_a.png)
+![Screenshot A](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/p2-week-08-lab-23/Screenshot%20A%20DevSecOps-execution-complete.png)
 *   **Hardened Least-Privilege Policy Schema Check:**
-    ![Screenshot B](./p2-week-08-lab-23/screenshot_b.png)
-
+![Screenshot B](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/p2-week-08-lab-23/Screenshot%20b%20execution-role.json.png)
 *   **White Hat Audit Question:** *"What is the core security advantage of restricting execution roles to specific log stream actions rather than attaching broad administrative wildcards?"*
 *   **Engineering Statement:** *"Attaching broad wildcard permissions to serverless integration runtimes breaks the Principle of Least Privilege; if the underlying application script is compromised via an code injection flaw, the threat actor inherits total administrative command execution across the entire cloud subscription footprint. Constraining the runtime role strictly to CloudWatch log creation primitives guarantees that even during a complete application shell hijack event, the attacker's post-exploitation footprint remains entirely compressed, preventing lateral compromise or resource modification across other enterprise systems."*
-Use code with caution.🎨 Step 3: Append the New Row to Your Governance Chart MatrixScroll back up to your Phase 2 Corporate Governance Compliance Chart at the top of your README.md file, find the bottom of your table right after your Lab 22 Cargo Ship entry, and paste this row directly into position:markdown
+---
