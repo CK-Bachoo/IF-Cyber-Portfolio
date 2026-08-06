@@ -1533,7 +1533,7 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 | **Telemetry State** | Default Web Editor Console Checks | Natively Invoked CLI Session Validation |
 | **Inbound Gate** | Over-Permissive Wildcard Access Policies | Hardened Least-Privilege JSON Trust Maps |
 
-*   **Technical Mechanics:** Wiped the developer's over-privileged configuration templates and codified a rigid access control object framework (`logs:CreateLogGroup`, `logs:CreateLogStream`, `logs:PutLogEvents`). Constrained resource interaction targets tightly using strict regional boundary strings (`arn:aws:logs:*:*:*`), completely neutralizing horizontal perimeter traversal during exploitation events. Evidence Files: `p2-week-08-lab-23/execution-role.json`, `p2-week-08-lab-23/lambda_function.py`
+*   **Technical Mechanics:** Wiped the developer's over-privileged configuration templates and codified a rigid access control object framework (`logs:CreateLogGroup`, `logs:CreateLogStream`, `logs:PutLogEvents`). Constrained resource interaction targets tightly using strict regional boundary strings (`arn:aws:logs:*:*:*`), completely neutralizing horizontal perimeter traversal during exploitation events. Evidence Files: `execution-role.json](./p2-week-08-lab-23/execution-role.json), `p2-week-08-lab-23/lambda_function.py`
 
 ### 🏢 Enterprise Deployment Verification & Security Audit Trail
 *   **DevSecOps Direct Cloud Code Execution Proof:**
