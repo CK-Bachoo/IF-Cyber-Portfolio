@@ -89,6 +89,7 @@ A professional, mobile-first Purple Team environment demonstrating Zero-Trust pr
 | **P2 · W7 · Lab 21**<br>The Delivery Drone | OIDC Keyless<br>Token Federation | Static Credential Theft<br>& Supply Chain Attacks | PR.AC<br>*(800-53: IA-2)* | CIS 6<br>*(CMMC: IA.L2)* | Confidentiality | [deploy.yml](./.github/workflows/deploy.yml)<br>[📸 Evidence](./p2-week-07-lab-21/sast_passed_proof.png) |
 | **P2 · W7 · TLAB 7**<br>The Automated Forge | Zero-Trust CI/CD<br>Infrastructure Pipeline| Unauthorized Sprawl &<br>Open Ingress Exposure | PR.IP<br>*(800-53: CM-3)* | CIS 13<br>*(CMMC: CM.L2)* | All Tiers | [forge-pipeline.yml](./.github/workflows/forge-pipeline.yml)<br>[📸 Evidence](./p2-tlab-07-the-automated-forge/screenshot%20c%20destroy%20complete%20p2week7%20tlab7.png) |
 | **P2 · W8 · Lab 22**<br>The Cargo Ship | Container Hardening &<br>Privilege Dropping | Container Breakouts &<br>Root Process Hijacking | PR.PT<br>*(800-53: SC-2)* | CIS 4<br>*(CMMC: SC.L2)* | All Tiers | [Dockerfile](./p2-week-08-lab-22/Dockerfile)<br>[📸 Evidence](#-p2--w8--s-22-the-cargo-ship--module-23-lab-submission) |
+| **P2 · W8 · Lab-23**<br>The Ghost Fleet | Serverless Role &<br>Least-Privilege Hardening | Identity Privilege Escalation &<br>Policy Wildcard Hijacking | PR.AC<br>*(800-53: AC-6)* | CIS 6<br>*(CMMC: AC.L2)* | Confidentiality | [execution-role.json](./p2-week-08-lab-23/execution-role.json)<br>[📸 Evidence](#-p2--w8--s-23-the-ghost-fleet--module-24-lab-submission) |
 ---
 
 ## 📂 Artifact Evidence & Operational History
@@ -1521,3 +1522,25 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 *   **White Hat Audit Question:** *"What is the core security advantage of shifting a container from root execution down to an explicit, non-privileged service user account?"*
 *   **Engineering Statement:** *"Running containerized application services as root creates an extreme escalation vulnerability; if an edge application is compromised via a web exploit, the attacker inherits full administrative root execution privileges directly over the underlying host kernel namespace. Forcing execution down to a non-privileged account like nginx constrains any potential post-exploitation footprint strictly within an unprivileged sandbox container layer, preventing lateral breakout progression onto the production host engine."*
 ---
+
+#### 👻 P2 · W8 · S-23: The Ghost Fleet — Module 24: Lab Submission
+*   **Attack Vector:** Identity Privilege Escalation / Policy Hijacking via Over-Permissive Wildcards.
+*   **Strategic Explanation:** Intercepted a dangerously over-permissive AWS Lambda execution role containing a toxic administrative wildcard parameter (`"Action": "*"`). Surgically engineered a hardened, infrastructure-as-code compliant Least-Privilege JSON access token strategy, locking execution boundaries down exclusively to the exact three CloudWatch logging endpoints required for operational baseline tracking.
+
+| Data Point | Standard Cohort (Laptop/Desktop - X86) | Android Mobile Cybersecurity Workbench (Samsung Note 20 Ultra 5g - Arm64) |
+| :--- | :--- | :--- |
+| **Architecture** | Console-Driven Lambda Deployments | Terminal-Driven Zip Packing Archives |
+| **Telemetry State** | Default Web Editor Console Checks | Natively Invoked CLI Session Validation |
+| **Inbound Gate** | Over-Permissive Wildcard Access Policies | Hardened Least-Privilege JSON Trust Maps |
+
+*   **Technical Mechanics:** Wiped the developer's over-privileged configuration templates and codified a rigid access control object framework (`logs:CreateLogGroup`, `logs:CreateLogStream`, `logs:PutLogEvents`). Constrained resource interaction targets tightly using strict regional boundary strings (`arn:aws:logs:*:*:*`), completely neutralizing horizontal perimeter traversal during exploitation events. Evidence Files: `p2-week-08-lab-23/execution-role.json`, `p2-week-08-lab-23/lambda_function.py`
+
+### 🏢 Enterprise Deployment Verification & Security Audit Trail
+*   **DevSecOps Direct Cloud Code Execution Proof:**
+    ![Screenshot A](./p2-week-08-lab-23/screenshot_a.png)
+*   **Hardened Least-Privilege Policy Schema Check:**
+    ![Screenshot B](./p2-week-08-lab-23/screenshot_b.png)
+
+*   **White Hat Audit Question:** *"What is the core security advantage of restricting execution roles to specific log stream actions rather than attaching broad administrative wildcards?"*
+*   **Engineering Statement:** *"Attaching broad wildcard permissions to serverless integration runtimes breaks the Principle of Least Privilege; if the underlying application script is compromised via an code injection flaw, the threat actor inherits total administrative command execution across the entire cloud subscription footprint. Constraining the runtime role strictly to CloudWatch log creation primitives guarantees that even during a complete application shell hijack event, the attacker's post-exploitation footprint remains entirely compressed, preventing lateral compromise or resource modification across other enterprise systems."*
+Use code with caution.🎨 Step 3: Append the New Row to Your Governance Chart MatrixScroll back up to your Phase 2 Corporate Governance Compliance Chart at the top of your README.md file, find the bottom of your table right after your Lab 22 Cargo Ship entry, and paste this row directly into position:markdown
