@@ -1581,19 +1581,20 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 | **Telemetry State** | Monolithic IAM Wildcard Roles (`*`) | Surgically Scoped Least-Privilege JSON Policies |
 | **Inbound Gate** | Unscanned Image Registries | ECR Vault with Automated Scan-on-Push Enabled |
 
-### **TLAB 8 Mission Defense Matrix (Executive Summary)**
-
+### **TLAB 8 Mission Defense Matrix (Summary)**
 * **Technical Mechanics:** Codified an ultra-lean Alpine integration profile, dropping root execution levels down to restricted service boundaries natively inside the container manifest (`USER node`). Drafted a strict Identity and Access Management (IAM) JSON policy limiting the serverless Python Auditor entirely to its required telemetry endpoints.
-* **Evidence Files:** `p2-tlab-08-the-hardened-hull/Dockerfile`, `p2-tlab-08-the-hardened-hull/auditor-role.json`
+* **Evidence Files:** * [Dockerfile Evidence Link](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/p2-tlab-08-the-hardened-hull/Dockerfile)
+  * [Auditor Role JSON Evidence Link](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/p2-tlab-08-the-hardened-hull/auditor-role.json)
 
 ### **Enterprise Deployment Verification & Security Audit Trail**
-
 * **Cloud Architecture Audit Check:** Verified via AWS ECR zero-vulnerability container scan and successful Python Boto3 Lambda execution logs bridging serverless identity boundaries.
 * **Destroy Mandate Proof (Total Asset Decommissioning & Stipend Protection):** `Destroy complete! Resources: 0 destroyed (Active ECR and Lambda instances purged manually via AWS Web Console)`
-* **Operational Defense Logic (White Hat Auditor Interrogation):** * *White Hat Auditor Question:* "Why must an AWS Lambda execution role be restricted to a precise ECR resource ARN rather than using a wildcard (`*`) when performing an image audit?"
-  * *Engineering Statement:* *"Utilizing a wildcard (`*`) on resource bindings in an IAM policy creates an extreme blast radius. If an attacker breaches the serverless function, they inherit administrative control over every repository and cloud asset in the account. By scoping the Resource ARN directly to `arn:aws:ecr:us-east-1:ACCOUNT_ID:repository/tkh-fleet-vault`, we enforce absolute Least Privilege containment—neutralizing lateral movement and protecting the broader cloud infrastructure."*
+
+* **Operational Defense Logic (White Hat Auditor Interrogation):**
+*   **White Hat Audit Question:** * "Why must an AWS Lambda execution role be restricted to a precise ECR resource ARN rather than using a wildcard (`*`) when performing an image audit?"
+*   **Engineering Statement:** * "Utilizing a wildcard (`*`) on resource bindings in an IAM policy creates an extreme blast radius. If an attacker breaches the serverless function, they inherit administrative control over every repository and cloud asset in the account. By scoping the Resource ARN directly to `arn:aws:ecr:us-east-1:ACCOUNT_ID:repository/tkh-fleet-vault`, we enforce absolute Least Privilege containment—neutralizing lateral movement and protecting the broader cloud infrastructure."*
 
 <p align="center">
-  <img src="./p2-tlab-08-the-hardened-hull/Screen Shot 2026-08-08 at 01.11.43.jpg" alt="ECR Vault Clean Scan" width="45%">
-  <img src="./p2-tlab-08-the-hardened-hull/Screen Shot 2026-08-08 at 00.58.58.jpg" alt="Lambda Auditor Success" width="45%">
+  <img src="https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/p2-tlab-08-the-hardened-hull/screenshot%20a%20tlab%208.png" alt="ECR Clean Scan Evidence" width="45%">
+  <img src="https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/p2-tlab-08-the-hardened-hull/screenshot%20b%20tlab%208.png" alt="Lambda Auditor Success Log Evidence" width="45%">
 </p>
