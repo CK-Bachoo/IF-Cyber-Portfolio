@@ -91,7 +91,7 @@ A professional, mobile-first Purple Team environment demonstrating Zero-Trust pr
 | **P2 · W8 · Lab 22**<br>The Cargo Ship | Container Hardening &<br>Privilege Dropping | Container Breakouts &<br>Root Process Hijacking | PR.PT<br>*(800-53: SC-2)* | CIS 4<br>*(CMMC: SC.L2)* | All Tiers | [Dockerfile](./p2-week-08-lab-22/Dockerfile)<br>[📸 Evidence](#-p2--w8--s-22-the-cargo-ship--module-23-lab-submission) |
 | **P2 · W8 · Lab-23**<br>The Ghost Fleet | Serverless Role &<br>Least-Privilege Hardening | Identity Privilege Escalation &<br>Policy Wildcard Hijacking | PR.AC<br>*(800-53: AC-6)* | CIS 6<br>*(CMMC: AC.L2)* | Confidentiality | [execution-role.json](./p2-week-08-lab-23/execution-role.json)<br>[📸 Evidence](#-p2--w8--s-23-the-ghost-fleet--module-24-lab-submission) |
 | **P2 · W8 · Lab-24**<br>The Manifest | Private Registry &<br>Supply Chain Hardening | Supply Chain Injection &<br>Unpatched Base Image CVEs | PR.IP<br>*(800-53: RA-5)* | CIS 13<br>*(CMMC: SI.L2)* | Integrity | [Dockerfile](./p2-week-08-lab-24/Dockerfile)<br>[📸 Evidence](#-p2--w8--s-24-the-manifest--module-25-lab-submission) |
-
+| **P2 · W8 · TLAB 8**<br>The Fleet Command | Container Hardening &<br>Serverless Least Privilege | Identity Escalation &<br>Container Breakouts | PR.AC<br>*(800-53: AC-6)* | CIS 5<br>*(CMMC: AC.L2)* | All Tiers | [Dockerfile](./p2-tlab-08-the-hardened-hull/Dockerfile)<br>[📸 Evidence](#-p2--w8--tlab-8-the-fleet-command--capstone-submission) |
 ---
 
 ## 📂 Artifact Evidence & Operational History
@@ -1567,3 +1567,33 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 *   **White Hat Audit Question:** *"Why is it critical to enforce automated scan-on-push filters for private container images rather than just performing baseline scans during local dev phases?"*
 *   **Engineering Statement:** *"Local developer scans only detect vulnerabilities known at the moment of build. Enforcing automated scan-on-push configurations ensures every image layer is checked against up-to-date threat models, intercepting vulnerable packages before they can move through delivery pipelines and enter production clusters."*
 ---
+
+***
+
+## 📦 P2 · W8 · TLAB 8: The Fleet Command — Capstone Submission
+
+* **Attack Vector:** Identity Privilege Escalation / Container Breakouts via Over-Permissive Wildcards.
+* **Strategic Explanation:** Intercepted a dangerously bloated Node.js container (`node:latest`) running as root and an over-permissive AWS Lambda execution role (`Action: *`). Surgically hardened the container to a micro-footprint Alpine base, explicitly dropped root execution privileges (`USER node`), and deployed it to an AWS ECR Vault with Scan-on-Push enabled. Engineered a strict, infrastructure-as-code compliant Least-Privilege JSON policy to lock the Lambda "Ghost Auditor" down exclusively to CloudWatch logging and ECR image telemetry.
+
+| Data Point | Standard Cohort (Laptop/Desktop - X86) | Android Mobile Cybersecurity Workbench (Samsung Note 20 Ultra 5g - Arm64) |
+| :--- | :--- | :--- |
+| **Architecture** | Bloated Base Images running as Root | Stripped Minimal Alpine Containers |
+| **Telemetry State** | Monolithic IAM Wildcard Roles (`*`) | Surgically Scoped Least-Privilege JSON Policies |
+| **Inbound Gate** | Unscanned Image Registries | ECR Vault with Automated Scan-on-Push Enabled |
+
+### **TLAB 8 Mission Defense Matrix (Executive Summary)**
+
+* **Technical Mechanics:** Codified an ultra-lean Alpine integration profile, dropping root execution levels down to restricted service boundaries natively inside the container manifest (`USER node`). Drafted a strict Identity and Access Management (IAM) JSON policy limiting the serverless Python Auditor entirely to its required telemetry endpoints.
+* **Evidence Files:** `p2-tlab-08-the-hardened-hull/Dockerfile`, `p2-tlab-08-the-hardened-hull/auditor-role.json`
+
+### **Enterprise Deployment Verification & Security Audit Trail**
+
+* **Cloud Architecture Audit Check:** Verified via AWS ECR zero-vulnerability container scan and successful Python Boto3 Lambda execution logs bridging serverless identity boundaries.
+* **Destroy Mandate Proof (Total Asset Decommissioning & Stipend Protection):** `Destroy complete! Resources: 0 destroyed (Active ECR and Lambda instances purged manually via AWS Web Console)`
+* **Operational Defense Logic (White Hat Auditor Interrogation):** * *White Hat Auditor Question:* "Why must an AWS Lambda execution role be restricted to a precise ECR resource ARN rather than using a wildcard (`*`) when performing an image audit?"
+  * *Engineering Statement:* *"Utilizing a wildcard (`*`) on resource bindings in an IAM policy creates an extreme blast radius. If an attacker breaches the serverless function, they inherit administrative control over every repository and cloud asset in the account. By scoping the Resource ARN directly to `arn:aws:ecr:us-east-1:ACCOUNT_ID:repository/tkh-fleet-vault`, we enforce absolute Least Privilege containment—neutralizing lateral movement and protecting the broader cloud infrastructure."*
+
+<p align="center">
+  <img src="./p2-tlab-08-the-hardened-hull/Screen Shot 2026-08-08 at 01.11.43.jpg" alt="ECR Vault Clean Scan" width="45%">
+  <img src="./p2-tlab-08-the-hardened-hull/Screen Shot 2026-08-08 at 00.58.58.jpg" alt="Lambda Auditor Success" width="45%">
+</p>
