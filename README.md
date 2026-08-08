@@ -90,6 +90,8 @@ A professional, mobile-first Purple Team environment demonstrating Zero-Trust pr
 | **P2 · W7 · TLAB 7**<br>The Automated Forge | Zero-Trust CI/CD<br>Infrastructure Pipeline| Unauthorized Sprawl &<br>Open Ingress Exposure | PR.IP<br>*(800-53: CM-3)* | CIS 13<br>*(CMMC: CM.L2)* | All Tiers | [forge-pipeline.yml](./.github/workflows/forge-pipeline.yml)<br>[📸 Evidence](./p2-tlab-07-the-automated-forge/screenshot%20c%20destroy%20complete%20p2week7%20tlab7.png) |
 | **P2 · W8 · Lab 22**<br>The Cargo Ship | Container Hardening &<br>Privilege Dropping | Container Breakouts &<br>Root Process Hijacking | PR.PT<br>*(800-53: SC-2)* | CIS 4<br>*(CMMC: SC.L2)* | All Tiers | [Dockerfile](./p2-week-08-lab-22/Dockerfile)<br>[📸 Evidence](#-p2--w8--s-22-the-cargo-ship--module-23-lab-submission) |
 | **P2 · W8 · Lab-23**<br>The Ghost Fleet | Serverless Role &<br>Least-Privilege Hardening | Identity Privilege Escalation &<br>Policy Wildcard Hijacking | PR.AC<br>*(800-53: AC-6)* | CIS 6<br>*(CMMC: AC.L2)* | Confidentiality | [execution-role.json](./p2-week-08-lab-23/execution-role.json)<br>[📸 Evidence](#-p2--w8--s-23-the-ghost-fleet--module-24-lab-submission) |
+| **P2 · W8 · Lab-24**<br>The Manifest | Private Registry &<br>Supply Chain Hardening | Supply Chain Injection &<br>Unpatched Base Image CVEs | PR.IP<br>*(800-53: RA-5)* | CIS 13<br>*(CMMC: SI.L2)* | Integrity | [Dockerfile](./p2-week-08-lab-24/Dockerfile)<br>[📸 Evidence](#-p2--w8--s-24-the-manifest--module-25-lab-submission) |
+
 ---
 
 ## 📂 Artifact Evidence & Operational History
@@ -1541,4 +1543,27 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 ![Screenshot B](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/p2-week-08-lab-23/Screenshot%20b%20execution-role.json.png)
 *   **White Hat Audit Question:** *"What is the core security advantage of restricting execution roles to specific log stream actions rather than attaching broad administrative wildcards?"*
 *   **Engineering Statement:** *"Attaching broad wildcard permissions to serverless integration runtimes breaks the Principle of Least Privilege; if the underlying application script is compromised via an code injection flaw, the threat actor inherits total administrative command execution across the entire cloud subscription footprint. Constraining the runtime role strictly to CloudWatch log creation primitives guarantees that even during a complete application shell hijack event, the attacker's post-exploitation footprint remains entirely compressed, preventing lateral compromise or resource modification across other enterprise systems."*
+---
+
+#### 📋 P2 · W8 · S-24: The Manifest — Module 25: Lab Submission
+*   **Attack Vector:** Supply Chain Vulnerability Injection / Legacy Package Exploitation.
+*   **Strategic Explanation:** Migrated microservice container baselines away from public registries into a private AWS ECR vault. Programmed automated image scan-on-push inspection triggers to systematically identify and block software packages containing known CVE risks. Deployed a clean, minimal Alpine Linux remediation layer to eliminate operating system dependencies.
+
+| Data Point | Standard Cohort (Laptop/Desktop - X86) | Android Mobile Cybersecurity Workbench (Samsung Note 20 Ultra 5g - Arm64) |
+| :--- | :--- | :--- |
+| **Architecture** | Public, Unverified DockerHub Images | Private, Monitored AWS ECR Vault Repositories |
+| **Telemetry State** | Manual Post-Build Image Scans | Automated, On-Push Vulnerability Ingestion |
+| **Inbound Gate** | Unrestricted Container Ingress | Strict Private Registry IAM Access Controls |
+
+*   **Technical Mechanics:** Wiped the developer's bloated, vulnerable image footprint and codified a hardened Nginx-Alpine base container framework (`FROM nginx:alpine`). Deployed version 2 (`v2`) to the repository, proving an immediate reduction in severe vulnerabilities across the image lifecycle. Evidence File: [Dockerfile](./p2-week-08-lab-24/Dockerfile)
+
+### 🏢 Enterprise Deployment Verification & Security Audit Trail
+*   **Private ECR Automated Vulnerability Scan Dashboard:**
+    ![Vulnerability Scan Proof](./p2-week-08-lab-24/ECR%20Console%20Screenshot.png)
+
+*   **DevSecOps Layer Push Verification Check:**
+    ![Terminal Digest Output](./p2-week-08-lab-24/v2%20digest%20terminal%20screenshot.png)
+
+*   **White Hat Audit Question:** *"Why is it critical to enforce automated scan-on-push filters for private container images rather than just performing baseline scans during local dev phases?"*
+*   **Engineering Statement:** *"Local developer scans only detect vulnerabilities known at the moment of build. Enforcing automated scan-on-push configurations ensures every image layer is checked against up-to-date threat models, intercepting vulnerable packages before they can move through delivery pipelines and enter production clusters."*
 ---
