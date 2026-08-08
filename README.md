@@ -1523,7 +1523,7 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 *   **Engineering Statement:** *"Running containerized application services as root creates an extreme escalation vulnerability; if an edge application is compromised via a web exploit, the attacker inherits full administrative root execution privileges directly over the underlying host kernel namespace. Forcing execution down to a non-privileged account like nginx constrains any potential post-exploitation footprint strictly within an unprivileged sandbox container layer, preventing lateral breakout progression onto the production host engine."*
 ---
 
-#### 👻 P2 · W8 · S-23: The Ghost Fleet — Module 24: Lab Submission
+#### 👻 P2 · W8 · S-23: The Ghost Fleet: Lab Submission
 *   **Attack Vector:** Identity Privilege Escalation / Policy Hijacking via Over-Permissive Wildcards.
 *   **Strategic Explanation:** Intercepted a dangerously over-permissive AWS Lambda execution role containing a toxic administrative wildcard parameter (`"Action": "*"`). Surgically engineered a hardened, infrastructure-as-code compliant Least-Privilege JSON access token strategy, locking execution boundaries down exclusively to the exact three CloudWatch logging endpoints required for operational baseline tracking.
 
