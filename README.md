@@ -1,8 +1,8 @@
 # IF-Cyber-Portfolio  
 **The Knowledge House | Cybersecurity Innovation Fellowship (IF-CS-26 NY)**  
-**C.K. Bachoo — Navy Veteran | Mobile-First Cybersecurity Practitioner**
+**C.K. Bachoo — Navy Veteran | Dual Mobile-First Arm 64 and X86 Cybersecurity Purple Team Cloud Practitioner**
 
-This portfolio contains the complete body of work completed during The Knowledge House NY Innovation Fellowship (Cohort IF-CS-26). All labs, scripts, reports, and infrastructure-as-code were engineered primarily from a **Samsung Galaxy Note 20 Ultra** using Termux, with supporting work in GitHub Codespaces, Google Cloud Shell, and AWS.
+This portfolio contains the complete body of work completed during The Knowledge House NY Innovation Fellowship (Cohort IF-CS-26). All labs, scripts, reports, and infrastructure-as-code were engineered primarily from a **Samsung Galaxy Note 20 Ultra** using Termux, with supporting work in GitHub Codespaces, Google Cloud Shell, Azure, and AWS.
 
 **Primary Focus Areas**
 - Enterprise Purple Team automation & continuous adversarial simulation
@@ -13,7 +13,7 @@ This portfolio contains the complete body of work completed during The Knowledge
 - Governance mapping to NIST CSF 2.0 and CIS Controls
 
 **Related Repositories**
-- [Android Mobile Cybersecurity Workbench](https://github.com/CK-Bachoo/Android-mobile-cybersecurity-workbench) — The mobile SOC / Bunker platform
+- [Android Mobile Cybersecurity Workbench](https://github.com/CK-Bachoo/Android-mobile-cybersecurity-workbench) — The mobile SOC rig (Samsung Note 20 Ultra 5g Exynos 990 chip 12gb ram 256gb storage with exp. sd card for isolated storage)  / Bunker platform
 - Profile & summary: [CK-Bachoo](https://github.com/CK-Bachoo)
 
 ---
@@ -22,9 +22,9 @@ This portfolio contains the complete body of work completed during The Knowledge
 
 All work was executed under hardware constraints (ARM64, non-rooted Android) and bridged to cloud compute when required:
 
-`Samsung Note 20 Ultra (Termux)` → `GitHub Codespaces` / `Google Cloud Shell` / `AWS`
+`Samsung Note 20 Ultra (Termux)` → `GitHub Codespaces` / `Google Cloud Shell` / `Azure` / `AWS`
 
-This approach demonstrates practical Zero Trust operations, thermal and resource management, and the ability to deliver enterprise-style security work without traditional laptop infrastructure.
+This approach demonstrates practical Zero Trust operations, thermal and resource management, and the  / `Google Cloud Shell` to deliver enterprise-style security work without traditional laptop infrastructure.
 
 ---
 
