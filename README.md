@@ -57,7 +57,7 @@ This approach demonstrates practical, real-world Zero Trust operations, thermal 
 | S08 | Memory Audit | RAM-Resident Brute Force | DE.CM | CIS 8 | Confidentiality | [brute_report.txt](week-03/brute_report.txt) |
 | S09 | Automation Pivot | Malware Detonation Attempt | PR.IP | CIS 16 | Integrity | [system_auditor.py](week-03/system_auditor.py) |
 | TLAB 3 | Automated Hunt | Remote Code Execution (RCE) | RS.MI | CIS 17 | Integrity | [incident_response.py](week-03/incident_response.py) |
-| S10 | Layer 3 Sandbox | C2 Exfiltration (The Air Gap) | PR.PT | CIS 12 | Confidentiality | [sandbox_verify.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/sandbox_verify.txt) |
+| S10 | Layer 3 Sandbox | C2 Exfiltration (The Air Gap) | PR.PT | CIS 12 | Confidentiality | sandbox_verify.txt |
 | S11 | Container Rev | Configuration Drift / Static Infra | PR.DS | CIS 12 | Integrity | [deploy_web.sh](week-04/deploy_web.sh) |
 | S12 | Fleet Orchestr. | Lateral Movement / Data Breach | PR.NW | CIS 14 | Confidentiality | [docker-compose.yml](week-04/docker-compose.yml) |
 | TLAB 4 | Cloud Fleet | Rogue Service Infrastructure | ID.GV | CIS 1 | Accountability | [hyperstack_audit.json](week-04/hyperstack_audit.json) |
@@ -168,7 +168,7 @@ This approach demonstrates practical, real-world Zero Trust operations, thermal 
 ---
 
 ### 🛠️ T1-M1-S06: Protocol Interrogation (Wireshark Analysis)
-📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/5da1f6c7f4dd5c3bbecc4bac04ac3866/raw/2a2b1656865961415535626087562f262839adca/protocol_audit.txt | bash 
+📥 Starter Code (Canvas): N/A (CLI Manual Entry)
 
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-02/protocol_audit.txt
 
