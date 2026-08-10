@@ -5,11 +5,11 @@
 This portfolio contains the complete body of work completed during The Knowledge House NY Innovation Fellowship (Cohort IF-CS-26). All labs, scripts, reports, and infrastructure-as-code were engineered primarily from a **Samsung Galaxy Note 20 Ultra** using Termux, with supporting work in GitHub Codespaces, Google Cloud Shell, and AWS.
 
 **Primary Focus Areas**
-- Purple Team operations & defensive automation
+- Enterprise Purple Team automation & continuous adversarial simulation
 - Mobile-to-Cloud Zero Trust pipelines
-- Infrastructure as Code (Terraform) + GitHub Actions
+- Declarative Infrastructure as Code (Terraform HCL) & Shift-Left CI/CD pipelines
 - DFIR, threat hunting, and incident response
-- Cloud security (IAM, OIDC, VPC, SSM, Flow Logs)
+- Cloud security & identity governance (IAM Principle of Least Privilege, OIDC federation)
 - Governance mapping to NIST CSF 2.0 and CIS Controls
 
 **Related Repositories**
