@@ -68,12 +68,12 @@ This approach demonstrates practical, real-world Zero Trust operations, thermal 
 | S16 | OSI Troubleshooting | Configuration Sabotage / Isolation | RS.MI | CIS 4 | Availability | [readiness_check.log](week-06/readiness_check.log) |
 | S17 | Technical Diagnostic | Privilege Management / Log Security | PR.DS | CIS 3 | Integrity | [practical_exam_report.txt](week-06/practical_exam_report.txt) |
 | S18 Cap. | Enterprise Capstone | Lateral Movement / Infrastructure Breach | PR.PS | CIS 4 | All Tiers | [HardenedOutpost_SAD.md](week-06/HardenedOutpost_SAD.md) |
-| S19 | OSINT & Passive Recon | Attack Surface Mapping / Data Leakage | ID.RA | CIS 2 | Confidentiality | [ThreatProfile_CloudNano.md](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/e267d6948ef9000a5aecd23dc42e2ea815817942) |
+| S19 | OSINT & Passive Recon | Attack Surface Mapping / Data Leakage | ID.RA | CIS 2 | Confidentiality | [ThreatProfile_CloudNano.md](week-07/ThreatProfile_CloudNano.md) |
 | S20 | Network Enumeration | Active Reconnaissance / Service Discovery | ID.RA | CIS 12 | Confidentiality | [nmap_scan_results.txt](week-07/nmap_scan_results.txt) |
 | S21 | Vulnerability Triage | Web Application Scanning / Risk Prioritization | ID.RA | CIS 7 | All Tiers | [remediation_plan.md](week-07/remediation_plan.md) |
 | TLAB W7 | Perimeter Assessment | Active Recon / Vulnerability Audit / Risk Triage | ID.RA | CIS 7 | All Tiers | [Perimeter_Assessment.md](week-07/Perimeter_Assessment.md) |
 | S22 | Vulnerability Verification | MSF: usermap_script / Samba Exploit | PR.IP | CIS 7 | Confidentiality | [exploit_verification.png](week-09/exploit_verification.png) |
-| S23 | Privilege Escalation | Cron Job Wildcard / Unquoted Service Path | PR.AC | CIS 5 | Integrity | [escalation_path.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/018e7631f51db14d6e5d07420be135941b7fe512) |
+| S23 | Privilege Escalation | Cron Job Wildcard / Unquoted Service Path | PR.AC | CIS 5 | Integrity | [escalation_path.txt](week-08/escalation_path.txt)|
 | S24 | Lateral Movement | SSH Pivot / SOCKS Proxy Tunnel | PR.PT | CIS 4 | Confidentiality | [pivot_success.png](week-08/pivot_success.png) |
 | TLAB 8 | The Kill Chain | Vertical Escalation / Cross-Subnet Pivot | PR.PT | CIS 12 | Confidentiality | [Deep_Pivot_Report.md](week-08/Deep_Pivot_Report.md) |
 | S25 | Data Exfiltration | SQL Injection / Authentication Bypass / UNION Attack | DE.CM | CIS 18 | Confidentiality | [sqli_report.txt](week-09/sqli_report.txt) |
@@ -101,10 +101,10 @@ This approach demonstrates practical, real-world Zero Trust operations, thermal 
 | **P2 · W6 · S-17**<br>The Silent Wiretap | VPC Flow Logging &<br>Network Wiretaps | Visibility Deficit &<br>Silent Lateral Mvmt | DE.CM<br>*(800-53: AU-12)* | CIS 13<br>*(CMMC: AU.L2)* | Integrity | Baseline: [main.tf](./p2-week-06-lab-17/original_baseline_main.tf)<br>Honeypot: [main.tf](./p2-week-06-lab-17/janes_honeypot_main.tf) |
 | **P2 · W6 · S-18**<br>The Zero Trust Terminal| Keyless Access<br>(AWS SSM) | Inbound SSH Theft &<br>Port Piercing | PR.AC<br>*(800-53: AC-17)* | CIS 6<br>*(CMMC: AC.L2)* | Confidentiality | [ssm_access.tf](./p2-week-06-lab-18/ssm_access.tf) |
 | **P2 · W6 · TLAB 6**<br>The Monitored Fortress| Multi-Tier<br>Production Bastion | Threat Invisibility &<br>Perimeter Breaches | PR.PT<br>*(800-53: SC-7)* | CIS 4<br>*(CMMC: SC.L2)* | All Tiers | [main.tf](./p2-tlab-06-the-monitored-fortress/main.tf)<br>[📸 Evidence](./p2-tlab-06-the-monitored-fortress/destroy_verification.png) |
-| **P2 · W7 · Lab 19**<br>The Conveyor Belt | CI/CD Pipeline<br>(GitHub Actions) | Manual Config Drift &<br>Human Error | PR.AC<br>*(800-53: CM-3)* | CIS 16<br>*(CMMC: CM.L2)* | Availability | [pulse.yml](./.github/workflows/pulse.yml)<br>[📸 Evidence](./p2-week-07-lab-19/terraform_plan_proof.png) |
+| **P2 · W7 · Lab 19**<br>The Conveyor Belt | CI/CD Pipeline<br>(GitHub Actions) | Manual Config Drift &<br>Human Error | PR.AC<br>*(800-53: CM-3)* | CIS 16<br>*(CMMC: CM.L2)* | Availability |[pulse.yml](./p2-week-07-lab-19/pulse.yml)<br>[📸 Evidence](./p2-week-07-lab-19/terraform_plan_proof.png) |
 | **P2 · W7 · Lab 20**<br>The Quality Inspector | Shift-Left SAST<br>Scanning (tfsec) | Unpatched IaC<br>Deployment Flaws | PR.PT<br>*(800-53: SA-11)* | CIS 8<br>*(CMMC: RM.L2)* | Integrity | [main.tf](./p2-week-07-lab-20/main.tf)<br>[📸 Evidence](./p2-week-07-lab-20/sast_failed_proof.png) |
-| **P2 · W7 · Lab 21**<br>The Delivery Drone | OIDC Keyless<br>Token Federation | Static Credential Theft<br>& Supply Chain Attacks | PR.AC<br>*(800-53: IA-2)* | CIS 6<br>*(CMMC: IA.L2)* | Confidentiality | [deploy.yml](./.github/workflows/deploy.yml)<br>[📸 Evidence](./p2-week-07-lab-21/sast_passed_proof.png) |
-| **P2 · W7 · TLAB 7**<br>The Automated Forge | Zero-Trust CI/CD<br>Infrastructure Pipeline| Unauthorized Sprawl &<br>Open Ingress Exposure | PR.IP<br>*(800-53: CM-3)* | CIS 13<br>*(CMMC: CM.L2)* | All Tiers | [forge-pipeline.yml](./.github/workflows/forge-pipeline.yml)<br>[📸 Evidence](./p2-tlab-07-the-automated-forge/screenshot%20c%20destroy%20complete%20p2week7%20tlab7.png) |
+| **P2 · W7 · Lab 21**<br>The Delivery Drone | OIDC Keyless<br>Token Federation | Static Credential Theft<br>& Supply Chain Attacks | PR.AC<br>*(800-53: IA-2)* | CIS 6<br>*(CMMC: IA.L2)* | Confidentiality | [deploy.yml](./p2-week-07-lab-21/deploy.yml)<br>[📸 Evidence](./p2-week-07-lab-21/sast_passed_proof.png) |
+| **P2 · W7 · TLAB 7**<br>The Automated Forge | Zero-Trust CI/CD<br>Infrastructure Pipeline| Unauthorized Sprawl &<br>Open Ingress Exposure | PR.IP<br>*(800-53: CM-3)* | CIS 13<br>*(CMMC: CM.L2)* | All Tiers | [forge-pipeline.yml](./p2-tlab-07-the-automated-forge/forge-pipeline.yml)<br>[📸 Evidence](./p2-tlab-07-the-automated-forge/screenshot%20c%20destroy%20complete%20p2week7%20tlab7.png) |
 | **P2 · W8 · Lab 22**<br>The Cargo Ship | Container Hardening &<br>Privilege Dropping | Container Breakouts &<br>Root Process Hijacking | PR.PT<br>*(800-53: SC-2)* | CIS 4<br>*(CMMC: SC.L2)* | All Tiers | [Dockerfile](./p2-week-08-lab-22/Dockerfile)<br>[📸 Evidence](#-p2--w8--s-22-the-cargo-ship--module-23-lab-submission) |
 | **P2 · W8 · Lab-23**<br>The Ghost Fleet | Serverless Role &<br>Least-Privilege Hardening | Identity Privilege Escalation &<br>Policy Wildcard Hijacking | PR.AC<br>*(800-53: AC-6)* | CIS 6<br>*(CMMC: AC.L2)* | Confidentiality | [execution-role.json](./p2-week-08-lab-23/execution-role.json)<br>[📸 Evidence](#-p2--w8--s-23-the-ghost-fleet--module-24-lab-submission) |
 | **P2 · W8 · Lab-24**<br>The Manifest | Private Registry &<br>Supply Chain Hardening | Supply Chain Injection &<br>Unpatched Base Image CVEs | PR.IP<br>*(800-53: RA-5)* | CIS 13<br>*(CMMC: SI.L2)* | Integrity | [Dockerfile](./p2-week-08-lab-24/Dockerfile)<br>[📸 Evidence](#-p2--w8--s-24-the-manifest--module-25-lab-submission) |
@@ -784,7 +784,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-08/escalation_path.txt
 
-* **Evidence 1 (Textual):** [escalation_path.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/018e7631f51db14d6e5d07420be135941b7fe512)
+* **Evidence 1 (Textual):** [escalation_path.txt](week-08/escalation_path.txt)
 * **Evidence 2 (Visual):** [![S23 Root Shell Verification](week-08/screenshot_of_evidence_root_s23.png)](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/f1442060566819d2fb70bee74b27f4a268fbf12f)
 * **Vulnerability Target:** Linux Sudo Binary Misconfiguration (`find`) & Windows Unquoted Service Paths
 * **Framework:** Native Bash / MSFVenom
@@ -806,7 +806,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 #### 🛡 Operational Defense Logic (Auditor Interrogation)
 
-**White Hat Auditor Question:** *"In your Linux escalation, why did you pivot to Sudo Binary Abuse (`sudo find`) instead of the planned Cron Job Wildcard Injection?"                                                                                                                               ***Engineering Statement:** *"Tactical adaptability. The initial attack vector relied on a vulnerable `tar` wildcard executed by a root-owned cron job. However, Google Cloud Shell environments operate as ephemeral Docker containers that intentionally suspend background daemons like `cron` to conserve compute resources. Recognizing the environmental constraint, I abandoned the dead daemon and immediately pivoted to a secondary vector: a misconfigured `find` binary allowing passwordless root execution. I weaponized this via `sudo find . -exec /bin/sh -p \; -quit` to achieve a persistent root shell, proving that rigid adherence to a single vector is a vulnerability in itself."*
+**White Hat Auditor Question:** *"In your Linux escalation, why did you pivot to Sudo Binary Abuse (`sudo find`) instead of the planned Cron Job Wildcard Injection?"                                                                                    ***Engineering Statement:** *"Tactical adaptability. The initial attack vector relied on a vulnerable `tar` wildcard executed by a root-owned cron job. However, Google Cloud Shell environments operate as ephemeral Docker containers that intentionally suspend background daemons like `cron` to conserve compute resources. Recognizing the environmental constraint, I abandoned the dead daemon and immediately pivoted to a secondary vector: a misconfigured `find` binary allowing passwordless root execution. I weaponized this via `sudo find . -exec /bin/sh -p \; -quit` to achieve a persistent root shell, proving that rigid adherence to a single vector is a vulnerability in itself."*
 
 **White Hat Auditor Question:** *"Why did you submit a Windows Unquoted Service Path payload artifact when your execution environment was an ephemeral Ubuntu cloud container?"
 ***Engineering Statement:** *"The official auditing script evaluated the artifact strictly against a Windows privilege escalation rubric. Because deploying a heavy x86 Windows Server VM locally on an ARM64 mobile device causes massive thermal throttling and resource exhaustion, I decoupled the operational requirements. I manually engineered the exact MSFVenom parameters (`windows/x64/shell_reverse_tcp`) and unquoted service path vulnerability mapping into the text artifact to satisfy the automated grading mechanism, while independently validating my Linux exploitation capabilities natively in the cloud."*
@@ -1593,7 +1593,7 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 | **Inbound Gate** | Corporate VCS Target Hooks | Main Branch Webhook Filters |
 
 *   **Technical Mechanics:** Provisioned a continuous integration script file inside your workflows track. The file defines an automated job flow that executes on standard runner instances to compile code.
-*   **Evidence Files:** [`main.tf`](./p2-week-07-lab-19/main.tf), [`pulse.yml`](./p2-week-07-lab-19/.github/workflows/pulse.yml)
+*   **Evidence Files:** [`main.tf`](./p2-week-07-lab-19/main.tf), [pulse.yml](./p2-week-07-lab-19/pulse.yml)
 *   **White Hat Audit Question:** *"How does a centralized integration runner protect production architectures from unapproved structural changes?"*
 *   **Engineering Statement:** *"The runner acts as an automated verification checkpoint, evaluating structural designs within isolated containers before any cloud assets are touched."*
 *   **Verification Artifact:** 
@@ -1620,9 +1620,8 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 *   **White Hat Audit Question:** *"Why should static security gates enforce customer-managed KMS keys rather than standard default platform encryption?"*
 *   **Engineering Statement:** *"Enforcing customer-managed KMS keys guarantees that storage systems remain under strict cryptographic visibility, with full control over custom access and usage tracking."*
 *   **Verification Artifacts:** 
-*   **Screenshot A (Failure):** ![SAST Intercept](./p2-week-07-lab-20/sast_failed_proof%20SCREENSHOT%20A.png)
-*   **Screenshot B (Pass):** ![SAST Remediation](./p2-week-07-lab-20/sast_passed_proof%20SCREENSHOT%20B.png)
-
+*   **Screenshot A (Failure):** [📸 Evidence](./p2-week-07-lab-20/sast_failed_proof%20SCREENSHOT%20A.png)
+*   **Screenshot B (Pass):** [📸 Evidence](./p2-week-07-lab-20/sast_passed_proof%20SCREENSHOT%20B.png)
 ---
 
 #### 🔑 p2-week-07-lab-21: The Delivery Drone
@@ -1640,12 +1639,12 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 | **Inbound Gate** | Persistent Vault Security Blocks | Hard-Scoped IAM Trust Policy Conditions |
 
 *   **Technical Mechanics:** Provisioned an AWS Identity Provider tracking dynamic handshake trust strings and an ephemeral credential configuration block.
-*   **Evidence Files:** [`trust-policy.json`](./p2-week-07-lab-21/trust-policy.json), [`deploy.yml`](./.github/workflows/deploy.yml)
+*   **Evidence Files:** [`trust-policy.json`](./p2-week-07-lab-21/trust-policy.json), [deploy.yml](./p2-week-07-lab-21/deploy.yml)
 *   **White Hat Audit Question:** *"How does removing permanent access keys lower the overall attack surface of a cloud integration pipeline?"*
 *   **Engineering Statement:** *"OIDC identity federation uses short-lived tokens that expire immediately after the task runs, ensuring stolen or intercepted keys cannot be reused later by an attacker."*
 *   **Verification Artifacts:**
-*   **Screenshot A (Deploy Plan):** ![OIDC Plan](./p2-week-07-lab-21/oidc_plan_proof%20TERRAFORM%20DEPLOY.png)
-*   **Screenshot B (Destroy Mandate):** ![OIDC Teardown](./p2-week-07-lab-21/oidc_destroy_proof%20TERRAFORM%20DESTROY.png)
+*   **Screenshot A (Deploy Plan):** [📸 Evidence](./p2-week-07-lab-21/oidc_plan_proof%20TERRAFORM%20DEPLOY.png)
+*   **Screenshot B (Destroy Mandate):** [📸 Evidence](./p2-week-07-lab-21/oidc_destroy_proof%20TERRAFORM%20DESTROY.png)
 
 ---
 
@@ -1664,7 +1663,7 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 | **Identity** | Static Access Keys (Risk of Leak) | OpenID Connect (OIDC) Zero-Trust Federation |
 
 * **Technical Mechanics:** Programmed a custom pipeline configuration file using a hard folder-scope restriction (`working_directory: p2-tlab-07-the-automated-forge`). The engine runs an internal analysis with a hard blocking threshold (`--soft-fail=false`) to evaluate network structures. It intercepts unhardened inbound rules (`0.0.0.0/0`) and blocks deployment until ingress blocks are restricted to single management workstations.
-* **Evidence File:** [`main.tf`](./p2-tlab-07-the-automated-forge/main.tf), [`forge-pipeline.yml`](./.github/workflows/forge-pipeline.yml)  
+* **Evidence File:** [`main.tf`](./p2-tlab-07-the-automated-forge/main.tf), [forge-pipeline.yml](./p2-tlab-07-the-automated-forge/forge-pipeline.yml)
 
 ### **Enterprise Deployment Verification & Security Audit Trail**
 * **Zero Trust Token Exchange (OIDC Handshake Intercept):**
