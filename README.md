@@ -1,30 +1,34 @@
-# The Knowledge House Bronx, NY: Cybersecurity Innovation Fellowship: (Cohort IF-CS-26 NY) C.K. Bachoo 
+# IF-Cyber-Portfolio  
+**The Knowledge House | Cybersecurity Innovation Fellowship (IF-CS-26 NY)**  
+**C.K. Bachoo — Navy Veteran | Mobile-First Cybersecurity Practitioner**
 
-**IF-Cyber-Portfolio:** This portfolio and all associated artifacts were engineered exclusively using a Samsung Note 20 Ultra 5G / Termux Bunker configuration, seamlessly utilizing a Zero-Trust "Mobile-to-Cloud Bridge" spanning Google Cloud Shell, GitHub Codespaces, and AWS . This environment demonstrates a mobile-first, headless-first approach to systems administration, network security, defensive automation, DFIR, Cloud Infrastructure as Code (IaC), AI Security Architecture, and Purple Team operations.
+This portfolio contains the complete body of work completed during The Knowledge House NY Innovation Fellowship (Cohort IF-CS-26). All labs, scripts, reports, and infrastructure-as-code were engineered primarily from a **Samsung Galaxy Note 20 Ultra** using Termux, with supporting work in GitHub Codespaces, Google Cloud Shell, and AWS.
 
-**📱 Android Mobile Cybersecurity Workbench / SOC Rig**
-*Built 100% on Samsung Galaxy Note 20 Ultra + Termux + Cloud Compute Bridging*
+**Primary Focus Areas**
+- Purple Team operations & defensive automation
+- Mobile-to-Cloud Zero Trust pipelines
+- Infrastructure as Code (Terraform) + GitHub Actions
+- DFIR, threat hunting, and incident response
+- Cloud security (IAM, OIDC, VPC, SSM, Flow Logs)
+- Governance mapping to NIST CSF 2.0 and CIS Controls
 
-A professional, mobile-first Purple Team environment demonstrating Zero-Trust principles, network audits, automated Python/Bash scripting, forensic logging, and AI-assisted analysis engineered during The Knowledge House NY Innovation Fellowship (Cohort IF-CS-26).
-
-**🔥 Key Capabilities & DevSecOps Arsenal**
-*   **Real-time Threat Hunting:** Brute-force detection, live process interrogation, and automated log parsing.
-*   **Network & Protocol Intelligence:** Deep packet analysis and reconnaissance executed without graphical interfaces.
-*   **Mobile-to-Cloud Zero-Trust Bridging:** Seamless offloading of heavy compute workloads from an ARM64 Exynos 990 processor to ephemeral x86_64 cloud containers to bypass hardware limitations.
-*   **Infrastructure as Code (IaC) & Cloud Governance:** Autonomous deployment of AWS financial firewalls, encrypted S3 vaults, and surgical IAM Role matrices using Terraform.
-*   **Multi-AI Orchestration:** Cross-validation of threat telemetry via custom God Mode intent bridging and localized, offline LLM execution.
-*   **Immutable Cryptographic Ledgers:** Continuous integration of all operational artifacts, mathematically mapped to NIST CSF 2.0 and CIS Controls.
-*   **True Hardware-Constrained Execution (ARM64):** Outperforming standard x86 hypervisor environments through OS-level routing bypasses and native stream-editing logic.
-
-### 🏫 The Knowledge House Innovation Fellow: Chad K. Bachoo (IF-CS-26 NY) [📱 Android Mobile Cybersecurity Workbench](https://github.com/CK-Bachoo/Android-mobile-cybersecurity-workbench) /SOC Rig
+**Related Repositories**
+- [Android Mobile Cybersecurity Workbench](https://github.com/CK-Bachoo/Android-mobile-cybersecurity-workbench) — The mobile SOC / Bunker platform
+- Profile & summary: [CK-Bachoo](https://github.com/CK-Bachoo)
 
 ---
 
-**The Mobile-to-Cloud Bridge:** `Note 20 Ultra` → Termux [Dual Terminal / (proot-distro login debian)] → Google Cloud Shell → Azure → Aws → `GitHub` 
-**The Mobile-to-Cloud Bridge:**  Android mobile Chrome browser → Github Codespaces → Github
+## 📱 Mobile-to-Cloud Execution Model
+
+All work was executed under hardware constraints (ARM64, non-rooted Android) and bridged to cloud compute when required:
+
+`Samsung Note 20 Ultra (Termux)` → `GitHub Codespaces` / `Google Cloud Shell` / `AWS`
+
+This approach demonstrates practical Zero Trust operations, thermal and resource management, and the ability to deliver enterprise-style security work without traditional laptop infrastructure.
+
 ---
 
-## ⚖️ Phase 1 Governance & Framework Alignment
+## ⚖️ Phase 1 — Governance & Framework Alignment
 
 | Session | Function | Attack Vector / Concept | NIST CSF 2.0 | CIS Control | CIA Triad | Evidence Artifact |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
