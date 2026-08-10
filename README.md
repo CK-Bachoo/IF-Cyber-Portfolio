@@ -8,40 +8,24 @@
 ## 🚀 Overview
 
 This repository contains the complete, production-ready evidence ledger, automation scripts, and declarative configurations compiled during 
-**The Knowledge House NY Cybersecurity Innovation Fellowship (Cohort IF-CS-26)** [4, 5]. 
+**The Knowledge House NY Cybersecurity Innovation Fellowship (Cohort IF-CS-26)**. 
 
-To demonstrate absolute operational resilience and bypass traditional workspace dependencies, the entire ecosystem was engineered from a constrained, non-rooted **Samsung Galaxy Note 20 Ultra** ARM64 interface [6, 7]. By decoupling our environment, we utilize the handheld device as a secure command node while offloading heavy compilation, scanning, and orchestration workloads to ephemeral x86_64 cloud infrastructure [3, 8].
+To demonstrate absolute operational resilience and bypass traditional workspace dependencies, the entire ecosystem was engineered from a constrained, non-rooted **Samsung Galaxy Note 20 Ultra** ARM64 interface. By decoupling our environment, we utilize the handheld device as a secure command node while offloading heavy compilation, scanning, and orchestration workloads to ephemeral x86_64 cloud infrastructure.
 
 ### ⚡ Primary Focus Areas
-*   **Enterprise Purple Team Automation & Continuous Adversarial Simulation** (S01–S33 / TLAB 1–11) [1, 9]
-*   **Mobile-to-Cloud Zero Trust Pipelines** (Decoupling the Command Layer from the Compute Layer) [3, 10]
-*   **Declarative Infrastructure as Code (Terraform HCL)** & Hardened Shift-Left CI/CD Pipelines [11]
-*   **Digital Forensics & Incident Response (DFIR)**, Threat Hunting, and Live Log Analysis (Splunk/Kibana) [9, 12]
-*   **Cloud Security & Multi-Tenant Identity Governance** (AWS IAM Least-Privilege, OIDC Keyless Token Federation) [5, 13]
-*   **Sovereign AI Security Engineering** (Hardening Local Gemma 2B Inference, MITRE ATLAS Alignment) [9, 14]
-*   **Global GRC Control Mapping** (NIST CSF 2.0, NIST SP 800-53r5, FedRAMP, ISO 27001, and CIS Controls v8) [2, 15]
+*   **Enterprise Purple Team Automation & Continuous Adversarial Simulation** (S01–S33 / TLAB 1–11)
+*   **Mobile-to-Cloud Zero Trust Pipelines** (Decoupling the Command Layer from the Compute Layer)
+*   **Declarative Infrastructure as Code (Terraform HCL)** & Hardened Shift-Left CI/CD Pipelines
+*   **Digital Forensics & Incident Response (DFIR)**, Threat Hunting, and Live Log Analysis (Splunk/Kibana)
+*   **Cloud Security & Multi-Tenant Identity Governance** (AWS IAM Least-Privilege, OIDC Keyless Token Federation)
+*   **Sovereign AI Security Engineering** (Hardening Local Gemma 2B Inference, MITRE ATLAS Alignment)
+*   **Global GRC Control Mapping** (NIST CSF 2.0, NIST SP 800-53r5, FedRAMP, ISO 27001, and CIS Controls v8)
 
 ### 🛰️ Related Repositories
-*   [📱 Android Mobile Cybersecurity Workbench](https://github.com/CK-Bachoo/Android-mobile-cybersecurity-workbench) — My operational mobile SOC platform and bunker rig (Samsung Note 20 Ultra 5G, Exynos 990, 12GB LPDDR5 RAM, 256GB UFS + expandable storage for isolated forensics) [3, 7].
-*   [👤 GitHub Profile & Master Ledger](https://github.com/CK-Bachoo) — Core developer landing page and secondary research outposts [16, 17].
+*   [📱 Android Mobile Cybersecurity Workbench](https://github.com/CK-Bachoo/Android-mobile-cybersecurity-workbench) — My operational mobile SOC platform and bunker rig (Samsung Note 20 Ultra 5G, Exynos 990, 12GB LPDDR5 RAM, 256GB UFS + expandable storage for isolated forensics).
+*   [👤 GitHub Profile & Master Ledger](https://github.com/CK-Bachoo) — Core developer landing page and secondary research outposts.
 
 ---
-
-## 📱 Mobile-to-Cloud Execution Model
-
-```text
-┌──────────────────────────────────────────────┐
-│          LOCAL COMMAND LAYER (ARM64)         │
-│  Samsung Note 20 Ultra 5G (Termux Sandbox)   │
-└──────────────────────┬───────────────────────┘
-                       │
-                       │ Secure SSH Tunnel / TLS API Uplink
-                       ▼
-┌──────────────────────────────────────────────┐
-│         EPHEMERAL COMPUTE LAYER (x86_64)     │
-│  Codespaces / Google Cloud Shell / AWS / Azure│
-└──────────────────────────────────────────────┘
-All laboratory environments, vulnerability scans, and Infrastructure-as-Code deployments were executed under strict physical hardware boundaries. By deploying a Decoupled Architecture, we run lightweight localized automation and pre-flight validation scripts natively on the mobile device, while offloading resource-heavy container fleets, SIEM indexers, and Terraform state graphs to ephemeral x86_64 cloud compute containersThis approach demonstrates practical, real-world Zero Trust operations, thermal and resource optimization, and the ability to deliver high-density enterprise security engineering without traditional laptop infrastructure
 
 ---
 
