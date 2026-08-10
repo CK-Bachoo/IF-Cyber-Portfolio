@@ -97,40 +97,73 @@ A professional, mobile-first Purple Team environment demonstrating Zero-Trust pr
 ## 📂 Artifact Evidence & Operational History
 
 ### 🛠️ T1-M1-S01: Portfolio Initialization
+📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/0aaa074ff77fca0b4cb8e097820d970a/raw/07abd5680a7db4a57e050594f35baf6a9ec03c48/setup_lab_01.sh | bash 
+🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-01/discovery.txt
+
 * [Evidence: Commit 584f951](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/584f951)
 * **Explanation:** Established secure baseline via Note 20 Ultra. Initialized Git version control and configured SSH key-based authentication. Documented initial Linux navigation via discovery.txt.
+---
 
 ### 🛠️ T1-M1-S02: Command Line Operations
+📥 Starter Code (Canvas): N/A (CLI Manual Entry) 
+🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-01/harden.sh
+
 * [Evidence: Commit f244294](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/f244294)
 * **Explanation:** CLI proficiency. Demonstrated mastery of directory traversal, file permission management, and core Linux I/O operations required for headless systems administration.
+---
 
 ### 🛠️ T1-M1-S03: Network Foundations
+📥 Starter Code (Canvas): N/A (CLI Manual Entry) 
+🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-01/threat_ips.txt
+
 * [Evidence: network_audit.txt](week-02/network_audit.txt)
 * **Explanation:** Network layer analysis performed in Termux using dual-terminal sessions for concurrent monitoring. Conducted packet analysis and connectivity verification (Ping 8.8.8.8: 0% loss).
+---
 
 ### 🔍 TLAB-01: OPERATION CLEAN SWEEP
+📥 Starter Code (Canvas): N/A (CLI Manual Entry) 
+🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-01/TLAB-01_Report.md
+
 * [Evidence: TLAB-01_Report.md](week-01/TLAB-01_Report.md)
 * **Explanation:** Advanced incident response and log interrogation. Leveraged dual Termux terminals to identify and eradicate IoCs (Malicious IPs: 10.99.88.77, 45.33.22.11). Confirmed system integrity post-remediation.
+---
 
 ### 🛠️ T1-M1-S04: Portfolio Artifact Git Commit
+📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/eea802f31544515afd22877b0c85502b/raw/5c21c36f0b832b914dff8e37a5e7f2b5d4e1b3f1/network_audit.txt | bash 
+🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-02/network_audit.txt
+
 * [Evidence: harden.sh](week-01/harden.sh)
 * **Explanation:** Infrastructure-as-Code deployment. Synchronized the local mobile workbench with curriculum dependencies strictly via Google Cloud Shell (Chrome Mobile) and Termux.
+---
 
 ### 🛠️ T1-M1-S05: Portfolio Artifact Git Commit
+📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/957530a3e86379a6af202b2e3949d37a/raw/458b2535e2cc1a71cf6f1fcbe125fd287b451fcb/subnet_blueprint.txt | bash 
+🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-02/subnet_audit.txt
+
 * [Evidence: subnet_audit.txt](week-02/subnet_audit.txt)
 * **Explanation:** Connectivity verification. Leveraged ip addr and ping in Termux to blueprint subnetting architectures and ensure routing integrity. (Target: 192.168.1.200)
+---
 
 ### 🛠️ T1-M1-S06: Protocol Interrogation (Wireshark Analysis)
+📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/5da1f6c7f4dd5c3bbecc4bac04ac3866/raw/2a2b1656865961415535626087562f262839adca/protocol_audit.txt | bash 
+🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-02/protocol_audit.txt
+
 * [Evidence: protocol_audit.txt](week-02/protocol_audit.txt)
 * **Explanation:** Protocol parsing via grep, awk, and sed in Termux. Isolated network protocol anomalies (Verified Google IP: 142.250.217.14) to transform traffic into actionable threat intelligence.
+---
 
 ### 🛰️ TLAB-2: Operation Blackout (Linux Hardening)
+📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/3dc9c8f1ef244c716f5dc703e9043728/raw/7a1f22b97968b2cba92f4032381f772aca9e0e8b/w2_tlab_setup.sh | sudo bash 
+🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-02/tlab_report.txt
+
 * [Evidence: harden.sh](week-01/harden.sh)
 * **Explanation:** Initialization of Module 2 Capstone. Leveraging Google Cloud Shell for high-compute security assessments and advanced automation workflows using the Note 20 Ultra.
 
 ---
 
 ## 🐍 T1-M1.S07: THE AUTOMATION FORGE (Network Reconnaissance)
+📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/8fbf854b0275eb82e52b9692b7416df6/raw/50aa36bf8fdfe33589aebe1ca88758d17121028c/port_check.py | sudo bash 
+🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-03/port_check.py
 
 | Data Point | Desktop/Laptop User (Standard) | Android Cyber Workbench (Note 20 Ultra) |
 | :--- | :--- | :--- |
@@ -142,6 +175,8 @@ A professional, mobile-first Purple Team environment demonstrating Zero-Trust pr
 ---
 
 ## 🛡️ T1-M1.S08: REFINED PAPER TRAIL (Forensic Audit Comparison)
+📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/8aead9fe01bf62456a18f490a817867b/raw/c16a8c593d84a250e69e8c22243af1335169d48c/brute_detector.py | sudo bash 
+🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-03/brute_report.txt
 
 | Data Point | Desktop User (Standard) | Android Cyber Workbench (Note 20 Ultra) |
 | :--- | :--- | :--- |
@@ -153,6 +188,8 @@ A professional, mobile-first Purple Team environment demonstrating Zero-Trust pr
 ---
 
 ## 🚀 T1-M1.S09: THE AUTOMATION PIVOT (Engineering Audit Comparison)
+📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/038550bf46736f98d66f3fe092707143/raw/844e48bf631f371746d13e40fc67b15dbd154a78/system_auditor.py | sudo bash 
+🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-03/system_auditor.py
 
 | Data Point | Desktop User (Standard) | Android Cyber Workbench (Note 20 Ultra) |
 | :--- | :--- | :--- |
@@ -165,6 +202,9 @@ A professional, mobile-first Purple Team environment demonstrating Zero-Trust pr
 ---
 
 #### 🛡 TLAB-03: OPERATION AUTOMATED Hunt (Zero-Trust Execution)
+📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/4523267cb512343bd14c835f9eee9420/raw/5281035153ce9b3a67b01389b1e9218bdbbfae93/incident_response.py | sudo bash 
+🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-03/incident_response.py
+
 | Data Point | Desktop User (Standard) | Android Cyber Workbench (Note 20 Ultra) |
 | :--- | :--- | :--- |
 | **Environment** | x86 Ubuntu VM | ARM64 Termux + Local Sandbox |
@@ -177,6 +217,9 @@ A professional, mobile-first Purple Team environment demonstrating Zero-Trust pr
 ---
 
 ## 📁 T1-M1-S10: THE GHOST IN THE MACHINE (Layer 3 Isolation)
+📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/cf4a0607c87af8085efbb0b828bd22f8/raw/3b21b3740a4db33ffa341043fe37b8068cabfddd/sandbox_report.txt | sudo bash 
+🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/sandbox_verify.txt
+
 **Evidence:** [Commit 36193ac](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/36193ac)
 **Verified Timestamp:** 2026-04-01 16:57:16 EDT
 Session 10 (Layer 3 Isolation)
@@ -212,10 +255,12 @@ Instead of utilizing a legacy GUI-based hypervisor toggle (VirtualBox/UTM), the 
 
 **Status:** Note 20 Ultra exynos 990 nonrooted termux terminal | Zero-Trust Verified | System Optimization Confirmed
 
----
 **Status:** All Sessions Synchronized | Zero-Trust Active
+---
 
 ### 🚀 T1-M1-S11: THE CONTAINER REVOLUTION (Comparative Deployment)
+📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/402dd14250b5bc3a7417f6fd7b8e7676/raw/fb4aa7f0ea02f1677a8a91356344dda9af8e0285/deploy_web.sh | sudo bash 
+🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-04/deploy_web.sh
 
 | Data Point | Desktop User (Standard Cohort) | Android Cyber Workbench (Note 20 Ultra) |
 | ------ | ------ | ------ |
@@ -228,26 +273,15 @@ Instead of utilizing a legacy GUI-based hypervisor toggle (VirtualBox/UTM), the 
 🛡️ **Operational Defense Logic (White Hat Auditor Common Questions)**
 
 **White Hat Auditor Question:** \"Why didn't you just run Docker locally like the rest of the cohort?\"
-
-**Response:**
-\"My workstation is a Samsung Note 20 Ultra engineered for Purple Team mobility. While the standard x86 desktop allows for local Docker execution, Android's kernel security (Samsung Knox) intentionally restricts the high-level system calls required by the Docker daemon. To bypass this hardware constraint while maintaining the mission objective, I engineered a **Mobile-to-Cloud Bridge**. 
-
+**Response:** \"My workstation is a Samsung Note 20 Ultra engineered for Purple Team mobility. While the standard x86 desktop allows for local Docker execution, Android's kernel security (Samsung Knox) intentionally restricts the high-level system calls required by the Docker daemon. To bypass this hardware constraint while maintaining the mission objective, I engineered a **Mobile-to-Cloud Bridge**. 
 By utilizing Google Cloud Shell as my remote compute layer, I was able to orchestrate enterprise-grade containers directly from my mobile terminal. This methodology is actually superior for security operations as it offloads the thermal strain and compute risks to a sandbox in the cloud, preserving the integrity of my local 'Bunker' device.\"
 
 **White Hat Auditor Question:** \"How did you prove the container was actually isolated?\"
-
-**Mechanical Proof:**
-\"I verified process isolation by executing `ps aux` within the Alpine environment. In a standard Linux environment, that command would return dozens of system-level processes. Within my container, the PID tree was segregated, returning only the primary shell and the process check itself. This mathematically proved that Linux **namespaces** were successfully caging the environment.\"
+**Mechanical Proof:** \"I verified process isolation by executing `ps aux` within the Alpine environment. In a standard Linux environment, that command would return dozens of system-level processes. Within my container, the PID tree was segregated, returning only the primary shell and the process check itself. This mathematically proved that Linux **namespaces** were successfully caging the environment.\"
 
 **White Hat Auditor Question:** \"What was the point of the 'deploy_web.sh' script?\"
-
-**Engineering Statement:**
-\"The script transforms a manual operational task into **Infrastructure as Code (IaC)**. By codifying the `docker run` command with detached flags (`-d`) and dynamic port mapping (`-p 8080:80`), I ensured that the deployment of the training server was repeatable and immutable. This removes human error from the provisioning phase and allows for the immediate, forensic destruction of the server post-mission to ensure a zero-footprint architecture.\"
-
----
-
+**Engineering Statement:** \"The script transforms a manual operational task into **Infrastructure as Code (IaC)**. By codifying the `docker run` command with detached flags (`-d`) and dynamic port mapping (`-p 8080:80`), I ensured that the deployment of the training server was repeatable and immutable. This removes human error from the provisioning phase and allows for the immediate, forensic destruction of the server post-mission to ensure a zero-footprint architecture.\"
 ## 🛡️ Strategic Defense: Why the Container Revolution?
-
 **Security Objective:** To transition from \"Static Infrastructure\" (which is expensive, slow to patch, and offers a permanent attack surface) to \"Disposable Infrastructure.\"
 
 ### 🏗️ Technical Mechanics: Standard x86 vs. Note 20 Ultra Rig
@@ -268,8 +302,11 @@ By engineering a **Mobile-to-Cloud Bridge**, I decoupled the Command Layer from 
 * **`docker rm -f`**: Forensically purged the entire environment post-operation to ensure zero persistence.
 
 **Status:** Strategic Defense Validated | Infrastructure Decoupled | Phase 1 Finalized.
+---
 
 ### 🎼 T1-M1-S12: THE CONDUCTOR & THE FLEET (Segmented Orchestration)
+📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/72cd0ddae515c6658906280526194069/raw/57c5c7933c2f74ba765263e9d29fee160d86a537/docker-compose.yml | sudo bash 
+🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-04/docker-compose.yml
 
 | Data Point | Desktop User (Standard Cohort) | Android Cyber Workbench (Note 20 Ultra) |
 | ------ | ------ | ------ |
@@ -284,25 +321,16 @@ By engineering a **Mobile-to-Cloud Bridge**, I decoupled the Command Layer from 
 🛡️ **Operational Defense Logic (White Hat Auditor Common Questions)**
 
 **White Hat Auditor Question:** \"Why did you use Docker Compose instead of manual 'docker run' commands for this stack?\"
-
-**Response:**
-\"Managing a multi-tier stack (Web + DB) with manual commands is prone to human error and configuration drift. By utilizing **Docker Compose**, I moved to a declarative **Infrastructure as Code (IaC)** model. This ensures that the entire fleet—including the specific network segments and isolation rules—is version-controlled and reproducible. In a production environment, this allows for 'single-command' deployment of complex, secure architectures.\"
+**Response:**\"Managing a multi-tier stack (Web + DB) with manual commands is prone to human error and configuration drift. By utilizing **Docker Compose**, I moved to a declarative **Infrastructure as Code (IaC)** model. This ensures that the entire fleet—including the specific network segments and isolation rules—is version-controlled and reproducible. In a production environment, this allows for 'single-command' deployment of complex, secure architectures.\"
 
 **White Hat Auditor Question:** \"How did you mathematically guarantee the database cannot be reached by an external attacker?\"
-
 **Mechanical Proof:**
 \"I engineered a dedicated `backend` network using the `internal: true` flag in the YAML configuration. This instruction prevents Docker from creating a NAT gateway to the public internet for that specific segment. I forensically verified this by executing `docker-compose exec db ping google.com`. The system returned `Network is unreachable`, confirming that the database exists in a cryptographically isolated layer with no exit path for data exfiltration.\"
 
 **White Hat Auditor Question:** \"How does the WordPress server talk to the DB if the DB is air-gapped?\"
-
-**Engineering Statement:**
-\"I implemented **Micro-segmentation**. The WordPress container acts as the 'Bridge'; it is assigned to both the `frontend` (for public traffic) and the `backend` (for database queries). The DB container is assigned **only** to the `backend`. This ensures that while the web server can serve users, the database is physically unable to initiate or receive traffic from the outside world, enforcing the Principle of Least Privilege at the network layer.\"
-
----
-
+**Engineering Statement:** \"I implemented **Micro-segmentation**. The WordPress container acts as the 'Bridge'; it is assigned to both the `frontend` (for public traffic) and the `backend` (for database queries). The DB container is assigned **only** to the `backend`. This ensures that while the web server can serve users, the database is physically unable to initiate or receive traffic from the outside world, enforcing the Principle of Least Privilege at the network layer.\"
 Status: S12 Segmented Fleet Active | Air-Gap Verified | Phase 1 Portfolio Locked.
 
----
 ### 🧠 S12 Mission Defense Matrix (Executive Summary)
 * **Strategic Explanation:** Transitioned from single-container management to full-stack orchestration using Docker Compose. Engineered a segmented network architecture to enforce a micro-segmented air-gap between the public web application and the sensitive database.
 * **Technical Mechanics:** Utilized a YAML configuration to define a dual-network topology (Frontend/Backend). Implemented the `internal: true` flag on the backend network to mathematically suppress the default gateway, preventing any outbound communication from the database container.
@@ -310,6 +338,8 @@ Status: S12 Segmented Fleet Active | Air-Gap Verified | Phase 1 Portfolio Locked
 
 ---
 ### 🏰 P1-W4-TLAB-04: Operation Cloud Fleet (Hyper-Stack Architecture)
+📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/eb96709c3b12b6a985dd4d85aa973d6e/raw/ada76c99811604bbec2354e539b6beb8ac7434c5/mission_brief.txt | sudo bash 
+🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-04/hyperstack_audit.json
 
 | Data Point | Desktop User (Standard Cohort) | Android Cyber Workbench (Note 20 Ultra) |
 | :--- | :--- | :--- |
@@ -339,9 +369,11 @@ Status: S12 Segmented Fleet Active | Air-Gap Verified | Phase 1 Portfolio Locked
     3. Implemented a dual-network topology (`public_net` / `private_net`), specifically applying the `internal: true` flag to the database backend to create a software air-gap.
     4. Audited the deployment using `nmap`, verifying Port 8080 was open and 3306 was filtered.
     5. Generated a dynamic `hyperstack_audit.json` log capturing the exact container IDs and isolated network IPs.
-
+---
 
 👔 **T1-M1-S13: THE CORPORATE BRAIN (Automated Onboarding)**
+📥 Starter Code (Canvas): https://gist.githubusercontent.com/grobbins-cell/dc30be571f331a948b8828e3206e6c1e/raw/dd6b06e8619a57754b61d2cf8d2567ffdb4f1af6/onboard_engineers.ps1 
+🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-05/onboard_engineers.ps1
 
 | Data Point | Desktop User (Standard Cohort) | Android Cyber Workbench (Note 20 Ultra) |
 | --- | --- | --- |
@@ -771,7 +803,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 ---
 
 ### 💥 T1-M1-TLAB8: OPERATION DEEP PIVOT (The Kill Chain)
-📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/63931548401586465072662885238a49/raw/tlab8_provision.sh | sudo bash 
+📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/63931548401586465072662885238a49/raw/tlab8_provision.sh | sudo bash
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-08/Deep_Pivot_Report.md
 
 * **Evidence:** [Deep_Pivot_Report.md](week-08/Deep_Pivot_Report.md)
