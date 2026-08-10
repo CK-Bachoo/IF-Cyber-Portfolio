@@ -1,34 +1,52 @@
-# IF-Cyber-Portfolio  
-**The Knowledge House | Cybersecurity Innovation Fellowship (IF-CS-26 NY)**  
-**C.K. Bachoo — Navy Veteran | Dual Mobile-First Arm 64 and X86 Cybersecurity Purple Team Cloud Practitioner**
+# ⚔️ IF-Cyber-Portfolio  
+### **The Knowledge House | Cybersecurity Innovation Fellowship (IF-CS-26 NY)**  
+**C.K. Bachoo — U.S. Navy Veteran | Dual-Stack ARM64-First & x86-Enhanced Purple Team Practitioner**  
+*Enterprise Purple Team Automation • Mobile-to-Cloud Zero Trust Pipelines • DevSecOps • Forensic Triage & DFIR • GRC Compliance • AI Security Architect*
 
-This portfolio contains the complete body of work completed during The Knowledge House NY Innovation Fellowship (Cohort IF-CS-26). All labs, scripts, reports, and infrastructure-as-code were engineered primarily from a **Samsung Galaxy Note 20 Ultra** using Termux, with supporting work in GitHub Codespaces, Google Cloud Shell, Azure, and AWS.
+---
 
-**Primary Focus Areas**
-- Enterprise Purple Team automation & continuous adversarial simulation
-- Mobile-to-Cloud Zero Trust pipelines
-- Declarative Infrastructure as Code (Terraform HCL) & Shift-Left CI/CD pipelines
-- DFIR, threat hunting, and incident response
-- Cloud security & identity governance (IAM Principle of Least Privilege, OIDC federation)
-- Governance mapping to NIST CSF 2.0 and CIS Controls
+## 🚀 Overview
 
-**Related Repositories**
-- [Android Mobile Cybersecurity Workbench](https://github.com/CK-Bachoo/Android-mobile-cybersecurity-workbench) — The mobile SOC rig (Samsung Note 20 Ultra 5g Exynos 990 chip 12gb ram 256gb storage with exp. sd card for isolated storage)  / Bunker platform
-- Profile & summary: [CK-Bachoo](https://github.com/CK-Bachoo)
+This repository contains the complete, production-ready evidence ledger, automation scripts, and declarative configurations compiled during 
+**The Knowledge House NY Cybersecurity Innovation Fellowship (Cohort IF-CS-26)** [4, 5]. 
+
+To demonstrate absolute operational resilience and bypass traditional workspace dependencies, the entire ecosystem was engineered from a constrained, non-rooted **Samsung Galaxy Note 20 Ultra** ARM64 interface [6, 7]. By decoupling our environment, we utilize the handheld device as a secure command node while offloading heavy compilation, scanning, and orchestration workloads to ephemeral x86_64 cloud infrastructure [3, 8].
+
+### ⚡ Primary Focus Areas
+*   **Enterprise Purple Team Automation & Continuous Adversarial Simulation** (S01–S33 / TLAB 1–11) [1, 9]
+*   **Mobile-to-Cloud Zero Trust Pipelines** (Decoupling the Command Layer from the Compute Layer) [3, 10]
+*   **Declarative Infrastructure as Code (Terraform HCL)** & Hardened Shift-Left CI/CD Pipelines [11]
+*   **Digital Forensics & Incident Response (DFIR)**, Threat Hunting, and Live Log Analysis (Splunk/Kibana) [9, 12]
+*   **Cloud Security & Multi-Tenant Identity Governance** (AWS IAM Least-Privilege, OIDC Keyless Token Federation) [5, 13]
+*   **Sovereign AI Security Engineering** (Hardening Local Gemma 2B Inference, MITRE ATLAS Alignment) [9, 14]
+*   **Global GRC Control Mapping** (NIST CSF 2.0, NIST SP 800-53r5, FedRAMP, ISO 27001, and CIS Controls v8) [2, 15]
+
+### 🛰️ Related Repositories
+*   [📱 Android Mobile Cybersecurity Workbench](https://github.com/CK-Bachoo/Android-mobile-cybersecurity-workbench) — My operational mobile SOC platform and bunker rig (Samsung Note 20 Ultra 5G, Exynos 990, 12GB LPDDR5 RAM, 256GB UFS + expandable storage for isolated forensics) [3, 7].
+*   [👤 GitHub Profile & Master Ledger](https://github.com/CK-Bachoo) — Core developer landing page and secondary research outposts [16, 17].
 
 ---
 
 ## 📱 Mobile-to-Cloud Execution Model
 
-All work was executed under hardware constraints (ARM64, non-rooted Android) and bridged to cloud compute when required:
-
-`Samsung Note 20 Ultra (Termux)` → `GitHub Codespaces` / `Google Cloud Shell` / `Azure` / `AWS`
-
-This approach demonstrates practical Zero Trust operations, thermal and resource management, and the  / `Google Cloud Shell` to deliver enterprise-style security work without traditional laptop infrastructure.
-
----
-
-## ⚖️ Phase 1 — Governance & Framework Alignment
+```text
+┌──────────────────────────────────────────────┐
+│          LOCAL COMMAND LAYER (ARM64)         │
+│  Samsung Note 20 Ultra 5G (Termux Sandbox)   │
+└──────────────────────┬───────────────────────┘
+                       │
+                       │ Secure SSH Tunnel / TLS API Uplink
+                       ▼
+┌──────────────────────────────────────────────┐
+│         EPHEMERAL COMPUTE LAYER (x86_64)     │
+│  Codespaces / Google Cloud Shell / AWS / Azure│
+└──────────────────────────────────────────────┘
+All laboratory environments, vulnerability scans, and Infrastructure-as-Code deployments were executed under strict physical hardware boundaries
+. By deploying a Decoupled Architecture, we run lightweight localized automation and pre-flight validation scripts natively on the mobile device, while offloading resource-heavy container fleets, SIEM indexers, and Terraform state graphs to ephemeral x86_64 cloud compute containers
+.
+This approach demonstrates practical, real-world Zero Trust operations, thermal and resource optimization, and the ability to deliver high-density enterprise security engineering without traditional laptop infrastructure
+.
+⚖️ Phase 1 — Governance & Framework Alignment
 
 | Session | Function | Attack Vector / Concept | NIST CSF 2.0 | CIS Control | CIA Triad | Evidence Artifact |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
