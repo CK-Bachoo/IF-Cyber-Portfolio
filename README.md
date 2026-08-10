@@ -98,6 +98,7 @@ A professional, mobile-first Purple Team environment demonstrating Zero-Trust pr
 
 ### 🛠️ T1-M1-S01: Portfolio Initialization
 📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/0aaa074ff77fca0b4cb8e097820d970a/raw/07abd5680a7db4a57e050594f35baf6a9ec03c48/setup_lab_01.sh | bash 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-01/discovery.txt
 
 * [Evidence: Commit 584f951](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/584f951)
@@ -106,6 +107,7 @@ A professional, mobile-first Purple Team environment demonstrating Zero-Trust pr
 
 ### 🛠️ T1-M1-S02: Command Line Operations
 📥 Starter Code (Canvas): N/A (CLI Manual Entry) 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-01/harden.sh
 
 * [Evidence: Commit f244294](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/f244294)
@@ -114,6 +116,7 @@ A professional, mobile-first Purple Team environment demonstrating Zero-Trust pr
 
 ### 🛠️ T1-M1-S03: Network Foundations
 📥 Starter Code (Canvas): N/A (CLI Manual Entry) 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-01/threat_ips.txt
 
 * [Evidence: network_audit.txt](week-02/network_audit.txt)
@@ -122,6 +125,7 @@ A professional, mobile-first Purple Team environment demonstrating Zero-Trust pr
 
 ### 🔍 TLAB-01: OPERATION CLEAN SWEEP
 📥 Starter Code (Canvas): N/A (CLI Manual Entry) 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-01/TLAB-01_Report.md
 
 * [Evidence: TLAB-01_Report.md](week-01/TLAB-01_Report.md)
@@ -130,6 +134,7 @@ A professional, mobile-first Purple Team environment demonstrating Zero-Trust pr
 
 ### 🛠️ T1-M1-S04: Portfolio Artifact Git Commit
 📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/eea802f31544515afd22877b0c85502b/raw/5c21c36f0b832b914dff8e37a5e7f2b5d4e1b3f1/network_audit.txt | bash 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-02/network_audit.txt
 
 * [Evidence: harden.sh](week-01/harden.sh)
@@ -138,6 +143,7 @@ A professional, mobile-first Purple Team environment demonstrating Zero-Trust pr
 
 ### 🛠️ T1-M1-S05: Portfolio Artifact Git Commit
 📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/957530a3e86379a6af202b2e3949d37a/raw/458b2535e2cc1a71cf6f1fcbe125fd287b451fcb/subnet_blueprint.txt | bash 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-02/subnet_audit.txt
 
 * [Evidence: subnet_audit.txt](week-02/subnet_audit.txt)
@@ -146,6 +152,7 @@ A professional, mobile-first Purple Team environment demonstrating Zero-Trust pr
 
 ### 🛠️ T1-M1-S06: Protocol Interrogation (Wireshark Analysis)
 📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/5da1f6c7f4dd5c3bbecc4bac04ac3866/raw/2a2b1656865961415535626087562f262839adca/protocol_audit.txt | bash 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-02/protocol_audit.txt
 
 * [Evidence: protocol_audit.txt](week-02/protocol_audit.txt)
@@ -154,6 +161,7 @@ A professional, mobile-first Purple Team environment demonstrating Zero-Trust pr
 
 ### 🛰️ TLAB-2: Operation Blackout (Linux Hardening)
 📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/3dc9c8f1ef244c716f5dc703e9043728/raw/7a1f22b97968b2cba92f4032381f772aca9e0e8b/w2_tlab_setup.sh | sudo bash 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-02/tlab_report.txt
 
 * [Evidence: harden.sh](week-01/harden.sh)
@@ -163,6 +171,7 @@ A professional, mobile-first Purple Team environment demonstrating Zero-Trust pr
 
 ## 🐍 T1-M1.S07: THE AUTOMATION FORGE (Network Reconnaissance)
 📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/8fbf854b0275eb82e52b9692b7416df6/raw/50aa36bf8fdfe33589aebe1ca88758d17121028c/port_check.py | sudo bash 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-03/port_check.py
 
 | Data Point | Desktop/Laptop User (Standard) | Android Cyber Workbench (Note 20 Ultra) |
@@ -176,6 +185,7 @@ A professional, mobile-first Purple Team environment demonstrating Zero-Trust pr
 
 ## 🛡️ T1-M1.S08: REFINED PAPER TRAIL (Forensic Audit Comparison)
 📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/8aead9fe01bf62456a18f490a817867b/raw/c16a8c593d84a250e69e8c22243af1335169d48c/brute_detector.py | sudo bash 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-03/brute_report.txt
 
 | Data Point | Desktop User (Standard) | Android Cyber Workbench (Note 20 Ultra) |
@@ -189,6 +199,7 @@ A professional, mobile-first Purple Team environment demonstrating Zero-Trust pr
 
 ## 🚀 T1-M1.S09: THE AUTOMATION PIVOT (Engineering Audit Comparison)
 📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/038550bf46736f98d66f3fe092707143/raw/844e48bf631f371746d13e40fc67b15dbd154a78/system_auditor.py | sudo bash 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-03/system_auditor.py
 
 | Data Point | Desktop User (Standard) | Android Cyber Workbench (Note 20 Ultra) |
@@ -203,6 +214,7 @@ A professional, mobile-first Purple Team environment demonstrating Zero-Trust pr
 
 #### 🛡 TLAB-03: OPERATION AUTOMATED Hunt (Zero-Trust Execution)
 📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/4523267cb512343bd14c835f9eee9420/raw/5281035153ce9b3a67b01389b1e9218bdbbfae93/incident_response.py | sudo bash 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-03/incident_response.py
 
 | Data Point | Desktop User (Standard) | Android Cyber Workbench (Note 20 Ultra) |
@@ -218,6 +230,7 @@ A professional, mobile-first Purple Team environment demonstrating Zero-Trust pr
 
 ## 📁 T1-M1-S10: THE GHOST IN THE MACHINE (Layer 3 Isolation)
 📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/cf4a0607c87af8085efbb0b828bd22f8/raw/3b21b3740a4db33ffa341043fe37b8068cabfddd/sandbox_report.txt | sudo bash 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/sandbox_verify.txt
 
 **Evidence:** [Commit 36193ac](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/36193ac)
@@ -256,10 +269,12 @@ Instead of utilizing a legacy GUI-based hypervisor toggle (VirtualBox/UTM), the 
 **Status:** Note 20 Ultra exynos 990 nonrooted termux terminal | Zero-Trust Verified | System Optimization Confirmed
 
 **Status:** All Sessions Synchronized | Zero-Trust Active
+
 ---
 
 ### 🚀 T1-M1-S11: THE CONTAINER REVOLUTION (Comparative Deployment)
 📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/402dd14250b5bc3a7417f6fd7b8e7676/raw/fb4aa7f0ea02f1677a8a91356344dda9af8e0285/deploy_web.sh | sudo bash 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-04/deploy_web.sh
 
 | Data Point | Desktop User (Standard Cohort) | Android Cyber Workbench (Note 20 Ultra) |
@@ -281,11 +296,10 @@ By utilizing Google Cloud Shell as my remote compute layer, I was able to orches
 
 **White Hat Auditor Question:** \"What was the point of the 'deploy_web.sh' script?\"
 **Engineering Statement:** \"The script transforms a manual operational task into **Infrastructure as Code (IaC)**. By codifying the `docker run` command with detached flags (`-d`) and dynamic port mapping (`-p 8080:80`), I ensured that the deployment of the training server was repeatable and immutable. This removes human error from the provisioning phase and allows for the immediate, forensic destruction of the server post-mission to ensure a zero-footprint architecture.\"
+
 ## 🛡️ Strategic Defense: Why the Container Revolution?
 **Security Objective:** To transition from \"Static Infrastructure\" (which is expensive, slow to patch, and offers a permanent attack surface) to \"Disposable Infrastructure.\"
-
 ### 🏗️ Technical Mechanics: Standard x86 vs. Note 20 Ultra Rig
-
 **Standard Desktop Approach (Monolithic Execution):**
 The average analyst uses an x86 laptop to run Docker Desktop locally. This requires the Docker daemon to share the same kernel as the host operating system. If a container escape occurs, the attacker has a direct path to the analyst’s personal files and hardware. This also puts immense thermal and computational stress on a single local device.
 
@@ -302,10 +316,12 @@ By engineering a **Mobile-to-Cloud Bridge**, I decoupled the Command Layer from 
 * **`docker rm -f`**: Forensically purged the entire environment post-operation to ensure zero persistence.
 
 **Status:** Strategic Defense Validated | Infrastructure Decoupled | Phase 1 Finalized.
+
 ---
 
 ### 🎼 T1-M1-S12: THE CONDUCTOR & THE FLEET (Segmented Orchestration)
 📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/72cd0ddae515c6658906280526194069/raw/57c5c7933c2f74ba765263e9d29fee160d86a537/docker-compose.yml | sudo bash 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-04/docker-compose.yml
 
 | Data Point | Desktop User (Standard Cohort) | Android Cyber Workbench (Note 20 Ultra) |
@@ -337,8 +353,10 @@ Status: S12 Segmented Fleet Active | Air-Gap Verified | Phase 1 Portfolio Locked
 * **Mechanical Proof:** Verified the air-gap via `docker-compose exec db ping google.com`. The resulting `Network is unreachable` error serves as forensic proof that the database is locked in a private, non-routable namespace with zero external exit paths.
 
 ---
+
 ### 🏰 P1-W4-TLAB-04: Operation Cloud Fleet (Hyper-Stack Architecture)
 📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/eb96709c3b12b6a985dd4d85aa973d6e/raw/ada76c99811604bbec2354e539b6beb8ac7434c5/mission_brief.txt | sudo bash 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-04/hyperstack_audit.json
 
 | Data Point | Desktop User (Standard Cohort) | Android Cyber Workbench (Note 20 Ultra) |
@@ -373,6 +391,7 @@ Status: S12 Segmented Fleet Active | Air-Gap Verified | Phase 1 Portfolio Locked
 
 👔 **T1-M1-S13: THE CORPORATE BRAIN (Automated Onboarding)**
 📥 Starter Code (Canvas): https://gist.githubusercontent.com/grobbins-cell/dc30be571f331a948b8828e3206e6c1e/raw/dd6b06e8619a57754b61d2cf8d2567ffdb4f1af6/onboard_engineers.ps1 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-05/onboard_engineers.ps1
 
 | Data Point | Desktop User (Standard Cohort) | Android Cyber Workbench (Note 20 Ultra) |
@@ -402,6 +421,7 @@ Status: S12 Segmented Fleet Active | Air-Gap Verified | Phase 1 Portfolio Locked
 
 ### 👔 T1-M1-S14: The Invisible Hand (Group Policy)
 📥 Starter Code (Canvas): https://gist.githubusercontent.com/grobbins-cell/c46721cc16af1980a2431532bf4c3a86/raw/066b2d8fb3d91186a632402cb8087b52e18d3cc2/gpo_audit.txt 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-05/gpo_audit.txt
 
 - **Evidence:** [gpo_audit.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/a617f238f802271db622ce64c8f6de04bbdbb6ad)
@@ -434,6 +454,7 @@ Mechanical Proof: \"I documented the exact inheritance resolution logic (Local, 
 
 ### 👔 T1-M1-S15: BRIDGING THE KINGDOMS (The Final Handshake)
 📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/c884ea4f1ff89716aca60dfe755c3a84/raw/d78b9ece2b24788eb21fd68536f6acfc6ad9a5f3/s15_linux_prep.sh | sudo bash 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-05/s15_linux_prep.sh
 
 * [Evidence 1: s15_win_prep.ps1](week-05/s15_win_prep.ps1)
@@ -460,6 +481,7 @@ Mechanical Proof: \"I documented the exact inheritance resolution logic (Local, 
 
 ### 🛡️ TLAB-05: OPERATION UNIFIED FRONT (Enterprise Synthesis)
 📥 Starter Code (Canvas): N/A (CLI Manual Entry) 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-05/tlab5_report.txt
 
 * [Evidence: tlab5_report.txt](week-05/tlab5_report.txt)
@@ -476,6 +498,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ### 🛡️ T1-M1-S16: THE ARCHITECT'S WAR ROOM (OSI Troubleshooting)
 📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/bb6bf1d514f885dd1f5e14c2eaa77161/raw/ae3deea26a4718b5e39a219703e257f21bf0eaca/s16_provisioning.sh | sudo bash 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-06/readiness_check.log
 
 * [Evidence: readiness_check.log](week-06/readiness_check.log)
@@ -509,6 +532,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ### 🛡️ T1-M1-S17: THE FORGE FINAL (Technical Diagnostic)
 📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/647f9eebffef2d0e350e4c91f25f6984/raw/89dce3cbcebabe261b687a2e71060031796131f6/practical_exam_report.txt | sudo bash 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-06/practical_exam_report.txt
 
 * [Evidence: practical_exam_report.txt](week-06/practical_exam_report.txt)
@@ -542,6 +566,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ### 🛡️ T1-M1-S18: THE HARDENED OUTPOST (Enterprise Capstone)
 📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/ab2499cbb17e222ff3c2501f3ad70106/raw/205ee526eea3b512938e871fc0f452866c506874/HardenedOutpost_SAD.md | sudo bash 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-06/HardenedOutpost_SAD.md
 
 * [Evidence: Capstone Commit](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/bcd5d22faac9d35e5016e4cca17c7a7c3ea1e9f6)
@@ -581,6 +606,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ### 👁️ T1-M1-S19: THE INVISIBLE SCOUT (OSINT Threat Profile)
 📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/53c92edde076bdd0156c1810c8506cf3/raw/s19_provision.sh | sudo bash 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-07/ThreatProfile_CloudNano.md
 
 * [Evidence: Commit e267d69](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/e267d6948ef9000a5aecd23dc42e2ea815817942)
@@ -598,6 +624,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ### 👁️ T1-M1-S20: MAPPING THE SHADOWS (Active Network Enumeration)
 📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/bd374d8be6f82620199b2c33af7ac8ed/raw/s20_provision.sh | sudo bash 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-07/nmap_scan_results.txt
 
 * [Evidence: nmap_scan_results.txt](week-07/nmap_scan_results.txt)
@@ -631,6 +658,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ### 🛡️ T1-M1-S21: THE PRIORITIZATION MATRIX (Vulnerability Triage)
 📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/fbf38bede473ef78dd0788b45a1c6ea7/raw/s21_provision.sh | sudo bash 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-07/remediation_plan.md
 
 * [Evidence: remediation_plan.md](week-07/remediation_plan.md)
@@ -665,6 +693,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ### 🏴 P1 week7 TLAB7 (W7 | TLAB 7 ) OPERATION SHADOW MAP (Perimeter Assessment)
 📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/932b36f84fc042e7727ea93371e22e9b/raw/tlab7_provision.sh | sudo bash 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-07/Perimeter_Assessment.md
 
 * [Evidence: Perimeter_Assessment.md](week-07/Perimeter_Assessment.md)
@@ -680,11 +709,9 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 🛡️ **Operational Defense Logic (White Hat Auditor Common Questions)**
 
 **White Hat Auditor Question:** "Why did you identify nginx 1.14.2 as the top priority over the Apache TRACE vulnerability?"
-
 **Response:** "Both findings are real risks, but nginx 1.14.2 represents a structurally worse posture. An outdated EOL server has no patch path — the attack surface cannot be reduced without replacing the software entirely. The HTTP TRACE vulnerability on Apache, while exploitable for XST session hijacking, can be mitigated immediately with a single configuration change. When applying Risk = Likelihood x Impact, an unpatched EOL server on a DMZ-facing asset with publicly documented CVEs scores higher on both axes than a misconfiguration with an available remediation."
 
 **White Hat Auditor Question:** "How did you confirm 172.88.0.15 was a cache database without open ports?"
-
 **Mechanical Proof:** "The version scan (`sudo nmap -sV 172.88.0.15`) returned all 1000 ports in closed states with no service banner — consistent with a Redis instance configured to block external access. The host responded to the ping sweep confirming it was live, but its hardened posture suppressed port exposure. Combined with the subnet context of a corporate DMZ audit, the behavioral signature matched a Redis cache operating behind a firewall rule."
 
 🧠 **TLAB-Week7  (W7 | TLAB) Perimeter Assessment - Operation Shadow Map**
@@ -698,9 +725,11 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
     * **172.88.0.15:** No open ports — Redis cache database (hardened posture)
     * **172.88.0.20:** Port 80/tcp — Apache httpd 2.4.66 — HTTP TRACE active (OSVDB-877)
 * **Mechanical Proof:** All three phases documented in `Perimeter_Assessment.md`, pushed to GitHub (Commit feat W7 TLABw7), establishing an immutable cryptographic audit trail of the full-scope assessment.
+---
 
 ### 👁 T1-M1-S22: THE VERIFICATION PROTOCOL (Exploitation & Shell Logic)
 📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/470296da7bc200a4f81abae7ffefcdff/raw/s22_provision.sh | sudo bash 
+
 🚀 Quick Fetch (Completed Solution): N/A (Image verification below)
 
 * **Evidence:** [exploit_verification.png](week-09/exploit_verification.png) 
@@ -735,6 +764,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ### 👁 T1-M1-S23: CLIMBING THE LADDER (Privilege Escalation)
 📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/e19d720f62ba447b9e520e63dc734abd/raw/s23_provision.sh | sudo bash 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-08/escalation_path.txt
 
 * **Evidence 1 (Textual):** [escalation_path.txt](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/018e7631f51db14d6e5d07420be135941b7fe512)
@@ -765,8 +795,10 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 ***Engineering Statement:** *"The official auditing script evaluated the artifact strictly against a Windows privilege escalation rubric. Because deploying a heavy x86 Windows Server VM locally on an ARM64 mobile device causes massive thermal throttling and resource exhaustion, I decoupled the operational requirements. I manually engineered the exact MSFVenom parameters (`windows/x64/shell_reverse_tcp`) and unquoted service path vulnerability mapping into the text artifact to satisfy the automated grading mechanism, while independently validating my Linux exploitation capabilities natively in the cloud."*
 
 ---
+
 ### 👁 T1-M1-S24: THE DEEP NETWORK (Lateral Movement & Pivoting)
 📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/33037d3489b13132d56815900d02f71c/raw/s24_provision.sh | sudo bash 
+
 🚀 Quick Fetch (Completed Solution): (See screenshot s24 pivot verification below)
 
 * **Evidence:** (https://github.com/CK-Bachoo/IF-Cyber-Portfolio/commit/93c98b0eac144c8ca1eccb00718c6f85d150a58b)
@@ -804,6 +836,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ### 💥 T1-M1-TLAB8: OPERATION DEEP PIVOT (The Kill Chain)
 📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/63931548401586465072662885238a49/raw/tlab8_provision.sh | sudo bash
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-08/Deep_Pivot_Report.md
 
 * **Evidence:** [Deep_Pivot_Report.md](week-08/Deep_Pivot_Report.md)
@@ -840,6 +873,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ### 💉 T1-M1-S25: THE DATA EXFILTRATION (SQL Injection Kill Chain)
 📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/6ad2f5311f05560210a6e8dea9d3a6ba/raw/4be23d9aeda8a438a33f765a1a57f6f3605be15d/s25_provision.sh | sudo bash 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-09/sqli_report.txt
 
 * **Evidence 1 (Artifact):** [sqli_report.txt](week-09/sqli_report.txt)
@@ -887,6 +921,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ### ⚗️ T1-M1-S26: THE POISONED BROWSER (XSS & CSRF Kill Chain)
 📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/320d66d61f6da81abaf4dd040452d1a5/raw/32e5d7e7cc3555a9fbecf16fc2875a93f800d372/s26_provision.sh | sudo bash 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-09/xss_payloads.txt
 
 * **Evidence 1 (Artifact):** [xss_payloads.txt](week-09/xss_payloads.txt)
@@ -926,6 +961,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ### 📡 T1-M1-S27: THE INVISIBLE LOGIC (API BOLA & Business Logic Exploitation)
 📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/a2767a581053e943d5254c653f7f8e85/raw/64af5b8d4621ed4826085f12787ec1827161b180/s27_provision.sh | sudo bash 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-09/api_audit.log
 
 * **Evidence (Artifact):** [api_audit.log](week-09/api_audit.log)
@@ -965,6 +1001,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ### 🔗 P1-W9-TLAB9: OPERATION OMNI-PORTAL (Full-Stack Chained Attack Assessment)
 📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/b7d9181dd65ed632bd0baa7474265e7b/raw/ffd4b2d0872193d64841238776c6d89e42dbd8b2/tlab9_provisioning.sh | sudo bash 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-09/OmniPortal_Assessment.md
 
 * **Evidence (Artifact):** [OmniPortal_Assessment.md](week-09/OmniPortal_Assessment.md)
@@ -1007,62 +1044,9 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ---
 
-### 🌐 WEEK 9: WEB APPLICATION EXPLOITATION & AGENTIC THREAT HUNTING
-
-🚀 **T1-M1-S25: SQL Injection (SQLi) Lab**
-📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/6ad2f5311f05560210a6e8dea9d3a6ba/raw/4be23d9aeda8a438a33f765a1a57f6f3605be15d/s25_provision.sh | sudo bash 
-🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-09/sqli_report.txt
-
-| Data Point | Desktop User (Standard Cohort) | Android Cyber Workbench (Note 20 Ultra) |
-| :--- | :--- | :--- |
-| **Methodology** | Desktop Browser & GUI Interception | Termux `curl` & Mobile Chrome DevTools |
-| **Evidence** | N/A | Evidence: `sqli_audit.txt` |
-
-🛡️ **Technical Analysis:** Bypassed traditional desktop constraints to perform database exploitation natively from a mobile environment. Executed authentication bypasses using tautologies (`' OR 1=1 --`) and extracted backend schema data via `UNION SELECT` payloads directly against the target infrastructure.
-
-<br>
-
-🚀 **T1-M1-S26: Cross-Site Scripting (XSS) Lab**
-📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/320d66d61f6da81abaf4dd040452d1a5/raw/32e5d7e7cc3555a9fbecf16fc2875a93f800d372/s26_provision.sh | sudo bash 
-🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-09/xss_payloads.txt
-
-| Data Point | Desktop User (Standard Cohort) | Android Cyber Workbench (Note 20 Ultra) |
-| :--- | :--- | :--- |
-| **Methodology** | Standard Desktop Browser extensions | Raw payload injection via Mobile Browser |
-| **Evidence** | N/A | Evidence: `xss_payloads.txt` |
-
-🛡️ **Technical Analysis:** Demonstrated client-side manipulation by injecting malicious JavaScript (`<script>alert(document.cookie)</script>`) into vulnerable input fields. Verified reflected and stored XSS vectors to simulate session hijacking, proving that Layer 7 attacks are entirely viable from a mobile SOC.
-
-<br>
-
-🚀 **T1-M1-S27: API Reconnaissance & Exploitation**
-📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/a2767a581053e943d5254c653f7f8e85/raw/64af5b8d4621ed4826085f12787ec1827161b180/s27_provision.sh | sudo bash 
-🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-09/api_audit.log
-
-| Data Point | Desktop User (Standard Cohort) | Android Cyber Workbench (Note 20 Ultra) |
-| :--- | :--- | :--- |
-| **Methodology** | Postman / Insomnia GUI applications | Native Bash looping & HTTP header forging |
-| **Evidence** | N/A | Evidence: `api_brute_loop.sh` |
-
-🛡️ **Technical Analysis:** Instead of relying on heavy desktop API clients, I engineered a highly optimized Bash brute-force loop natively in Termux. Utilized `curl -X POST -H "Content-Type: application/json"` inside a `seq` loop to autonomously iterate through 10,000 PIN combinations against a protected API endpoint, extracting the access token with near-zero RAM overhead.
-
----
-
-💥 **T1-M1-TLAB9: Operation Agentic Threat Hunt (Web Breach)**
-📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/b7d9181dd65ed632bd0baa7474265e7b/raw/ffd4b2d0872193d64841238776c6d89e42dbd8b2/tlab9_provisioning.sh | sudo bash 
-🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-09/OmniPortal_Assessment.md
-
-| Data Point | Desktop User (Standard Cohort) | Android Cyber Workbench (Note 20 Ultra) |
-| :--- | :--- | :--- |
-| **Methodology** | Standard VM & Splunk/SIEM GUI | Python Automation Forge & Local LLM (Gemma) |
-| **Evidence** | N/A | Evidence: `tlab9_web_breach_report.md` |
-
-🛡️ **Technical Analysis:** Synthesized Week 9 offensive tactics (SQLi, XSS, API Abuse) with defensive automation. Leveraged Python scripting to parse massive web server logs for HTTP 200 responses tied to malicious SQL payloads. Integrated an Agentic AI workflow to autonomously classify the Threat Actor's TTPs and generate incident response commands, successfully defending the perimeter from the Note 20 Ultra.
-
----
-
 ### 🚨 T1-M1-S28: THE CRIME SCENE (DFIR Live Triage & Chain of Custody)
 📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/016ab3c9fba28b325bb45ee2621261ce/raw/f46f3ec6a7c544ebcc6973e387d39a1e3da4b51e/s28_provision.sh | sudo bash 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-10/collection_log.txt
 
 * **Evidence (Artifact):** [collection_log.txt](week-10/collection_log.txt)
@@ -1106,6 +1090,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ### 🚨 T1-M1-S29: THE DIGITAL AUTOPSY (Malware Recovery & Disk Carving)
 📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/86fb7535ee59dc28cc38a0b58a7a97c3/raw/79c9d16e1c12c87352d2f8e39a9c788618b3844c/s29_provision.sh | sudo bash 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-10/forensic_findings.md
 
 * **Evidence (Artifact):** [forensic_findings.md](week-10/forensic_findings.md)
@@ -1138,6 +1123,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ### 💥 T1-M1-S30: OPERATION CENTRAL NERVOUS SYSTEM (SIEM Engineering & Threat Hunting)
 📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/4fc353546a7211945496cf7f4b104a64/raw/da3cc7547c6787a52cb3f7a3c64347117e07b1a2/s30_provision.sh | tr -d '\r' | sudo bash 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-10/attack_timeline.csv
 
 * **Evidence (Artifact):** [attack_timeline.csv](week-10/attack_timeline.csv)
@@ -1171,6 +1157,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ### 🔍 T1-M1-TLAB10: OPERATION PHANTOM PURSUIT (Full DFIR Lifecycle)
 📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/431075ab61aa63a6ca08d57837ab2562/raw/6b5d6ce7879ed1a126a4d73da58b785f2e98d10d/tlab10_provision.sh | tr -d '\r' | sudo bash 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-10/Incident_Response_Report.md
 
 * Evidence (Artifact): [Incident_Response_Report.md](week-10/Incident_Response_Report.md)
@@ -1203,6 +1190,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ### 🚨 T1-M1-S31: THE BARRICADE (Firewall & DMZ Lockdown)
 📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/f69144b6d08241d8d9dd633bda734558/raw/165deec34576f841bfb8f89ce8a7d5c69dacf92c/s31_provision.sh | tr -d '\r' | sudo bash 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-11/firewall_config.sh
 
 * **Evidence (Artifact):** [firewall_config.sh](week-11/firewall_config.sh)
@@ -1245,6 +1233,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ### 🪤 T1-M1-S32: THE TRIPWIRE (Custom Suricata IDS Signatures)
 📥 Starter Code (Canvas): N/A (Provisioning script varies per student URL) 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-11/custom_ids.rules
 
 * **Evidence (Artifact):** [custom_ids.rules](week-11/custom_ids.rules)
@@ -1276,6 +1265,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ### 🏁 T1-M1-S33: THE LAST MILE (Endpoint Detection & Response)
 📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/grobbins-cell/428878b8291205af62569f5b805def9e/raw/a857dbd29147b010f6030bbc2b324a7cab801a6f/s33_provision.sh | tr -d '\r' | sudo bash 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-11/edr_policy.xml
 
 * **Evidence (Artifact):** [edr_policy.xml](week-11/edr_policy.xml)
@@ -1306,6 +1296,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ### 🔍 T1-M1-TLAB-11: OPERATION FORTRESS (Defense in Depth)
 📥 Starter Code (Canvas): N/A (Provisioning script varies per student URL) 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-11/Operation_Fortress_Report.md
 
 * **Evidence (Artifact):** [Operation_Fortress_Report.md](week-11/Operation_Fortress_Report.md)
@@ -1345,6 +1336,7 @@ Synthesized the Week 5 Identity track by validating the cross-platform handshake
 
 ### 🏁 TLAB 12 & W12 TEPP Final  ( Tlab 12  — Portfolio Review & Week 12 TEPP — Final Reckoning )
 📥 Starter Code (Canvas): curl -sL https://gist.githubusercontent.com/janepierresgithub/5a8e343b0951b2345e196ebcab3e81f2/raw/902136068782435af8f1b4b1c55abec85c389cc3/tepp_provisioning.sh | sudo bash 
+
 🚀 Quick Fetch (Completed Solution): curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/week-12/tepp_postmortem.md
 
 **Evidence (Artifact):** [portfolio_audit.md](week-12/portfolio_audit.md)
@@ -1373,6 +1365,7 @@ Mechanical Proof: Full audit trail in portfolio_audit.md and tepp_postmortem.md.
 
 #### 🧱 P2 · W5 · D1 · S-XIII: 🧱 The Financial Firewall — Module 13: Lab Submission
 📥 Starter Code (Canvas): git clone https://github.com/grobbins-cell/S13-Budget-Lab.git 
+
 🚀 Quick Fetch (Completed Solution): git clone https://github.com/CK-Bachoo/IF-Cyber-Portfolio.git && cd IF-Cyber-Portfolio/p2-week-05-lab-13/
 
 *   **Attack Vector:** Denial of Wallet / Cloud Resource Hijacking.
@@ -1386,7 +1379,7 @@ Mechanical Proof: Full audit trail in portfolio_audit.md and tepp_postmortem.md.
 
 *   **Technical Mechanics:** Identified a syntax sabotage inside the [`budget_plan.tf`](./budget_plan.tf) file. Intervened and explicitly defined the missing `notification_type = "ACTUAL"` validator metric, mapped the subscriber email to a 50% threshold limit, and deployed the live guardrails via `terraform apply`. Safely executed `terraform destroy` to instantly tear down the infrastructure and completely prevent operational stipend loss.
 
-🛡 **Operational Defense Logic (White Hat Auditor Interrogation)**
+*   **Operational Defense Logic (White Hat Auditor Interrogation)**
 *   **White Hat Auditor Question:** "Why must cloud financial budgets be deployed as code rather than configured manually in the AWS billing console?"
 *   **Engineering Statement:** "Manual configuration is prone to human error and cannot be securely version-controlled. By deploying the budget alarm using HashiCorp Configuration Language (HCL), I established an immutable, robotic flow-meter. This ensures that the moment our $75 operational stipend hits a hard 50% threshold, an exact `ACTUAL` notification triggers to mathematically prevent a 'Denial of Wallet' attack."
 
@@ -1394,6 +1387,7 @@ Mechanical Proof: Full audit trail in portfolio_audit.md and tepp_postmortem.md.
 
 #### 🔑 P2 · W5 · D2 · S-XIV: 🔑 The Keymaster's Ring — Module 14: Lab Submission
 📥 Starter Code (Canvas): git clone https://github.com/grobbins-cell/S14-IAM-Lab.git 
+
 🚀 Quick Fetch (Completed Solution): git clone https://github.com/CK-Bachoo/IF-Cyber-Portfolio.git && cd IF-Cyber-Portfolio/p2-week-05-lab-14/
 
 *   **Attack Vector:** Privilege Escalation / Wildcard Authorization.
@@ -1414,6 +1408,7 @@ Mechanical Proof: Full audit trail in portfolio_audit.md and tepp_postmortem.md.
 
 #### 🗺️ P2 · W5 · D3 · S-XV: 🗺️ The Vault & The State — Module 15: Lab Submission
 📥 Starter Code (Canvas): git clone https://github.com/grobbins-cell/S15-State-Lab.git 
+
 🚀 Quick Fetch (Completed Solution): git clone https://github.com/CK-Bachoo/IF-Cyber-Portfolio.git && cd IF-Cyber-Portfolio/p2-week-05-lab-15/
 
 *   **Attack Vector:** State Loss / Orphaned Infrastructure Collisions.
@@ -1434,6 +1429,7 @@ Mechanical Proof: Full audit trail in portfolio_audit.md and tepp_postmortem.md.
 
 #### 💳 P2 · W5 · TLAB 5: 💳 The Budgeted Identity — TLab Submission
 📥 Starter Code (Canvas): git clone https://github.com/grobbins-cell/TLAB5-Budgeted-Identity.git 
+
 🚀 Quick Fetch (Completed Solution): git clone https://github.com/CK-Bachoo/IF-Cyber-Portfolio.git && cd IF-Cyber-Portfolio/p2-tlab-05-the-budgeted-identity/
 
 *   **Attack Vector:** Multi-Vector Sabotage / Full Stack Compromise.
@@ -1467,6 +1463,7 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 
 # 🌐 P2 · W6 · D1 · S-XVI: 🌐 The War Room — Module 16: Lab Submission
 📥 Starter Code (Canvas): git clone https://github.com/grobbins-cell/S16-VPC-Lab.git 
+
 🚀 Quick Fetch (Completed Solution): git clone https://github.com/CK-Bachoo/IF-Cyber-Portfolio.git && cd IF-Cyber-Portfolio/p2-week-06-lab-16/
 
 *   **Attack Vector:** Configuration Sabotage / Outage Inducement.
@@ -1487,6 +1484,7 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 
 #### 🎧 P2 · W6 · D2 · S-17: 🎧 The Silent Wiretap — Module 17 Lab Submission (Dual-Execution)
 📥 Starter Code (Canvas): git clone https://github.com/grobbins-cell/S17-Wiretap-Lab.git 
+
 🚀 Quick Fetch (Completed Solution): git clone https://github.com/CK-Bachoo/IF-Cyber-Portfolio.git && cd IF-Cyber-Portfolio/p2-week-06-lab-17/
 
 *   **Attack Vector:** Visibility Deficit / Telemetry Bypass.
@@ -1510,6 +1508,7 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 
 #### 🛑 P2 · W6 · D3 · S-XVIII: 🛑 The Zero Trust Terminal — Module 18: Lab Submission
 📥 Starter Code (Canvas): git clone https://github.com/grobbins-cell/S18-ZeroTrust-Lab.git 
+
 🚀 Quick Fetch (Completed Solution): git clone https://github.com/CK-Bachoo/IF-Cyber-Portfolio.git && cd IF-Cyber-Portfolio/p2-week-06-lab-18/
 
 *   **Attack Vector:** Perimeter Piercing / SSH Credential Theft.
@@ -1530,6 +1529,7 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 
 #### 🗺️ P2 · W6 · TLAB 6: The Monitored Fortress — TLab Submission
 📥 Starter Code (Canvas): git clone https://github.com/grobbins-cell/TLAB6-Monitored-Fortress.git 
+
 🚀 Quick Fetch (Completed Solution): git clone https://github.com/CK-Bachoo/IF-Cyber-Portfolio.git && cd IF-Cyber-Portfolio/p2-tlab-06-the-monitored-fortress/
 
 *   **Attack Vector:** Multi-Vector Perimeter Compromise / Threat Invisibility
@@ -1563,6 +1563,7 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 
 #### 📦 p2-week-07-lab-19: The Conveyor Belt
 📥 Starter Code (Canvas): git clone https://github.com/grobbins-cell/S19-Pipeline-Lab.git 
+
 🚀 Quick Fetch (Completed Solution): git clone https://github.com/CK-Bachoo/IF-Cyber-Portfolio.git && cd IF-Cyber-Portfolio/p2-week-07-lab-19/
 
 *   **Attack Vector:** Configuration Drift / Automated Deployment Inefficiencies.
@@ -1585,6 +1586,7 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 
 #### 🛡️ p2-week-07-lab-20: The Quality Inspector
 📥 Starter Code (Canvas): git clone https://github.com/grobbins-cell/S20-Quality-Lab.git 
+
 🚀 Quick Fetch (Completed Solution): git clone https://github.com/CK-Bachoo/IF-Cyber-Portfolio.git && cd IF-Cyber-Portfolio/p2-week-07-lab-20/
 
 *   **Attack Vector:** Insecure Code Injection / Downstream Policy Violations.
@@ -1608,6 +1610,7 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 
 #### 🔑 p2-week-07-lab-21: The Delivery Drone
 📥 Starter Code (Canvas): git clone https://github.com/grobbins-cell/S21-Delivery-Lab.git 
+
 🚀 Quick Fetch (Completed Solution): git clone https://github.com/CK-Bachoo/IF-Cyber-Portfolio.git && cd IF-Cyber-Portfolio/p2-week-07-lab-21/
 
 *   **Attack Vector:** Static Credential Theft / Persistent Secrets Leakage.
@@ -1631,6 +1634,7 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 
 ### 🚀 P2 · W7 · TLAB 7: The Automated Forge — Capstone Submission
 📥 Starter Code (Canvas): git clone https://github.com/grobbins-cell/TLAB7-Forge.git                                
+
 🚀 Quick Fetch (Completed Solution): git clone https://github.com/CK-Bachoo/IF-Cyber-Portfolio.git && cd IF-Cyber-Portfolio/p2-tlab-07-the-automated-forge/
 
 * **Attack Vector:** Perimeter Compromise Prevention / Unauthorized Infrastructure Proliferation.
@@ -1660,6 +1664,7 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 
 #### 🚢 P2-Week-08-Lab-22: The Cargo Ship 
 📥 Starter Code (Canvas): git clone https://github.com/grobbins-cell/S22-Cargo-Lab.git                             
+
 🚀 Quick Fetch (Completed Solution): git clone https://github.com/CK-Bachoo/IF-Cyber-Portfolio.git && cd IF-Cyber-Portfolio/p2-week-08-lab-22/
 
 *   **Attack Vector:** Container Breakouts / Privilege Escalation via Root Process Hijacking.
@@ -1685,6 +1690,7 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 
 #### 👻 P2 · W8 · S-23: The Ghost Fleet: Lab Submission
 📥 Starter Code (Canvas): git clone https://github.com/grobbins-cell/S23-Ghost-Lab.git                             
+
 🚀 Quick Fetch (Completed Solution): git clone https://github.com/CK-Bachoo/IF-Cyber-Portfolio.git && cd IF-Cyber-Portfolio/p2-week-08-lab-23/
 
 *   **Attack Vector:** Identity Privilege Escalation / Policy Hijacking via Over-Permissive Wildcards.
@@ -1708,6 +1714,7 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 
 #### 📋 P2 · W8 · S-24: The Manifest — Module 25: Lab Submission
 📥 Starter Code (Canvas): git clone https://github.com/grobbins-cell/S24-Manifest-Lab.git                         
+
 🚀 Quick Fetch (Completed Solution): git clone https://github.com/CK-Bachoo/IF-Cyber-Portfolio.git && cd IF-Cyber-Portfolio/p2-week-08-lab-24/
 
 *   **Attack Vector:** Supply Chain Vulnerability Injection / Legacy Package Exploitation.
@@ -1732,10 +1739,9 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 *   **Engineering Statement:** *"Local developer scans only detect vulnerabilities known at the moment of build. Enforcing automated scan-on-push configurations ensures every image layer is checked against up-to-date threat models, intercepting vulnerable packages before they can move through delivery pipelines and enter production clusters."*
 ---
 
-***
-
 ## 📦 P2 · W8 · TLAB 8: The Fleet Command — Capstone Submission
 📥 Starter Code (Canvas): git clone https://github.com/grobbins-cell/TLAB8-Fleet.git         
+
 🚀 Quick Fetch (Completed Solution): git clone https://github.com/CK-Bachoo/IF-Cyber-Portfolio.git && cd IF-Cyber-Portfolio/p2-tlab-08-the-hardened-hull/
 
 * **Attack Vector:** Identity Privilege Escalation / Container Breakouts via Over-Permissive Wildcards.
@@ -1764,3 +1770,4 @@ To ensure full accountability and continuous logging alignment, the entire lifec
   <img src="https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/p2-tlab-08-the-hardened-hull/screenshot%20a%20tlab%208.png" alt="ECR Clean Scan Evidence" width="45%">
   <img src="https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/p2-tlab-08-the-hardened-hull/screenshot%20b%20tlab%208.png" alt="Lambda Auditor Success Log Evidence" width="45%">
 </p>
+---
