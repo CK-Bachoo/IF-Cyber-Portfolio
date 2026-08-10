@@ -28,26 +28,18 @@ To demonstrate absolute operational resilience and bypass traditional workspace 
 
 ## 📱 Mobile-to-Cloud Execution Model
 
-```text
-┌──────────────────────────────────────────────┐
-│          LOCAL COMMAND LAYER (ARM64)         │
-│  Samsung Note 20 Ultra 5G (Termux Sandbox)   │
-└──────────────────────┬───────────────────────┘
-                       │
-                       │ Secure SSH Tunnel / TLS API Uplink
-                       ▼
-┌──────────────────────────────────────────────┐
-│         EPHEMERAL COMPUTE LAYER (x86_64)     │
-│  Codespaces / Google Cloud Shell / AWS / Azure│
-└──────────────────────────────────────────────┘
-All laboratory environments, vulnerability scans, and Infrastructure-as-Code deployments were executed under strict physical hardware boundaries
-. By deploying a Decoupled Architecture, we run lightweight localized automation and pre-flight validation scripts natively on the mobile device, while offloading resource-heavy container fleets, SIEM indexers, and Terraform state graphs to ephemeral x86_64 cloud compute containers
-.
-This approach demonstrates practical, real-world Zero Trust operations, thermal and resource optimization, and the ability to deliver high-density enterprise security engineering without traditional laptop infrastructure
-.
+**[ LOCAL COMMAND LAYER — ARM64 ]**  
+📱 **Samsung Note 20 Ultra 5G** (Termux Sandbox)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▼ *Secure SSH Tunnel & TLS API Uplink*  
+**[ EPHEMERAL COMPUTE COMPILATION LAYER — x86_64 ]**  
+☁️ **GitHub Codespaces** | **Google Cloud Shell** | **AWS** | **Azure**
+
+All laboratory environments, vulnerability scans, and Infrastructure-as-Code deployments were executed under strict physical hardware boundaries. By deploying a **Decoupled Architecture**, we run lightweight localized automation and pre-flight validation scripts natively on the mobile device, while offloading resource-heavy container fleets, SIEM indexers, and Terraform state graphs to ephemeral x86_64 cloud compute containers. 
+
+This approach demonstrates practical, real-world Zero Trust operations, thermal and resource optimization, and the ability to deliver high-density enterprise security engineering without traditional laptop infrastructure.
 
 ---
-
 
 ⚖️ Phase 1 — Governance & Framework Alignment
 
