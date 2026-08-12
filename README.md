@@ -1852,7 +1852,7 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 
 ### 🏢 Enterprise Deployment Verification & Security Audit Trail
 *   **AWS Academy Sandbox Service Account Monitor Check:**
-    [AWS Console Restriction Alert Log](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/p2-week-09-lab-25/AWS%20GUARD%20DUTY%20CONSOLE%20P2%20WEEK9%20DAY%201%20S%20XXV%20FREE%20TIER%20LIMITATION.txt)
+    [AWS Console Restriction Alert Log](./p2-week-09-lab-25/AWS%20GUARD%20DUTY%20CONSOLE%20P2%20WEEK9%20DAY%201%20S%20XXV%20FREE%20TIER%20LIMITATION.txt)
 
 *   **White Hat Audit Question:** *"Why should enterprise teams monitor GuardDuty findings even if their infrastructure relies strictly on pre-deployment Infrastructure as Code (IaC) linting?"*
 *   **Engineering Statement:** *"IaC scanners only check for static misconfigurations before deployment. Cloud-native behavioral monitoring tools like GuardDuty ingest active data streams to detect post-deployment operational anomalies, such as credential hijacking or active exfiltration attempts, catching threats that static configurations cannot foresee."*
