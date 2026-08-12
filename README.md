@@ -1834,9 +1834,9 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 ---
 
 #### 📋 P2 · W9 · D1 · S-XXV: The Radar — Module 26: Lab Submission
-📥 Starter Code (Canvas): git clone https://github.com/grobbins-cell/S25-Radar-Lab.git
+📥 Starter Code (Canvas): `git clone https://github.com/grobbins-cell/S25-Radar-Lab.git`
 
-🚀 Quick Fetch (Completed Solution): git clone https://github.com/CK-Bachoo/IF-Cyber-Portfolio.git && cd IF-Cyber-Portfolio/p2-week-09-lab-25/
+🚀 Quick Fetch (Completed Solution): `git clone https://github.com/CK-Bachoo/IF-Cyber-Portfolio.git && cd IF-Cyber-Portfolio/p2-week-09-lab-25/`
 
 *   **Core Assets Links:** 
     *   📜 **Quick Fetch Blueprint:** [p2-week-09-lab-25/guardduty.tf](./p2-week-09-lab-25/guardduty.tf)
@@ -1852,11 +1852,10 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 
 ### 🏢 Enterprise Deployment Verification & Security Audit Trail
 *   **AWS Academy Sandbox Service Account Monitor Check:**
-    [AWS Console Restriction Alert Log](./p2-week-09-lab-25/AWS%20GUARD%20DUTY%20CONSOLE%20P2%20WEEK9%20DAY%201%20S%20XXV%20FREE%20TIER%20LIMITATION.txt)
+    ![AWS Console Restriction Alert](./p2-week-09-lab-25/AWS%20GUARD%20DUTY%20CONSOLE%20P2%20WEEK9%20DAY%201%20S%20XXV%20FREE%20TIER%20LIMITATION.png)
 
 *   **White Hat Audit Question:** *"Why should enterprise teams monitor GuardDuty findings even if their infrastructure relies strictly on pre-deployment Infrastructure as Code (IaC) linting?"*
 *   **Engineering Statement:** *"IaC scanners only check for static misconfigurations before deployment. Cloud-native behavioral monitoring tools like GuardDuty ingest active data streams to detect post-deployment operational anomalies, such as credential hijacking or active exfiltration attempts, catching threats that static configurations cannot foresee."*
-
 ---
 
 #### 📋 P2 · W9 · D2 · S-XXVI: The Breadcrumbs — Lab Submission
