@@ -1,0 +1,6 @@
+NIST_Function,AWS_Tool,Security_Purpose
+Identify,Terraform,Infrastructure as Code mapping and asset inventory management.
+Protect,AWS IAM,Enforcing the Principle of Least Privilege and Zero-Trust access control.
+Detect,Amazon GuardDuty,Continuous intelligent threat detection and anomaly monitoring.
+Respond,AWS CloudTrail,API logging and comprehensive forensic incident tracking.
+Recover,AWS Backup,Automated immutable snapshots for ransomware recovery and resilience.

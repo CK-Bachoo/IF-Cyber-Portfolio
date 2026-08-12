@@ -1,0 +1,10 @@
+MEMORANDUM
+
+TO: Executive Leadership / Board of Directors
+FROM: C.K. Bachoo, Cloud Security Engineer (TKH IF-CS-26)
+DATE: August 12, 2026
+SUBJECT: Business Risk — Misconfigured Cloud Storage Access
+
+1. A cloud storage location holding company data was left open with overly broad access permissions, meaning people or systems outside our intended control could reach it.
+2. This creates a direct risk of customer data exposure, regulatory fines, and loss of trust if the data is stolen or leaked.
+3. We will immediately restrict access to only approved roles, block public exposure, and keep continuous monitoring in place so this cannot recur unnoticed.
