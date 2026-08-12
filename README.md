@@ -1437,7 +1437,7 @@ Mechanical Proof: Full audit trail in portfolio_audit.md and tepp_postmortem.md.
 | **Provisioning** | AWS Management Console Clicks | Terraform IaC (HashiCorp Configuration Language) |
 | **Security Posture** | Reactive Billing Monitoring | Automated HCL "Denial of Wallet" Tripwire |
 
-*   **Technical Mechanics:** Identified a syntax sabotage inside the [`budget_plan.tf`](./budget_plan.tf) file. Intervened and explicitly defined the missing `notification_type = "ACTUAL"` validator metric, mapped the subscriber email to a 50% threshold limit, and deployed the live guardrails via `terraform apply`. Safely executed `terraform destroy` to instantly tear down the infrastructure and completely prevent operational stipend loss.
+*   **Technical Mechanics:** Identified a syntax sabotage inside the [budget_plan.tf](./p2-week-05-lab-13/budget_plan.tf) file. Intervened and explicitly defined the missing `notification_type = "ACTUAL"` validator metric, mapped the subscriber email to a 50% threshold limit, and deployed the live guardrails via `terraform apply`. Safely executed `terraform destroy` to instantly tear down the infrastructure and completely prevent operational stipend loss.
 
 *   **Operational Defense Logic (White Hat Auditor Interrogation)**
 *   **White Hat Auditor Question:** "Why must cloud financial budgets be deployed as code rather than configured manually in the AWS billing console?"
