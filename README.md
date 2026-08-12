@@ -1786,4 +1786,99 @@ To ensure full accountability and continuous logging alignment, the entire lifec
   <img src="https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/p2-tlab-08-the-hardened-hull/screenshot%20a%20tlab%208.png" alt="ECR Clean Scan Evidence" width="45%">
   <img src="https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/p2-tlab-08-the-hardened-hull/screenshot%20b%20tlab%208.png" alt="Lambda Auditor Success Log Evidence" width="45%">
 </p>
+
+---
+
+#### 📋 P2 · W9 · D1 · S-XXV: The Radar — Module 26: Lab Submission
+*   **Core Assets Links:** 
+    *   📦 **Starter Code Repository:** [grobbins-cell/S25-Radar-Lab](https://github.com)
+    *   📜 **Quick Fetch Blueprint:** [p2-week-09-lab-25/guardduty.tf](./p2-week-09-lab-25/guardduty.tf)
+*   **Attack Vector:** Undetected Ingress Perimeter Traversal / Blind Infrastructure Compromise.
+*   **Strategic Explanation:** Evaluated the operational utility of cloud-native anomaly detection infrastructure via Amazon GuardDuty. Overcame strict AWS Academy subscription free-tier access barriers by engineering a fallback forensic triage analysis framework to validate simulated incident logs natively on the disk layout.
+
+| Data Point | Standard Cohort (Laptop/Desktop - X86) | Android Mobile Cybersecurity Workbench (Samsung Note 20 Ultra 5g - Arm64) |
+| :--- | :--- | :--- |
+| **Architecture** | API-Driven Programmatic Initialization | Web Console Subscription Sandbox Bypasses |
+| **Telemetry State** | Live Automated Ingestion Pipelines | Manual Threat Triage Forensic Frameworks |
+
+*   **Technical Mechanics:** Documented a production detector configuration layer (`enable = true`) running at highFindingPublishingFrequency thresholds to minimize data ingestion latency. Bypassed program block states via a manual web interface setup override paired with forensic sample ingestion matrices. Evidence File: `p2-week-09-lab-25/guardduty.tf`
+
+### 🏢 Enterprise Deployment Verification & Security Audit Trail
+*   **AWS Academy Sandbox Service Account Monitor Check:**
+    ![AWS Console Restriction Alert](./p2-week-09-lab-25/AWS%20GUARD%20DUTY%20CONSOLE%20P2%20WEEK9%20DAY%201%20S%20XXV%20FREE%20TIER%20LIMITATION.txt)
+
+*   **White Hat Audit Question:** *"Why should enterprise teams monitor GuardDuty findings even if their infrastructure relies strictly on pre-deployment Infrastructure as Code (IaC) linting?"*
+*   **Engineering Statement:** *"IaC scanners only check for static misconfigurations before deployment. Cloud-native behavioral monitoring tools like GuardDuty ingest active data streams to detect post-deployment operational anomalies, such as credential hijacking or active exfiltration attempts, catching threats that static configurations cannot foresee."*
+
+---
+
+#### 📋 P2 · W9 · D2 · S-XXVI: The Breadcrumbs — Lab Submission
+*   **Core Assets Links:** 
+    *   📦 **Starter Code Repository:** [grobbins-cell/S26-Breadcrumbs-Lab](https://github.com)
+    *   📜 **Quick Fetch Blueprint:** [p2-week-09-lab-26/trail_hunter.sql](./p2-week-09-lab-26/trail_hunter.sql)
+*   **Attack Vector:** Invisible Administrative API Tampering / Unaudited Identity Ingress.
+*   **Strategic Explanation:** Constructed an enterprise-wide cloud trail audit logging infrastructure combining AWS CloudTrail telemetry streaming with Amazon Athena big-data analytical query compilation. Defeated visibility sabotage blocks targeting invalid event endpoints.
+
+| Data Point | Standard Cohort (Laptop/Desktop - X86) | Android Mobile Cybersecurity Workbench (Samsung Note 20 Ultra 5g - Arm64) |
+| :--- | :--- | :--- |
+| **Architecture** | UI-Driven SQL Selection Buffers | Localized Text Stream Replacement Tooling (`sed`) |
+| **Telemetry State** | Default Regional Trail Logging | Global All-Region Unified S3 Log Repositories |
+
+*   **Technical Mechanics:** Formulated an optimized database tracking catalog (`cloudtrail_logs_tkh`) pointing explicitly to localized partitions. Overwrote broken template constraints to redirect investigative telemetry queries straight back to target global identity provider endpoints (`://amazonaws.com`). Evidence File: `p2-week-09-lab-26/trail_hunter.sql`
+
+### 🏢 Enterprise Deployment Verification & Security Audit Trail
+*   **Amazon Athena Logging Matrix Table Generation Scan:**
+    *(Telemetry tracking engine successfully provisioned and indexed inside the AWS big-data workspace cluster environment.)*
+
+*   **White Hat Audit Question:** *"Why is it dangerous to leave structural template placeholders unconfigured within big-data query engines like Athena?"*
+*   **Engineering Statement:** *"Unconfigured table paths or syntax targets isolate investigative queries from real storage buckets. Properly editing schemas ensures analytical tools target live telemetry stores directly, eliminating visibility blind spots and allowing teams to intercept active multi-region administrative attacks."*
+
+---
+
+#### 📋 P2 · W9 · D3 · S-XXVII: The War Room — Lab Submission
+*   **Core Assets Links:** 
+    *   📦 **Starter Code Repository:** [grobbins-cell/S27-WarRoom-Lab](https://github.com)
+    *   📜 **Quick Fetch Blueprint:** [p2-week-09-lab-27/quarantine-policy.json](./p2-week-09-lab-27/quarantine-policy.json)
+*   **Attack Vector:** Inadvertent Administrator Ingress Allocation / Unauthorized Access Drift.
+*   **Strategic Explanation:** Engineered localized incident response containment boundaries to isolate compromised assets. Built absolute security blocks to reverse malicious environment drift and trap adversarial movements within strict sandbox perimeters.
+
+| Data Point | Standard Cohort (Laptop/Desktop - X86) | Android Mobile Cybersecurity Workbench (Samsung Note 20 Ultra 5g - Arm64) |
+| :--- | :--- | :--- |
+| **Architecture** | Manual Web GUI Configuration Traversal | Programmed, Standardized Policy Templates |
+| **Telemetry State** | Permissive Default Allow Architectures | Hard-Scoped Explicit Deny Isolation Perimeters |
+
+*   **Technical Mechanics:** Destroyed highly vulnerable wildcard allowance profiles containing toxic access permissions (`"Effect": "Allow"`). Codified an explicit root structural deny mechanism (`"Effect": "Deny"`) to completely lock out lateral host pivoting. Evidence File: `p2-week-09-lab-27/quarantine-policy.json`
+
+### 🏢 Enterprise Deployment Verification & Security Audit Trail
+*   **Hardened Structural Security Isolation Architecture Check:**
+    *(Explicit deny boundary parameters verified and synced to ensure immediate isolation capability during live security events.)*
+
+*   **White Hat Audit Question:** *"Why is a hard-coded explicit deny policy superior to simply detaching old administrative permissions during an active incident response lifecycle?"*
+*   **Engineering Statement:** *"Detaching active permissions leaves open structural gaps where group inheritances or role assumptions can still grant unexpected paths of ingress. An explicit deny declaration overrides all other rules across the environment instantly, completely freezing the compromised identity's capabilities and neutralizing lateral pivot windows."*
+
+---
+
+#### 🕵️‍♂️ P2 · W9 · TLAB 9: The Threat Hunt — Capstone Submission
+*   **Core Assets Links:** 
+    *   📦 **Starter Code Repository:** [grobbins-cell/TLAB9-Breach](https://github.com)
+    *   📜 **Quick Fetch Blueprint:** [p2-tlab-09-the-threat-hunt/hunting-query.sql](./p2-tlab-09-the-threat-hunt/hunting-query.sql)
+*   **Attack Vector:** Credential Hijacking / Rogue Resource Proliferation & Exfiltration.
+*   **Strategic Explanation:** Conducted an active tactical threat hunt against a live environment compromise event. Queried data trail logs to extract identity metadata signatures linked to unauthorized infrastructure mutations, followed by immediate dual-layer containment protocols.
+
+| Data Point | Standard Cohort (Laptop/Desktop - X86) | Android Mobile Cybersecurity Workbench (Samsung Note 20 Ultra 5g - Arm64) |
+| :--- | :--- | :--- |
+| **Architecture** | Default Broad Administrative Access | Hardened Explicit Deny Policy Perimeters |
+| **Telemetry State** | Post-Exploitation Resource Sprawl | Active Isolation & Account Containment Layers |
+
+### **TLAB 9 Mission Defense Matrix (Executive Summary)**
+*   **Technical Mechanics:** Query-searched historical log frames to map occurrences of unauthorized system provisioning endpoints (`eventname = 'RunInstances'`). Formulated a critical emergency mitigation identity manifest (`revoke_policy.json`) applying an explicit root wildcard deny instruction (`"Effect": "Deny"`, `"Action": "*"`) to immediately compress the adversary's post-compromise blast radius. Evidence Files: `p2-tlab-09-the-threat-hunt/hunting-query.sql`, `p2-tlab-09-the-threat-hunt/revoke_policy.json`
+
+### 🏢 Enterprise Deployment Verification & Security Audit Trail
+*   **Query 3 Threat Hunt Forensic Execution Evidence:** 
+    Captured the forensic audit log footprint by deploying Query 3 inside the Amazon Athena console workspace environment. The query successfully filters through CloudTrail data streams to capture the definitive identity footprint left by the intruder during the compromised runtime event.
+    ![TLAB 9 Query 3 Execution Screenshot](./p2-tlab-09-the-threat-hunt/p2%20week%209%20tlab9%20query%203%20screenshot.png)
+
+*   **White Hat Audit Question:** *"Why pair cloud infrastructure logging pipelines with automated runtime analytics instead of relying on standard manual reviews?"*
+*   **Engineering Statement:** *"Manual event reviews leave a dangerous window of latency that adversaries exploit to escalate privileges and establish persistence. Fusing real-time CloudTrail data streams with structured Athena analytical indexing allows incident response squads to execute custom forensic scripts—like our Query 3 extraction filter—to identify resource mutations and apply emergency containment rulesets within minutes of an initial breach event."*
+
 ---
