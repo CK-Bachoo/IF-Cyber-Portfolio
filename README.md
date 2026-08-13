@@ -1961,7 +1961,8 @@ git clone [https://github.com/grobbins-cell/S28-Framework.git](https://github.co
 * **White Hat Audit Question:** *"Why is it critical to map native cloud tooling directly to business frameworks like the NIST CSF rather than relying purely on technical metrics?"*
 * **Operational Defense Logic:** *"Security tools hold no value if leadership does not understand the business risk they mitigate. By mapping AWS tools directly to the NIST framework (Identify, Protect, Detect, Respond, Recover), we prove to the board that our DevSecOps pipeline covers the entire lifecycle of a cyber attack."*
 
-* **Evidence Links:** * 📄 [Executive Risk Memo](./p2-week-10-lab-28/risk_memo.txt)
+* **Evidence Links:**
+* * 📄 [Executive Risk Memo](./p2-week-10-lab-28/risk_memo.txt)
 * * 📊 [NIST CSF Controls Mapping](./p2-week-10-lab-28/controls.csv)
 
 ---
