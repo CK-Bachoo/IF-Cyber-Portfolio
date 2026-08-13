@@ -1947,6 +1947,11 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 git clone [https://github.com/grobbins-cell/S28-Framework.git](https://github.com/grobbins-cell/S28-Framework.git)
 
 * **Mission Objective:** Translated technical cloud perimeter vulnerabilities into executive-level business risks and mapped DevSecOps architecture directly to the NIST Cybersecurity Framework (CSF) to secure remediation budget approval.
+| Data Point | Standard Cohort (Laptop/Desktop - X86) | Android Mobile Cybersecurity Workbench (Samsung Note 20 Ultra 5g - Arm64) |
+| :--- | :--- | :--- |
+| **Framework Mapping** | GUI Spreadsheet Entry | Automated Terminal CSV Generation (Heredoc) |
+| **Risk Translation** | Disconnected Word Processors | Native CLI Stream-Editing |
+| **Execution Environment** | Static Desktop Tethers | 100% Mobile Ephemeral Workspace |
 
 #### 🏢 Enterprise Deployment Verification & Security Audit Trail
 
