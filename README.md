@@ -113,6 +113,8 @@ This approach demonstrates practical, real-world Zero Trust operations, thermal 
 | **P2 · W9 · Lab-26**<br>The Breadcrumbs | Log Analytics &<br>SQL Registry Engineering | Auditing Failure &<br>Hidden API Identity Footprints | DE.CM<br>*(800-53: AU-12)* | CIS 8<br>*(CMMC: AU.L2)* | Integrity | [trail_hunter.sql](./p2-week-09-lab-26/trail_hunter.sql)<br>[📸 Evidence](#p2--w9--d2--s-xxvi-the-breadcrumbs--lab-submission) |
 | **P2 · W9 · Lab-27**<br>The War Room | Network Quarantine &<br>Isolation Hardening | Wildcard Privileges &<br>Lateral Environment Escalation | IR.RE<br>*(800-53: IR-4)* | CIS 14<br>*(CMMC: IR.L2)* | Confidentiality | [quarantine-policy.json](./p2-week-09-lab-27/quarantine-policy.json) |
 | **P2 · W9 · TLAB 9**<br>The Threat Hunt | Incident Isolation &<br>Policy Revocation | Rogue Resource Proliferation &<br>Lateral Privilege Escalation | IR.RE<br>*(800-53: IR-4)* | CIS 17<br>*(CMMC: IR.L2)* | All Tiers | [hunting-query.sql](./p2-tlab-09-the-threat-hunt/hunting-query.sql)<br>[📸 Evidence](#p2--w9--tlab-9-the-threat-hunt--capstone-submission) |
+| **P2 · W10 · Lab-28**<br>The Framework | Executive Risk Translation & NIST Mapping | Cloud Perimeter Risk & Data Exposure | ID.RM<br>*(800-53: PM-9)* | CIS 1<br>*(CMMC: RM.L2)* | Confidentiality | [risk_memo.txt](./p2-week-10-lab-28/risk_memo.txt)<br>[controls.csv](./p2-week-10-lab-28/controls.csv) |
+
 ---
 
 ## 📂 Artifact Evidence & Operational History
@@ -1935,5 +1937,25 @@ To ensure full accountability and continuous logging alignment, the entire lifec
 
 *   **White Hat Audit Question:** *"Why pair cloud infrastructure logging pipelines with automated runtime analytics instead of relying on standard manual reviews?"*
 *   **Engineering Statement:** *"Manual event reviews leave a dangerous window of latency that adversaries exploit to escalate privileges and establish persistence. Fusing real-time CloudTrail data streams with structured Athena analytical indexing allows incident response squads to execute custom forensic scripts—like our Query 3 extraction filter—to identify resource mutations and apply emergency containment rulesets within minutes of an initial breach event."*
+
+---
+
+### 📊 P2 · W10 · Lab-28: Executive Risk Translation & Framework Alignment
+📥 Starter Code (Canvas): `Provided via direct prompt`
+
+🚀 Quick Fetch (Completed Solution): ```bash
+git clone [https://github.com/grobbins-cell/S28-Framework.git](https://github.com/grobbins-cell/S28-Framework.git)
+
+* **Mission Objective:** Translated technical cloud perimeter vulnerabilities into executive-level business risks and mapped DevSecOps architecture directly to the NIST Cybersecurity Framework (CSF) to secure remediation budget approval.
+
+#### 🏢 Enterprise Deployment Verification & Security Audit Trail
+
+* **Cloud Architecture Audit Check:** Verified correct translation of cloud perimeter threats to C-Suite risk vectors, ensuring rapid budget approval for remediation configurations.
+
+* **White Hat Audit Question:** *"Why is it critical to map native cloud tooling directly to business frameworks like the NIST CSF rather than relying purely on technical metrics?"*
+* **Operational Defense Logic:** *"Security tools hold no value if leadership does not understand the business risk they mitigate. By mapping AWS tools directly to the NIST framework (Identify, Protect, Detect, Respond, Recover), we prove to the board that our DevSecOps pipeline covers the entire lifecycle of a cyber attack."*
+
+* **Evidence Links:** * 📄 [Executive Risk Memo](./p2-week-10-lab-28/risk_memo.txt)
+* * 📊 [NIST CSF Controls Mapping](./p2-week-10-lab-28/controls.csv)
 
 ---
