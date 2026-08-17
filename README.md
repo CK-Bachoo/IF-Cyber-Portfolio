@@ -1989,4 +1989,6 @@ git clone [https://github.com/grobbins-cell/S28-Framework.git](https://github.co
 * **White Hat Audit Question:** *"Why should configuration compliance be enforced dynamically via code rather than manually through the AWS Console?"*
 * **Operational Defense Logic:** *"Manual console checks represent a point-in-time snapshot, meaning a bucket could remain dangerously exposed for months between audits. Deploying AWS Config via Terraform establishes continuous, stateful monitoring that flags non-compliant architecture the exact millisecond a configuration drift occurs."*
 * **Quick Fetch Evidence Links:** * 📄 [Repaired Config Rule (IaC)](./p2-week-10-lab-29/config_rule.tf)
-![evidence screenshot](https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/p2-week-10-lab-29/p2_week_10_lab29_api_block.png)
+* **Screenshot of Terminal:** ![evidence screenshot](https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/p2-week-10-lab-29/p2_week_10_lab29_api_block.png)
+
+---
