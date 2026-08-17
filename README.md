@@ -114,7 +114,7 @@ This approach demonstrates practical, real-world Zero Trust operations, thermal 
 | **P2 · W9 · Lab-27**<br>The War Room | Network Quarantine &<br>Isolation Hardening | Wildcard Privileges &<br>Lateral Environment Escalation | IR.RE<br>*(800-53: IR-4)* | CIS 14<br>*(CMMC: IR.L2)* | Confidentiality | [quarantine-policy.json](./p2-week-09-lab-27/quarantine-policy.json) |
 | **P2 · W9 · TLAB 9**<br>The Threat Hunt | Incident Isolation &<br>Policy Revocation | Rogue Resource Proliferation &<br>Lateral Privilege Escalation | IR.RE<br>*(800-53: IR-4)* | CIS 17<br>*(CMMC: IR.L2)* | All Tiers | [hunting-query.sql](./p2-tlab-09-the-threat-hunt/hunting-query.sql)<br>[📸 Evidence](#p2--w9--tlab-9-the-threat-hunt--capstone-submission) |
 | **P2 · W10 · Lab-28**<br>The Framework | Executive Risk Translation & NIST Mapping | Cloud Perimeter Risk & Data Exposure | ID.RM<br>*(800-53: PM-9)* | CIS 1<br>*(CMMC: RM.L2)* | Confidentiality | [risk_memo.txt](./p2-week-10-lab-28/risk_memo.txt)<br>[controls.csv](./p2-week-10-lab-28/controls.csv) |
-
+| **P2 · W10 · Lab-29**<br>The Auditor | Continuous Compliance & AWS Config | Configuration Drift & Public S3 Exposure | PR.DS<br>*(800-53: CM-2)* | CIS 4<br>*(CMMC: CM.L2)* | Integrity | [config_rule.tf](./p2-week-10-lab-29/config_rule.tf) |
 ---
 
 ## 📂 Artifact Evidence & Operational History
@@ -1966,3 +1966,26 @@ git clone [https://github.com/grobbins-cell/S28-Framework.git](https://github.co
 * * 📊 [NIST CSF Controls Mapping](./p2-week-10-lab-28/controls.csv)
 
 ---
+
+### 📊 P2 · W10 · Lab-29: Continuous Compliance & Configuration Drift (The Auditor)
+
+**Starter Code (Canvas):** `Provided via direct prompt`
+
+**🚀 Quick Fetch (Completed Solution):** `git clone https://github.com/grobbins-cell/S29-Auditor-Lab.git`
+
+* **Attack Vector:** Unmonitored Configuration Drift / Exposed Storage Buckets.
+* **Strategic Explanation:** Engineered an automated compliance boundary using AWS Config and Terraform. Repaired sabotaged Infrastructure-as-Code (IaC) to enforce the `S3_BUCKET_PUBLIC_READ_PROHIBITED` managed rule, ensuring any developer-induced configuration drift is instantly flagged for remediation.
+* **Mission Objective:** Simulate a misconfiguration and verify AWS Config catches it.
+
+| Data Point | Standard Cohort (Laptop/Desktop - X86) | Android Mobile Cybersecurity Workbench (Samsung Note 20 Ultra 5g - Arm64) |
+| :--- | :--- | :--- |
+| **IaC Remediation** | Heavy GUI Text Editors | Headless CLI Stream Editing (`sed -i`) |
+| **Deployment Testing** | Local Machine State | Ephemeral Cloud Container State |
+| **Execution Environment** | Static Desktop Tethers | 100% Mobile Ephemeral Workspace |
+
+#### 🏢 Enterprise Deployment Verification & Security Audit Trail
+
+* **Cloud Architecture Audit Check:** Verified proper Infrastructure as Code (IaC) syntax to trigger continuous compliance evaluation on S3 bucket ACL boundaries.
+* **White Hat Audit Question:** *"Why should configuration compliance be enforced dynamically via code rather than manually through the AWS Console?"*
+* **Operational Defense Logic:** *"Manual console checks represent a point-in-time snapshot, meaning a bucket could remain dangerously exposed for months between audits. Deploying AWS Config via Terraform establishes continuous, stateful monitoring that flags non-compliant architecture the exact millisecond a configuration drift occurs."*
+* **Quick Fetch Evidence Links:** * 📄 [Repaired Config Rule (IaC)](./p2-week-10-lab-29/config_rule.tf)
