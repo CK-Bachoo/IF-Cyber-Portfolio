@@ -115,6 +115,7 @@ This approach demonstrates practical, real-world Zero Trust operations, thermal 
 | **P2 · W9 · TLAB 9**<br>The Threat Hunt | Incident Isolation &<br>Policy Revocation | Rogue Resource Proliferation &<br>Lateral Privilege Escalation | IR.RE<br>*(800-53: IR-4)* | CIS 17<br>*(CMMC: IR.L2)* | All Tiers | [hunting-query.sql](./p2-tlab-09-the-threat-hunt/hunting-query.sql)<br>[📸 Evidence](#p2--w9--tlab-9-the-threat-hunt--capstone-submission) |
 | **P2 · W10 · Lab-28**<br>The Framework | Executive Risk Translation & NIST Mapping | Cloud Perimeter Risk & Data Exposure | ID.RM<br>*(800-53: PM-9)* | CIS 1<br>*(CMMC: RM.L2)* | Confidentiality | [risk_memo.txt](./p2-week-10-lab-28/risk_memo.txt)<br>[controls.csv](./p2-week-10-lab-28/controls.csv) |
 | **P2 · W10 · Lab-29**<br>The Auditor | Continuous Compliance & AWS Config | Configuration Drift & Public S3 Exposure | PR.DS<br>*(800-53: CM-2)* | CIS 4<br>*(CMMC: CM.L2)* | Integrity | [config_rule.tf](./p2-week-10-lab-29/config_rule.tf) |
+| **P2 · W10 · Lab-30**<br>The Guardrails | Data Sovereignty &<br>AWS Organizations SCPs | Cross-Region Access &<br>Unregulated Infrastructure Drift | RE.🛡️<br>*(800-53: SC-7)* | CIS 4<br>*(CMMC: SC.L2)* | Confidentiality | [scp_guardrail.json](./p2-week-10-lab-30/scp_guardrail.json) |
 ---
 
 ## 📂 Artifact Evidence & Operational History
@@ -1990,5 +1991,28 @@ git clone [https://github.com/grobbins-cell/S28-Framework.git](https://github.co
 * **Operational Defense Logic:** *"Manual console checks represent a point-in-time snapshot, meaning a bucket could remain dangerously exposed for months between audits. Deploying AWS Config via Terraform establishes continuous, stateful monitoring that flags non-compliant architecture the exact millisecond a configuration drift occurs."*
 * **Quick Fetch Evidence Links:** * 📄 [Repaired Config Rule (IaC)](./p2-week-10-lab-29/config_rule.tf)
 * **Screenshot of Terminal:** ![evidence screenshot](https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/p2-week-10-lab-29/p2_week_10_lab29_api_block.png)
+
+---
+
+#### 📋 P2 · W10 · D3 · S-XXX: The Guardrails — Lab Submission
+*   **Core Assets Links:** 
+    *   📦 **Starter Code Repository:** [grobbins-cell/S30-Guardrails-Lab](https://github.com/grobbins-cell/S30-Guardrails-Lab)
+    *   📜 **Quick Fetch Blueprint:** [p2-week-10-lab-30/scp_guardrail.json](./p2-week-10-lab-30/scp_guardrail.json)
+*   **Attack Vector:** Regional Compliance Drift / Lateral Multi-Region Shadow Infrastructure Sprawl.
+*   **Strategic Explanation:** Formulated enterprise-grade data sovereignty enforcement parameters utilizing AWS Organizations Service Control Policies (SCPs). Engineered automated regional data boundaries to systematically isolate operational deployments and freeze cross-region administrative requests outside authorized borders.
+
+| Data Point | Standard Cohort (Laptop/Desktop - X86) | Android Mobile Cybersecurity Workbench (Samsung Note 20 Ultra 5g - Arm64) |
+| :--- | :--- | :--- |
+| **Enforcement Layer** | Group Policy Sheet Traversal | Programmable Infrastructure JSON Manifests |
+| **Perimeter Boundary** | Manual Geofence Asset Reviewing | Native CLI Stream-Edited Explicit Deny Injection |
+
+*   **Technical Mechanics:** Corrected severe logic validation errors inside the core guardrail ruleset template by replacing incorrect evaluation statements with strict conditional inverse operators (`StringNotEquals`). Mapped environment rules to isolate API actions exclusively within the approved primary infrastructure center (`us-east-1`). Evidence File: [scp_guardrail.json](./p2-week-10-lab-30/scp_guardrail.json)
+
+### 🏢 Enterprise Deployment Verification & Security Audit Trail
+*   **Hardened Operational SCP Guardrail Perimeter Check:**
+    *(Data sovereignty boundary policy engineered successfully to deny unapproved deployment operations across all foreign cloud regions.)*
+
+*   **White Hat Audit Question:** *"Why is it critical to enforce Service Control Policies (SCPs) at the root AWS Organizations tier instead of relying purely on individual IAM role policies?"*
+*   **Engineering Statement:** *"Individual IAM role restrictions can be subverted or misconfigured by downstream deployment managers. Applying explicit structural constraints natively at the AWS Organizations root level establishes a permanent security boundary that cannot be overridden by individual local account administrators, guaranteeing complete infrastructure governance across all multi-tenant environments."*
 
 ---
