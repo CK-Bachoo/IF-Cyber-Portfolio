@@ -116,6 +116,7 @@ This approach demonstrates practical, real-world Zero Trust operations, thermal 
 | **P2 · W10 · Lab-28**<br>The Framework | Executive Risk Translation & NIST Mapping | Cloud Perimeter Risk & Data Exposure | ID.RM<br>*(800-53: PM-9)* | CIS 1<br>*(CMMC: RM.L2)* | Confidentiality | [risk_memo.txt](./p2-week-10-lab-28/risk_memo.txt)<br>[controls.csv](./p2-week-10-lab-28/controls.csv) |
 | **P2 · W10 · Lab-29**<br>The Auditor | Continuous Compliance & AWS Config | Configuration Drift & Public S3 Exposure | PR.DS<br>*(800-53: CM-2)* | CIS 4<br>*(CMMC: CM.L2)* | Integrity | [config_rule.tf](./p2-week-10-lab-29/config_rule.tf) |
 | **P2 · W10 · Lab-30**<br>The Guardrails | Data Sovereignty &<br>AWS Organizations SCPs | Cross-Region Access &<br>Unregulated Infrastructure Drift | RE.🛡️<br>*(800-53: SC-7)* | CIS 4<br>*(CMMC: SC.L2)* | Confidentiality | [scp_guardrail.json](./p2-week-10-lab-30/scp_guardrail.json) |
+| **P2 · W10 · TLAB 10**<br>The Audit | Automated Auditing &<br>Vulnerability Triage | Public Data Exposure &<br>Unrestricted SSH Ingress Boundaries | RM.🛡️<br>*(800-53: PM-9)* | CIS 1<br>*(CMMC: RM.L2)* | All Tiers | **Starter:** [grobbins-cell/TLAB10-Audit](https://github.com/grobbins-cell/TLAB10-Audit)<br>**Fetch:** [executive_audit_report.pdf](./p2-tlab-10-the-compliance-audit/executive_audit_report.pdf)<br>**Evidence:** [📸 View Section](#-p2--w10--weekend-tlab-10-the-compliance-audit--capstone-submission) |
 ---
 
 ## 📂 Artifact Evidence & Operational History
@@ -2014,5 +2015,29 @@ git clone [https://github.com/grobbins-cell/S28-Framework.git](https://github.co
 
 *   **White Hat Audit Question:** *"Why is it critical to enforce Service Control Policies (SCPs) at the root AWS Organizations tier instead of relying purely on individual IAM role policies?"*
 *   **Engineering Statement:** *"Individual IAM role restrictions can be subverted or misconfigured by downstream deployment managers. Applying explicit structural constraints natively at the AWS Organizations root level establishes a permanent security boundary that cannot be overridden by individual local account administrators, guaranteeing complete infrastructure governance across all multi-tenant environments."*
+
+---
+
+#### 🕵️‍♂️ P2 · W10 · Weekend: TLAB 10 - The Compliance Audit — Capstone Submission
+*   **Core Assets Links:** 
+    *   📦 **Starter Code Repository:** [grobbins-cell/TLAB10-Audit](https://github.com/grobbins-cell/TLAB10-Audit)
+    *   📜 **Quick Fetch Blueprint:** [p2-tlab-10-the-compliance-audit/executive_audit_report.pdf](./p2-tlab-10-the-compliance-audit/executive_audit_report.pdf)
+*   **Attack Vector:** Configuration Drift / Perimeter Compromise & Public Data Exposure.
+*   **Strategic Explanation:** Evaluated multi-region cloud governance frameworks by deploying continuous compliance tracking recorders. Conducted live automated auditing, tracked real-time configuration drift, and executed manual infrastructure isolation and data block remediation procedures to return components to an absolute green security state.
+
+| Data Point | Standard Cohort (Laptop/Desktop - X86) | Android Mobile Cybersecurity Workbench (Samsung Note 20 Ultra 5g - Arm64) |
+| :--- | :--- | :--- |
+| **Analysis Focus** | Deep Technical Terminal Jargon | C-Suite Strategic Risk Translation |
+| **Audit Strategy** | Periodic Manual Point Checks | Automated Recorders & NIST CSF Synthesis |
+
+*   **Technical Mechanics:** Provisioned active config recorder rulesets via pinned provider states to detect inbound traffic compromises (`INCOMING_SSH_DISABLED`) and unhardened bucket leaks. Triaged non-compliant assets to bridge terminal metrics with executive business risks including ransomware impacts and data exposure fines. Evidence File: `p2-tlab-10-the-compliance-audit/executive_audit_report.pdf`
+
+### 🏢 Enterprise Deployment Verification & Security Audit Trail
+*   **C-Suite Executive Audit Briefing Document Check:** 
+    Synthesized technical vulnerability data metrics into business-level framework indicators to capture board budget approval.
+    *   📄 [Executive Audit Report Memo PDF](./p2-tlab-10-the-compliance-audit/executive_audit_report.pdf)
+
+*   **White Hat Audit Question:** *"Why is it critical to map native cloud tooling directly to business frameworks like the NIST CSF rather than relying purely on technical metrics?"*
+*   **Engineering Statement:** *"Security tools hold no value if corporate leadership does not understand the business risks they mitigate. Translating active cloud metrics directly to the core functions of the NIST framework (Identify, Protect, Detect, Respond) proves to executive stakeholders that our technical pipeline actively blocks corporate liability vectors, stabilizes transaction continuity, and safeguards market brand equity."*
 
 ---
