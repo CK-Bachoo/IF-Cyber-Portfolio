@@ -116,9 +116,9 @@ This approach demonstrates practical, real-world Zero Trust operations, thermal 
 | **P2 · W10 · Lab-28**<br>The Framework | Executive Risk Translation & NIST Mapping | Cloud Perimeter Risk & Data Exposure | ID.RM<br>*(800-53: PM-9)* | CIS 1<br>*(CMMC: RM.L2)* | Confidentiality | [risk_memo.txt](./p2-week-10-lab-28/risk_memo.txt)<br>[controls.csv](./p2-week-10-lab-28/controls.csv) |
 | **P2 · W10 · Lab-29**<br>The Auditor | Continuous Compliance & AWS Config | Configuration Drift & Public S3 Exposure | PR.DS<br>*(800-53: CM-2)* | CIS 4<br>*(CMMC: CM.L2)* | Integrity | [config_rule.tf](./p2-week-10-lab-29/config_rule.tf) |
 | **P2 · W10 · Lab-30**<br>The Guardrails | Data Sovereignty &<br>AWS Organizations SCPs | Cross-Region Access &<br>Unregulated Infrastructure Drift | RE.🛡️<br>*(800-53: SC-7)* | CIS 4<br>*(CMMC: SC.L2)* | Confidentiality | [scp_guardrail.json](./p2-week-10-lab-30/scp_guardrail.json) |
-| **P2 · W10 · TLAB 10**<br>The Audit | Automated Auditing &<br>Vulnerability Triage | Public Data Exposure &<br>Unrestricted SSH Ingress Boundaries | RM.🛡️<br>*(800-53: PM-9)* | CIS 1<br>*(CMMC: RM.L2)* | All Tiers | **Fetch:** [executive_audit_report.pdf](https://github.com)<br>**Evidence:** [📸 View Section](#-p2--w10--weekend-tlab-10-the-compliance-audit--capstone-submission) |
-| **P2 · W11 · Lab-31**<br>The Translation | STAR Framework & Interview Strategy | Communication Silos & Jargon Mismatch Risks | ID.RM<br>*(800-53: PM-9)* | CIS 1<br>*(CMMC: RM.L2)* | All Tiers | **Fetch:** [star_interview_stories.pdf](https://github.com)<br>**Evidence:** [📸 View Section](#-p2--w11--d1--s-xxxi-the-translation--lab-submission) |
-| **P2 · W11 · Lab-32**<br>The Resume | Engineering Resume Metric Refactoring | Passive Professional Language & Low-Impact Resumes | ID.RM<br>*(800-53: PM-9)* | CIS 1<br>*(CMMC: RM.L2)* | Confidentiality | **Fetch:** [gold_standard_bullets.pdf](https://github.com)<br>**Evidence:** [📸 View Section](#-p2--w11--d2--s-xxxii-the-6-second-resume--lab-submission) |
+| **P2 · W10 · TLAB 10**<br>The Audit | Automated Auditing &<br>Vulnerability Triage | Public Data Exposure &<br>Unrestricted SSH Ingress Boundaries | RM.🛡️<br>*(800-53: PM-9)* | CIS 1<br>*(CMMC: RM.L2)* | All Tiers | **Fetch:** [executive_audit_report.pdf](./p2-tlab-10-the-compliance-audit/executive_audit_report.pdf?raw=true)<br>**Evidence:** [📸 View Section](#-p2--w10--weekend-tlab-10-the-compliance-audit--capstone-submission) |
+| **P2 · W11 · Lab-31**<br>The Translation | STAR Framework & Interview Strategy | Communication Silos & Jargon Mismatch Risks | ID.RM<br>*(800-53: PM-9)* | CIS 1<br>*(CMMC: RM.L2)* | All Tiers | **Fetch:** [star_interview_stories.pdf](./p2-week-11-lab-31/p2%20week%2011%20s31%20star_interview_stories.pdf?raw=true)<br>**Evidence:** [📸 View Section](#-p2--w11--d1--s-xxxi-the-translation--lab-submission) |
+| **P2 · W11 · Lab-32**<br>The Resume | Engineering Resume Metric Refactoring | Passive Professional Language & Low-Impact Resumes | ID.RM<br>*(800-53: PM-9)* | CIS 1<br>*(CMMC: RM.L2)* | Confidentiality | **Fetch:** [gold_standard_bullets.pdf](./p2-week-11-lab-32/gold_standard_bullets.pdf?raw=true)<br>**Evidence:** [📸 View Section](#-p2--w11--d2--s-xxxii-the-6-second-resume--lab-submission) |
 ---
 
 ## 📂 Artifact Evidence & Operational History
@@ -2023,8 +2023,7 @@ git clone [https://github.com/grobbins-cell/S28-Framework.git](https://github.co
 #### 🕵️‍♂️ P2 · W10 · Weekend: TLAB 10 - The Compliance Audit — Capstone Submission
 *   **Core Assets Links:** 
     *   📦 **Starter Code Repository:** [grobbins-cell/TLAB10-Audit](https://github.com/grobbins-cell/TLAB10-Audit)
-    *   📜 **Quick Fetch Blueprint:** [p2-tlab-10-the-compliance-audit/executive_audit_report.pdf](./p2-tlab-10-the-compliance-audit/executive_audit_report.pdf)
-*   **Attack Vector:** Configuration Drift / Perimeter Compromise & Public Data Exposure.
+    *   📜 **Quick Fetch Blueprint:** [p2-tlab-10-the-compliance-audit/executive_audit_report.pdf](./p2-tlab-10-the-compliance-audit/executive_audit_report.pdf?raw=true) 
 *   **Strategic Explanation:** Evaluated multi-region cloud governance frameworks by deploying continuous compliance tracking recorders. Conducted live automated auditing, tracked real-time configuration drift, and executed manual infrastructure isolation and data block remediation procedures to return components to an absolute green security state.
 
 | Data Point | Standard Cohort (Laptop/Desktop - X86) | Android Mobile Cybersecurity Workbench (Samsung Note 20 Ultra 5g - Arm64) |
@@ -2037,7 +2036,7 @@ git clone [https://github.com/grobbins-cell/S28-Framework.git](https://github.co
 ### 🏢 Enterprise Deployment Verification & Security Audit Trail
 *   **C-Suite Executive Audit Briefing Document Check:** 
     Synthesized technical vulnerability data metrics into business-level framework indicators to capture board budget approval.
-    *   📄 [Executive Audit Report Memo PDF](./p2-tlab-10-the-compliance-audit/executive_audit_report.pdf)
+    *   📄 [Executive Audit Report Memo PDF](./p2-tlab-10-the-compliance-audit/executive_audit_report.pdf?raw=true)
 
 *   **White Hat Audit Question:** *"Why is it critical to map native cloud tooling directly to business frameworks like the NIST CSF rather than relying purely on technical metrics?"*
 *   **Engineering Statement:** *"Security tools hold no value if corporate leadership does not understand the business risks they mitigate. Translating active cloud metrics directly to the core functions of the NIST framework (Identify, Protect, Detect, Respond) proves to executive stakeholders that our technical pipeline actively blocks corporate liability vectors, stabilizes transaction continuity, and safeguards market brand equity."*
@@ -2047,7 +2046,8 @@ git clone [https://github.com/grobbins-cell/S28-Framework.git](https://github.co
 #### 🗣️ P2 · W11 · D1 · S-XXXI: The Translation — Lab Submission
 *   **Core Assets Links:** 
     *   📦 **Starter Code Repository:** [grobbins-cell/S31-Translation](https://github.com)
-    *   📜 **Quick Fetch Blueprint:** [p2-week-11-lab-31/p2 week 11 s31 star_interview_stories.pdf](https://github.com)
+    *   📜 **Quick Fetch Blueprint:** [p2-week-11-lab-31/p2 week 11 s31 star_interview_stories.pdf](./p2-week-11-lab-31/p2%20week%2011%20s31%20star_interview_stories.pdf?raw=true)
+
 
 *   **Attack Vector:** Enterprise Communication Breakdowns / Inability to Translate Technical Risk.
 *   **Strategic Explanation:** Formulated a structured interview and technical translation matrix using the behavioral STAR methodology. Converted complex terminal engineering logs from AWS Config automation and critical incident response war rooms into high-impact business risk indicators to secure C-Suite alignment and hiring panel validation.
@@ -2062,7 +2062,7 @@ git clone [https://github.com/grobbins-cell/S28-Framework.git](https://github.co
 ### 🏢 Enterprise Deployment Verification & Security Audit Trail
 *   **C-Suite Executive STAR Interview Strategy Document Check:** 
     Synthesized infrastructure telemetry metrics into clear business-level framework indicators.
-    *   📄 [STAR Interview Stories Portfolio PDF](./p2-week-11-lab-31/star_interview_stories.pdf)
+    *   📄 [STAR Interview Stories Portfolio PDF](./p2-week-11-lab-31/star_interview_stories.pdf?raw=true)
 
 *   **White Hat Audit Question:** *"Why must technical cloud engineers learn to translate low-level infrastructure configurations into high-level business risks when communicating with corporate stakeholders?"*
 *   **Engineering Statement:** *"Technical tools and configuration lines mean nothing to a business if executive leadership cannot understand the financial liabilities they mitigate. Translating low-level terminal metrics into high-level vectors—such as regulatory compliance fines, brand equity protection, and breach containment windows—proves that DevSecOps architecture actively safeguards company market value and guarantees transactional continuity."*
@@ -2072,7 +2072,7 @@ git clone [https://github.com/grobbins-cell/S28-Framework.git](https://github.co
 #### 📄 P2 · W11 · D2 · S-XXXII: The 6-Second Resume — Lab Submission
 *   **Core Assets Links:** 
     *   📦 **Starter Code Repository:** [grobbins-cell/S32-Resume](https://github.com)
-    *   📜 **Quick Fetch Blueprint:** [p2-week-11-lab-32/gold_standard_bullets.pdf](https://github.com)
+    *   📜 **Quick Fetch Blueprint:** [p2-week-11-lab-32/gold_standard_bullets.pdf](./p2-week-11-lab-32/gold_standard_bullets.pdf?raw=true)
 
 *   **Attack Vector:** Career Transition Impedance / Passive Technical Professional Documentation.
 *   **Strategic Explanation:** Refactored historical technical accomplishment matrices into high-impact engineering portfolio assets. Eliminated passive introductory expressions and non-quantifiable language across core profile narratives, replacing them with a strict framework tying technical automation directly to business operations.
@@ -2087,7 +2087,7 @@ git clone [https://github.com/grobbins-cell/S28-Framework.git](https://github.co
 ### 🏢 Enterprise Deployment Verification & Security Audit Trail
 *   **Gold Standard Refactored Resume Architecture Check:** 
     Validated execution metrics and engineering action statements optimized for elite employer selection reviews.
-    *   📄 [Gold Standard Resume Bullets PDF](./p2-week-11-lab-32/gold_standard_bullets.pdf)
+    *   📄 [Gold Standard Resume Bullets PDF](./p2-week-11-lab-32/gold_standard_bullets.pdf?raw=true)
 
 *   **White Hat Audit Question:** *"Why must engineering candidates explicitly structure their resumes around business impact metrics rather than simply listing the names of technical tools they have used?"*
 *   **Engineering Statement:** *"Technical tools change rapidly and hold no inherent value unless they solve a distinct business problem. By anchoring resume definitions directly to operational metrics—such as deployment time reductions, automated security gates, and breach containment speeds—an architect demonstrates a clear capability to preserve revenue continuity, protect brand equity, and reduce corporate risk profiles."*
