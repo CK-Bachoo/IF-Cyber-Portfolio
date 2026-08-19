@@ -2037,7 +2037,7 @@ git clone [https://github.com/grobbins-cell/S28-Framework.git](https://github.co
 ### 🏢 Enterprise Deployment Verification & Security Audit Trail
 *   **C-Suite Executive Audit Briefing Document Check:** 
     Synthesized technical vulnerability data metrics into business-level framework indicators to capture board budget approval.
-    *   📄 [Executive Audit Report Memo PDF](./p2-tlab-10-the-compliance-audit/executive_audit_report.pdf?raw=true)
+    *   📄 [executive_audit_report.pdf](./p2-tlab-10-the-compliance-audit/executive_audit_report.pdf)
 
 *   **White Hat Audit Question:** *"Why is it critical to map native cloud tooling directly to business frameworks like the NIST CSF rather than relying purely on technical metrics?"*
 *   **Engineering Statement:** *"Security tools hold no value if corporate leadership does not understand the business risks they mitigate. Translating active cloud metrics directly to the core functions of the NIST framework (Identify, Protect, Detect, Respond) proves to executive stakeholders that our technical pipeline actively blocks corporate liability vectors, stabilizes transaction continuity, and safeguards market brand equity."*
@@ -2062,7 +2062,7 @@ git clone [https://github.com/grobbins-cell/S28-Framework.git](https://github.co
 ### 🏢 Enterprise Deployment Verification & Security Audit Trail
 *   **C-Suite Executive STAR Interview Strategy Document Check:** 
     Synthesized infrastructure telemetry metrics into clear business-level framework indicators.
-    *   📄 [STAR Interview Stories Portfolio PDF](./p2-week-11-lab-31/star_interview_stories.pdf?raw=true)
+    *   📄 [star_interview_stories.pdf](./p2-week-11-lab-31/p2%20week%2011%20s31%20star_interview_stories.pdf)
 
 *   **White Hat Audit Question:** *"Why must technical cloud engineers learn to translate low-level infrastructure configurations into high-level business risks when communicating with corporate stakeholders?"*
 *   **Engineering Statement:** *"Technical tools and configuration lines mean nothing to a business if executive leadership cannot understand the financial liabilities they mitigate. Translating low-level terminal metrics into high-level vectors—such as regulatory compliance fines, brand equity protection, and breach containment windows—proves that DevSecOps architecture actively safeguards company market value and guarantees transactional continuity."*
@@ -2087,8 +2087,7 @@ git clone [https://github.com/grobbins-cell/S28-Framework.git](https://github.co
 ### 🏢 Enterprise Deployment Verification & Security Audit Trail
 *   **Gold Standard Refactored Resume Architecture Check:** 
     Validated execution metrics and engineering action statements optimized for elite employer selection reviews.
-    *   📄 [Gold Standard Resume Bullets PDF](./p2-week-11-lab-32/gold_standard_bullets.pdf?raw=true)
-
+    *   📄 [gold_standard_bullets.pdf](./p2-week-11-lab-32/gold_standard_bullets.pdf)
 *   **White Hat Audit Question:** *"Why must engineering candidates explicitly structure their resumes around business impact metrics rather than simply listing the names of technical tools they have used?"*
 *   **Engineering Statement:** *"Technical tools change rapidly and hold no inherent value unless they solve a distinct business problem. By anchoring resume definitions directly to operational metrics—such as deployment time reductions, automated security gates, and breach containment speeds—an architect demonstrates a clear capability to preserve revenue continuity, protect brand equity, and reduce corporate risk profiles."*
 
