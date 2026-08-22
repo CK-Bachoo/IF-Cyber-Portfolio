@@ -120,7 +120,7 @@ This approach demonstrates practical, real-world Zero Trust operations, thermal 
 | **P2 · W11 · Lab-31**<br>The Translation | STAR Framework & Interview Strategy | Communication Silos & Jargon Mismatch Risks | ID.RM<br>*(800-53: PM-9)* | CIS 1<br>*(CMMC: RM.L2)* | All Tiers | [star_interview_stories.pdf (PDF Download)](https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/p2-week-11-lab-31/star_interview_stories.pdf) |
 | **P2 · W11 · Lab-32**<br>The Resume | Engineering Resume Metric Refactoring | Passive Professional Language & Low-Impact Resumes | ID.RM<br>*(800-53: PM-9)* | CIS 1<br>*(CMMC: RM.L2)* | Confidentiality | [gold_standard_bullets.pdf (PDF Download)](https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/p2-week-11-lab-32/gold_standard_bullets.pdf) |
 | **P2 · W12 · Lab-34**<br>The Architecture | Multi-Tier Network &<br>Compute Orchestration | Unprotected Public Ports &<br>Unrestricted Administrative Ingress | RE.🛡️<br>*(800-53: SC-7)* | CIS 4<br>*(CMMC: SC.L2)* | Confidentiality | **Fetch:** [main.tf](./p2-week-12-lab-34/main.tf)<br>**Evidence:** [📸 View Section](#-p2--w12--day-1--milestone-1---infrastructure--lab-submission) |
-| **P2 · W12 · Lab-35**<br>The Pipeline | DevSecOps Quality Gate & Terraform SAST | Insecure IaC / Exposed Security Groups & Missing Encryption | ID.RM / PR.IP<br>*(800-53: RA-5, SA-15)* | CIS 2<br>*(CMMC: RM.L2)* | Integrity | **Fetch:** [security_scan.yml](./p2-week-12-lab-35/security_scan.yml)<br>**Evidence:** [📸 View Screenshot](./p2-week-12-lab-35/actions github screenshot week 12.png) |
+| **P2 · W12 · Lab-35**<br>The Pipeline | DevSecOps Quality Gate & Terraform SAST | Insecure IaC / Exposed Security Groups & Missing Encryption | ID.RM / PR.IP<br>*(800-53: RA-5, SA-15)* | CIS 2<br>*(CMMC: RM.L2)* | Integrity | **Fetch:** [security_scan.yml](./p2-week-12-lab-35/security_scan.yml) |
 ---
 
 ## 📂 Artifact Evidence & Operational History
@@ -2145,7 +2145,6 @@ git clone [https://github.com/grobbins-cell/S28-Framework.git](https://github.co
 *   **Technical Mechanics:** Created `.github/workflows/security_scan.yml` that triggers on push, checks out the repository, and runs tfsec against the Terraform codebase. Successfully resolved multiple HIGH severity findings until the pipeline achieved a green state.
 
 ### 🏢 Enterprise Deployment Verification & Security Audit Trail
-
 *   **Infrastructure Syntax Compilation Check:**  
     Validated configuration blueprints natively via the core linting engine to ensure absolute stability and confirm layout validity.  
     *   `Success! The DevSecOps Quality Gate has passed.`
@@ -2153,5 +2152,5 @@ git clone [https://github.com/grobbins-cell/S28-Framework.git](https://github.co
 *   **White Hat Audit Question:** *"Why is it critical to set `--soft-fail=false` in a security scanning pipeline rather than allowing it to pass with warnings?"*
 
 *   **Engineering Statement:** *"Security tools that only warn without failing allow insecure code to reach production. By enforcing a hard failure on findings, we create an automated control that prevents configuration drift and ensures only secure infrastructure code can be deployed."*
-
+![Passed](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/p2-week-12-lab-35/actions%20github%20screenshot%20week%2012.png)
 ---
