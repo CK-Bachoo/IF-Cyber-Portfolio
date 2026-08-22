@@ -119,6 +119,7 @@ This approach demonstrates practical, real-world Zero Trust operations, thermal 
 | **P2 · W10 · TLAB 10**<br>The Audit | Automated Auditing &<br>Vulnerability Triage | Public Data Exposure &<br>Unrestricted SSH Ingress Boundaries | RM.🛡️<br>*(800-53: PM-9)* | CIS 1<br>*(CMMC: RM.L2)* | All Tiers | [executive_audit_report.pdf (PDF Download)](https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/p2-tlab-10-the-compliance-audit/executive_audit_report.pdf) |
 | **P2 · W11 · Lab-31**<br>The Translation | STAR Framework & Interview Strategy | Communication Silos & Jargon Mismatch Risks | ID.RM<br>*(800-53: PM-9)* | CIS 1<br>*(CMMC: RM.L2)* | All Tiers | [star_interview_stories.pdf (PDF Download)](https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/p2-week-11-lab-31/star_interview_stories.pdf) |
 | **P2 · W11 · Lab-32**<br>The Resume | Engineering Resume Metric Refactoring | Passive Professional Language & Low-Impact Resumes | ID.RM<br>*(800-53: PM-9)* | CIS 1<br>*(CMMC: RM.L2)* | Confidentiality | [gold_standard_bullets.pdf (PDF Download)](https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/p2-week-11-lab-32/gold_standard_bullets.pdf) |
+| **P2 · W12 · Lab-34**<br>The Architecture | Multi-Tier Network &<br>Compute Orchestration | Unprotected Public Ports &<br>Unrestricted Administrative Ingress | RE.🛡️<br>*(800-53: SC-7)* | CIS 4<br>*(CMMC: SC.L2)* | Confidentiality | **Fetch:** [main.tf](./p2-week-12-lab-34/main.tf)<br>**Evidence:** [📸 View Section](#-p2--w12--day-1--milestone-1---infrastructure--lab-submission) |
 ---
 
 ## 📂 Artifact Evidence & Operational History
@@ -2090,5 +2091,37 @@ git clone [https://github.com/grobbins-cell/S28-Framework.git](https://github.co
     *   📄 [gold_standard_bullets.pdf (PDF Download)](https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/p2-week-11-lab-32/gold_standard_bullets.pdf)
 *   **White Hat Audit Question:** *"Why must engineering candidates explicitly structure their resumes around business impact metrics rather than simply listing the names of technical tools they have used?"*
 *   **Engineering Statement:** *"Technical tools change rapidly and hold no inherent value unless they solve a distinct business problem. By anchoring resume definitions directly to operational metrics—such as deployment time reductions, automated security gates, and breach containment speeds—an architect demonstrates a clear capability to preserve revenue continuity, protect brand equity, and reduce corporate risk profiles."*
+
+---
+
+#### 🏗️ P2 · W12 · Day 1 · S-XXXIV Lab: Milestone 1 - Infrastructure — Lab Submission
+*   **Core Assets Links:** 
+    *   📦 **Starter Code Repository:** `Provided via direct prompt context`
+    *   📜 **Quick Fetch Blueprint:** [p2-week-12-lab-34/main.tf](./p2-week-12-lab-34/main.tf)
+*   **Attack Vector:** Inadvertent Perimeter Security Drift / Unauthorized Public Network Ingress.
+*   **Strategic Explanation:** Formulated a hardened, multi-tier AWS infrastructure topology entirely from a blank text canvas using declarative Infrastructure as Code (IaC). Engineered strict network zoning partitions to containerize traffic patterns, isolate operational compute modules, and stabilize infrastructure resource mapping across approved deployment boundaries.
+
+| Data Point | Standard Cohort (Laptop/Desktop - X86) | Android Mobile Cybersecurity Workbench (Samsung Note 20 Ultra 5g - Arm64) |
+| :--- | :--- | :--- |
+| **Orchestration Matrix** | GUI Management Console Traversal | Automated Text-Engine Heredoc Generation |
+| **Validation Method** | Local Hardware Execution Hooks | Cloud-Based Sandbox Syntax Auditing Loops |
+
+*   **Technical Mechanics:** Codified a sovereign Virtual Private Cloud (VPC) partition (`10.0.0.0/16`) intersecting an Internet Gateway boundary and a dedicated application routing layer. Configured custom security group firewalls restricting administrative ingress boundaries down to trusted operator scopes, pairing the compute cluster with an automated user data initialization routine to instantiate an isolated web runtime host (`httpd`). Evidence File: `p2-week-12-lab-34/main.tf`
+
+### 🏢 Enterprise Deployment Verification & Security Audit Trail
+*   **Infrastructure Syntax Compilation Check:**
+    Validated configuration blueprints natively via the core linting engine to ensure absolute stability and confirm layout validity.
+    *   `Success! The configuration is valid.`
+
+*   **White Hat Audit Question:** *"Why should infrastructure architects prioritize declarative code frameworks to provision corporate environments rather than deploying resources manually inside the web console?"*
+*   **Engineering Statement:** *"Manual web console deployments introduce immediate human error, configuration drift, and unvetted security perimeters that cannot be easily audited. Codifying environments declaratively allows teams to enforce rigid version control, subject architecture to automated pre-deployment testing loops, and guarantee that production environments are identically replicated across secure, predictable baselines."*
+
+### 🏢 Enterprise Deployment Verification & Security Audit Trail
+*   **Infrastructure Syntax Compilation Check:**
+    Validated configuration blueprints natively via the core linting engine to ensure absolute stability and confirm layout validity.
+    
+    ![Milestone 1 Validation Success](./p2-week-12-lab-34/validation%20success%20image%20week%2012.png)
+
+*   `Success! The configuration is valid.`
 
 ---
