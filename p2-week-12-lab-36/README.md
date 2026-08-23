@@ -14,38 +14,34 @@ This project provisions a secure, highly available, and publicly accessible web 
 * **Infrastructure as Code (IaC):** HashiCorp Terraform (HCL v1.5+)
 * **CI/CD Automation:** GitHub Actions Workflows
 * **Static Application Security Testing (SAST):** Aqua Security `tfsec` (Quality Gate Enforcement with `--soft-fail=false`)
-* **Compute & Web Server:** Amazon Linux 2023 (`t2.micro`), Apache HTTP Server (`httpd`) via automated `user_data`
+* **Compute & Web Server:** Amazon Linux 2023 (`t3.micro`), Apache HTTP Server (`httpd`) via automated `user_data`
 
 ---
 
 ## 🏛️ Security Architecture & Network Lockdown
+
+```text
 [ Internet Traffic ]
-│
-▼
-
+        │
+        ▼
 [ Internet Gateway (IGW) ]
-│
-▼ (0.0.0.0/0 Route Table)
-
+        │
+        ▼ (0.0.0.0/0 Route Table)
 [ Custom VPC (10.0.0.0/16) ]
-│
-▼
-
+        │
+        ▼
 [ Public Subnet (10.0.1.0/24) | us-east-1a ]
-│
-▼
-
+        │
+        ▼
 [ Security Group (tkh-final-capstone-sg) ]
-├── Ingress Port 80 (HTTP): 0.0.0.0/0 (Public Web Access)
-├── Ingress Port 22 (SSH): Hardened IP / Restricted Boundary
-└── Egress All Ports: Outbound Package & Update Resolution
-│
-▼
+  ├── Ingress Port 80 (HTTP): 0.0.0.0/0 (Public Web Access)
+  ├── Ingress Port 22 (SSH): Hardened IP / Restricted Boundary
+  └── Egress All Ports: Outbound Package & Update Resolution
+        │
+        ▼
+[ EC2 Instance (t3.micro) ] ➔ Automated Apache Bootstrap via user_data
 
-[ EC2 Instance (t2.micro) ] ➔ Automated Apache Bootstrap via user_data
-
-
-* **Network Segmentation:** The environment is provisioned inside a custom Virtual Private Cloud (`10.0.0.0/16`), fully decoupled from default AWS VPCs to eliminate shared boundary risks[cite: 3, 4]. Compute resources reside in a dedicated public subnet (`10.0.1.0/24`) pinned to Availability Zone `us-east-1a`.
+* **Network Segmentation:** The environment is provisioned inside a custom Virtual Private Cloud (`10.0.0.0/16`), fully decoupled from default AWS VPCs to eliminate shared boundary risks. Compute resources reside in a dedicated public subnet (`10.0.1.0/24`) pinned to Availability Zone `us-east-1a`.
 * **Routing Control:** Traffic routing is explicitly codified with an AWS Route Table directing all outbound destinations (`0.0.0.0/0`) through the provisioned Internet Gateway, strictly associated with the public subnet.
 * **Least-Privilege Firewall Perimeter:** The security group enforces strict ingress segregation:
   * Inbound Port 80 (HTTP) is open to `0.0.0.0/0` exclusively to serve web traffic.
@@ -66,6 +62,7 @@ This project provisions a secure, highly available, and publicly accessible web 
 ---
 
 ## 📸 Live Deployment Verification
+
 ![Live Deployment Proof](./live_deployment_screenshot.png)
 *Figure 1.0: Live Apache web server online and serving HTTP traffic via AWS EC2 public IPv4 address.*
 
