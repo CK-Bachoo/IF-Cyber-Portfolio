@@ -69,4 +69,4 @@ This project provisions a secure, highly available, and publicly accessible web 
 ## 🛡️ Operational Defense & Governance
 * **NIST CSF 2.0:** PR.IP-1 (Baseline Configuration Maintenance), PR.AC-5 (Network Segmentation), ID.RA-1 (IaC Vulnerability Identification)
 * **CIS Controls v8:** Control 4 (Secure Configuration of Enterprise Assets), Control 12 (Network Infrastructure Management)
-* **Teardown Protocol:** The entire architecture is 100% ephemeral and disposable, ready for instantaneous de-provisioning via `terraform destroy -auto-approve` to enforce fiscal discipline and eliminate attack surface persistence post-operation.
+* **Teardown Protocol:** The entire architecture is 100% ephemeral and disposable, ready for instantaneous de-provisioning via `terraform destroy -auto-approve` to enforce fiscal discipline and eliminate attack surface persistence post-operation. 
