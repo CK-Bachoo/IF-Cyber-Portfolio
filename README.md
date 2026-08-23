@@ -121,6 +121,7 @@ This approach demonstrates practical, real-world Zero Trust operations, thermal 
 | **P2 · W11 · Lab-32**<br>The Resume | Engineering Resume Metric Refactoring | Passive Professional Language & Low-Impact Resumes | ID.RM<br>*(800-53: PM-9)* | CIS 1<br>*(CMMC: RM.L2)* | Confidentiality | [gold_standard_bullets.pdf (PDF Download)](https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/p2-week-11-lab-32/gold_standard_bullets.pdf) |
 | **P2 · W12 · Lab-34**<br>The Architecture | Multi-Tier Network &<br>Compute Orchestration | Unprotected Public Ports &<br>Unrestricted Administrative Ingress | RE.🛡️<br>*(800-53: SC-7)* | CIS 4<br>*(CMMC: SC.L2)* | Confidentiality | **Fetch:** [main.tf](./p2-week-12-lab-34/main.tf)<br>**Evidence:** [📸 View Section](#-p2--w12--day-1--milestone-1---infrastructure--lab-submission) |
 | **P2 · W12 · Lab-35**<br>The Pipeline | DevSecOps Quality Gate & Terraform SAST | Insecure IaC / Exposed Security Groups & Missing Encryption | ID.RM / PR.IP<br>*(800-53: RA-5, SA-15)* | CIS 2<br>*(CMMC: RM.L2)* | Integrity | **Fetch:** [security_scan.yml](./p2-week-12-lab-35/security_scan.yml) |
+| **P2 · W12 · Lab-36**<br>The Deployment | Cloud Infrastructure<br>Launch & Verification | Automated Deployment Drift &<br>Service Outages | PR.IP<br>*(800-53: CM-3)* | CIS 4<br>*(CMMC: CM.L2)* | Availability | **Fetch:** [main.tf](./p2-week-12-lab-36/main.tf)<br>**Evidence:** [📸 View Section](#-p2--w12--day-3--s-xxxvi-lab-milestone-3---deployment--lab-submission) |
 ---
 
 ## 📂 Artifact Evidence & Operational History
@@ -2153,4 +2154,71 @@ git clone [https://github.com/grobbins-cell/S28-Framework.git](https://github.co
 
 *   **Engineering Statement:** *"Security tools that only warn without failing allow insecure code to reach production. By enforcing a hard failure on findings, we create an automated control that prevents configuration drift and ensures only secure infrastructure code can be deployed."*
 ![Passed](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/p2-week-12-lab-35/actions%20github%20screenshot%20week%2012.png)
+
+---
+
+---
+
+#### 🚀 P2 · W12 · Day 3 · S-XXXVI Lab: Milestone 3 - Deployment — Lab Submission
+📥 Starter Code (Canvas): `git clone https://github.com/grobbins-cell/S34-Infrastructure-Lab.git`
+🚀 Quick Fetch (Completed Solution): `git clone https://github.com/CK-Bachoo/IF-Cyber-Portfolio.git && cd IF-Cyber-Portfolio/p2-week-12-lab-36/`
+📜 Direct Blueprint Fetch: `curl -O https://raw.githubusercontent.com/CK-Bachoo/IF-Cyber-Portfolio/main/p2-week-12-lab-36/main.tf`
+
+* **Core Assets Links:**
+  * 📜 **Completed Blueprint:** [p2-week-12-lab-36/main.tf](./p2-week-12-lab-36/main.tf)
+  * 📑 **Standalone Lab README:** [p2-week-12-lab-36/README.md](./p2-week-12-lab-36/README.md)
+  * 📸 **Live Verification Proof:** [Live Web Server Verification](#-live-infrastructure-deployment-proof)
+
+* **Attack Vector:** Automated Configuration Drift / Unverified Cloud Provisioning & Service Outages.
+* **Strategic Explanation:** Executed the programmatic launch of the verified infrastructure stack to Amazon Web Services (AWS) using HashiCorp Terraform. Enforced zero-touch cloud initialization by driving runtime software provisioning through an automated `user_data` bootstrap script. Verified network routing integrity and live application availability over public IPv4 interfaces while preserving the environment for final capstone video audit and teardown execution.
+
+| Data Point | Standard Cohort (Laptop/Desktop - X86) | Android Mobile Cybersecurity Workbench (Samsung Note 20 Ultra 5g - Arm64) |
+| :--- | :--- | :--- |
+| **Orchestration Matrix** | Local Desktop VS Code & Local AWS CLI | Ephemeral GitHub Codespaces Cloud Bridge |
+| **Bootstrap Delivery** | Manual SSH / Console Package Installs | Automated Cloud-Init `user_data` Scripting |
+| **Validation Method** | Localhost GUI Browser Testing | Public IPv4 Interface Ingress Interrogation |
+| **Lifecycle Posture** | Static Infrastructure Babysitting | Ephemeral, Disposable IaC (Teardown Ready) |
+
+---
+
+### 🧠 S-XXXVI Mission Defense Matrix (Executive Summary)
+
+* **Mission Objective:** Deploy the secure, static-analyzed cloud architecture to AWS, confirm live web server availability via public IPv4 address, and author comprehensive repository documentation for enterprise portfolio presentation.
+* **Technical Mechanics:**
+  1. Executed `terraform apply -auto-approve` to instantiate the custom VPC (`10.0.0.0/16`), public subnet (`10.0.1.0/24`), Internet Gateway, explicit route table, and least-privilege security group.
+  2. Dynamically resolved the Amazon Linux 2023 AMI (`data.aws_ami.amazon_linux_2023`) and launched a `t3.micro` compute node configured with automated `user_data` cloud-init instructions to update package managers, install the Apache HTTP server (`httpd`), start the daemon, and bind the production DOM layout.
+  3. Extracted the allocated AWS Public IPv4 address (`34.205.131.132`) via AWS CLI metadata interrogation and verified inbound HTTP 200 delivery directly in the browser.
+  4. Authored and synchronized project README documentation detailing the architecture topology, security controls, and accepted risk justifications.
+
+---
+
+### 🏛️ Architectural Mechanics & Layman Translation
+
+* **The Self-Assembling Blueprint (Terraform IaC):** Instead of manually clicking through a web console to lay individual bricks and wire sockets, you draft an exact schematic on paper. Handing that blueprint to Terraform instructs an automated robotic crew to build the entire cloud fortress in under two minutes without missing a bolt.
+* **The Robotic Turnkey Caretaker (`user_data` Cloud-Init):** Instead of a contractor manually walking through every room to flip on light switches and install furniture after a building is erected, an automated robotic sequence initializes the entire storefront the exact millisecond the foundation is laid.
+* **The Dedicated Highway On-Ramp (VPC Route Table & IGW):** The VPC is an isolated corporate park, and the Internet Gateway is the dedicated on-ramp connecting the internal private road directly to the global interstate.
+* **The Double-Door Security Lobby (Security Group Ingress Filtering):** The front revolving door (Port 80) is open for public visitors to view the catalog, while the executive elevator (Port 22) requires a dedicated keycard.
+
+---
+
+### 🏢 Enterprise Deployment Verification & Security Audit Trail
+
+#### 🌐 Live Infrastructure Deployment Proof
+*Verified public IPv4 web server delivery (`34.205.131.132`) loading the automated Apache payload in-browser:*
+![Live Deployment Proof](./p2-week-12-lab-36/live_deployment_screenshot.png)
+
+#### 🖥️ AWS Management Console Active State Audit
+*Verified active `t3.micro` instance state (`running`), network attachment (`10.0.1.116`), and public IP allocation (`34.205.131.132`) inside `us-east-1`:*
+![AWS Console Verification](./p2-week-12-lab-36/live_instance_aws.png)
+
+---
+
+### 🛡️ Operational Defense Logic (White Hat Auditor Interrogation)
+
+**White Hat Auditor Question:** *"Why is automated bootstrap scripting (`user_data`) superior to configuring web servers post-launch via manual SSH access?"*  
+**Engineering Statement:** *"Manual server configuration introduces configuration drift, exposes unnecessary administrative attack vectors like long-lived SSH access, and increases human error. Codifying initialization routines inside `user_data` transforms compute nodes into immutable, self-configuring appliances that boot directly into an active, compliant state in seconds with zero administrative intervention."*
+
+**White Hat Auditor Question:** *"Why did you utilize dynamic AMI data queries rather than hardcoding a static AMI string in your Terraform blueprint?"*  
+**Engineering Statement:** *"Static AMI IDs are brittle and region-locked; cloud providers routinely deprecate older image IDs, which causes automated deployment pipelines to fail unexpectedly. By declaring `data "aws_ami"` with automated filters for official Amazon Linux 2023 releases, Terraform dynamically queries the AWS API to fetch the most recent, secure image hash at runtime, guaranteeing deployment resilience and immutable reproduction across any availability zone."*
+
 ---
