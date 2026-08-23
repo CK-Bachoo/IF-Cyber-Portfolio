@@ -22,21 +22,26 @@ This project provisions a secure, highly available, and publicly accessible web 
 [ Internet Traffic ]
 │
 ▼
+
 [ Internet Gateway (IGW) ]
 │
 ▼ (0.0.0.0/0 Route Table)
+
 [ Custom VPC (10.0.0.0/16) ]
 │
 ▼
+
 [ Public Subnet (10.0.1.0/24) | us-east-1a ]
 │
 ▼
+
 [ Security Group (tkh-final-capstone-sg) ]
 ├── Ingress Port 80 (HTTP): 0.0.0.0/0 (Public Web Access)
 ├── Ingress Port 22 (SSH): Hardened IP / Restricted Boundary
 └── Egress All Ports: Outbound Package & Update Resolution
 │
 ▼
+
 [ EC2 Instance (t2.micro) ] ➔ Automated Apache Bootstrap via user_data
 
 
