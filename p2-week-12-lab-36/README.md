@@ -52,7 +52,7 @@ This project provisions a secure, highly available, and publicly accessible web 
 
 ## 🏛️ Layman Metaphors & Technical Translation
 
-* **The Self-Assembling Blueprint (Terraform IaC):** Instead of manually clicking through a web console to lay individual bricks and wire sockets, you draft an exact schematic on paper[cite: 3, 4]. Handing that blueprint to Terraform instructs an automated robotic crew to build the entire cloud fortress in under two minutes without missing a bolt.
+* **The Self-Assembling Blueprint (Terraform IaC):** Instead of manually clicking through a web console to lay individual bricks and wire sockets, you draft an exact schematic on paper. Handing that blueprint to Terraform instructs an automated robotic crew to build the entire cloud fortress in under two minutes without missing a bolt.
 * **The Airport Security Scanner (GitHub Actions & `tfsec`):** Before any code is deployed to AWS production, it rolls through an automated X-ray inspection. If the scanner flags an unencrypted volume or an open port, the conveyor belt stops immediately and halts deployment.
 * **The Dedicated Highway On-Ramp (VPC Route Table & IGW):** The VPC is an isolated corporate park, and the Internet Gateway is the dedicated on-ramp connecting the internal private road directly to the global interstate.
 * **The Double-Door Security Lobby (Security Group Rules):** The front revolving door (Port 80) is open for public visitors to view the catalog, while the executive elevator (Port 22) requires a dedicated keycard.
