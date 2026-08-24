@@ -2300,6 +2300,14 @@ git clone [https://github.com/grobbins-cell/S28-Framework.git](https://github.co
 
 * **Live Execution Transcript Record:** *"As a Cloud Security Architect, deploying the infrastructure is only half the mission. Leaving unmonitored cloud assets running triggers catastrophic denial-of-wallet billing problems, and we don't want that. By executing terraform destroy -auto-approve live, we trigger a controlled demolition, un-stitching all seven cloud assets and wiping our operational footprint back to absolute zero."*
 
+#### 📊 Team E: Secure Automated Web Architecture Presentation
+*Below is the executive architectural briefing delivered by Team E, detailing the zero-manual-console deployment, the automated DevSecOps pipeline, and the live infrastructure teardown verification.*
+
+![Capstone Title](./p2-week-12-lab-36/tepp_slide_1.png)
+![Capstone Infrastructure](./p2-week-12-lab-36/tepp_slide_2.png)
+![Capstone Pipeline](./p2-week-12-lab-36/tepp_slide_3.png)
 ![Terraform Destroy Verification](./p2-week-12-lab-36/week_12_Tepp_terraform_destroy-verification%20.jpeg)
+
+📥 **[Download the Full Team E Capstone Presentation (PDF)](./p2-week-12-lab-36/Capstone_Team_Presentation-2.pptx.pdf)**
 
 ---
