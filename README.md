@@ -122,6 +122,7 @@ This approach demonstrates practical, real-world Zero Trust operations, thermal 
 | **P2 · W12 · Lab-34**<br>The Architecture | Multi-Tier Network &<br>Compute Orchestration | Unprotected Public Ports &<br>Unrestricted Administrative Ingress | RE.🛡️<br>*(800-53: SC-7)* | CIS 4<br>*(CMMC: SC.L2)* | Confidentiality | **Fetch:** [main.tf](./p2-week-12-lab-34/main.tf)<br>**Evidence:** [📸 View Section](#-p2--w12--day-1--milestone-1---infrastructure--lab-submission) |
 | **P2 · W12 · Lab-35**<br>The Pipeline | DevSecOps Quality Gate & Terraform SAST | Insecure IaC / Exposed Security Groups & Missing Encryption | ID.RM / PR.IP<br>*(800-53: RA-5, SA-15)* | CIS 2<br>*(CMMC: RM.L2)* | Integrity | **Fetch:** [security_scan.yml](./p2-week-12-lab-35/security_scan.yml) |
 | **P2 · W12 · Lab-36**<br>The Deployment | Cloud Infrastructure<br>Launch & Verification | Automated Deployment Drift &<br>Service Outages | PR.IP<br>*(800-53: CM-3)* | CIS 4<br>*(CMMC: CM.L2)* | Availability | **Fetch:** [main.tf](./p2-week-12-lab-36/main.tf)<br>**Evidence:** [📸 View Section](#-p2--w12--day-3--s-xxxvi-lab-milestone-3---deployment--lab-submission) |
+| **P2 · W12 · TEPP**<br>The Capstone | Technical Presentation &<br>Infrastructure Teardown | Denial of Wallet &<br>Unmonitored Attack Surface | PR.IP<br>*(800-53: CM-3)* | CIS 4<br>*(CMMC: CM.L2)* | Availability | **Evidence:** [📸 View Section](#-p2--w12--tepp-the-capstone-video-walkthrough--final-submission) |
 ---
 
 ## 📂 Artifact Evidence & Operational History
@@ -2222,3 +2223,27 @@ git clone [https://github.com/grobbins-cell/S28-Framework.git](https://github.co
 **Engineering Statement:** *"Static AMI IDs are brittle and region-locked; cloud providers routinely deprecate older image IDs, which causes automated deployment pipelines to fail unexpectedly. By declaring `data "aws_ami"` with automated filters for official Amazon Linux 2023 releases, Terraform dynamically queries the AWS API to fetch the most recent, secure image hash at runtime, guaranteeing deployment resilience and immutable reproduction across any availability zone."*
 
 ---
+
+---
+
+### 🎬 P2 · W12 · TEPP: The Capstone Video Walkthrough — Final Submission
+
+**Mission Objective:** Delivered a professional technical presentation of a fully automated, DevSecOps-hardened AWS web architecture, demonstrating CI/CD security gating, live network verification, and an automated ghost protocol infrastructure demolition.
+
+* **Attack Vector:** Denial of Wallet / Lingering Cloud Attack Surface.
+* **Strategic Explanation:** Orchestrated a live, recorded technical briefing to simulate an executive architectural review. Demonstrated the successful deployment of a secure AWS architecture natively configured via Terraform. Highlighted the integration of a Shift-Left SAST quality gate (`tfsec` with `--soft-fail=false`) designed to physically break deployment builds if unencrypted volumes or dangerous firewall rules are detected. Concluded the operation by executing a live `terraform destroy -auto-approve` protocol to enforce fiscal governance and vaporize the operational footprint.
+
+| Data Point | Standard Cohort (Desktop/Laptop - X86) | Android Mobile Cybersecurity Workbench (Samsung Note 20 Ultra 5g - Arm64) |
+| :--- | :--- | :--- |
+| **Presentation Medium** | Standard Desktop Screen Share | Mobile-Native Screen + Camera (Picture-in-Picture) |
+| **Demolition Execution** | GUI Console Deletion / Local CLI | Cloud-Bridged Ephemeral Codespaces Terminal |
+| **Lifecycle Posture** | Static Infrastructure Babysitting | 100% Ephemeral, Disposable IaC |
+
+#### 🏢 Enterprise Deployment Verification & Security Audit Trail
+
+* **Cloud Architecture Audit Check:** Verified live Apache web server deployment via `user_data` bootstrapping with Port 80 ingress and strict Port 22 administrative boundary lockdown.
+
+* **White Hat Audit Question:** *"Why is it critical to execute an automated infrastructure teardown immediately after a deployment verification or testing phase?"*
+* **Operational Defense Logic:** *"Leaving unmonitored cloud assets running triggers catastrophic 'Denial of Wallet' billing sprawl and creates a persistent, unpatched attack surface. By executing an automated `terraform destroy` sequence, we enforce strict fiscal discipline and physically remove the targets from the battlefield the exact second they are no longer needed."*
+
+* **Live Execution Transcript Record:** *"As a Cloud Security Architect, deploying the infrastructure is only half the mission. Leaving unmonitored cloud assets running triggers catastrophic denial-of-wallet billing problems, and we don't want that. By executing terraform destroy -auto-approve live, we trigger a controlled demolition, un-stitching all seven cloud assets and wiping our operational footprint back to absolute zero."*
