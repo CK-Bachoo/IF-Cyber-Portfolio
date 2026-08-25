@@ -122,7 +122,7 @@ This approach demonstrates practical, real-world Zero Trust operations, thermal 
 | **P2 · W11 · D3 · S-33**<br>The Boardroom | Executive Presentation &<br>Mock Panel Triage | Strategic Jargon Overhaul &<br>Corporate Visibility Failures | ID.RM<br>*(800-53: PM-9)* | CIS 1<br>*(CMMC: RM.L2)* | All Tiers | **Evidence:** [📸 View Section](#-p2--w11--d3--s-xxxiii-the-boardroom--lab-submission) |
 | **P2 · W11 · TLAB 11**<br>The Gauntlet | Interview Delivery &<br>Technical Pitch Defense | Communication Deficiencies &<br>Professional Brand Misalignment | ID.RM<br>*(800-53: PM-9)* | CIS 1<br>*(CMMC: RM.L2)* | All Tiers | **Evidence:** [📸 View Section](#-p2--w11--weekend-tlab-11-the-interview-gauntlet--capstone-submission) |
 | **P2 · W12 · Lab-34**<br>The Architecture | Multi-Tier Network &<br>Compute Orchestration | Unprotected Public Ports &<br>Unrestricted Administrative Ingress | RE.🛡️<br>*(800-53: SC-7)* | CIS 4<br>*(CMMC: SC.L2)* | Confidentiality | **Fetch:** [main.tf](./p2-week-12-lab-34/main.tf)<br>**Evidence:** [📸 View Section](#-p2--w12--day-1--milestone-1---infrastructure--lab-submission) |
-| **P2 · W12 · Lab-35**<br>The Pipeline | DevSecOps Quality Gate & Terraform SAST | Insecure IaC / Exposed Security Groups & Missing Encryption | ID.RM / PR.IP<br>*(800-53: RA-5, SA-15)* | CIS 2<br>*(CMMC: RM.L2)* | Integrity | **Fetch:** [security_scan.yml](./p2-week-12-lab-35/security_scan.yml) |
+| **P2 · W12 · Lab-35**<br>The Pipeline | DevSecOps Quality Gate & Terraform SAST | Insecure IaC / Exposed Security Groups & Missing Encryption | ID.RM / PR.IP<br>*(800-53: RA-5, SA-15)* | CIS 2<br>*(CMMC: RM.L2)* | Integrity | **Fetch:** [security_scan.yml](./p2-week-12-lab-35/security_scan.yml)<br>**Evidence:** [📸 Screenshot](./p2-week-12-lab-35/actions%20github%20screenshot%20week%2012.png) |
 | **P2 · W12 · Lab-36**<br>The Deployment | Cloud Infrastructure<br>Launch & Verification | Automated Deployment Drift &<br>Service Outages | PR.IP<br>*(800-53: CM-3)* | CIS 4<br>*(CMMC: CM.L2)* | Availability | **Fetch:** [main.tf](./p2-week-12-lab-36/main.tf)<br>**Evidence:** [📸 View Section](#-p2--w12--day-3--s-xxxvi-lab-milestone-3---deployment--lab-submission) |
 | **P2 · W12 · TEPP**<br>The Capstone | Technical Presentation &<br>Infrastructure Teardown | Denial of Wallet &<br>Unmonitored Attack Surface | PR.IP<br>*(800-53: CM-3)* | CIS 4<br>*(CMMC: CM.L2)* | Availability | **Evidence:** [📸 View Section](#-p2--w12--tepp-the-capstone-video-walkthrough--final-submission) |
 ---
@@ -2166,26 +2166,21 @@ git clone [https://github.com/grobbins-cell/S28-Framework.git](https://github.co
 ### 🏢 Enterprise Deployment Verification & Security Audit Trail
 *   **Infrastructure Syntax Compilation Check:**
     Validated configuration blueprints natively via the core linting engine to ensure absolute stability and confirm layout validity.
-    *   `Success! The configuration is valid.`
-
-*   **White Hat Audit Question:** *"Why should infrastructure architects prioritize declarative code frameworks to provision corporate environments rather than deploying resources manually inside the web console?"*
-*   **Engineering Statement:** *"Manual web console deployments introduce immediate human error, configuration drift, and unvetted security perimeters that cannot be easily audited. Codifying environments declaratively allows teams to enforce rigid version control, subject architecture to automated pre-deployment testing loops, and guarantee that production environments are identically replicated across secure, predictable baselines."*
-
-### 🏢 Enterprise Deployment Verification & Security Audit Trail
-*   **Infrastructure Syntax Compilation Check:**
-    Validated configuration blueprints natively via the core linting engine to ensure absolute stability and confirm layout validity.
     
     ![Milestone 1 Validation Success](./p2-week-12-lab-34/validation%20success%20image%20week%2012.png)
 
 *   `Success! The configuration is valid.`
+
+*   **White Hat Audit Question:** *"Why should infrastructure architects prioritize declarative code frameworks to provision corporate environments rather than deploying resources manually inside the web console?"*
+*   **Engineering Statement:** *"Manual web console deployments introduce immediate human error, configuration drift, and unvetted security perimeters that cannot be easily audited. Codifying environments declaratively allows teams to enforce rigid version control, subject architecture to automated pre-deployment testing loops, and guarantee that production environments are identically replicated across secure, predictable baselines."*
 
 ---
 
 #### 🛡️ P2 · W12 · D2 · S-XXXV Lab: Milestone 2 - The Pipeline
 
 *   **Core Assets Links:** 
-    *   📜 **Quick Fetch Blueprint:** (./p2-week-12-lab-35/security_scan.yml)
-    *   📸 **Evidence:** [`actions github screenshot week 12.png`](./p2-week-12-lab-35/actions github screenshot week 12.png)
+    *   📜 **Quick Fetch Blueprint:** [security_scan.yml](./p2-week-12-lab-35/security_scan.yml)
+    *   📸 **Evidence:** [actions github screenshot week 12.png](./p2-week-12-lab-35/actions%20github%20screenshot%20week%2012.png)
 
 *   **Attack Vector:** Insecure Infrastructure as Code / Exposed Security Group Rules & Missing Encryption
 
@@ -2206,9 +2201,7 @@ git clone [https://github.com/grobbins-cell/S28-Framework.git](https://github.co
 *   **White Hat Audit Question:** *"Why is it critical to set `--soft-fail=false` in a security scanning pipeline rather than allowing it to pass with warnings?"*
 
 *   **Engineering Statement:** *"Security tools that only warn without failing allow insecure code to reach production. By enforcing a hard failure on findings, we create an automated control that prevents configuration drift and ensures only secure infrastructure code can be deployed."*
-![Passed](https://github.com/CK-Bachoo/IF-Cyber-Portfolio/blob/main/p2-week-12-lab-35/actions%20github%20screenshot%20week%2012.png)
-
----
+![Passed](./p2-week-12-lab-35/actions%20github%20screenshot%20week%2012.png)
 
 ---
 
@@ -2273,8 +2266,6 @@ git clone [https://github.com/grobbins-cell/S28-Framework.git](https://github.co
 
 **White Hat Auditor Question:** *"Why did you utilize dynamic AMI data queries rather than hardcoding a static AMI string in your Terraform blueprint?"*  
 **Engineering Statement:** *"Static AMI IDs are brittle and region-locked; cloud providers routinely deprecate older image IDs, which causes automated deployment pipelines to fail unexpectedly. By declaring `data "aws_ami"` with automated filters for official Amazon Linux 2023 releases, Terraform dynamically queries the AWS API to fetch the most recent, secure image hash at runtime, guaranteeing deployment resilience and immutable reproduction across any availability zone."*
-
----
 
 ---
 
