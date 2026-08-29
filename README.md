@@ -2306,4 +2306,6 @@ git clone [https://github.com/grobbins-cell/S28-Framework.git](https://github.co
 
 📥 **[Download the Full Team E Capstone Presentation (PDF)](./p2-week-12-lab-36/Capstone_Team_Presentation-2.pptx.pdf)**
 
+* **[Watch the Zoom presentation](https://drive.google.com/file/d/1l7MZV6K43pWT66JTJ4W7eYydMsA0zW8v/view?usp=drivesdk)**
+
 ---
